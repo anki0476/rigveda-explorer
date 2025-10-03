@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import BookLayout from './components/Layout/BookLayout';
 import FlipBook from './components/Layout/FlipBook';
+import PageTransition from './components/Layout/PageTransition';  // ADD THIS LINE
 
 
 // ==================== PLACEHOLDER COMPONENTS ====================
@@ -90,14 +91,17 @@ const Home = () => {
   ];
 
   return (
+    <PageTransition>
     <BookLayout pageNumber="1">
       <FlipBook pages={samplePages} />
     </BookLayout>
+    </PageTransition>
   );
 };
 
 
 const DeityNetwork = () => (
+  <PageTransition>
   <BookLayout pageNumber="2">
     <div className="max-w-4xl mx-auto">
       <h1 className="text-4xl font-[family:--font-family-header] text-[--color-ink] mb-6 border-b-2 border-[--color-gold]/30 pb-4">
@@ -116,9 +120,11 @@ const DeityNetwork = () => (
       </div>
     </div>
   </BookLayout>
+  </PageTransition>
 );
 
 const RigVedaOn = () => (
+  <PageTransition>
   <BookLayout pageNumber="3">
     <div className="max-w-4xl mx-auto">
       <h1 className="text-4xl font-[family:--font-family-header] text-[--color-ink] mb-6 border-b-2 border-[--color-gold]/30 pb-4">
@@ -152,9 +158,11 @@ const RigVedaOn = () => (
       </div>
     </div>
   </BookLayout>
+  </PageTransition>
 );
 
 const SurpriseMe = () => (
+  <PageTransition>
   <BookLayout pageNumber="4">
     <div className="max-w-4xl mx-auto text-center">
       <h1 className="text-4xl font-[family:--font-family-header] text-[--color-ink] mb-6 border-b-2 border-[--color-gold]/30 pb-4 inline-block">
@@ -179,9 +187,11 @@ const SurpriseMe = () => (
       </div>
     </div>
   </BookLayout>
+  </PageTransition>
 );
 
 const AskRishi = () => (
+  <PageTransition>
   <BookLayout pageNumber="5">
     <div className="max-w-4xl mx-auto">
       <h1 className="text-4xl font-[family:--font-family-header] text-[--color-ink] mb-6 border-b-2 border-[--color-gold]/30 pb-4">
@@ -215,9 +225,11 @@ const AskRishi = () => (
       </div>
     </div>
   </BookLayout>
+  </PageTransition>
 );
 
 const Mandalas = () => (
+  <PageTransition>
   <BookLayout pageNumber="6">
     <div className="max-w-4xl mx-auto">
       <h1 className="text-4xl font-[family:--font-family-header] text-[--color-ink] mb-6 border-b-2 border-[--color-gold]/30 pb-4">
@@ -243,9 +255,11 @@ const Mandalas = () => (
       </div>
     </div>
   </BookLayout>
+  </PageTransition>
 );
 
 const About = () => (
+  <PageTransition>
   <BookLayout pageNumber="7">
     <div className="max-w-4xl mx-auto">
       <h1 className="text-4xl font-[family:--font-family-header] text-[--color-ink] mb-6 border-b-2 border-[--color-gold]/30 pb-4">
@@ -286,6 +300,7 @@ const About = () => (
       </div>
     </div>
   </BookLayout>
+  </PageTransition>
 );
 
 // ==================== ROUTER CONFIGURATION ====================

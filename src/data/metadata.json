@@ -1,0 +1,499 @@
+{
+  "about": {
+    "title": "The Rig Veda",
+    "fullName": "Rigveda Samhita",
+    "meaning": "Rig = Praise/Verse, Veda = Knowledge",
+    "description": "The Rig Veda is the oldest of the four Vedas and one of the oldest religious texts in the world, composed between 1500-1200 BCE in Vedic Sanskrit.",
+    "significance": "It forms the foundation of Hindu philosophy, ritual practice, and theological thought. Its hymns influenced all subsequent Indian philosophy, literature, and spirituality.",
+    "composition": "Originally transmitted orally with extraordinary precision for nearly 2000 years before being written down. The oral tradition used sophisticated mnemonic techniques to preserve every syllable.",
+    "language": "Vedic Sanskrit - an archaic form of Sanskrit with complex grammar, multiple verb tenses, and rich poetic vocabulary.",
+    "worldContext": "Contemporary with Bronze Age civilizations: Mycenaean Greece, New Kingdom Egypt, Shang Dynasty China."
+  },
+  "structure": {
+    "totalMandalas": 10,
+    "totalSuktas": 1028,
+    "totalVerses": 10552,
+    "totalWords": "Approximately 153,000 words",
+    "mandalas": [
+      {
+        "term": "Rita",
+        "pronunciation": "RI-tuh",
+        "meaning": "Cosmic order, truth, natural law",
+        "etymology": "From root 'r' = to go/flow (that which flows correctly)"
+      },
+      {
+        "term": "Dharma",
+        "pronunciation": "DHAR-muh",
+        "meaning": "Duty, righteousness, cosmic law, one's proper role",
+        "etymology": "From root 'dhr' = to hold/support"
+      },
+      {
+        "term": "Agni",
+        "pronunciation": "UG-nee",
+        "meaning": "Fire, fire god, transformative power",
+        "etymology": "From root 'anj' = to anoint/illuminate"
+      },
+      {
+        "term": "Indra",
+        "pronunciation": "IN-druh",
+        "meaning": "King of gods, thunder god, warrior deity",
+        "etymology": "Possibly from 'ind' = to drop (rain)"
+      },
+      {
+        "term": "Brahman",
+        "pronunciation": "BRUH-mun",
+        "meaning": "Ultimate reality, sacred power, cosmic essence",
+        "etymology": "From root 'brh' = to expand/grow"
+      },
+      {
+        "term": "Atman",
+        "pronunciation": "AHT-mun",
+        "meaning": "Self, soul, essence of individual being",
+        "etymology": "From root 'an' = to breathe"
+      },
+      {
+        "term": "Prana",
+        "pronunciation": "PRAH-nuh",
+        "meaning": "Life force, vital breath, energy",
+        "etymology": "From 'pra' (forth) + 'an' (breathe)"
+      },
+      {
+        "term": "Manas",
+        "pronunciation": "MUH-nus",
+        "meaning": "Mind, mental faculty, processing mind",
+        "etymology": "From root 'man' = to think"
+      },
+      {
+        "term": "Buddhi",
+        "pronunciation": "BUD-hee",
+        "meaning": "Intellect, discrimination, higher wisdom",
+        "etymology": "From root 'budh' = to wake/know"
+      },
+      {
+        "term": "Tapas",
+        "pronunciation": "TUH-pus",
+        "meaning": "Heat, austerity, transformative discipline",
+        "etymology": "From root 'tap' = to heat/burn"
+      },
+      {
+        "term": "Satya",
+        "pronunciation": "SUHT-yuh",
+        "meaning": "Truth, reality, that which is",
+        "etymology": "From root 'as' = to be"
+      },
+      {
+        "term": "Shanti",
+        "pronunciation": "SHAHN-tee",
+        "meaning": "Peace, tranquility, calm",
+        "etymology": "From root 'sham' = to be quiet"
+      }
+    ],
+    "ritualTerms": [
+      {
+        "term": "Homa/Havan",
+        "meaning": "Fire ritual, making offerings into sacred fire"
+      },
+      {
+        "term": "Ghee",
+        "meaning": "Clarified butter used as primary offering in rituals"
+      },
+      {
+        "term": "Samhita",
+        "meaning": "Collection, specifically the collection of mantras/hymns"
+      },
+      {
+        "term": "Stotra",
+        "meaning": "Hymn of praise"
+      },
+      {
+        "term": "Sukta",
+        "meaning": "Well-said, a hymn or chapter"
+      },
+      {
+        "term": "Rc/Rik",
+        "meaning": "A verse or stanza"
+      },
+      {
+        "term": "Pada",
+        "meaning": "Quarter-verse, foot, or word"
+      },
+      {
+        "term": "Chandas",
+        "meaning": "Meter, poetic rhythm"
+      }
+    ]
+  },
+  "culturalContext": {
+    "society": {
+      "description": "Early Vedic society was tribal, pastoral, and semi-nomadic, gradually transitioning to settled agriculture.",
+      "socialStructure": "Clan-based (jana) with tribal chiefs (rajan). Early forms of varna (social classes) emerging.",
+      "economy": "Cattle-herding primary wealth. Horses highly valued. Agriculture developing. Trade networks.",
+      "warfare": "Frequent inter-tribal conflicts. Chariots and bronze weapons. Warrior ethos prominent.",
+      "religion": "Polytheistic with henotheistic tendencies (one supreme god at a time). Sacrifice-centered. Priest class gaining power."
+    },
+    "geography": {
+      "region": "Northwestern Indian subcontinent, primarily Punjab and surrounding areas",
+      "rivers": "Sapta Sindhu (Seven Rivers) - Indus system including Sutlej, Beas, Ravi, Chenab, Jhelum, Sarasvati",
+      "landscape": "River valleys, some mountains (Himalayas referenced), plains",
+      "climate": "Monsoon-dependent agriculture. Seasonal rhythms deeply embedded in hymns."
+    },
+    "values": {
+      "primary": [
+        "Rita (cosmic order) - fundamental organizing principle",
+        "Satya (truth) - honesty in speech and action",
+        "Yajna (sacrifice) - reciprocity with divine",
+        "Dana (generosity) - hospitality and giving",
+        "Shraddha (faith/sincerity) - earnest devotion"
+      ],
+      "virtues": [
+        "Warrior courage (virya)",
+        "Wisdom (jnana)",
+        "Self-control (dama)",
+        "Austerity (tapas)",
+        "Non-violence emerging (ahimsa - not yet primary)"
+      ]
+    }
+  },
+  "influence": {
+    "onHinduism": [
+      "Foundation of all Hindu scripture and philosophy",
+      "Established deity worship patterns (though deities evolved)",
+      "Created ritual framework still used in ceremonies",
+      "Philosophical concepts (Brahman, Atman, Rita) became central",
+      "Gayatri Mantra remains most sacred prayer",
+      "Authority source for all schools of Hindu thought"
+    ],
+    "onIndianCulture": [
+      "Sanskrit language preservation and development",
+      "Oral transmission techniques (influenced all education)",
+      "Poetic meters became standard for all classical Sanskrit literature",
+      "Concepts of dharma, karma (later), moksha (later) emerged from Vedic thought",
+      "Fire ritual template for all Hindu ceremonies (weddings, funerals, etc.)",
+      "Vedic chanting remains living tradition"
+    ],
+    "onWorldThought": [
+      "Influenced early Buddhism (Buddha studied Vedas)",
+      "Jainism emerged partly as reaction to Vedic animal sacrifice",
+      "Influenced Zoroastrianism (shared Indo-Iranian heritage)",
+      "19th century European philosophers (Schopenhauer, Nietzsche) studied Vedas",
+      "Modern yoga and meditation draw from Vedic concepts",
+      "Quantum physics discussions sometimes reference Vedic cosmology"
+    ]
+  },
+  "modernRelevance": {
+    "religiousPractice": [
+      "Still chanted daily by millions of Hindus worldwide",
+      "Used in all Hindu religious ceremonies",
+      "Gayatri Mantra universal prayer",
+      "Fire rituals (havan) still performed",
+      "Vedic astrology (jyotish) based on Vedic concepts"
+    ],
+    "academicStudy": [
+      "Linguistics - study of Proto-Indo-European languages",
+      "Comparative mythology - parallels with Greek, Norse, Persian myths",
+      "History - insights into Bronze Age Indian society",
+      "Religious studies - understanding religious evolution",
+      "Anthropology - oral tradition preservation methods",
+      "Literature - study of ancient poetry and symbolism"
+    ],
+    "contemporaryApplications": [
+      "Meditation and mindfulness practices",
+      "Yoga philosophy (though yoga not prominent in Rig Veda)",
+      "Environmental ethics (reverence for nature)",
+      "Mental health (concepts of manas, chitta, buddhi)",
+      "Leadership and ethics (dharma concepts)",
+      "Holistic health (Ayurveda emerged from Vedic medicine)",
+      "Philosophy of consciousness",
+      "Interfaith dialogue"
+    ]
+  },
+  "translations": {
+    "majorEnglish": [
+      {
+        "translator": "Ralph T.H. Griffith",
+        "year": 1896,
+        "style": "Complete verse translation. Victorian English. Poetic but archaic.",
+        "accessibility": "Public domain, widely available online"
+      },
+      {
+        "translator": "Stephanie W. Jamison & Joel P. Brereton",
+        "year": 2014,
+        "style": "Most scholarly modern translation. Literal, with extensive commentary.",
+        "accessibility": "3-volume set, expensive but definitive"
+      },
+      {
+        "translator": "Wendy Doniger",
+        "year": 1981,
+        "style": "Selected hymns with interpretation. Accessible, focuses on most famous hymns.",
+        "accessibility": "Popular paperback, good introduction"
+      },
+      {
+        "translator": "H.H. Wilson",
+        "year": 1850,
+        "style": "First complete English translation. Very literal, heavily influenced by Sayana's commentary.",
+        "accessibility": "Historical interest, less readable"
+      }
+    ],
+    "otherLanguages": [
+      "German: Karl Friedrich Geldner (1951) - highly regarded scholarly translation",
+      "French: Alexandre Langlois (1872), Louis Renou (selections)",
+      "Sanskrit commentaries: Sayana (14th century) - most influential traditional commentary",
+      "Hindi: Numerous translations, including by Pt. Ram Govind Trivedi"
+    ]
+  },
+  "furtherStudy": {
+    "recommendedBooks": [
+      "The Rig Veda - Wendy Doniger (Penguin Classics) - Accessible introduction",
+      "The Rigveda: The Earliest Religious Poetry of India - Stephanie Jamison & Joel Brereton - Scholarly standard",
+      "The Origins of Yoga and Tantra - Geoffrey Samuel - Contextualizes Vedic religion",
+      "The Wonder That Was India - A.L. Basham - Historical context",
+      "Vedic Cosmology and Ethics - Brereton - Philosophical analysis"
+    ],
+    "onlineResources": [
+      "Sacred-texts.com - Complete Griffith translation free online",
+      "VedaWeb (University of Cologne) - Scholarly database with morphological analysis",
+      "Wisdom Library - Searchable translations and commentaries",
+      "Archive.org - Historical translations and commentaries",
+      "Sanskrit Documents site - Original Sanskrit texts"
+    ]
+  },
+  "projectInfo": {
+    "purpose": "This digital exploration makes the ancient Rig Veda accessible and engaging for modern learners through interactive visualizations, curated content, and AI-assisted exploration.",
+    "approach": "Rather than overwhelming users with all 10,552 verses, we've selected key hymns, organized themes relevant to contemporary life, and created connections between ancient wisdom and modern questions.",
+    "philosophy": "The Rig Veda itself was never meant to be read cover-to-cover but to be experienced through ritual, recitation, and contemplation. This digital format honors that spirit by providing multiple pathways for exploration.",
+    "features": {
+      "deityNetwork": "Visualizes the interconnections between gods mentioned across hymns",
+      "surpriseMe": "Fascinating facts that make the ancient text come alive",
+      "rigVedaOn": "Thematic organization around timeless human concerns",
+      "aiChat": "Conversational exploration with AI guide familiar with the texts"
+    }
+  },
+  "mandalas": [
+    {
+      "number": 1,
+      "suktas": 191,
+      "verses": 2006,
+      "description": "Longest mandala. Hymns to various deities, especially Indra and Agni. Composed by multiple families of rishis.",
+      "character": "Diverse authorship, varied themes, includes some of most famous hymns (1.1, 1.32, 1.154, 1.164)"
+    },
+    {
+      "number": 2,
+      "suktas": 43,
+      "verses": 429,
+      "description": "Family mandala of the Gritsamadas. Dedicated primarily to Agni and Indra.",
+      "character": "Oldest core material. Consistent style. Known for powerful Indra hymns."
+    },
+    {
+      "number": 3,
+      "suktas": 62,
+      "verses": 617,
+      "description": "Family mandala of the Vishvamitras. Contains the Gayatri Mantra (3.62.10).",
+      "character": "Most sacred mandala due to Gayatri. Balanced coverage of deities."
+    },
+    {
+      "number": 4,
+      "suktas": 58,
+      "verses": 589,
+      "description": "Family mandala of the Vamadevas. Hymns to Agni, Indra, and the Ribhus (divine craftsmen).",
+      "character": "Notable for Ribhu hymns. Technical and priestly focus."
+    },
+    {
+      "number": 5,
+      "suktas": 87,
+      "verses": 727,
+      "description": "Family mandala of the Atris. Diverse deities, strong nature hymns.",
+      "character": "Balanced, includes beautiful hymns to Ushas, Parjanya, Heaven and Earth."
+    },
+    {
+      "number": 6,
+      "suktas": 75,
+      "verses": 765,
+      "description": "Family mandala of the Bharadvajas. Primarily Agni and Indra.",
+      "character": "Liturgical focus. Ritual precision."
+    },
+    {
+      "number": 7,
+      "suktas": 104,
+      "verses": 841,
+      "description": "Family mandala of the Vasisthas. Considered the most beautiful for poetry and philosophy.",
+      "character": "Most refined poetry. Famous Varuna hymns (7.86). Peak of Vedic composition."
+    },
+    {
+      "number": 8,
+      "suktas": 103,
+      "verses": 1716,
+      "description": "Mixed authorship. Many Soma hymns and Indra-Soma pairs.",
+      "character": "Soma-centric. Some of latest material. Long hymns."
+    },
+    {
+      "number": 9,
+      "suktas": 114,
+      "verses": 1108,
+      "description": "Entirely dedicated to Soma Pavamana (purifying Soma).",
+      "character": "Unique single-deity mandala. Repetitive but hypnotic. Ritual focus."
+    },
+    {
+      "number": 10,
+      "suktas": 191,
+      "verses": 1754,
+      "description": "Longest mandala with most diverse content. Philosophical hymns, dialogues, cosmological speculation.",
+      "character": "Latest material. Most philosophically mature. Includes Nasadiya Sukta, Purusha Sukta, dialogue hymns."
+    }
+  ],
+  "meters": {
+    "description": "Vedic meters (chandas) are based on syllable count per line. Precise meter was essential for oral preservation.",
+    "majorMeters": [
+      {
+        "name": "Gayatri",
+        "syllables": 24,
+        "structure": "3 lines × 8 syllables",
+        "usage": "~2500 verses",
+        "character": "Simple, direct, powerful. Used for most sacred mantras.",
+        "example": "The Gayatri Mantra (3.62.10)"
+      },
+      {
+        "name": "Trishtubh",
+        "syllables": 44,
+        "structure": "4 lines × 11 syllables",
+        "usage": "~4500 verses (most common)",
+        "character": "Noble, expansive, narrative. Standard for epic hymns.",
+        "example": "Indra slays Vritra (1.32)"
+      },
+      {
+        "name": "Jagati",
+        "syllables": 48,
+        "structure": "4 lines × 12 syllables",
+        "usage": "~1350 verses",
+        "character": "Flowing, lyrical, descriptive.",
+        "example": "Many Soma hymns"
+      },
+      {
+        "name": "Anushtubh",
+        "syllables": 32,
+        "structure": "4 lines × 8 syllables",
+        "usage": "~900 verses",
+        "character": "Compact, memorable. Later becomes standard Sanskrit meter (shloka).",
+        "example": "Various teaching verses"
+      },
+      {
+        "name": "Pankti",
+        "syllables": 40,
+        "structure": "5 lines × 8 syllables",
+        "usage": "Rare",
+        "character": "Five-fold structure, ritualistic.",
+        "example": "Special ceremonial hymns"
+      }
+    ],
+    "importance": "Meter served as error-checking mechanism during oral transmission. Any deviation from proper syllable count would be immediately noticed."
+  },
+  "chronology": {
+    "compositionPeriod": "c. 1500-1200 BCE (conservative estimate)",
+    "oralTransmission": "c. 1500 BCE - 500 BCE",
+    "writtenForm": "c. 500 BCE onwards (though oral tradition continued as primary)",
+    "relativeChronology": {
+      "oldest": "Mandalas 2-7 (family books) - core Vedic period",
+      "middle": "Mandalas 1, 8 - expansion period",
+      "youngest": "Mandalas 9, 10 - late Vedic period with philosophical development"
+    },
+    "historicalContext": [
+      "Composition overlaps with late Indus Valley Civilization decline",
+      "Reflects Indo-Aryan culture in northwestern India",
+      "Shows transition from nomadic to settled agricultural society",
+      "Documents religious evolution from naturalistic to abstract"
+    ]
+  },
+  "rishis": {
+    "description": "Rishis (seers) are the traditional authors/receivers of Vedic hymns. They 'saw' (rather than composed) eternal truths.",
+    "familyLines": [
+      {
+        "family": "Angirasa",
+        "description": "One of the oldest priestly families",
+        "mandalas": "Contributed throughout, especially to Mandala 1",
+        "characteristics": "Fire cult specialists, Agni hymns"
+      },
+      {
+        "family": "Bhrigu",
+        "description": "Ancient priestly lineage",
+        "mandalas": "Scattered contributions",
+        "characteristics": "Fire sacrifice expertise"
+      },
+      {
+        "family": "Atri",
+        "description": "Composed most of Mandala 5",
+        "mandalas": "Mandala 5",
+        "characteristics": "Nature hymns, balanced deity worship"
+      },
+      {
+        "family": "Vishvamitra",
+        "description": "Royal sage lineage, composed Gayatri",
+        "mandalas": "Mandala 3",
+        "characteristics": "Most sacred hymns, power-focused"
+      },
+      {
+        "family": "Vamadeva",
+        "description": "Priestly family",
+        "mandalas": "Mandala 4",
+        "characteristics": "Technical ritual expertise"
+      },
+      {
+        "family": "Bharadvaja",
+        "description": "Scholar lineage",
+        "mandalas": "Mandala 6",
+        "characteristics": "Liturgical precision"
+      },
+      {
+        "family": "Vasishtha",
+        "description": "Most celebrated sage family",
+        "mandalas": "Mandala 7",
+        "characteristics": "Highest poetic quality, profound philosophy"
+      },
+      {
+        "family": "Kanva",
+        "description": "Later priestly family",
+        "mandalas": "Mandala 8",
+        "characteristics": "Soma specialists"
+      }
+    ],
+    "notableIndividuals": [
+      "Dirghatamas - Philosopher poet, blind seer, composed many riddle hymns",
+      "Vasishtha - Most revered sage, Mandala 7 composer",
+      "Vishvamitra - Composed Gayatri Mantra, warrior turned sage",
+      "Gritsamada - Mandala 2 composer, powerful Indra hymns",
+      "Vamadeva - Self-realized sage, mystical hymns"
+    ]
+  },
+  "glossary": {
+    "sanskrit": [
+      {
+        "term": "Deva",
+        "pronunciation": "DAY-vuh",
+        "meaning": "God, divine being, shining one",
+        "etymology": "From root 'div' = to shine"
+      },
+      {
+        "term": "Rishi",
+        "pronunciation": "RI-shee",
+        "meaning": "Seer, sage, one who 'sees' eternal truths",
+        "etymology": "From root 'drsh' = to see"
+      },
+      {
+        "term": "Mantra",
+        "pronunciation": "MUN-truh",
+        "meaning": "Sacred formula, instrument of thought",
+        "etymology": "From 'man' (mind) + 'tra' (tool/instrument)"
+      },
+      {
+        "term": "Yajna",
+        "pronunciation": "YUG-nyuh",
+        "meaning": "Sacrifice, ritual offering, selfless action",
+        "etymology": "From root 'yaj' = to worship/offer"
+      },
+      {
+        "term": "Soma",
+        "pronunciation": "SO-muh",
+        "meaning": "Sacred ritual drink, moon, deity of inspiration",
+        "etymology": "From root 'su' = to press/extract"
+      }
+    ]
+  }
+}

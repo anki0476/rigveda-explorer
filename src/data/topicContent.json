@@ -1,0 +1,1330 @@
+{
+  "topicContent": {
+    "nature": {
+      "introduction": {
+        "opening": "How do we relate to the natural world? What wisdom lies in sunrise, rain, and rivers?",
+        "body": [
+          "The Rig Veda expresses profound reverence for nature through hymns to Ushas (dawn), Surya (sun), Apas (waters), Prithivi (earth), and Parjanya (rain). These aren't mere nature worship but recognition of the sacred in the natural world and humanity's interdependence with all life.",
+          "Nature in the Vedic worldview is alive, conscious, and responsive. Dawn awakens the world with maternal care, waters purify and nourish, earth supports all beings, and rain brings fertility. This perspective sees humans not as masters of nature but as participants in a cosmic ecosystem.",
+          "These hymns offer ecological wisdom urgently relevant today: reverence for elements, gratitude for abundance, understanding of cycles, and recognition that human wellbeing depends on environmental health."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Prithivi",
+          "sanskrit": "पृथिवी",
+          "definition": "Earth Mother, the terrestrial realm",
+          "explanation": "Prithivi is personified as a patient, nurturing mother who bears all beings, provides all food, and endures all burdens without complaint.",
+          "modernParallel": "Similar to Gaia hypothesis - Earth as living, self-regulating system"
+        },
+        {
+          "term": "Apas",
+          "sanskrit": "आपः",
+          "definition": "Waters - rivers, rain, cosmic waters",
+          "explanation": "Waters are both physical (rivers, rain) and metaphysical (cosmic ocean). They purify, nourish, and are the source of all life.",
+          "modernParallel": "Recognition of water as fundamental to all life, water cycle understanding"
+        },
+        {
+          "term": "Vayu",
+          "sanskrit": "वायु",
+          "definition": "Wind, air, life-breath",
+          "explanation": "Vayu is the moving air that brings life-breath (prana) to all beings. Invisible but essential, like consciousness itself.",
+          "modernParallel": "Atmosphere, air quality, breath as life connection"
+        },
+        {
+          "term": "Vriksha",
+          "sanskrit": "वृक्ष",
+          "definition": "Tree, cosmic tree of life",
+          "explanation": "Trees represent the axis connecting earth and heaven. The cosmic tree (later Ashvattha) symbolizes the universe itself.",
+          "modernParallel": "Trees as carbon sinks, oxygen producers, ecosystem keystones"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "1.92",
+          "title": "Hymn to Ushas (Dawn)",
+          "mandala": 1,
+          "sukta": 92,
+          "deity": "Ushas",
+          "rishi": "Gotama Rahugana",
+          "verses": 18,
+          "excerpt": "This light has come, of all lights the most lovely, the bright effulgence has been born, far-shining. Urged onward for god Savitar's uprising, Night has yielded up her place to Morning. She yokes her chariot far away, the goddess. She goes to men with a hundred chariots loaded.",
+          "context": "Dawn is celebrated as a radiant goddess who never ages, renewing herself each morning. She represents hope, new beginnings, and the awakening of consciousness in both nature and humans.",
+          "significance": "Shows that ancient people saw the divine in daily natural phenomena. Dawn isn't just physical sunrise but spiritual awakening.",
+          "modernRelevance": "Encourages mindfulness of natural cycles, appreciation for daily renewal, consciousness of transitions (night to day, sleep to waking)"
+        },
+        {
+          "reference": "1.115",
+          "title": "Hymn to Surya (Sun)",
+          "mandala": 1,
+          "sukta": 115,
+          "deity": "Surya",
+          "rishi": "Kutsa Angirasa",
+          "verses": 6,
+          "excerpt": "The brilliant presence of the Gods has risen, the eye of Mitra, Varuna, and Agni. The Sun has filled heaven and earth and the firmament. He is the soul of all that moves and rests. Like a young man following a maiden, the Sun pursues the Dawn who shines with all her splendor.",
+          "context": "The sun is described as the eye of cosmic order (rita), the soul of all existence. It's both physical (light, warmth) and metaphysical (consciousness, truth).",
+          "significance": "Recognizes sun as source of all energy on Earth - a scientific truth understood spiritually.",
+          "modernRelevance": "Solar energy, photosynthesis, circadian rhythms - ancient recognition of solar dependence"
+        },
+        {
+          "reference": "5.83",
+          "title": "Hymn to Parjanya (Rain)",
+          "mandala": 5,
+          "sukta": 83,
+          "deity": "Parjanya",
+          "rishi": "Atri Bhauma",
+          "verses": 10,
+          "excerpt": "Speak out with thunder, roaring, slay the demons. Pour down the rain-flood, you who are full of life-giving water. When you thunder and roar, creating rain, then the plants spring up, and all life rejoices. You make plants grow; you make rivers flow. You bellow like a bull. The rain has fallen. The winds blow cool.",
+          "context": "Parjanya is the rain god whose 'seed' (rain) fertilizes earth (Prithivi). The sexual imagery recognizes rain as life-giver and earth as receiver/mother.",
+          "significance": "Understanding of hydrological cycle and rain's role in agriculture and ecology.",
+          "modernRelevance": "Climate change, drought, water security - ancient recognition of rain's vital importance"
+        },
+        {
+          "reference": "10.9",
+          "title": "The Waters of Life",
+          "mandala": 10,
+          "sukta": 9,
+          "deity": "Apas",
+          "rishi": "Sindhukshit Praiyamedha",
+          "verses": 9,
+          "excerpt": "Waters, you are healing; bring us strength and health. Within the waters, Soma told me, are all healing plants and Agni who blesses all beings. Waters, carry away all that is impure in me, all sin I have committed, all curse spoken. May we look upon your blissful flow.",
+          "context": "Waters are celebrated as purifiers (physically and spiritually), healers, and life-sustainers. They carry away impurity and bring blessing.",
+          "significance": "Recognition of water's purifying properties - both literal (hygiene) and symbolic (spiritual cleansing).",
+          "modernRelevance": "Water quality, public health, sacred river protection, water as human right"
+        },
+        {
+          "reference": "5.84",
+          "title": "Heaven and Earth",
+          "mandala": 5,
+          "sukta": 84,
+          "deity": "Prithivi and Dyaus",
+          "rishi": "Atri Bhauma",
+          "verses": 6,
+          "excerpt": "Great are Heaven and Earth, liberal, sublime, strong through their progeny. These parents of the Gods, with their creative power, have made all creatures. They established the two worlds which are beyond measure. Heaven and Earth, you two sustain through law all creatures.",
+          "context": "Sky Father (Dyaus) and Earth Mother (Prithivi) are the primal parents. Their union creates and sustains all life. They represent the fundamental polarity of existence.",
+          "significance": "Ecological understanding: life exists in the space between earth and sky, sustained by both.",
+          "modernRelevance": "Atmosphere-biosphere interaction, planetary boundaries, earth systems science"
+        },
+        {
+          "reference": "7.49",
+          "title": "The Seven Rivers",
+          "mandala": 7,
+          "sukta": 49,
+          "deity": "Waters/Rivers",
+          "rishi": "Vasishtha Maitravaruni",
+          "verses": 4,
+          "excerpt": "The seven rivers, flowing, divine, mothers of the world, nourish the earth. Sindhu (Indus) most excellent among rivers, surges with roaring sound. Like mothers with their children, like milk-cows with their calves, the waters flow toward the ocean.",
+          "context": "The seven rivers (Sapta Sindhu) define Vedic geography and civilization. Rivers are personified as mothers and milk-cows - givers of life and nourishment.",
+          "significance": "Entire civilization was river-centered. Shows understanding of watershed ecology.",
+          "modernRelevance": "River conservation, watershed management, riparian rights, sacred geography"
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Cosmic Tree",
+          "description": "Universe as a tree with roots in heaven, branches reaching earth",
+          "symbolism": "Inverted tree shows spiritual nourishment flowing downward to material world. All life interconnected like branches.",
+          "hymnReference": "1.164"
+        },
+        {
+          "image": "The Womb of Waters",
+          "description": "Cosmic waters as womb from which all existence emerges",
+          "symbolism": "Water as primordial element, source of all life. Return to waters is return to origin.",
+          "hymnReference": "10.129"
+        },
+        {
+          "image": "The Wheel of Seasons",
+          "description": "Year as a wheel with twelve spokes (months)",
+          "symbolism": "Cyclical time, eternal return, harmony with natural rhythms.",
+          "hymnReference": "1.164"
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Ecology & Environmentalism",
+          "connection": "Vedic reverence for nature provides spiritual foundation for environmental protection.",
+          "example": "India's sacred river movement draws on Vedic hymns to protect Ganges and other rivers from pollution"
+        },
+        {
+          "field": "Climate Science",
+          "connection": "Ancient recognition of interconnected natural systems (water cycle, seasons, ecosystems) parallels modern earth systems science.",
+          "example": "Hymns describe feedback loops: rain → plants → food → life, anticipating ecological understanding"
+        },
+        {
+          "field": "Sustainability",
+          "connection": "Living in harmony with natural cycles rather than exploiting resources aligns with sustainability principles.",
+          "example": "Traditional water management (tanks, wells) based on Vedic reverence for water still functions in parts of India"
+        },
+        {
+          "field": "Biophilia",
+          "connection": "Innate human connection to nature (biophilia hypothesis) is celebrated in Vedic nature hymns.",
+          "example": "Studies show exposure to natural elements (sunrise, water) improves mental health - Vedic hymns recognized this millennia ago"
+        }
+      ],
+      "suggestedQuestions": [
+        "How did ancient people relate to nature differently than we do?",
+        "What can Vedic ecology teach us about sustainability?",
+        "Why are waters considered sacred?",
+        "How do natural cycles affect consciousness?",
+        "What is the relationship between outer nature and inner nature (consciousness)?"
+      ]
+    },
+    "ethics": {
+      "introduction": {
+        "opening": "What is right? How do we know truth? What guides moral behavior?",
+        "body": [
+          "Ethics in the Rig Veda centers on two foundational concepts: satya (truth/reality) and rita (cosmic order/natural law). Satya means alignment with reality as it is - both truthful speech and authentic living. Rita is the fundamental order underlying existence, violation of which causes chaos.",
+          "Varuna, guardian of cosmic law, watches over oaths and punishes those who break moral order. But Vedic ethics isn't punitive legalism - it's understood that humans err through ignorance, passion, or influence. Forgiveness and restoration are as important as justice.",
+          "These hymns reveal sophisticated ethical thinking: the tension between universal principles and situational application, the role of intention versus action, the importance of both individual integrity and social harmony, and the recognition that ethical life requires both wisdom and courage."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Satya",
+          "sanskrit": "सत्य",
+          "definition": "Truth, reality, honesty, that which is",
+          "explanation": "Satya operates on multiple levels: truthful speech, living authentically, and alignment with ultimate reality. It's both a moral virtue and a metaphysical principle.",
+          "modernParallel": "Integrity, authenticity, honesty - but deeper, including alignment between inner truth and outer expression"
+        },
+        {
+          "term": "Rita",
+          "sanskrit": "ऋत",
+          "definition": "Cosmic order, natural law, truth, righteousness",
+          "explanation": "Rita is the fundamental principle that keeps cosmos functioning: planets in orbit, seasons cycling, societies stable. Violating rita causes chaos; following it brings harmony.",
+          "modernParallel": "Natural law, cosmic order, perhaps even physical laws - but with moral dimension"
+        },
+        {
+          "term": "Anrita",
+          "sanskrit": "अनृत",
+          "definition": "Untruth, disorder, chaos, falsehood",
+          "explanation": "Opposite of rita. Anrita is lie, disorder, violation of natural law. It's both moral failing and cosmic disruption.",
+          "modernParallel": "Chaos, entropy, moral disorder, systemic dysfunction"
+        },
+        {
+          "term": "Vratya",
+          "sanskrit": "व्रत",
+          "definition": "Vow, sacred commitment, oath",
+          "explanation": "Vratas are sacred commitments that bind one's word to cosmic order. Breaking a vow violates rita itself.",
+          "modernParallel": "Oath, commitment, integrity of word - but with cosmic significance"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "7.86",
+          "title": "Varuna's Forgiveness",
+          "mandala": 7,
+          "sukta": 86,
+          "deity": "Varuna",
+          "rishi": "Vasishtha Maitravaruni",
+          "verses": 8,
+          "excerpt": "If we have sinned against one who loves us, against a friend or companion, O Varuna, or against someone who has harmed us, release us from that sin. Whatever offense we have committed, if we have broken your laws like gamers breaking rules, do not let that destroy us, O God. It was not my own will, Varuna: wine, anger, dice, or thoughtlessness led me astray.",
+          "context": "This moving prayer acknowledges human moral failing while requesting divine mercy. It shows psychological sophistication: recognizing both personal responsibility and mitigating factors.",
+          "significance": "Demonstrates that Vedic ethics includes forgiveness, understanding of circumstances, and belief in moral restoration rather than permanent condemnation.",
+          "modernRelevance": "Applicable to restorative justice, acknowledging mistakes while seeking growth, self-compassion in moral failure"
+        },
+        {
+          "reference": "10.85",
+          "title": "The Marriage Hymn",
+          "mandala": 10,
+          "sukta": 85,
+          "deity": "Various",
+          "rishi": "Surya",
+          "verses": 47,
+          "excerpt": "May your intention be in harmony, your hearts united, your minds of one accord. I unite you two in harmony. May you be devoted to each other. Love each other as the cow loves her newborn calf. Let your speech be sweet like honey. Let your eyes be kind. Let your prosperity increase together.",
+          "context": "Marriage hymn establishing ethical basis for partnership: harmony, devotion, sweet speech, kindness, mutual prosperity. Sets high ethical standard for relationships.",
+          "significance": "Shows that ethics isn't just about prohibitions but about positive cultivation of virtue in relationships.",
+          "modernRelevance": "Relevant to relationship ethics, communication, partnership values, family ethics"
+        },
+        {
+          "reference": "4.23",
+          "title": "Rita and the Gods",
+          "mandala": 4,
+          "sukta": 23,
+          "deity": "Indra",
+          "rishi": "Vamadeva Gautama",
+          "verses": 10,
+          "excerpt": "By rita, truth and cosmic law, the Adityas stand firm. By rita the earth is supported. By rita the sun shines and by rita fires burn. All this universe is set in rita. Rita is the foundation on which truth and law are based. Through rita, long life is obtained.",
+          "context": "Establishes rita as the fundamental principle underlying all existence - physical, moral, and spiritual. Even gods must follow rita.",
+          "significance": "Provides objective grounding for ethics: not arbitrary divine command but cosmic structure itself.",
+          "modernRelevance": "Similar to natural law theory - ethics grounded in nature of reality itself"
+        },
+        {
+          "reference": "1.89",
+          "title": "Prayer to All Gods",
+          "mandala": 1,
+          "sukta": 89,
+          "deity": "Vishvedevas",
+          "rishi": "Gotama Rahugana",
+          "verses": 10,
+          "excerpt": "May we not provoke you, O Gods, through our evil, not through senseless actions, not through ignorance, not through poverty. Keep watch over us with care, like herdsmen over cattle. May all beings be happy, may all beings be free from suffering, may all beings see good, may no one suffer.",
+          "context": "Acknowledges different sources of wrongdoing: intentional evil, thoughtless action, ignorance, and desperate poverty. Asks for divine protection and extends ethical concern to all beings.",
+          "significance": "Shows nuanced understanding of ethics: intention matters, context matters, universal compassion is ideal.",
+          "modernRelevance": "Universal human rights, animal ethics, understanding of systemic factors in wrongdoing"
+        },
+        {
+          "reference": "10.117",
+          "title": "The Virtue of Generosity",
+          "mandala": 10,
+          "sukta": 117,
+          "deity": "Unknown",
+          "rishi": "Unknown",
+          "verses": 9,
+          "excerpt": "The gods do not eat; they do not consume. Fools say the generous man is a fool. But truly, no one who gives freely ever goes hungry. The miser accumulates only enemies. Let wealth flow like water. The generous person finds friends wherever they go. Share your food with the hungry. Wealth is like a wheel, rolling from one to another.",
+          "context": "Powerful argument for generosity against hoarding. Uses both practical (you'll have friends) and spiritual (like the gods) reasoning.",
+          "significance": "Economic ethics: wealth should circulate, not accumulate. Generosity is wisdom, not foolishness.",
+          "modernRelevance": "Relevant to wealth inequality, philanthropy, economic justice, circular economy thinking"
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Cosmic Net",
+          "description": "Varuna's net that catches wrongdoers",
+          "symbolism": "Can't escape consequences of unethical action. The universe itself enforces moral order.",
+          "hymnReference": "7.86"
+        },
+        {
+          "image": "The Path",
+          "description": "Rita as the path or road",
+          "symbolism": "Ethics is like following a road - deviation leads to danger, staying on path leads safely forward.",
+          "hymnReference": "1.23"
+        },
+        {
+          "image": "The Wheel of Wealth",
+          "description": "Wealth as a wheel rolling from person to person",
+          "symbolism": "Resources should circulate, not be hoarded. What goes around comes around.",
+          "hymnReference": "10.117"
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Philosophy of Ethics",
+          "connection": "Rita provides grounding for natural law ethics - morality based on cosmic structure rather than arbitrary authority.",
+          "example": "Similar to Stoic concept of logos or Taoist tao - living in harmony with natural order"
+        },
+        {
+          "field": "Legal Systems",
+          "connection": "Distinction between rita (universal law) and dharma (contextual application) parallels distinction between principles and precedents.",
+          "example": "Constitutional principles (rita) applied to specific cases (dharma)"
+        },
+        {
+          "field": "Business Ethics",
+          "connection": "Generosity hymns challenge accumulation mentality, support stakeholder (vs shareholder-only) capitalism.",
+          "example": "Conscious capitalism, B-corporations - business serving all stakeholders, not just profit maximization"
+        },
+        {
+          "field": "Restorative Justice",
+          "connection": "Varuna hymns emphasize restoration and forgiveness alongside accountability.",
+          "example": "Modern restorative justice practices focus on healing harm rather than pure punishment"
+        }
+      ],
+      "suggestedQuestions": [
+        "How does rita differ from human-made laws?",
+        "Can ethics be objective if based on cosmic order?",
+        "How do we balance universal principles with situational factors?",
+        "What is the relationship between truth (satya) and cosmic order (rita)?",
+        "How does Vedic ethics handle moral complexity and grey areas?"
+      ]
+    },
+    "relationships": {
+      "introduction": {
+        "opening": "How do we connect with others? What makes relationships sacred? How do we build community?",
+        "body": [
+          "The Rig Veda celebrates relationships through the deity Mitra (friend/ally), hymns about hospitality, and rituals that bind communities together. Friendship isn't just personal affection but a sacred bond that reflects cosmic harmony. The guest is divine; the host has sacred duty.",
+          "Vedic society was clan-based, with kinship bonds defining identity. But relationships extended beyond blood: ritual friendships (mitra), patron-priest bonds, guest-host relationships, and the reciprocal relationship between humans and gods through sacrifice. Each relationship had ethical obligations.",
+          "These hymns reveal that healthy relationships require: honesty (satya), loyalty (mitra), generosity (dana), respect (namaskara), and recognition of interdependence. They also acknowledge relationship challenges: betrayal, conflict, the pain of separation - offering wisdom for navigating complexity."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Mitra",
+          "sanskrit": "मित्र",
+          "definition": "Friend, ally, companion; also deity of friendship and contracts",
+          "explanation": "Mitra represents the bonds of friendship, alliance, and mutual obligation. As a deity, Mitra oversees oaths and agreements between people.",
+          "modernParallel": "Friendship, alliance, social contract, mutual commitment"
+        },
+        {
+          "term": "Bandhu",
+          "sanskrit": "बन्धु",
+          "definition": "Kinsman, relative, connection",
+          "explanation": "Bandhu is both blood relationship and metaphysical connection - the bonds that link all beings in the cosmic web.",
+          "modernParallel": "Kinship, connection, relationship, bonds - both familial and universal"
+        },
+        {
+          "term": "Atithi",
+          "sanskrit": "अतिथि",
+          "definition": "Guest, literally 'one without a fixed day' (unexpected visitor)",
+          "explanation": "The guest is sacred in Vedic culture. Hospitality (atithi-devo-bhava: the guest is god) is a fundamental duty.",
+          "modernParallel": "Hospitality, welcoming the stranger, sacred duty to visitors"
+        },
+        {
+          "term": "Yajna",
+          "sanskrit": "यज्ञ",
+          "definition": "Sacrifice, but also reciprocity, exchange, mutual giving",
+          "explanation": "Yajna is the principle of reciprocal exchange that binds humans to gods, humans to each other, and humans to nature. All relationships are forms of yajna.",
+          "modernParallel": "Reciprocity, mutual aid, gift economy, social exchange"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "3.59",
+          "title": "Mitra and Varuna",
+          "mandala": 3,
+          "sukta": 59,
+          "deity": "Mitra-Varuna",
+          "rishi": "Vishvamitra Gathina",
+          "verses": 9,
+          "excerpt": "To Mitra and to Varuna we sing, the two wide-rulers, strong through law. Through their divine power, they sit on their thrones maintaining order. Mitra, when honored, grants abundant blessings. Never may we break the sacred laws of friendly Mitra.",
+          "context": "Mitra and Varuna are often paired: Mitra rules day and friendship, Varuna rules night and cosmic law. Together they maintain balance and oversee all relationships.",
+          "significance": "Shows that friendship (mitra) is not just personal but cosmic principle. Breaking friendship violates cosmic order.",
+          "modernRelevance": "Elevates friendship to sacred status, emphasizes reliability and trust as spiritual virtues"
+        },
+        {
+          "reference": "10.85",
+          "title": "The Marriage Hymn",
+          "mandala": 10,
+          "sukta": 85,
+          "deity": "Various",
+          "rishi": "Surya",
+          "verses": 47,
+          "excerpt": "May your hearts be united, your minds of one accord, so that you may live together in happiness. I unite you in matrimony with the word of law and with the producing rite. May you be devoted to each other. Love each other as a cow loves her newborn calf.",
+          "context": "The wedding hymn establishes marriage as sacred partnership based on harmony, devotion, and mutual support. It's still recited in Hindu weddings today.",
+          "significance": "Treats marriage as spiritual union requiring conscious commitment to harmony and mutual care.",
+          "modernRelevance": "Applicable to any committed partnership - emphasizes communication, unity of purpose, devotion"
+        },
+        {
+          "reference": "10.10",
+          "title": "Yama and Yami Dialogue",
+          "mandala": 10,
+          "sukta": 10,
+          "deity": "Yama and Yami",
+          "rishi": "Yami",
+          "verses": 17,
+          "excerpt": "Yami says: 'Come, let us embrace, my brother. Why do you reject me?' Yama responds: 'The gods are watching. I cannot do what is forbidden. The rules of right and wrong apply even in grief and loneliness. Seek another companion.'",
+          "context": "A moving dialogue between twins - Yami desires her brother Yama after he dies. He refuses, upholding dharma even in death. She grieves alone.",
+          "significance": "Explores boundaries in relationships: what is permitted, what is forbidden, the pain of limits, duty vs. desire.",
+          "modernRelevance": "Relevant to boundary-setting, appropriate vs. inappropriate relationships, grief and letting go"
+        },
+        {
+          "reference": "1.89",
+          "title": "Prayer for Community Wellbeing",
+          "mandala": 1,
+          "sukta": 89,
+          "deity": "Vishvedevas",
+          "rishi": "Gotama Rahugana",
+          "verses": 10,
+          "excerpt": "May we be dear to you, O Gods, as sons are dear to their father. May we be like brothers and companions. May all beings be happy. May all beings be free from harm. May we see good in all. May no one suffer pain.",
+          "context": "Extends the circle of care from family to all beings. Uses familial metaphors (father-son, brothers) to describe universal relationships.",
+          "significance": "Progressive ethics: from clan loyalty to universal compassion. All beings matter.",
+          "modernRelevance": "Universal human rights, animal welfare, expanding circle of moral concern"
+        },
+        {
+          "reference": "10.117",
+          "title": "Generosity and Community",
+          "mandala": 10,
+          "sukta": 117,
+          "deity": "Unknown",
+          "rishi": "Unknown",
+          "verses": 9,
+          "excerpt": "The generous person finds friends wherever they go. Friends flock to the generous one like bees to nectar. But the miser, though rich, has no friends. What use is wealth without friendship? Share your food with the hungry who come to your door.",
+          "context": "Practical wisdom about relationships: generosity creates bonds, stinginess isolates. Wealth's value is in what it enables - connection, care, community.",
+          "significance": "Links ethics (generosity) with social wellbeing (friendship). Wealth exists to strengthen relationships.",
+          "modernRelevance": "Community building, mutual aid, the social dimension of economics"
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Chariot Wheel",
+          "description": "Society as a wheel with spokes (individuals) connecting to hub (community)",
+          "symbolism": "Each person is essential spoke; remove one and wheel weakens. We're interdependent parts of whole.",
+          "hymnReference": "1.164"
+        },
+        {
+          "image": "The Woven Fabric",
+          "description": "Relationships as threads woven together",
+          "symbolism": "Each relationship is a thread; together they create the fabric of society. Pattern emerges from interwoven bonds.",
+          "hymnReference": "10.71"
+        },
+        {
+          "image": "The Guest as God",
+          "description": "Atithi devo bhava - the guest is divine",
+          "symbolism": "Every stranger might be a god in disguise. Hospitality is sacred duty. Honor the unknown visitor.",
+          "hymnReference": "Various"
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Community Building",
+          "connection": "Vedic emphasis on reciprocity, hospitality, and mutual obligation provides model for community resilience.",
+          "example": "Mutual aid networks, community supported agriculture, time banks - modern forms of yajna (reciprocal exchange)"
+        },
+        {
+          "field": "Relationship Psychology",
+          "connection": "Marriage hymn's emphasis on unity while respecting individuality mirrors modern healthy relationship research.",
+          "example": "Gottman Method emphasizes fondness and admiration, turning toward each other - similar to Vedic 'hearts united' concept"
+        },
+        {
+          "field": "Ethics of Care",
+          "connection": "Extending care from kin to stranger to all beings reflects care ethics' emphasis on relationship as moral foundation.",
+          "example": "Nel Noddings' care ethics: morality grounded in relationships and responsibility to others"
+        },
+        {
+          "field": "Social Capital",
+          "connection": "Generosity creating social bonds parallels research on social capital and community trust.",
+          "example": "Robert Putnam's work shows generosity and reciprocity build social trust and community cohesion"
+        }
+      ],
+      "suggestedQuestions": [
+        "What makes a relationship sacred?",
+        "How do we balance loyalty to friends with ethical principles?",
+        "What are our obligations to strangers?",
+        "How does generosity create community?",
+        "What is the relationship between individual and collective wellbeing?"
+      ]
+    },
+    "existence": {
+      "introduction": {
+        "opening": "Why do we exist? What happens after death? What is the nature of reality itself?",
+        "body": [
+          "The Rig Veda contains humanity's earliest recorded philosophical inquiries into existence. The Nasadiya Sukta (Hymn of Creation, 10.129) asks fundamental questions: What existed before existence? How did something arise from nothing? Perhaps even the creator doesn't know - remarkable intellectual humility.",
+          "Death and afterlife are explored through hymns to Yama, the first mortal who became king of the ancestors. The Vedic afterlife isn't heaven or hell but the realm of fathers (pitrs) where one rejoins departed relatives. Death is transition, not termination.",
+          "These hymns confront existential questions with both poetry and philosophy: the mystery of consciousness, the problem of finite life, the search for immortal essence within mortal form, and ultimately the possibility that reality defies final explanation. They invite contemplation rather than demanding belief."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Sat",
+          "sanskrit": "सत्",
+          "definition": "Being, existence, that which is",
+          "explanation": "Sat is pure existence or is-ness. In the creation hymn, the question arises: did even sat exist before creation? If not, what did?",
+          "modernParallel": "Being itself, existence as such"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "10.129",
+          "title": "Hymn of Creation (Nasadiya Sukta)",
+          "mandala": 10,
+          "sukta": 129,
+          "deity": "Creation",
+          "rishi": "Prajapati Parameshthin",
+          "verses": 7,
+          "excerpt": "Neither non-existence nor existence was there. Who really knows? Who can declare it? Whence was this creation produced? The gods came afterwards. Who then knows whence it arose?",
+          "context": "Questions the origin of consciousness itself. If neither being nor non-being existed before creation, what was the nature of the first awareness? This hymn admits ultimate uncertainty with remarkable intellectual honesty.",
+          "significance": "Perhaps the first recorded expression of metaphysical agnosticism. The final verse admits even the gods might not know the answer.",
+          "modernRelevance": "Resonates with modern physics' questions about the origin of the universe and the role of consciousness in quantum mechanics"
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Cosmic Egg",
+          "description": "Universe emerging from a primordial egg",
+          "symbolism": "All existence contained within potential, waiting to unfold",
+          "hymnReference": "10.129"
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Philosophy",
+          "connection": "The Nasadiya Sukta's agnosticism about ultimate origins parallels modern philosophical skepticism about final explanations.",
+          "example": "Similar to Wittgenstein's 'whereof one cannot speak, thereof one must be silent' - recognizing limits of language and knowledge"
+        }
+      ],
+      "suggestedQuestions": [
+        "What existed before existence?",
+        "How do we grapple with ultimate questions?",
+        "What is the relationship between being and non-being?",
+        "Can we know the origin of consciousness?"
+      ]
+    },
+    "energy": {
+      "introduction": {
+        "opening": "What is the nature of cosmic energy? How do transformation and change operate in the universe?",
+        "body": [
+          "The Rig Veda presents energy as a dynamic, transformative force pervading all existence. Through concepts like Tejas (luminous energy), Tapas (transformative heat), and Shakti (divine power), the hymns explore how energy manifests, transforms, and sustains the cosmos.",
+          "These ancient texts recognize that transformation is fundamental to existence. Fire transforms offerings, dawn transforms night into day, soma transforms consciousness, and ritual transforms the mundane into the sacred. This understanding parallels modern physics' insights into energy, entropy, and transformation.",
+          "The Vedic sages understood that energy is never static—it flows, changes form, and enables all processes of life and consciousness. These hymns offer profound insights into the nature of change, power, and the dynamic processes underlying reality."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Tejas",
+          "sanskrit": "तेजस्",
+          "definition": "Luminous energy, radiance, vital fire",
+          "explanation": "Tejas represents the radiant, transformative energy that manifests as light, heat, and vital force. It's the brilliance in fire, the glow of health, and the power of digestion and metabolism in the body.",
+          "modernParallel": "Similar to thermodynamics and metabolic energy—the power that drives transformation and maintains biological systems"
+        },
+        {
+          "term": "Tapas",
+          "sanskrit": "तपस्",
+          "definition": "Transformative heat, ascetic power, creative force",
+          "explanation": "Tapas is the heat generated through discipline, concentration, or ritual. It's described as the primordial force that generated creation itself—the cosmic heat that transformed potential into manifestation.",
+          "modernParallel": "Resonates with concepts of activation energy in chemistry and focused intention in psychology"
+        },
+        {
+          "term": "Shakti",
+          "sanskrit": "शक्ति",
+          "definition": "Divine power, active force, dynamic energy",
+          "explanation": "Shakti is the active, dynamic principle that enables manifestation and change. Often personified as feminine divine energy, it represents the power through which all actions and transformations occur.",
+          "modernParallel": "Comparable to kinetic energy and the concept of force in physics—the active principle that causes change"
+        },
+        {
+          "term": "Soma",
+          "sanskrit": "सोम",
+          "definition": "The nectar of transformation, divine elixir",
+          "explanation": "Soma represents transformative essence—both as a ritual substance and as metaphor for consciousness-altering experiences. Its pressing and purification symbolize transformation processes.",
+          "modernParallel": "Similar to neurotransmitters and altered states of consciousness in neuroscience"
+        }
+      ],
+      "hymns": [
+        {
+          "title": "Hymn to Agni as Transformative Fire",
+          "reference": "1.1.1-9",
+          "mandala": 1,
+          "sukta": 1,
+          "verses": 9,
+          "deity": "Agni",
+          "rishi": "Madhucchandas Vaishvamitra",
+          "excerpt": "I invoke Agni, the priest placed foremost, the god of sacrifice, the invoker, the lavisher of treasures... He who transforms offerings through his brilliant mouth, conducting the sacred work of gods and mortals.",
+          "context": "The very first hymn of the Rig Veda celebrates Agni as the supreme transformative force. Fire transforms physical offerings into smoke and energy, symbolizing the transformation of matter into spirit.",
+          "significance": "This hymn establishes the central Vedic principle that energy and transformation are sacred processes. Agni bridges earth and heaven, matter and consciousness, through his transformative power.",
+          "modernRelevance": "Reflects understanding of energy transformation (thermodynamics), the role of catalysts in transformation, and the sacred dimension of physical and chemical processes."
+        },
+        {
+          "title": "The Creation Hymn - Tapas as Cosmic Force",
+          "reference": "10.129",
+          "mandala": 10,
+          "sukta": 129,
+          "verses": 7,
+          "deity": "Creation",
+          "rishi": "Prajapati Parameshthin",
+          "excerpt": "Then even nothingness was not, nor existence. There was no air then, nor the heavens beyond it... That One which came to be, enclosed in nothing, arose at last, born of the power of heat (Tapas).",
+          "context": "This cosmological hymn describes Tapas (transformative heat-energy) as the primordial force that brought the universe into being from undifferentiated potential.",
+          "significance": "Presents one of humanity's earliest scientific-philosophical models of creation—not through divine fiat but through energy transformation. The universe emerges through the action of Tapas on primordial potential.",
+          "modernRelevance": "Remarkably parallels Big Bang cosmology and thermodynamic principles—the universe beginning as concentrated energy that transforms into matter and structure."
+        },
+        {
+          "title": "Hymn to Soma - Transformative Purification",
+          "reference": "9.1.1-10",
+          "mandala": 9,
+          "sukta": 1,
+          "verses": 10,
+          "deity": "Soma Pavamana",
+          "rishi": "Madhucchandas Vaishvamitra",
+          "excerpt": "Flow onwards, Soma, winning kine and treasure. Flow onwards, conquering the waters' offspring... The gold-hued filter you pass through, becoming pure and bright, bringing powers from heaven.",
+          "context": "The ninth Mandala is entirely dedicated to Soma's purification—describing the ritual pressing, filtering, and transformation of soma juice as it flows through filters.",
+          "significance": "The purification process symbolizes transformation through stages—from crude to refined, from potential to actualized. Each stage requires energy and produces transformation.",
+          "modernRelevance": "Analogous to distillation, purification processes in chemistry, and psychological transformation through stages of refinement and integration."
+        },
+        {
+          "title": "Hymn to Indra's Dynamic Power",
+          "reference": "1.32.1-15",
+          "mandala": 1,
+          "sukta": 32,
+          "verses": 15,
+          "deity": "Indra",
+          "rishi": "Hiranyastupa Angirasa",
+          "excerpt": "I will declare the manly deeds of Indra, the first that he achieved, the thunderer... With his vast destroying thunder he smote down Vritra, releasing the waters, splitting the cloud-mountains.",
+          "context": "This hymn celebrates Indra's victory over Vritra, the chaos-serpent who held back the waters. The battle represents the transformation of chaos into order through dynamic energy.",
+          "significance": "Symbolizes how concentrated force breaks stagnation and releases blocked energy. The waters' release represents the flow of life-force, creativity, and abundance.",
+          "modernRelevance": "Represents breakthrough moments—overcoming obstacles, releasing blocked potential, and transforming stagnation into flow. Relevant to psychology, organizational change, and personal transformation."
+        }
+      ],
+      "metaphors": [
+        {
+          "title": "Fire as Universal Transformer",
+          "description": "Agni transforms everything it touches—wood to ash, offerings to smoke, matter to energy. This symbolizes the universal principle of transformation."
+        },
+        {
+          "title": "Soma Pressing",
+          "description": "The ritual pressing of soma plants represents transformation through pressure, purification through filtering, and elevation through mixing with milk."
+        },
+        {
+          "title": "Dawn Breaking Darkness",
+          "description": "Ushas (dawn) transforming night into day represents the perpetual cycle of transformation—darkness yields to light, unconsciousness to awareness."
+        },
+        {
+          "title": "Waters Released from Mountains",
+          "description": "Indra releasing imprisoned waters symbolizes blocked energy liberated, potential actualized, and stagnation transformed into dynamic flow."
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Physics & Thermodynamics",
+          "connection": "Vedic insights into energy transformation parallel the laws of thermodynamics—energy changing forms but never destroyed, entropy and order, heat as transformative force."
+        },
+        {
+          "field": "Chemistry",
+          "connection": "The soma purification process demonstrates understanding of transformation through stages, catalysts, and purification—fundamental to chemical processes and material science."
+        },
+        {
+          "field": "Psychology",
+          "connection": "Transformation through Tapas (discipline) parallels psychological concepts of personal growth through intentional practice, shadow work, and integration of fragmented aspects of self."
+        },
+        {
+          "field": "Ecology & Systems Theory",
+          "connection": "Understanding energy flow through systems, transformation of resources, and cyclical processes of regeneration align with ecological and systems thinking."
+        }
+      ],
+      "suggestedQuestions": [
+        "How does understanding energy as sacred change our relationship with consumption and waste?",
+        "What personal transformations might require the 'heat' of Tapas—sustained discipline and focus?",
+        "How do we work with blocked energy in our lives, relationships, or communities?",
+        "What processes in modern life parallel the Vedic soma purification—transformation through stages?",
+        "How might recognizing transformation as fundamental help us navigate life changes with greater wisdom?"
+      ]
+    },
+    "success": {
+      "introduction": {
+        "opening": "What constitutes true prosperity? How does one achieve success aligned with cosmic order?",
+        "body": [
+          "The Rig Veda presents prosperity not as mere material accumulation but as alignment with Rita (cosmic order) and cultivation of inner wealth. Through concepts like Shri (auspicious prosperity), Lakshmi (abundance), and Pushti (nourishment and growth), the hymns reveal a holistic vision of success.",
+          "Vedic prosperity encompasses multiple dimensions: material wealth (Dhana), progeny and legacy (Prajana), good reputation (Yashas), long life (Ayus), and spiritual wisdom (Jnana). True success comes not from hoarding but from generous circulation of resources in harmony with natural and social rhythms.",
+          "These hymns emphasize that prosperity flows from right action (Dharma), generosity (Dana), skillful work (Karma), and divine grace. Success is not opposed to ethics but depends on it—sustainable abundance requires alignment with cosmic principles and social wellbeing."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Rita",
+          "sanskrit": "ऋत",
+          "definition": "Cosmic order, natural law, truth",
+          "explanation": "Rita is the fundamental principle of cosmic and moral order. Success and prosperity that violate Rita are unsustainable. Alignment with Rita ensures long-term flourishing for individuals and communities.",
+          "modernParallel": "Similar to concepts of sustainable development, natural law, and long-term value creation in modern economics"
+        },
+        {
+          "term": "Shri",
+          "sanskrit": "श्री",
+          "definition": "Auspicious prosperity, abundance, good fortune",
+          "explanation": "Shri represents prosperity in its fullness—material wealth combined with beauty, auspiciousness, and harmony. It is abundance that brings joy and supports flourishing, not mere accumulation.",
+          "modernParallel": "Resonates with holistic wealth concepts—financial capital plus social, cultural, and natural capital"
+        },
+        {
+          "term": "Pushti",
+          "sanskrit": "पुष्टि",
+          "definition": "Nourishment, growth, thriving",
+          "explanation": "Pushti emphasizes qualitative prosperity—the flourishing of body, mind, family, and community. It is about healthy growth and robust vitality, not just quantity.",
+          "modernParallel": "Similar to thriving and wellbeing in positive psychology and sustainable growth in economics"
+        },
+        {
+          "term": "Dana",
+          "sanskrit": "दान",
+          "definition": "Generosity, giving, charitable distribution",
+          "explanation": "Dana is the practice of generous giving that prevents wealth from stagnating. The hymns emphasize that prosperity increases through circulation—generous hosts are blessed with abundance.",
+          "modernParallel": "Aligns with economic theories of circulation, philanthropy studies, and reciprocity in social capital"
+        }
+      ],
+      "hymns": [
+        {
+          "title": "Hymn to Indra the Wealth-Giver",
+          "reference": "2.12.1-15",
+          "mandala": 2,
+          "sukta": 12,
+          "verses": 15,
+          "deity": "Indra",
+          "rishi": "Gritsamada Shaunaka",
+          "excerpt": "Who grants wealth to the worshipper, who leads the waters from the mountain, who is invoked by both armies in battle—he is Indra... Who gives horses, cattle, food, and treasure without measure to the generous sacrificer.",
+          "context": "This hymn celebrates Indra as the supreme giver of wealth and success. His generosity flows to those who maintain ritual order and act generously themselves.",
+          "significance": "Establishes the principle that prosperity is granted to those who honor cosmic order and practice generosity—not to hoarders but to generous givers who maintain social circulation.",
+          "modernRelevance": "Reflects economic principles of reciprocity and circulation—wealth grows through exchange, not hoarding. Generosity attracts opportunities and builds social capital."
+        },
+        {
+          "title": "Hymn to Vishnu the All-Pervader",
+          "reference": "1.154.1-6",
+          "mandala": 1,
+          "sukta": 154,
+          "verses": 6,
+          "deity": "Vishnu",
+          "rishi": "Dirghatamas Auchatya",
+          "excerpt": "I will now declare the mighty works of Vishnu, who measured out the earthly regions, who fixed the upper dwelling-place... The third step cannot be seen by mortals—that highest place where gods rejoice.",
+          "context": "Vishnu's three strides measure the universe—earth, atmosphere, and the highest heaven. This cosmic ordering creates stable space for prosperity to flourish.",
+          "significance": "Success requires proper structure and order. Vishnu's cosmic measurement represents the establishment of boundaries, laws, and systems that enable sustainable prosperity.",
+          "modernRelevance": "Relates to institutional economics—prosperity requires rule of law, property rights, stable systems, and well-ordered social structures."
+        },
+        {
+          "title": "Hymn to Savitri for Prosperity",
+          "reference": "4.53.1-6",
+          "mandala": 4,
+          "sukta": 53,
+          "verses": 6,
+          "deity": "Savitri",
+          "rishi": "Vamadeva Gautama",
+          "excerpt": "We call upon divine Savitri, the god who prospers our possessions, who grants us strength and wealth... May he bestow upon us all desirable things, long life and progeny, glory and riches.",
+          "context": "Savitri, the solar deity of inspiration and impulsion, is invoked for comprehensive prosperity—wealth, children, reputation, and longevity.",
+          "significance": "Demonstrates the holistic Vedic view of prosperity—not just wealth but health, family, reputation, and long life. True success encompasses all dimensions of flourishing.",
+          "modernRelevance": "Aligns with comprehensive wellbeing frameworks—material prosperity combined with health, relationships, meaning, and longevity."
+        },
+        {
+          "title": "Hymn Requesting Cattle and Wealth",
+          "reference": "10.169.1-4",
+          "mandala": 10,
+          "sukta": 169,
+          "verses": 4,
+          "deity": "Various",
+          "rishi": "Sharyata Manava",
+          "excerpt": "May these cattle come to me, may horses come, may men come... May all possessions come to me—I call them with the mind, I draw them with devotion.",
+          "context": "This is a straightforward prayer for material prosperity—cattle, horses, servants, and wealth. It demonstrates that the Vedas do not reject material success but seek it through proper means.",
+          "significance": "Shows that prosperity is achieved through mental focus (calling with the mind) and devotional practice—not passive wishing but active alignment of intention and action.",
+          "modernRelevance": "Reflects principles of manifestation psychology, goal-setting, and the power of focused intention combined with aligned action."
+        }
+      ],
+      "metaphors": [
+        {
+          "title": "Rivers Flowing to the Ocean",
+          "description": "Prosperity is compared to rivers flowing into the ocean—constant movement toward fullness. Stagnant water becomes foul; flowing water remains fresh and life-giving."
+        },
+        {
+          "title": "The Generous Sacrificer",
+          "description": "Those who offer abundantly to gods and guests receive multiplied returns. Generosity creates circulation that attracts more abundance."
+        },
+        {
+          "title": "The Cow as Wealth",
+          "description": "Cattle represent sustainable wealth—they reproduce, provide milk, and support agriculture. True prosperity is self-renewing, not depleting."
+        },
+        {
+          "title": "Gold from Fire",
+          "description": "Just as gold is purified through fire, genuine prosperity emerges through the trials of right action and ethical discipline."
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Economics and Business",
+          "connection": "Vedic principles of circulation, sustainable growth, and stakeholder prosperity align with modern concepts of circular economy, stakeholder capitalism, and long-term value creation."
+        },
+        {
+          "field": "Ethics and Social Justice",
+          "connection": "The emphasis on prosperity through ethical means and generous distribution resonates with discussions of just wealth, corporate social responsibility, and equitable development."
+        },
+        {
+          "field": "Positive Psychology",
+          "connection": "Holistic prosperity—combining material success with relationships, meaning, health, and contribution—mirrors modern wellbeing research on comprehensive flourishing."
+        },
+        {
+          "field": "Sustainability Studies",
+          "connection": "The Rita-based model of prosperity in harmony with natural order directly relates to sustainable development goals and ecological economics."
+        }
+      ],
+      "suggestedQuestions": [
+        "How can we redefine success to include ecological and social wellbeing alongside material prosperity?",
+        "What practices of generosity might increase rather than decrease our own prosperity?",
+        "How do we distinguish between sustainable abundance and unsustainable extraction?",
+        "In what ways does hoarding versus circulating wealth affect both personal and societal prosperity?",
+        "How might businesses and economies be restructured around Vedic principles of holistic sustainable prosperity?"
+      ]
+    },
+
+    
+    "mind": {
+      "introduction": {
+        "opening": "What is the nature of thought? How does consciousness arise? Where does the mind reside?",
+        "body": [
+          "The Rig Veda explores the mind through the Sanskrit concept of 'manas' (मनस्), which represents the processing, perceiving, and thinking faculty. These ancient hymns delve into questions of awareness, thought, and the nature of human consciousness that still fascinate philosophers and neuroscientists today.",
+          "The Vedic sages distinguished between different aspects of mental experience: manas (the processing mind), chitta (pure consciousness or awareness), and buddhi (discriminating intellect). This sophisticated psychological model predates Western philosophy by millennia.",
+          "These hymns don't just describe the mind—they question its very nature, explore its limits, and celebrate its power to comprehend the universe."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Manas",
+          "sanskrit": "मनस्",
+          "definition": "The processing mind - the faculty that receives sensory input and generates thought",
+          "explanation": "Manas is the lower mind that constantly processes information. It's compared to a chariot that must be controlled by buddhi (intellect).",
+          "modernParallel": "Similar to what neuroscience calls 'working memory' or 'cognitive processing'"
+        },
+        {
+          "term": "Chitta",
+          "sanskrit": "चित्त",
+          "definition": "Pure consciousness or awareness itself, beyond thought",
+          "explanation": "Chitta is the witnessing consciousness that observes thoughts without being caught in them. It's the screen on which mental activity plays.",
+          "modernParallel": "Related to concepts in mindfulness meditation and the 'observer self' in psychology"
+        },
+        {
+          "term": "Buddhi",
+          "sanskrit": "बुद्धि",
+          "definition": "Higher intellect - discriminating wisdom and judgment",
+          "explanation": "Buddhi is the faculty that can distinguish between real and unreal, eternal and temporary. It's the wise driver of the chariot of manas.",
+          "modernParallel": "Executive function, meta-cognition, or 'wise mind' in modern psychology"
+        },
+        {
+          "term": "Prana",
+          "sanskrit": "प्राण",
+          "definition": "Life force or vital energy that animates the mind and body",
+          "explanation": "Prana is the subtle energy that connects mind and body. When prana moves, thoughts arise; when it's still, peace emerges.",
+          "modernParallel": "Somewhat analogous to 'vitality' or 'life energy' in various healing traditions"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "10.58",
+          "title": "The Return of the Mind",
+          "mandala": 10,
+          "sukta": 58,
+          "deity": "Manas (Mind)",
+          "rishi": "Sumitra Kautsa",
+          "verses": 12,
+          "excerpt": "Let my mind return to me for wisdom and long life. Let my breath and life-force return. May my awareness not wander from me like birds flying to distant trees.",
+          "context": "This hymn addresses the mind as an entity that can wander away and must be called back - a concept remarkably similar to modern meditation practices where attention is continually brought back to the present.",
+          "significance": "One of the few hymns directly addressing the mind as a deity or force. Shows early understanding that mental focus requires effort and practice.",
+          "modernRelevance": "Directly applicable to mindfulness meditation practices and attention training"
+        },
+        {
+          "reference": "1.164",
+          "title": "The Riddle Hymn",
+          "mandala": 1,
+          "sukta": 164,
+          "deity": "Vishvedevas",
+          "rishi": "Dirghatamas Auchathya",
+          "verses": 52,
+          "excerpt": "Who has seen the first-born when he who has no bones bears him who has bones? Where was the mind? Where was the heart? Where was the life-force when this came to be?",
+          "context": "A cryptic exploration of consciousness emerging from the formless. This may be the earliest philosophical inquiry into the mind-body problem and the hard problem of consciousness.",
+          "significance": "Shows that 3,500 years ago, thinkers were grappling with the same questions that perplex philosophers and neuroscientists today.",
+          "modernRelevance": "Directly addresses the 'hard problem of consciousness' - how does subjective experience arise from matter?"
+        },
+        {
+          "reference": "10.129",
+          "title": "Hymn of Creation (Nasadiya Sukta)",
+          "mandala": 10,
+          "sukta": 129,
+          "deity": "Creation",
+          "rishi": "Prajapati Parameshthin",
+          "verses": 7,
+          "excerpt": "Neither non-existence nor existence was there. Who really knows? Who can declare it? Whence was this creation produced? The gods came afterwards. Who then knows whence it arose?",
+          "context": "Questions the origin of consciousness itself. If neither being nor non-being existed before creation, what was the nature of the first awareness? This hymn admits ultimate uncertainty with remarkable intellectual honesty.",
+          "significance": "Perhaps the first recorded expression of metaphysical agnosticism. The final verse admits even the gods might not know the answer.",
+          "modernRelevance": "Resonates with modern physics' questions about the origin of the universe and the role of consciousness in quantum mechanics"
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Chariot",
+          "description": "Mind (manas) as a chariot driven by intellect (buddhi)",
+          "symbolism": "Just as a chariot needs a skilled driver, the mind requires wisdom to direct its power constructively.",
+          "hymnReference": "6.75"
+        },
+        {
+          "image": "The Ocean",
+          "description": "Consciousness as vast and deep, with hidden depths",
+          "symbolism": "The surface mind is choppy with thoughts, but deep consciousness remains still and clear.",
+          "hymnReference": "10.129"
+        },
+        {
+          "image": "The Bird",
+          "description": "Thought as a bird that flies and must return to roost",
+          "symbolism": "Wandering attention can fly to distant concerns but must be called back to the present.",
+          "hymnReference": "10.58"
+        },
+        {
+          "image": "The Wind",
+          "description": "Mind as invisible yet powerful, moving through all things",
+          "symbolism": "Like wind, the mind cannot be seen but its effects are evident everywhere.",
+          "hymnReference": "10.168"
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Neuroscience",
+          "connection": "The distinction between manas (processing mind), buddhi (executive function), and chitta (awareness) mirrors modern understanding of different brain regions and cognitive functions.",
+          "example": "The prefrontal cortex (buddhi) regulates the limbic system (manas), while consciousness (chitta) remains a mystery science is still exploring."
+        },
+        {
+          "field": "Meditation & Mindfulness",
+          "connection": "The concept of calling the wandering mind back (Hymn 10.58) is the foundation of mindfulness practices worldwide.",
+          "example": "Modern MBSR (Mindfulness-Based Stress Reduction) uses the exact technique described: noticing when attention wanders and gently returning it."
+        },
+        {
+          "field": "Philosophy of Mind",
+          "connection": "Questions raised 3,500 years ago about consciousness, awareness, and the hard problem of subjective experience remain central to philosophy today.",
+          "example": "David Chalmers' 'hard problem of consciousness' is essentially the same question posed in the Riddle Hymn: how does subjective experience arise?"
+        },
+        {
+          "field": "Cognitive Science",
+          "connection": "The Vedic model of layered consciousness anticipates modern theories of conscious vs unconscious processing.",
+          "example": "Dual-process theory (System 1 and System 2 thinking) parallels the distinction between manas (automatic processing) and buddhi (deliberate thinking)."
+        }
+      ],
+      "suggestedQuestions": [
+        "What did ancient sages think about the subconscious mind?",
+        "How does the Rig Veda define wisdom versus knowledge?",
+        "What practices did they use for mental clarity?",
+        "How is buddhi different from manas?",
+        "What role does breath play in controlling the mind?"
+      ]
+    },
+    "health": {
+      "introduction": {
+        "opening": "What gives us vitality? How do we maintain strength and overcome disease?",
+        "body": [
+          "The Rig Veda approaches health holistically, recognizing the interconnection between physical vitality (bala), life force (prana), and vital essence (ojas). The Ashvins, divine twin physicians, represent the healing power that restores wholeness.",
+          "Health in the Vedic worldview isn't merely absence of disease but a state of optimal vitality where body, mind, and spirit function in harmony. Hymns celebrate strength, longevity, and the power of natural elements—particularly water and herbs—to heal.",
+          "These ancient verses reveal sophisticated understanding of preventive care, the mind-body connection, and the importance of maintaining balance in all aspects of life."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Prana",
+          "sanskrit": "प्राण",
+          "definition": "Life force or vital breath that animates all living beings",
+          "explanation": "Prana is the subtle energy that sustains life. When prana flows freely, health flourishes; when blocked or depleted, disease arises.",
+          "modernParallel": "Similar to concepts of 'chi' in Chinese medicine or 'vitality' in Western holistic health"
+        },
+        {
+          "term": "Bala",
+          "sanskrit": "बल",
+          "definition": "Physical strength, vigor, and power",
+          "explanation": "Bala represents muscular strength and robust physical health. Hymns pray for bala to protect against enemies and accomplish great deeds.",
+          "modernParallel": "Physical fitness, strength, and resilience in modern wellness terminology"
+        },
+        {
+          "term": "Ojas",
+          "sanskrit": "ओजस्",
+          "definition": "Vital essence, the subtle substance that maintains immunity and vitality",
+          "explanation": "Ojas is considered the finest product of perfect digestion and healthy living. It creates a glow of health and protects against disease.",
+          "modernParallel": "Somewhat analogous to immune function and overall constitutional strength"
+        },
+        {
+          "term": "Ayus",
+          "sanskrit": "आयुस्",
+          "definition": "Lifespan, longevity, duration of life",
+          "explanation": "Ayus represents not just length of life but quality of years. Prayers often request 'hundred autumns' of healthy life.",
+          "modernParallel": "Healthspan - not just living long but living well"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "1.116",
+          "title": "The Healing Deeds of the Ashvins",
+          "mandala": 1,
+          "sukta": 116,
+          "deity": "Ashvins",
+          "rishi": "Kakshivan Dairghatamasa",
+          "verses": 25,
+          "excerpt": "O Ashvins, you restored sight to Rijrashva who was blind. You gave legs to Vispala who had been crippled. You rescued Bhujyu from drowning in the ocean. You rejuvenated the aged Cyavana.",
+          "context": "This hymn catalogs the miraculous healings performed by the divine physicians. Each story represents a different type of restoration: sight, mobility, rescue from death, and renewal of youth.",
+          "significance": "Shows that healing was viewed as divine intervention working through natural means. The Ashvins represent the ideal physicians—swift, skillful, and compassionate.",
+          "modernRelevance": "Emphasizes holistic healing that addresses root causes, not just symptoms. The variety of healings suggests different approaches for different conditions."
+        },
+        {
+          "reference": "10.97",
+          "title": "Hymn to the Healing Herbs",
+          "mandala": 10,
+          "sukta": 97,
+          "deity": "Oshadhi (Herbs)",
+          "rishi": "Bhishak Atharvana",
+          "verses": 23,
+          "excerpt": "The plants that were born three ages before the gods, I will declare the hundred powers of herbs. Mothers, you have a hundred forms and a thousand healing properties.",
+          "context": "One of the most important hymns about medicinal plants. It personifies herbs as mothers with wisdom older than the gods themselves, suggesting deep respect for plant medicine.",
+          "significance": "Documents early pharmaceutical knowledge. The 'hundred forms' likely refers to different species, while 'thousand properties' suggests multiple uses per plant.",
+          "modernRelevance": "Validates traditional herbal medicine and the importance of preserving plant diversity for future pharmaceutical discoveries."
+        },
+        {
+          "reference": "10.9",
+          "title": "The Waters of Life",
+          "mandala": 10,
+          "sukta": 9,
+          "deity": "Apas (Waters)",
+          "rishi": "Sindhukshit Praiyamedha",
+          "verses": 9,
+          "excerpt": "Waters, you are healing; bring us strength and health. Waters, you carry away all that is impure and diseased. May we look upon your blissful flow.",
+          "context": "Water is celebrated as the primary healing element. The hymn emphasizes both external cleansing and internal purification through drinking pure water.",
+          "significance": "Shows understanding of water's crucial role in health - both for hygiene and as medicine. The concept of 'healing waters' appears across cultures.",
+          "modernRelevance": "Validates importance of clean water for public health and the therapeutic use of hydrotherapy."
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Tree of Life",
+          "description": "The body as a tree with roots, trunk, and branches",
+          "symbolism": "Just as a tree needs nourishment from roots, the body requires proper diet and rest to sustain vitality.",
+          "hymnReference": "1.59"
+        },
+        {
+          "image": "The Sacred Fire",
+          "description": "Digestive fire (agni) that transforms food into vitality",
+          "symbolism": "Health depends on strong digestive fire. When it burns bright, all food becomes medicine; when weak, even medicine becomes poison.",
+          "hymnReference": "10.79"
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Holistic Medicine",
+          "connection": "The Vedic approach treats the whole person, not isolated symptoms—a principle central to modern integrative medicine.",
+          "example": "Mind-body medicine recognizes that mental state affects physical health, just as the Vedas connected consciousness (manas) with vitality (prana)."
+        },
+        {
+          "field": "Preventive Care",
+          "connection": "Emphasis on maintaining health rather than just treating disease aligns with modern preventive medicine.",
+          "example": "The concept of ojas (vital essence) is similar to building robust immune function through lifestyle choices."
+        },
+        {
+          "field": "Herbal Medicine",
+          "connection": "The Rig Veda's reverence for medicinal plants laid groundwork for Ayurvedic pharmacy, which modern science continues to validate.",
+          "example": "Many plants mentioned in Vedic hymns (like turmeric, ashwagandha) are now scientifically proven to have therapeutic properties."
+        }
+      ],
+      "suggestedQuestions": [
+        "What herbs did ancient healers use most?",
+        "How did the Ashvins perform their miraculous healings?",
+        "What is the connection between prana and physical health?",
+        "How can I build ojas according to Vedic wisdom?",
+        "What role does water play in Vedic healing?"
+      ]
+    },
+    "wellbeing": {
+      "introduction": {
+        "opening": "How do we find inner peace? What brings contentment in a turbulent world?",
+        "body": [
+          "Mental wellbeing in the Rig Veda is understood through the concept of shanti (peace), santosha (contentment), and freedom from fear. These hymns recognize that true happiness comes not from external circumstances but from inner alignment with cosmic order (rita).",
+          "The Vedic approach to wellbeing is both practical and spiritual. It acknowledges human emotions—fear, anxiety, grief—while providing practices and perspectives to transcend them. Prayer, ritual, and community are seen as essential supports for mental health.",
+          "These ancient verses offer remarkably modern insights: that peace comes from acceptance, that we must actively cultivate positive mental states, and that connection to something greater than ourselves provides resilience in difficult times."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Shanti",
+          "sanskrit": "शान्ति",
+          "definition": "Peace, tranquility, absence of disturbance",
+          "explanation": "Shanti is threefold: peace in body, peace in mind, and peace in one's environment. True shanti arises when all three are aligned.",
+          "modernParallel": "Similar to concepts of 'inner peace' or 'equanimity' in modern mindfulness"
+        },
+        {
+          "term": "Santosha",
+          "sanskrit": "सन्तोष",
+          "definition": "Contentment, satisfaction with what is",
+          "explanation": "Santosha is not complacency but deep acceptance of the present moment while still striving for dharma. It's peace with what is, not resignation.",
+          "modernParallel": "Related to 'acceptance' in ACT (Acceptance and Commitment Therapy) and gratitude practices"
+        },
+        {
+          "term": "Abhaya",
+          "sanskrit": "अभय",
+          "definition": "Fearlessness, freedom from fear",
+          "explanation": "Abhaya isn't recklessness but courage rooted in understanding. When one aligns with cosmic law (rita), fear naturally dissolves.",
+          "modernParallel": "Courage, psychological safety, freedom from anxiety in modern terminology"
+        },
+        {
+          "term": "Mudita",
+          "sanskrit": "मुदिता",
+          "definition": "Joy, delight, sympathetic happiness",
+          "explanation": "Mudita is the ability to feel joy in others' happiness. It's antidote to envy and key to social wellbeing.",
+          "modernParallel": "Compersion, vicarious joy—opposite of schadenfreude"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "7.86",
+          "title": "Varuna's Forgiveness",
+          "mandala": 7,
+          "sukta": 86,
+          "deity": "Varuna",
+          "rishi": "Vasishtha Maitravaruni",
+          "verses": 7,
+          "excerpt": "If we have sinned against one who loves us, against a friend or companion, O Varuna, or against someone who has harmed us, release us from that sin. Whatever offense we have committed, if we have broken your laws like gamers breaking the rules, do not let that destroy us, O God.",
+          "context": "A moving prayer for forgiveness and release from guilt. It shows psychological insight: guilt and shame corrode wellbeing, and forgiveness (divine and self-forgiveness) heals.",
+          "significance": "One of the most emotionally honest hymns. Acknowledges human failing while requesting compassion—both for oneself and from the divine.",
+          "modernRelevance": "Directly applicable to therapy around shame, self-compassion, and the healing power of forgiveness"
+        },
+        {
+          "reference": "10.34",
+          "title": "The Gambler's Lament",
+          "mandala": 10,
+          "sukta": 34,
+          "deity": "Unknown",
+          "rishi": "Kavasha Aila",
+          "verses": 14,
+          "excerpt": "The dice have maddened me. They drove me away from my faithful wife. My mother-in-law hates me. My wife pushes me away. But when I hear the dice rattling, I run to them like a lover to his beloved. Yet I counsel others: do not play with dice!",
+          "context": "A raw confession of addiction and its consequences. Shows that addiction struggles—and the self-knowledge that comes with them—existed 3,500 years ago.",
+          "significance": "One of the most psychologically modern hymns. It captures the essence of addiction: knowing better but being unable to stop, ruining relationships, yet being drawn back repeatedly.",
+          "modernRelevance": "Applicable to any addiction. Shows that recovery begins with honest self-examination and that community support matters"
+        },
+        {
+          "reference": "1.89",
+          "title": "Prayer for Protection",
+          "mandala": 1,
+          "sukta": 89,
+          "deity": "Vishvedevas",
+          "rishi": "Gotama Rahugana",
+          "verses": 10,
+          "excerpt": "May we be free from fear of you, O Gods, free from fear of anyone. Let us see a hundred autumns. May we live a hundred autumns in joy and peace. May all beings be happy.",
+          "context": "A comprehensive prayer for wellbeing—freedom from fear, long life, joy, and peace. The final line extends this wish to all beings, showing that personal wellbeing is connected to universal wellbeing.",
+          "significance": "Shows that mental health was understood to require safety, longevity, joy, and connection to others.",
+          "modernRelevance": "The 'may all beings be happy' mirrors modern loving-kindness meditation practices"
+        },
+        {
+          "reference": "10.127",
+          "title": "Hymn to Night",
+          "mandala": 10,
+          "sukta": 127,
+          "deity": "Ratri",
+          "rishi": "Kushika Kausika",
+          "verses": 8,
+          "excerpt": "Night has come, looking around on many sides with her eyes. She has clothed herself in all her glories. The immortal goddess has filled wide space, the depths and heights. She drives away the darkness with her light.",
+          "context": "A gentle hymn celebrating night as protective and peaceful. Instead of fearing darkness, it's seen as restful and renewing.",
+          "significance": "Shows healthy relationship with darkness and rest. Night isn't threatening but nurturing.",
+          "modernRelevance": "Applicable to sleep hygiene, rest, and overcoming fear of darkness or night anxiety"
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Calm Lake",
+          "description": "Mind as a lake that can be turbulent or still",
+          "symbolism": "When winds of desire and fear blow, the lake churns. When they cease, the surface becomes mirror-clear, reflecting reality as it is.",
+          "hymnReference": "10.129"
+        },
+        {
+          "image": "The Sheltered Fire",
+          "description": "Inner peace as a flame protected from winds",
+          "symbolism": "Just as fire needs shelter from wind to burn steadily, peace requires protection from constant disturbance.",
+          "hymnReference": "5.4"
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Psychology & Therapy",
+          "connection": "The Gambler's Lament shows that ancient people understood addiction's psychology remarkably well.",
+          "example": "Modern addiction treatment emphasizes the same elements: acknowledging powerlessness, community support, and gradual recovery"
+        },
+        {
+          "field": "Mindfulness Practices",
+          "connection": "The concept of shanti (peace) as actively cultivated rather than passively received aligns with modern mindfulness training.",
+          "example": "MBSR teaches that peace comes from present-moment awareness and acceptance, not from controlling circumstances"
+        },
+        {
+          "field": "Positive Psychology",
+          "connection": "The emphasis on santosha (contentment) and mudita (sympathetic joy) anticipates modern gratitude and positive psychology practices.",
+          "example": "Research shows that practicing gratitude and feeling joy for others increases personal wellbeing"
+        }
+      ],
+      "suggestedQuestions": [
+        "How did ancient people deal with anxiety?",
+        "What is the Vedic cure for excessive worry?",
+        "How can I cultivate santosha (contentment)?",
+        "What role does forgiveness play in mental health?",
+        "How are community and wellbeing connected?"
+      ]
+    },
+    "purpose": {
+      "introduction": {
+        "opening": "What is my purpose? How do I know what is right? What gives life meaning?",
+        "body": [
+          "The Rig Veda addresses life's purpose through two interconnected concepts: dharma (righteous duty) and rita (cosmic order). Dharma is one's personal path aligned with universal law; rita is that universal law itself—the fundamental order underlying reality.",
+          "Purpose in the Vedic worldview isn't something you invent but something you discover by understanding your unique role in the cosmic dance. Each being has svadharma (own dharma)—the specific contribution only they can make.",
+          "These hymns teach that meaning comes from participation in something greater than oneself, from fulfilling one's role with excellence, and from maintaining harmony between personal will and cosmic order."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Dharma",
+          "sanskrit": "धर्म",
+          "definition": "Righteous duty, cosmic law, one's proper role",
+          "explanation": "Dharma operates at multiple levels: universal dharma (truth, non-violence), social dharma (duties of one's role), and personal dharma (unique life purpose).",
+          "modernParallel": "Similar to concepts of 'calling,' 'vocation,' or 'life purpose' in modern psychology"
+        },
+        {
+          "term": "Rita",
+          "sanskrit": "ऋत",
+          "definition": "Cosmic order, fundamental truth, natural law",
+          "explanation": "Rita is the underlying principle that keeps planets in orbit, seasons in cycle, and societies functioning. Living in alignment with rita brings harmony; violating it causes chaos.",
+          "modernParallel": "Somewhat analogous to 'natural law' in philosophy or even natural laws in physics"
+        },
+        {
+          "term": "Satya",
+          "sanskrit": "सत्य",
+          "definition": "Truth, reality, that which is",
+          "explanation": "Satya is both truthfulness in speech and alignment with reality as it is. Speaking satya means your words match reality; living satya means your life matches your truth.",
+          "modernParallel": "Integrity, authenticity, alignment between values and actions"
+        },
+        {
+          "term": "Yajna",
+          "sanskrit": "यज्ञ",
+          "definition": "Sacrifice, offering, ritual action",
+          "explanation": "Yajna is selfless action offered to the cosmic order. The fire ritual is literal yajna, but any action done without selfish motive is yajna.",
+          "modernParallel": "Service, contribution, giving without expectation of return"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "10.129",
+          "title": "The Creation Hymn (Nasadiya Sukta)",
+          "mandala": 10,
+          "sukta": 129,
+          "deity": "Creation",
+          "rishi": "Prajapati Parameshthin",
+          "verses": 7,
+          "excerpt": "Then was neither existence nor non-existence. There was no realm of air, no sky beyond. What covered all? Where was it? In whose protection? What was that deep abyss of water? Who really knows? Who here can declare it? Whence was it born? Whence this creation?",
+          "context": "The ultimate philosophical hymn questioning existence itself. Rather than providing dogmatic answers, it embraces mystery and uncertainty.",
+          "significance": "Shows that true purpose may involve living meaningfully even without ultimate answers. Purpose isn't certainty but participation in the mystery.",
+          "modernRelevance": "Relevant to existential therapy and meaning-making in the face of uncertainty"
+        },
+        {
+          "reference": "1.164",
+          "title": "The Riddle Hymn",
+          "mandala": 1,
+          "sukta": 164,
+          "deity": "Vishvedevas",
+          "rishi": "Dirghatamas Auchathya",
+          "verses": 52,
+          "excerpt": "Two birds, beautiful of wing, close companions, cling to one common tree. One eats the sweet fruit; the other looks on without eating. On this same tree, a person sits grieving, deluded by his powerlessness. But when he sees the other, the Lord who is worshipped, and his glory, then his grief disappears.",
+          "context": "A profound metaphor for the self. The bird eating fruit is the ego caught in experience; the bird watching is the witnessing self. Purpose emerges when we identify with the watcher, not the doer.",
+          "significance": "Teaches that true purpose comes from understanding our nature as consciousness (the watcher) not just the personality (the eater).",
+          "modernRelevance": "Applicable to self-awareness practices and the distinction between ego and true self"
+        },
+        {
+          "reference": "4.23",
+          "title": "Indra and Rita",
+          "mandala": 4,
+          "sukta": 23,
+          "deity": "Indra",
+          "rishi": "Vamadeva Gautama",
+          "verses": 10,
+          "excerpt": "By rita, truth and cosmic law, the Adityas stand firm. By rita the earth is supported. By rita the sun shines and by rita fires burn. All this universe is set in rita.",
+          "context": "Explains that cosmic order (rita) is the fundamental principle underlying all existence. Understanding and aligning with rita gives life purpose and meaning.",
+          "significance": "Shows that purpose isn't arbitrary but rooted in cosmic structure. Finding your place in that order is finding purpose.",
+          "modernRelevance": "Similar to finding one's place in the 'web of life' or understanding ecological interconnection"
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Wheel",
+          "description": "Universe as a wheel with rita as the axle",
+          "symbolism": "Just as a wheel needs a central axle to turn smoothly, life needs alignment with cosmic order to function harmoniously.",
+          "hymnReference": "1.164"
+        },
+        {
+          "image": "The Sacred Tree",
+          "description": "The universe as a tree with two birds (hymn 1.164)",
+          "symbolism": "The tree is existence itself. One bird (ego) experiences; the other (soul) witnesses. Purpose is realizing you're the watcher, not just the experiencer.",
+          "hymnReference": "1.164"
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Existential Psychology",
+          "connection": "The Vedic search for dharma parallels Viktor Frankl's 'search for meaning' as central to human wellbeing.",
+          "example": "Logotherapy teaches that meaning comes from fulfilling responsibilities and contributing to something greater—exactly what dharma teaches"
+        },
+        {
+          "field": "Vocation & Calling",
+          "connection": "The concept of svadharma (one's own dharma) is similar to discovering one's unique calling or gifts.",
+          "example": "Modern career counseling emphasizes finding work aligned with values and strengths—discovering your dharma"
+        },
+        {
+          "field": "Ethics & Morality",
+          "connection": "Rita as cosmic law provides objective grounding for ethics, while dharma allows for situational application.",
+          "example": "Universal human rights (rita) combined with cultural context (dharma) creates balanced ethical framework"
+        }
+      ],
+      "suggestedQuestions": [
+        "How do I discover my personal dharma?",
+        "What is the relationship between dharma and free will?",
+        "How does rita differ from dharma?",
+        "Can purpose change over a lifetime?",
+        "How do I know if I'm aligned with cosmic order?"
+      ]
+    }
+  },
+  "metadata": {
+    "totalTopics": 10,
+    "completedTopics": 4,
+    "remainingTopics": ["nature", "ethics", "relationships", "existence", "energy", "success"],
+    "averageHymnsPerTopic": 6,
+    "note": "First 4 topics completed in detail. Remaining 6 follow same structure",
+    "contentNote": "Each topic includes: introduction, key concepts, 4-6 hymns, metaphors, modern relevance, and suggested questions"
+  }
+}

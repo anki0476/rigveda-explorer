@@ -1,7 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
 
+
 const Navigation = () => {
   const location = useLocation();
+
 
   const navItems = [
     { path: '/', label: 'Home', icon: '🏠' },
@@ -9,9 +11,12 @@ const Navigation = () => {
     { path: '/rigveda-on', label: 'Rig Veda On...', icon: '📚' },
     { path: '/surprise-me', label: 'Surprise Me!', icon: '✨' },
     { path: '/ask-rishi', label: 'Ask the Rishi', icon: '💬' },
+    { path: '/hymns', label: 'Hymns', icon: '📜' },
     { path: '/mandalas', label: 'Ten Mandalas', icon: '📖' },
+    { path: '/mandala-wheel', label: 'Mandala Wheel', icon: '🕉️' },
     { path: '/about', label: 'About', icon: 'ℹ️' },
   ];
+
 
   return (
     <nav className="bg-[--color-parchment-dark] border-b-4 border-[--color-gold]/30 shadow-lg sticky top-0 z-50">
@@ -43,5 +48,6 @@ const Navigation = () => {
     </nav>
   );
 };
+
 
 export default Navigation;

@@ -1,101 +1,74 @@
-import React, { useEffect } from 'react';
-import Lottie from 'react-lottie';
-import useSound from 'use-sound';
-import fireAnimationData from '../../assets/animations/fire-animation.json';
-import fireIgnitionSound from '../../assets/sounds/fire-ignition.mp3';
+import React, { useEffect, useRef } from 'react';
+import Lottie from 'lottie-react';
+import fireAnimation from '../../assets/animations/fire-animation.json';
+import fireSound from '../../assets/sounds/fire-ignition.mp3'; // ← Import the sound
 
-const FireLoading = ({ playSound }) => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: fireAnimationData,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-  };
+const FireLoading = ({ playSound = true }) => {
+  const audioRef = useRef(null);
 
-  // Fire ignition sound with preload
-  const [playFire] = useSound(fireIgnitionSound, {
-    volume: 0.9,
-    interrupt: false,
-    preload: true,
-    soundEnabled: playSound  // Only enable if audio unlocked
-  });
-
-  // Play fire sound immediately when component mounts (if audio unlocked)
   useEffect(() => {
-    if (playSound) {
-      // Tiny delay to ensure sound is ready
-      const timer = setTimeout(() => {
-        playFire();
-      }, 100);
-      return () => clearTimeout(timer);
+    // Play fire sound effect when component mounts
+    if (playSound && audioRef.current) {
+      console.log('🔊 Attempting to play sound...');
+      audioRef.current.volume = 0.4; // 40% volume
+      
+      // Attempt to play
+      const playPromise = audioRef.current.play();
+      
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            console.log('✅ Sound playing successfully!');
+          })
+          .catch(err => {
+            console.error('❌ Audio play failed:', err);
+            console.log('💡 This usually means user interaction is required first');
+          });
+      }
     }
-  }, [playSound, playFire]);
+
+    // Cleanup
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
+    };
+  }, [playSound]);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-b from-[--color-ink] via-[#1a0f08] to-[#0a0604] overflow-hidden">
-      {/* Radial Glow Background */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-[600px] h-[600px] bg-[--color-saffron] opacity-20 blur-3xl rounded-full" />
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-b from-orange-900 via-red-900 to-black">
+      {/* Fire Animation */}
+      <div className="w-96 h-96 mb-8">
+        <Lottie
+          animationData={fireAnimation}
+          loop={true}
+          autoplay={true}
+        />
       </div>
 
-      {/* Main Content Container */}
-      <div className="relative flex flex-col items-center justify-center gap-12 px-4">
-        
-        {/* Lottie Fire Animation */}
-        <div className="relative flex items-center justify-center">
-          <Lottie
-            options={defaultOptions}
-            height={280}
-            width={280}
-            isStopped={false}
-            isPaused={false}
-          />
-        </div>
+      {/* Loading Text */}
+      <h2 className="text-5xl font-serif font-bold text-orange-300 mb-4 animate-pulse">
+        Invoking Fire...
+      </h2>
 
-        {/* Text Content */}
-        <div className="flex flex-col items-center gap-6 text-center max-w-xl">
-          
-          {/* Sanskrit Text */}
-          <div className="space-y-3">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-[family:--font-family-sanskrit] text-[#F4C430] drop-shadow-[0_0_20px_rgba(244,196,48,0.6)] leading-relaxed font-bold">
-              अग्निमीळे पुरोहितम्
-            </h1>
-            <p className="text-base sm:text-lg text-[#E8C872] font-[family:--font-family-body] tracking-wider">
-              Agnim īḷe purohitam
-            </p>
-          </div>
-          
-          {/* English Translation */}
-          <p className="text-2xl sm:text-3xl font-[family:--font-family-body] text-white italic font-light drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]">
-            Invoking Fire...
-          </p>
+      <p className="text-2xl text-orange-200/80 italic mb-8">
+        Igniting the sacred flames 🔥
+      </p>
 
-          {/* Loading Dots */}
-          <div className="flex items-center justify-center gap-2 mt-4">
-            <div 
-              className="w-3 h-3 bg-[#F4C430] rounded-full animate-bounce-custom shadow-[0_0_10px_rgba(244,196,48,0.8)]" 
-              style={{ animationDelay: '0ms' }}
-            />
-            <div 
-              className="w-3 h-3 bg-[#F4C430] rounded-full animate-bounce-custom shadow-[0_0_10px_rgba(244,196,48,0.8)]" 
-              style={{ animationDelay: '150ms' }}
-            />
-            <div 
-              className="w-3 h-3 bg-[#F4C430] rounded-full animate-bounce-custom shadow-[0_0_10px_rgba(244,196,48,0.8)]" 
-              style={{ animationDelay: '300ms' }}
-            />
-          </div>
-        </div>
-
-        {/* Footer Text */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-          <p className="text-sm sm:text-base text-[#D4AF37] font-[family:--font-family-body] tracking-[0.25em] uppercase opacity-70">
-            Rigveda Explorer
-          </p>
-        </div>
+      {/* Animated Progress Dots */}
+      <div className="flex gap-3">
+        <span className="w-4 h-4 bg-orange-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></span>
+        <span className="w-4 h-4 bg-orange-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></span>
+        <span className="w-4 h-4 bg-orange-400 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></span>
       </div>
+
+      {/* Audio Element - Import the sound file */}
+      <audio
+        ref={audioRef}
+        src={fireSound}
+        preload="auto"
+      />
     </div>
   );
 };

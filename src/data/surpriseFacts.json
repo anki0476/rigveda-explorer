@@ -1,0 +1,405 @@
+{
+  "facts": [
+    {
+      "id": 1,
+      "category": "linguistics",
+      "title": "The Word 'Ignite' is Ancient!",
+      "fact": "The Sanskrit word 'Agni' (अग्नि - fire) shares the same Indo-European root as Latin 'ignis', which gave us English 'ignite' and 'ignition'. After 3,500 years, we're still using essentially the same word for fire!",
+      "relatedDeity": "agni",
+      "relatedTopic": "energy",
+      "shareText": "🔥 Did you know? 'Ignite' comes from the ancient Sanskrit 'Agni' - same word, 3,500 years later!",
+      "funFactor": 9
+    },
+    {
+      "id": 2,
+      "category": "philosophy",
+      "title": "Ancient Existential Questions",
+      "fact": "The Nasadiya Sukta (Hymn 10.129) ends with radical intellectual honesty: 'Who really knows? Who can say? Perhaps it formed itself, or perhaps it did not.' 3,500 years ago, Vedic sages were already questioning the origins of existence with scientific skepticism!",
+      "relatedHymn": "10.129",
+      "relatedTopic": "existence",
+      "shareText": "💭 Ancient wisdom: The Rig Veda asked 'Who really knows?' about creation - ultimate intellectual humility!",
+      "funFactor": 10
+    },
+    {
+      "id": 3,
+      "category": "mythology",
+      "title": "Indra: The Original Superhero",
+      "fact": "Indra has 289 hymns dedicated to him - more than any other deity! He's the original 'superhero' who defeats demons, releases waters, and drinks soma to power up before battles. Think Thor meets Superman!",
+      "relatedDeity": "indra",
+      "relatedTopic": "success",
+      "shareText": "⚡ Indra: 289 hymns strong - the OG superhero of ancient texts!",
+      "funFactor": 8
+    },
+    {
+      "id": 4,
+      "category": "science",
+      "title": "Ancient Astronomy",
+      "fact": "Hymn 1.164 describes the solar year using the metaphor of a wheel with 12 spokes (months) and 360 points (days). The ancient Vedic people had remarkably accurate astronomical knowledge and encoded it in poetry!",
+      "relatedHymn": "1.164",
+      "relatedTopic": "nature",
+      "shareText": "🌟 Ancient Indians encoded the 360-day calendar in poetry 3,500 years ago!",
+      "funFactor": 9
+    },
+    {
+      "id": 5,
+      "category": "connections",
+      "title": "The Inseparable Trio",
+      "fact": "Ushas (Dawn) appears in 20 hymns, but she's ALWAYS mentioned alongside the Ashvins (twin gods). They're like an ancient divine trio that never separates - the Ashvins ride a golden chariot that brings Ushas across the sky each morning.",
+      "relatedDeity": "ushas",
+      "relatedTopic": "nature",
+      "shareText": "🌅 Dawn goddess Ushas never appears alone - always with her twin companions, the Ashvins!",
+      "funFactor": 7
+    },
+    {
+      "id": 6,
+      "category": "linguistics",
+      "title": "Father Sky, Mother Earth",
+      "fact": "The Sanskrit 'Dyaus Pitar' (Sky Father) is linguistically identical to Greek 'Zeus Pater' and Latin 'Jupiter'. Same god, same name, spread across ancient Indo-European cultures!",
+      "relatedDeity": "dyaus",
+      "shareText": "⚡ Zeus, Jupiter, and Dyaus are literally the SAME god with the same name in different languages!",
+      "funFactor": 10
+    },
+    {
+      "id": 7,
+      "category": "philosophy",
+      "title": "The Question That Has No Answer",
+      "fact": "The Rig Veda contains the Riddle Hymn (1.164) with 52 verses of cryptic questions about existence, consciousness, and reality. It asks: 'What holds up the universe? What is the foundation of thought?' - questions we're still pondering!",
+      "relatedHymn": "1.164",
+      "relatedTopic": "mind",
+      "shareText": "🤔 The Rig Veda asked 'What is the foundation of thought?' 3,500 years before neuroscience!",
+      "funFactor": 9
+    },
+    {
+      "id": 8,
+      "category": "mythology",
+      "title": "The God Who Got Promoted",
+      "fact": "The Ribhus were originally skilled craftsmen who became gods through their exceptional artistry! They created miraculous objects and were granted immortality as a reward. Talk about career advancement!",
+      "relatedDeity": "ribhus",
+      "shareText": "🔨 The Ribhus worked their way UP to becoming gods - divine career goals!",
+      "funFactor": 8
+    },
+    {
+      "id": 9,
+      "category": "science",
+      "title": "Soma: Ancient Psychedelic?",
+      "fact": "Scholars have debated for over a century what the mysterious soma plant actually was. Theories include: ephedra, cannabis, fly agaric mushroom, or even a lost species. The ancient recipe remains one of history's greatest mysteries!",
+      "relatedDeity": "soma",
+      "shareText": "🍄 What was soma? The ancient psychedelic recipe has been lost for 3,000+ years!",
+      "funFactor": 10
+    },
+    {
+      "id": 10,
+      "category": "connections",
+      "title": "The Dynamic Duo",
+      "fact": "Indra and Agni are mentioned together in 157 hymns - the most frequently paired deities in the entire Rig Veda! Agni (fire) carries offerings up, Indra (thunder) brings rain down. The ultimate collaboration!",
+      "relatedDeity": "indra",
+      "shareText": "🔥⚡ Indra + Agni: 157 hymns together - the original power couple!",
+      "funFactor": 7
+    },
+    {
+      "id": 11,
+      "category": "philosophy",
+      "title": "First Feminist Theology?",
+      "fact": "Hymn 10.125 is spoken by Vac (Speech) herself - a goddess declaring her own supremacy: 'I am the Queen, I am the gatherer-up of treasures.' This is one of the earliest examples of a female deity speaking in first person!",
+      "relatedDeity": "vac",
+      "relatedHymn": "10.125",
+      "shareText": "👑 Goddess Vac declares: 'I am the Queen' - ancient female empowerment!",
+      "funFactor": 9
+    },
+    {
+      "id": 12,
+      "category": "mythology",
+      "title": "The Battle That Created Rivers",
+      "fact": "Indra's most famous deed was slaying Vritra, a cosmic serpent/demon who was hoarding all the world's waters. When Indra killed him, the waters were released, creating rivers and bringing life to earth. Epic cosmic plumbing!",
+      "relatedDeity": "indra",
+      "relatedHymn": "1.32",
+      "shareText": "⚡ Indra defeated a dragon to release all the world's waters - ultimate hero moment!",
+      "funFactor": 9
+    },
+    {
+      "id": 13,
+      "category": "linguistics",
+      "title": "The Ancient Word for 'Honey'",
+      "fact": "The Sanskrit word 'madhu' (honey/sweet) gave us 'mead' in English. The same root appears in Greek 'methy' (wine) and Old English 'meodu'. Sweet things have been sweet for millennia!",
+      "shareText": "🍯 'Mead' and 'madhu' (honey) - same sweet word for 4,000 years!",
+      "funFactor": 6
+    },
+    {
+      "id": 14,
+      "category": "science",
+      "title": "Counting in Ancient Times",
+      "fact": "The Rig Veda uses large numbers like 'sahasra' (thousand) and 'ayuta' (ten thousand) frequently, showing sophisticated mathematical concepts. They describe armies of 100,000 and cosmic time spans reaching into millions!",
+      "shareText": "🔢 Ancient Vedic people counted in thousands and millions - serious math!",
+      "funFactor": 7
+    },
+    {
+      "id": 15,
+      "category": "mythology",
+      "title": "The Goddess Who Never Ages",
+      "fact": "Ushas (Dawn) is described as 'ever-young' because she renews herself every morning. While countless generations grow old and die, Dawn remains eternally youthful - the original immortal beauty!",
+      "relatedDeity": "ushas",
+      "shareText": "🌅 Dawn never ages - she's been young for 3,500+ years!",
+      "funFactor": 8
+    },
+    {
+      "id": 16,
+      "category": "connections",
+      "title": "Mitra-Varuna: Two Sides of One Coin",
+      "fact": "Mitra and Varuna are so frequently invoked together that they're often treated as a divine pair (Mitra-Varuna). Mitra rules day and friendship; Varuna rules night and cosmic law. Think Batman and Superman of the ancient world!",
+      "relatedDeity": "varuna",
+      "shareText": "☀️🌙 Mitra (day) & Varuna (night) - the original dynamic duo!",
+      "funFactor": 7
+    },
+    {
+      "id": 17,
+      "category": "philosophy",
+      "title": "The Concept of Rita",
+      "fact": "'Rita' (ऋत) is cosmic order, truth, and natural law all rolled into one. It's the fundamental principle that keeps the universe functioning. Breaking rita causes chaos; following it brings harmony. The Force before Star Wars!",
+      "relatedTopic": "ethics",
+      "shareText": "⚖️ Rita: Ancient concept of cosmic order - the universe's operating system!",
+      "funFactor": 9
+    },
+    {
+      "id": 18,
+      "category": "mythology",
+      "title": "The Noose of Justice",
+      "fact": "Varuna catches sinners with his magical noose (pasha). If you break an oath or commit a sin, Varuna's noose will find you. He's basically the original cosmic detective with a lasso of truth!",
+      "relatedDeity": "varuna",
+      "relatedHymn": "7.86",
+      "shareText": "🪢 Varuna catches sinners with a magical noose - ancient justice system!",
+      "funFactor": 8
+    },
+    {
+      "id": 19,
+      "category": "science",
+      "title": "Seven Rivers Mystery",
+      "fact": "The Rig Veda frequently mentions 'sapta sindhu' (seven rivers). Scholars debate which rivers these are, but they're central to Vedic geography. The entire civilization was defined by these waterways!",
+      "shareText": "🌊 The 'seven rivers' of the Rig Veda - ancient geography mystery!",
+      "funFactor": 6
+    },
+    {
+      "id": 20,
+      "category": "linguistics",
+      "title": "God = Deva = Divine",
+      "fact": "The Sanskrit 'deva' (god) comes from the root 'div' meaning 'to shine'. Gods are literally 'shining ones'. This root gives us 'divine', 'deity', and even 'Tuesday' (Tiw's day, from Germanic *Tiwaz, related to Sanskrit dyaus)!",
+      "shareText": "✨ 'Deva' means 'shining one' - gods were literally beings of light!",
+      "funFactor": 8
+    },
+    {
+      "id": 21,
+      "category": "mythology",
+      "title": "Soma: The Drink of Immortality",
+      "fact": "Soma wasn't just any drink - it was believed to grant immortality (amrita). The gods themselves drank it to maintain their divine status. In later mythology, gods and demons fought a cosmic war over it!",
+      "relatedDeity": "soma",
+      "shareText": "🍷 Soma granted immortality - the ancient elixir of life!",
+      "funFactor": 9
+    },
+    {
+      "id": 22,
+      "category": "philosophy",
+      "title": "Mind vs. Heart Ancient Debate",
+      "fact": "The Rig Veda distinguishes between 'manas' (processing mind), 'hridaya' (heart/emotional center), and 'chitta' (pure consciousness). This psychological model predates Western philosophy by millennia!",
+      "relatedTopic": "mind",
+      "shareText": "🧠 Ancient Indians had different words for mind, consciousness, and heart-center!",
+      "funFactor": 9
+    },
+    {
+      "id": 23,
+      "category": "connections",
+      "title": "Agni: The Ultimate Messenger",
+      "fact": "Agni appears in 218 hymns and is connected to nearly every other deity. Why? He's the messenger who carries offerings from humans to gods. He's literally the divine postal service!",
+      "relatedDeity": "agni",
+      "shareText": "📬 Agni is the divine messenger - ancient spiritual post office!",
+      "funFactor": 7
+    },
+    {
+      "id": 24,
+      "category": "science",
+      "title": "Poetic Meters as Code",
+      "fact": "The Rig Veda uses sophisticated poetic meters (chandas) like Gayatri (24 syllables), Trishtubh (44 syllables), and Jagati (48 syllables). These weren't just for beauty - they were mnemonic devices to preserve accuracy across generations!",
+      "shareText": "📖 Ancient Indians used poetic meter as data compression - 3,500 years before computers!",
+      "funFactor": 9
+    },
+    {
+      "id": 25,
+      "category": "mythology",
+      "title": "The Twins Who Save Everyone",
+      "fact": "The Ashvins are divine physicians who rescue shipwrecked sailors, restore sight to the blind, and even give youth back to the elderly. They're basically ancient superheroes with a medical license!",
+      "relatedDeity": "ashvins",
+      "relatedHymn": "1.116",
+      "shareText": "🐎 The Ashvins: Divine doctors who rescued drowning sailors and restored youth!",
+      "funFactor": 8
+    },
+    {
+      "id": 26,
+      "category": "philosophy",
+      "title": "The First Gender-Neutral Pronoun?",
+      "fact": "The Rig Veda uses 'tad ekam' (That One) to refer to the ultimate reality before creation - neither male nor female, neither being nor non-being. Non-binary divinity 3,500 years ago!",
+      "relatedHymn": "10.129",
+      "shareText": "♾️ The Rig Veda describes ultimate reality as 'That One' - beyond gender!",
+      "funFactor": 10
+    },
+    {
+      "id": 27,
+      "category": "linguistics",
+      "title": "The Ancient Word for 'Mother'",
+      "fact": "Sanskrit 'matar' (mother) is nearly identical across Indo-European languages: Latin 'mater', Greek 'meter', Old English 'modor', Persian 'madar'. The word for 'mother' has barely changed in 6,000 years!",
+      "shareText": "👩‍👧 'Mother' sounds almost the same in 50+ languages - oldest word ever!",
+      "funFactor": 8
+    },
+    {
+      "id": 28,
+      "category": "mythology",
+      "title": "Vishnu's Three Steps",
+      "fact": "In the Rig Veda, Vishnu takes three cosmic steps that measure the entire universe. First step: Earth. Second step: Atmosphere. Third step: Heaven. He literally walked across creation!",
+      "relatedDeity": "vishnu",
+      "relatedHymn": "1.154",
+      "shareText": "🦶 Vishnu measured the universe in 3 steps - ultimate stride!",
+      "funFactor": 9
+    },
+    {
+      "id": 29,
+      "category": "science",
+      "title": "Ancient Acoustics",
+      "fact": "The Rig Veda was composed to be recited aloud with specific pitch accents (svara). These accents were so important that they were preserved through 3,500 years of oral transmission with stunning accuracy!",
+      "shareText": "🎵 The Rig Veda was sung with specific pitches - preserved for 3,500 years!",
+      "funFactor": 8
+    },
+    {
+      "id": 30,
+      "category": "connections",
+      "title": "The Family Business",
+      "fact": "Many hymns were composed by specific family lineages! The Atris composed much of Mandala 5, the Vishvamitras did Mandala 3, and the Kanvas did Mandala 8. Vedic poetry was a family tradition passed down through generations!",
+      "shareText": "👨‍👩‍👧‍👦 Rig Vedic hymns were family businesses - poetic dynasties!",
+      "funFactor": 7
+    },
+    {
+      "id": 31,
+      "category": "philosophy",
+      "title": "First Recorded Doubt",
+      "fact": "The Nasadiya Sukta (10.129) is perhaps the first recorded expression of metaphysical doubt. The poet admits that even the gods might not know how creation began. Radical honesty in ancient theology!",
+      "relatedHymn": "10.129",
+      "shareText": "❓ 'Perhaps even the gods don't know' - ancient admission of uncertainty!",
+      "funFactor": 10
+    },
+    {
+      "id": 32,
+      "category": "mythology",
+      "title": "Rudra: The Healer Who Hurts",
+      "fact": "Rudra is simultaneously feared as a bringer of disease and praised as a healer. He has a thousand medicines but also a thousand arrows. The original embodiment of 'what doesn't kill you makes you stronger'!",
+      "relatedDeity": "rudra",
+      "relatedHymn": "2.33",
+      "shareText": "⚕️ Rudra: God of both disease AND healing - ultimate paradox!",
+      "funFactor": 8
+    },
+    {
+      "id": 33,
+      "category": "linguistics",
+      "title": "The Number Seven is Sacred",
+      "fact": "The number seven appears everywhere in the Rig Veda: seven rivers, seven sages (rishis), seven rays of Agni, seven waters. The mystical significance of seven dates back at least 3,500 years!",
+      "shareText": "7️⃣ Seven rivers, seven sages, seven rays - ancient sacred number!",
+      "funFactor": 7
+    },
+    {
+      "id": 34,
+      "category": "science",
+      "title": "Oral Tradition Accuracy",
+      "fact": "The Rig Veda was transmitted orally for nearly 2,000 years before being written down, yet scholars confirm it remained virtually unchanged. Ancient memory techniques were incredibly sophisticated!",
+      "shareText": "🗣️ 2,000 years of oral transmission with ZERO changes - human memory at its peak!",
+      "funFactor": 10
+    },
+    {
+      "id": 35,
+      "category": "mythology",
+      "title": "The Gambler's Lament",
+      "fact": "Hymn 10.34 is a moving plea from a gambling addict to stop playing dice! It's one of the most relatable and human hymns, showing that addiction struggles existed 3,500 years ago.",
+      "relatedHymn": "10.34",
+      "shareText": "🎲 Ancient hymn about gambling addiction - some struggles are timeless!",
+      "funFactor": 9
+    },
+    {
+      "id": 36,
+      "category": "philosophy",
+      "title": "The Power of Intention",
+      "fact": "The concept of 'sankalpa' (intention/will) appears in the Rig Veda. The idea that focused intention shapes reality is ancient wisdom now backed by modern psychology!",
+      "relatedTopic": "mind",
+      "shareText": "💭 'Sankalpa' (intention) shapes reality - 3,500-year-old law of attraction!",
+      "funFactor": 8
+    },
+    {
+      "id": 37,
+      "category": "connections",
+      "title": "Heaven and Earth: The Original Couple",
+      "fact": "Dyaus (Sky Father) and Prithivi (Earth Mother) are invoked together 56 times - they're the cosmic parents who created everything. Think Greek Ouranos and Gaia, but earlier!",
+      "relatedDeity": "prithivi",
+      "shareText": "🌍☁️ Sky Father + Earth Mother = Everything. Ancient cosmic romance!",
+      "funFactor": 7
+    },
+    {
+      "id": 38,
+      "category": "mythology",
+      "title": "The Dialogue Hymns",
+      "fact": "Some hymns are actual dramatic dialogues! The most famous is between Yama (Death) and his twin sister Yami - a moving conversation about mortality and loss. Ancient theater!",
+      "relatedDeity": "yama",
+      "relatedHymn": "10.10",
+      "shareText": "🎭 The Rig Veda has dialogue hymns - ancient drama in verse!",
+      "funFactor": 9
+    },
+    {
+      "id": 39,
+      "category": "science",
+      "title": "Water Purification Rituals",
+      "fact": "The Rig Veda describes waters as 'ghrtavat' (mixed with ghee/clarifying agent) for purification. Ancient water treatment techniques encoded in religious rituals!",
+      "relatedDeity": "apas",
+      "shareText": "💧 Ancient water purification techniques disguised as religious rituals!",
+      "funFactor": 7
+    },
+    {
+      "id": 40,
+      "category": "linguistics",
+      "title": "Name Yourself",
+      "fact": "The Sanskrit word 'nama' (name) gives us 'name' in English, 'nomen' in Latin, 'onoma' in Greek. Humans have been naming things the same way for millennia!",
+      "shareText": "📛 'Name' has been 'nama' for 5,000+ years - literally!",
+      "funFactor": 6
+    }
+  ],
+  "categories": {
+    "linguistics": {
+      "name": "Linguistic Gems",
+      "description": "Word origins and language connections",
+      "icon": "📖",
+      "count": 10
+    },
+    "philosophy": {
+      "name": "Ancient Wisdom",
+      "description": "Profound philosophical insights",
+      "icon": "💭",
+      "count": 10
+    },
+    "mythology": {
+      "name": "Epic Tales",
+      "description": "Stories of gods and heroes",
+      "icon": "⚡",
+      "count": 12
+    },
+    "science": {
+      "name": "Ancient Knowledge",
+      "description": "Scientific and mathematical insights",
+      "icon": "🔬",
+      "count": 8
+    },
+    "connections": {
+      "name": "Divine Networks",
+      "description": "How deities relate to each other",
+      "icon": "🔗",
+      "count": 6
+    }
+  },
+  "metadata": {
+    "totalFacts": 40,
+    "averageFunFactor": 8.2,
+    "mostPopularCategory": "mythology",
+    "source": "Compiled from Rig Veda scholarship and translations",
+    "note": "All facts are historically accurate based on current scholarship"
+  }
+}

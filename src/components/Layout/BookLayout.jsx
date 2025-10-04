@@ -1,35 +1,38 @@
 import React from 'react';
 import "../../styles/textures.css";
 import Navigation from './Navigation';
+import GlobalSearch from '../GlobalSearch';
 
-
-
-/**
- * BookLayout Component
- * 
- * A full-page container with ancient manuscript aesthetics for the Rig Veda Explorer.
- * Features parchment background, Sanskrit title, and responsive design.
- * 
- * @param {React.ReactNode} children - The page content to display
- * @param {number} [pageNumber] - Optional page number to display in bottom-right
- * @returns {JSX.Element} The book layout component
- */
 const BookLayout = ({ children, pageNumber }) => {
+  // ← REMOVED all the AudioUnlock state and logic
+
   return (
     <>
       <Navigation />
       
       <div className="min-h-screen w-full texture-parchment relative overflow-hidden">
-        {/* Sanskrit Title - Top Left Corner */}
-        <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-10">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-amber-600 drop-shadow-sm">
-            ऋग्वेद
-          </h1>
-          <div className="text-xs sm:text-sm text-amber-700/80 font-serif mt-1">
-            Rig Veda
+        {/* Top Bar with Sanskrit Title and Global Search */}
+        <div className="absolute top-4 left-4 right-4 sm:top-6 sm:left-6 sm:right-6 z-10 flex items-start justify-between gap-4">
+          {/* Sanskrit Title - Left Side */}
+          <div>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-amber-600 drop-shadow-sm">
+              ऋग्वेद
+            </h1>
+            <div className="text-xs sm:text-sm text-amber-700/80 font-serif mt-1">
+              Rig Veda
+            </div>
+          </div>
+
+          {/* Global Search - Right Side */}
+          <div className="hidden md:block flex-shrink-0 w-full max-w-md">
+            <GlobalSearch />
           </div>
         </div>
 
+        {/* Mobile Search - Below Title on Small Screens */}
+        <div className="md:hidden absolute top-24 left-4 right-4 z-10">
+          <GlobalSearch />
+        </div>
 
         {/* Page Number - Bottom Right Corner (if provided) */}
         {pageNumber && (
@@ -40,9 +43,8 @@ const BookLayout = ({ children, pageNumber }) => {
           </div>
         )}
 
-
         {/* Main Content Container */}
-        <div className="w-full max-w-none sm:max-w-4xl lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+        <div className="w-full max-w-none sm:max-w-4xl lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 mt-16 md:mt-0">
           {/* Content Wrapper with subtle inner shadow */}
           <div className="relative">
             {/* Subtle inner glow effect */}
@@ -54,7 +56,6 @@ const BookLayout = ({ children, pageNumber }) => {
             </div>
           </div>
         </div>
-
 
         {/* Decorative Corner Elements */}
         <div className="absolute top-0 left-0 w-16 h-16 sm:w-20 sm:h-20 opacity-10">
@@ -69,7 +70,6 @@ const BookLayout = ({ children, pageNumber }) => {
         <div className="absolute bottom-0 right-0 w-16 h-16 sm:w-20 sm:h-20 opacity-10">
           <div className="w-full h-full border-r-2 border-b-2 border-amber-600 rounded-br-lg" />
         </div>
-
 
         {/* Subtle Page Edge Effects */}
         <div className="absolute inset-0 pointer-events-none">
@@ -86,6 +86,5 @@ const BookLayout = ({ children, pageNumber }) => {
     </>
   );
 };
-
 
 export default BookLayout;

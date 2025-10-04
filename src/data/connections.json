@@ -1,0 +1,415 @@
+{
+  "connections": [
+    {
+      "source": "indra",
+      "target": "agni",
+      "strength": 157,
+      "context": "Frequently invoked together in sacrifice rituals. Agni carries offerings to Indra.",
+      "type": "ritual",
+      "sampleHymns": ["1.3", "1.6", "2.1", "3.12"]
+    },
+    {
+      "source": "indra",
+      "target": "soma",
+      "strength": 143,
+      "context": "Indra drinks soma before battles. Soma empowers Indra's strength.",
+      "type": "empowerment",
+      "sampleHymns": ["1.16", "3.32", "8.1", "9.2"]
+    },
+    {
+      "source": "indra",
+      "target": "maruts",
+      "strength": 89,
+      "context": "Maruts are Indra's battle companions. Together they fight demons and bring rain.",
+      "type": "alliance",
+      "sampleHymns": ["1.165", "1.171", "5.57"]
+    },
+    {
+      "source": "indra",
+      "target": "vishnu",
+      "strength": 45,
+      "context": "Allied in cosmic battles. Vishnu assists Indra in establishing cosmic order.",
+      "type": "alliance",
+      "sampleHymns": ["1.154", "6.69"]
+    },
+    {
+      "source": "indra",
+      "target": "vayu",
+      "strength": 38,
+      "context": "Often invoked together. Both share soma offerings.",
+      "type": "ritual",
+      "sampleHymns": ["1.134", "1.135"]
+    },
+    {
+      "source": "indra",
+      "target": "varuna",
+      "strength": 32,
+      "context": "Both are sovereign deities, though with different spheres of influence.",
+      "type": "parallel",
+      "sampleHymns": ["7.82", "7.86"]
+    },
+    {
+      "source": "indra",
+      "target": "brihaspati",
+      "strength": 28,
+      "context": "Brihaspati as priest supports Indra's victories through prayer.",
+      "type": "support",
+      "sampleHymns": ["2.23", "4.50"]
+    },
+    {
+      "source": "agni",
+      "target": "soma",
+      "strength": 98,
+      "context": "Agni heats and transforms soma. Essential ritual partnership.",
+      "type": "transformation",
+      "sampleHymns": ["1.91", "3.1", "9.5"]
+    },
+    {
+      "source": "agni",
+      "target": "ushas",
+      "strength": 67,
+      "context": "Agni kindled at dawn. Both associated with awakening and illumination.",
+      "type": "temporal",
+      "sampleHymns": ["1.44", "1.123", "5.1"]
+    },
+    {
+      "source": "agni",
+      "target": "maruts",
+      "strength": 45,
+      "context": "Agni invoked with Maruts for protection and victory.",
+      "type": "invocation",
+      "sampleHymns": ["1.19", "5.60"]
+    },
+    {
+      "source": "agni",
+      "target": "vishvedevas",
+      "strength": 52,
+      "context": "Agni mediates between humans and all gods collectively.",
+      "type": "mediation",
+      "sampleHymns": ["1.3", "1.189"]
+    },
+    {
+      "source": "agni",
+      "target": "varuna",
+      "strength": 31,
+      "context": "Agni as purifier appeals to Varuna for forgiveness.",
+      "type": "purification",
+      "sampleHymns": ["4.1", "5.3"]
+    },
+    {
+      "source": "agni",
+      "target": "surya",
+      "strength": 28,
+      "context": "Both are sources of light and energy, terrestrial and celestial.",
+      "type": "parallel",
+      "sampleHymns": ["1.1", "1.115"]
+    },
+    {
+      "source": "soma",
+      "target": "varuna",
+      "strength": 41,
+      "context": "Soma offered to Varuna. Both connected to cosmic waters.",
+      "type": "offering",
+      "sampleHymns": ["9.73", "9.86"]
+    },
+    {
+      "source": "soma",
+      "target": "maruts",
+      "strength": 36,
+      "context": "Soma offerings accompanied by Maruts. Storm gods receive soma.",
+      "type": "ritual",
+      "sampleHymns": ["9.66", "9.96"]
+    },
+    {
+      "source": "ushas",
+      "target": "ashvins",
+      "strength": 78,
+      "context": "Ashvins always arrive with dawn. Inseparable trio in hymns.",
+      "type": "temporal",
+      "sampleHymns": ["1.46", "1.92", "7.71"]
+    },
+    {
+      "source": "ushas",
+      "target": "surya",
+      "strength": 52,
+      "context": "Dawn precedes sunrise. Sister relationship in mythology.",
+      "type": "succession",
+      "sampleHymns": ["1.92", "1.115"]
+    },
+    {
+      "source": "ushas",
+      "target": "agni",
+      "strength": 67,
+      "context": "Sacred fire kindled at dawn. Both awakeners and illuminators.",
+      "type": "temporal",
+      "sampleHymns": ["1.44", "3.61", "5.1"]
+    },
+    {
+      "source": "surya",
+      "target": "savitar",
+      "strength": 44,
+      "context": "Both solar deities, often conflated or invoked together.",
+      "type": "overlap",
+      "sampleHymns": ["1.35", "5.81"]
+    },
+    {
+      "source": "surya",
+      "target": "varuna",
+      "strength": 29,
+      "context": "Sun as eye of Varuna. Varuna sees all through Surya.",
+      "type": "instrument",
+      "sampleHymns": ["7.63", "7.88"]
+    },
+    {
+      "source": "maruts",
+      "target": "rudra",
+      "strength": 55,
+      "context": "Maruts are sons of Rudra. Father-sons relationship.",
+      "type": "kinship",
+      "sampleHymns": ["1.85", "2.33"]
+    },
+    {
+      "source": "maruts",
+      "target": "agni",
+      "strength": 45,
+      "context": "Both fierce and protective. Invoked together for strength.",
+      "type": "parallel",
+      "sampleHymns": ["1.19", "5.60"]
+    },
+    {
+      "source": "varuna",
+      "target": "mitra",
+      "strength": 89,
+      "context": "Frequently paired as Mitra-Varuna. Complementary sovereign deities.",
+      "type": "pair",
+      "sampleHymns": ["3.59", "5.62", "7.61"]
+    },
+    {
+      "source": "varuna",
+      "target": "apas",
+      "strength": 38,
+      "context": "Varuna is lord of waters. Waters embody his domain.",
+      "type": "dominion",
+      "sampleHymns": ["7.49", "10.9"]
+    },
+    {
+      "source": "ashvins",
+      "target": "surya",
+      "strength": 34,
+      "context": "Ashvins bring dawn which precedes sun. Sequential appearance.",
+      "type": "succession",
+      "sampleHymns": ["1.116", "1.117"]
+    },
+    {
+      "source": "vishnu",
+      "target": "indra",
+      "strength": 45,
+      "context": "Vishnu assists Indra in cosmic battles. Allied deities.",
+      "type": "alliance",
+      "sampleHymns": ["1.154", "6.69", "8.100"]
+    },
+    {
+      "source": "vayu",
+      "target": "indra",
+      "strength": 38,
+      "context": "Both receive soma together. Often jointly invoked.",
+      "type": "ritual",
+      "sampleHymns": ["1.134", "1.135", "7.90"]
+    },
+    {
+      "source": "pushan",
+      "target": "indra",
+      "strength": 22,
+      "context": "Pushan assists Indra. Complementary protective functions.",
+      "type": "support",
+      "sampleHymns": ["6.53", "6.54"]
+    },
+    {
+      "source": "brihaspati",
+      "target": "indra",
+      "strength": 28,
+      "context": "Brihaspati's prayers empower Indra's victories.",
+      "type": "empowerment",
+      "sampleHymns": ["2.23", "4.50"]
+    },
+    {
+      "source": "savitar",
+      "target": "surya",
+      "strength": 44,
+      "context": "Both solar deities representing different aspects of sun.",
+      "type": "aspect",
+      "sampleHymns": ["1.35", "4.53", "5.81"]
+    },
+    {
+      "source": "prithivi",
+      "target": "dyaus",
+      "strength": 56,
+      "context": "Earth and Sky as cosmic parents. Primal couple.",
+      "type": "marriage",
+      "sampleHymns": ["1.160", "1.185", "6.70"]
+    },
+    {
+      "source": "prithivi",
+      "target": "agni",
+      "strength": 31,
+      "context": "Fire emerges from earth. Agni born from terrestrial realm.",
+      "type": "emergence",
+      "sampleHymns": ["5.84"]
+    },
+    {
+      "source": "aditi",
+      "target": "surya",
+      "strength": 24,
+      "context": "Aditi is mother of solar deities (Adityas) including Surya.",
+      "type": "kinship",
+      "sampleHymns": ["1.89", "10.63"]
+    },
+    {
+      "source": "vishvedevas",
+      "target": "agni",
+      "strength": 52,
+      "context": "Agni mediates between humans and all gods collectively.",
+      "type": "mediation",
+      "sampleHymns": ["1.3", "1.189", "10.65"]
+    },
+    {
+      "source": "vishvedevas",
+      "target": "indra",
+      "strength": 48,
+      "context": "Indra as chief among all gods. Leader of Vishvedevas.",
+      "type": "leadership",
+      "sampleHymns": ["1.89", "3.54"]
+    },
+    {
+      "source": "ribhus",
+      "target": "indra",
+      "strength": 31,
+      "context": "Ribhus create weapons and chariots for Indra.",
+      "type": "service",
+      "sampleHymns": ["1.161", "4.33"]
+    },
+    {
+      "source": "ribhus",
+      "target": "ashvins",
+      "strength": 26,
+      "context": "Both associated with miraculous craftsmanship and healing.",
+      "type": "parallel",
+      "sampleHymns": ["1.161", "4.33"]
+    },
+    {
+      "source": "tvashtar",
+      "target": "indra",
+      "strength": 18,
+      "context": "Tvashtar crafts Indra's thunderbolt (vajra).",
+      "type": "creation",
+      "sampleHymns": ["1.32", "1.85"]
+    },
+    {
+      "source": "yama",
+      "target": "agni",
+      "strength": 15,
+      "context": "Agni as psychopomp carries offerings to ancestors ruled by Yama.",
+      "type": "mediation",
+      "sampleHymns": ["10.14", "10.16"]
+    },
+    {
+      "source": "ratri",
+      "target": "ushas",
+      "strength": 12,
+      "context": "Night and Dawn as sisters. Sequential cosmic order.",
+      "type": "kinship",
+      "sampleHymns": ["10.127"]
+    },
+    {
+      "source": "parjanya",
+      "target": "indra",
+      "strength": 21,
+      "context": "Both rain-bringers. Parjanya waters earth, Indra releases waters.",
+      "type": "parallel",
+      "sampleHymns": ["5.83", "7.101"]
+    },
+    {
+      "source": "parjanya",
+      "target": "maruts",
+      "strength": 19,
+      "context": "All storm deities associated with rain and thunder.",
+      "type": "domain",
+      "sampleHymns": ["5.83"]
+    },
+    {
+      "source": "vac",
+      "target": "brihaspati",
+      "strength": 14,
+      "context": "Both related to sacred speech and prayer.",
+      "type": "domain",
+      "sampleHymns": ["10.125"]
+    },
+    {
+      "source": "apas",
+      "target": "soma",
+      "strength": 33,
+      "context": "Soma flows in/with waters. Waters purify soma.",
+      "type": "purification",
+      "sampleHymns": ["9.67", "10.9"]
+    },
+    {
+      "source": "apas",
+      "target": "varuna",
+      "strength": 38,
+      "context": "Varuna as lord of cosmic waters. Waters are his domain.",
+      "type": "dominion",
+      "sampleHymns": ["7.49"]
+    },
+    {
+      "source": "mitra",
+      "target": "surya",
+      "strength": 27,
+      "context": "Mitra associated with daylight, Surya is the sun itself.",
+      "type": "aspect",
+      "sampleHymns": ["3.59"]
+    },
+    {
+      "source": "rudra",
+      "target": "agni",
+      "strength": 23,
+      "context": "Both fierce deities associated with transformative power.",
+      "type": "parallel",
+      "sampleHymns": ["2.1", "2.33"]
+    },
+    {
+      "source": "soma",
+      "target": "vishnu",
+      "strength": 19,
+      "context": "Soma offered to Vishnu. Both associated with cosmic order.",
+      "type": "offering",
+      "sampleHymns": ["1.154", "9.96"]
+    },
+    {
+      "source": "agni",
+      "target": "brihaspati",
+      "strength": 25,
+      "context": "Both associated with sacred fire and prayer rituals.",
+      "type": "ritual",
+      "sampleHymns": ["2.1", "2.23"]
+    }
+  ],
+  "metadata": {
+    "totalConnections": 45,
+    "strongestConnection": {
+      "deities": ["indra", "agni"],
+      "strength": 157,
+      "note": "Most frequently co-mentioned deity pair"
+    },
+    "connectionTypes": [
+      "ritual",
+      "alliance",
+      "kinship",
+      "temporal",
+      "parallel",
+      "mediation",
+      "empowerment"
+    ],
+    "source": "Based on Rig Veda co-occurrence analysis",
+    "note": "Strength values represent approximate co-mention counts across all mandalas"
+  }
+}

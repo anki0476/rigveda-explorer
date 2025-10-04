@@ -1,0 +1,723 @@
+{
+  "deities": [
+    {
+      "id": "indra",
+      "name": "Indra",
+      "alternateNames": ["Shakra", "Maghavan", "Vajrapani"],
+      "hymnCount": 289,
+      "category": "major",
+      "domains": ["war", "thunder", "rain", "kingship", "victory"],
+      "description": "King of gods, wielder of vajra (thunderbolt), slayer of demon Vritra. Most prominent deity in Rig Veda.",
+      "attributes": ["powerful", "generous", "warrior", "protector"],
+      "iconSuggestion": "⚡",
+      "color": "#4169E1",
+      "mandalas": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "peakMandalas": [1, 2, 8],
+      "keyMyths": [
+        "Slaying of Vritra (cosmic serpent)",
+        "Releasing the waters",
+        "Defender against Asuras"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "1.32",
+          "title": "Indra Slays Vritra",
+          "excerpt": "I will declare the manly deeds of Indra, the first that he achieved..."
+        },
+        {
+          "reference": "2.12",
+          "title": "Who is Indra?",
+          "excerpt": "He who gave being to the Sun and Morning, who leads the waters..."
+        },
+        {
+          "reference": "8.1",
+          "title": "Praise of Indra",
+          "excerpt": "Come, magnify with song the mighty Indra..."
+        }
+      ]
+    },
+    {
+      "id": "agni",
+      "name": "Agni",
+      "alternateNames": ["Jatavedas", "Vaisvanara"],
+      "hymnCount": 218,
+      "category": "major",
+      "domains": ["fire", "sacrifice", "messenger", "transformation"],
+      "description": "God of fire and sacrifice. Mediator between humans and gods, consumer of offerings.",
+      "attributes": ["purifying", "illuminating", "transformative", "sacred"],
+      "iconSuggestion": "🔥",
+      "color": "#FF4500",
+      "mandalas": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "peakMandalas": [1, 3, 5],
+      "keyMyths": [
+        "Born from two fire-sticks",
+        "Messenger between worlds",
+        "Consumer of soma"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "1.1",
+          "title": "Opening Hymn to Agni",
+          "excerpt": "I praise Agni, the priest, the divine minister of sacrifice..."
+        },
+        {
+          "reference": "3.1",
+          "title": "Agni as Mediator",
+          "excerpt": "We choose Agni as our messenger, the all-possessing..."
+        },
+        {
+          "reference": "10.51",
+          "title": "Dialogue with Agni",
+          "excerpt": "What sin have we committed, O Agni, that you turn away?"
+        }
+      ]
+    },
+    {
+      "id": "soma",
+      "name": "Soma",
+      "alternateNames": ["Pavamana", "Indu"],
+      "hymnCount": 143,
+      "category": "major",
+      "domains": ["sacred-drink", "moon", "inspiration", "immortality"],
+      "description": "Personification of sacred soma drink and lunar deity. Source of divine inspiration.",
+      "attributes": ["intoxicating", "purifying", "inspiring", "immortal"],
+      "iconSuggestion": "🌙",
+      "color": "#C0C0C0",
+      "mandalas": [1, 8, 9, 10],
+      "peakMandalas": [9],
+      "keyMyths": [
+        "Pressed between stones",
+        "Purified through filters",
+        "Drunk by Indra before battle"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "9.1",
+          "title": "Soma Pavamana",
+          "excerpt": "Flow onward, Soma, in your juice, in your clearness..."
+        },
+        {
+          "reference": "9.113",
+          "title": "Where Immortality Dwells",
+          "excerpt": "Where light is perpetual, in the world where the sun is placed..."
+        }
+      ]
+    },
+    {
+      "id": "varuna",
+      "name": "Varuna",
+      "alternateNames": ["Asura"],
+      "hymnCount": 46,
+      "category": "major",
+      "domains": ["cosmic-order", "water", "night-sky", "oath", "justice"],
+      "description": "Guardian of cosmic order (rita), lord of waters and night sky. Punisher of oath-breakers.",
+      "attributes": ["wise", "omniscient", "just", "fearsome"],
+      "iconSuggestion": "🌊",
+      "color": "#006994",
+      "mandalas": [1, 2, 5, 7, 8, 10],
+      "peakMandalas": [7],
+      "keyMyths": [
+        "Catcher of sinners with noose",
+        "Guardian of cosmic law",
+        "Lord of waters"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "7.86",
+          "title": "Prayer for Forgiveness",
+          "excerpt": "If we have sinned against the man who loves us, against a friend or comrade, O Varuna..."
+        },
+        {
+          "reference": "1.25",
+          "title": "Hymn to Varuna",
+          "excerpt": "Whatever law of thine, O God, O Varuna, as we are men, day after day we violate..."
+        }
+      ]
+    },
+    {
+      "id": "ushas",
+      "name": "Ushas",
+      "alternateNames": ["Dawn"],
+      "hymnCount": 20,
+      "category": "major",
+      "domains": ["dawn", "awakening", "renewal", "beauty"],
+      "description": "Goddess of dawn, bringer of light and consciousness. Most prominent female deity.",
+      "attributes": ["radiant", "youthful", "generous", "awakening"],
+      "iconSuggestion": "🌅",
+      "color": "#FFB6C1",
+      "mandalas": [1, 3, 4, 5, 6, 7, 10],
+      "peakMandalas": [1],
+      "keyMyths": [
+        "Awakens sleeping world",
+        "Rides golden chariot",
+        "Sister of night"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "1.92",
+          "title": "Praise of Dawn",
+          "excerpt": "This light has come, of all lights the most lovely, the bright effulgence has been born, far-shining..."
+        },
+        {
+          "reference": "1.113",
+          "title": "Ushas the Awakener",
+          "excerpt": "She hath shone brightly like a youthful woman, stirring to motion every living creature..."
+        }
+      ]
+    },
+    {
+      "id": "surya",
+      "name": "Surya",
+      "alternateNames": ["Savitar", "Aditya"],
+      "hymnCount": 33,
+      "category": "major",
+      "domains": ["sun", "light", "energy", "time"],
+      "description": "Sun god, source of light and life. Eye of Mitra and Varuna.",
+      "attributes": ["brilliant", "all-seeing", "life-giving", "golden"],
+      "iconSuggestion": "☀️",
+      "color": "#FFD700",
+      "mandalas": [1, 4, 5, 7, 10],
+      "peakMandalas": [1, 10],
+      "keyMyths": [
+        "Father of Yama and Yami",
+        "Rides chariot across sky",
+        "All-seeing eye"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "1.115",
+          "title": "Hymn to Surya",
+          "excerpt": "The brilliant presence of the Gods hath risen, the eye of Mitra, Varuna, and Agni..."
+        }
+      ]
+    },
+    {
+      "id": "maruts",
+      "name": "Maruts",
+      "alternateNames": ["Storm-Gods", "Sons of Rudra"],
+      "hymnCount": 33,
+      "category": "major",
+      "domains": ["storm", "wind", "rain", "warfare"],
+      "description": "Group of storm deities, companions of Indra. Fierce warriors with golden armor.",
+      "attributes": ["fierce", "youthful", "powerful", "swift"],
+      "iconSuggestion": "💨",
+      "color": "#708090",
+      "mandalas": [1, 2, 5, 7, 8],
+      "peakMandalas": [1, 5],
+      "keyMyths": [
+        "Born from Rudra",
+        "Battle companions of Indra",
+        "Bringers of rain"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "1.165",
+          "title": "The Maruts",
+          "excerpt": "Like brilliant heroes, active in their valor, the Maruts have clothed themselves in flowing garments..."
+        }
+      ]
+    },
+    {
+      "id": "ashvins",
+      "name": "Ashvins",
+      "alternateNames": ["Nasatya", "Divine Twins"],
+      "hymnCount": 56,
+      "category": "major",
+      "domains": ["healing", "dawn", "medicine", "rescue"],
+      "description": "Twin gods of dawn, divine physicians and rescuers. Always invoked together.",
+      "attributes": ["helpful", "swift", "healing", "youthful"],
+      "iconSuggestion": "🐎",
+      "color": "#87CEEB",
+      "mandalas": [1, 4, 7, 8, 10],
+      "peakMandalas": [1],
+      "keyMyths": [
+        "Rescued shipwrecked Bhujyu",
+        "Restored youth to Cyavana",
+        "Ride golden chariot"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "1.116",
+          "title": "Deeds of the Ashvins",
+          "excerpt": "Nasatyas, you who glide in your chariot among the waters..."
+        }
+      ]
+    },
+    {
+      "id": "vishnu",
+      "name": "Vishnu",
+      "alternateNames": ["All-Pervading"],
+      "hymnCount": 6,
+      "category": "minor",
+      "domains": ["preservation", "space", "cosmic-order"],
+      "description": "The wide-striding one who measured the universe in three steps. Less prominent than in later texts.",
+      "attributes": ["pervading", "protective", "cosmic", "benevolent"],
+      "iconSuggestion": "🦅",
+      "color": "#4169E1",
+      "mandalas": [1, 7],
+      "peakMandalas": [1],
+      "keyMyths": [
+        "Three cosmic strides",
+        "Ally of Indra",
+        "Upholder of universe"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "1.154",
+          "title": "Vishnu's Three Strides",
+          "excerpt": "I will declare the mighty deeds of Vishnu, who measured out the earthly regions..."
+        }
+      ]
+    },
+    {
+      "id": "rudra",
+      "name": "Rudra",
+      "alternateNames": ["Shiva", "The Howler"],
+      "hymnCount": 5,
+      "category": "minor",
+      "domains": ["storm", "destruction", "healing", "wilderness"],
+      "description": "Fearsome storm god with healing powers. Father of the Maruts. Precursor to Shiva.",
+      "attributes": ["fierce", "healing", "wild", "powerful"],
+      "iconSuggestion": "🌪️",
+      "color": "#8B0000",
+      "mandalas": [1, 2, 7],
+      "peakMandalas": [2],
+      "keyMyths": [
+        "Father of Maruts",
+        "Wielder of bow and arrows",
+        "Both destroyer and healer"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "2.33",
+          "title": "Prayer to Rudra",
+          "excerpt": "Father of Maruts, let thy bliss approach us: exclude us not from looking upon the Sun..."
+        }
+      ]
+    },
+    {
+      "id": "mitra",
+      "name": "Mitra",
+      "alternateNames": ["Friend"],
+      "hymnCount": 12,
+      "category": "minor",
+      "domains": ["friendship", "contracts", "daylight"],
+      "description": "God of friendship, contracts, and oaths. Often paired with Varuna.",
+      "attributes": ["friendly", "honest", "protective", "reliable"],
+      "iconSuggestion": "🤝",
+      "color": "#FFA500",
+      "mandalas": [3, 5, 7],
+      "peakMandalas": [3],
+      "keyMyths": [
+        "Guardian of oaths",
+        "Paired with Varuna",
+        "Protector of day"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "3.59",
+          "title": "Mitra and Varuna",
+          "excerpt": "To Mitra and to Varuna sing forth your song, ye men..."
+        }
+      ]
+    },
+    {
+      "id": "pushan",
+      "name": "Pushan",
+      "alternateNames": ["Nourisher"],
+      "hymnCount": 11,
+      "category": "minor",
+      "domains": ["roads", "cattle", "protection", "nourishment"],
+      "description": "Protector of travelers and cattle. Guardian of roads and pathways.",
+      "attributes": ["protective", "nourishing", "guiding", "helpful"],
+      "iconSuggestion": "🛤️",
+      "color": "#DEB887",
+      "mandalas": [1, 6, 10],
+      "peakMandalas": [6],
+      "keyMyths": [
+        "Guardian of herds",
+        "Guide on journeys",
+        "Toothless deity"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "6.53",
+          "title": "Prayer to Pushan",
+          "excerpt": "Pushan, bring us to the man who knows, who will tell us..."
+        }
+      ]
+    },
+    {
+      "id": "vayu",
+      "name": "Vayu",
+      "alternateNames": ["Wind"],
+      "hymnCount": 7,
+      "category": "minor",
+      "domains": ["wind", "breath", "life-force"],
+      "description": "God of wind and breath. Often invoked with Indra.",
+      "attributes": ["swift", "invisible", "powerful", "life-giving"],
+      "iconSuggestion": "💨",
+      "color": "#B0E0E6",
+      "mandalas": [1, 7, 10],
+      "peakMandalas": [7],
+      "keyMyths": [
+        "First to drink soma",
+        "Swift mover",
+        "Breath of life"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "1.134",
+          "title": "Vayu and Indra",
+          "excerpt": "Vayu, to thee who art beautiful of aspect comes the offering..."
+        }
+      ]
+    },
+    {
+      "id": "parjanya",
+      "name": "Parjanya",
+      "alternateNames": ["Rain-Bringer"],
+      "hymnCount": 3,
+      "category": "minor",
+      "domains": ["rain", "fertility", "agriculture"],
+      "description": "Rain god and fertility deity. Waters the earth with his seed.",
+      "attributes": ["fertile", "nourishing", "powerful", "generous"],
+      "iconSuggestion": "🌧️",
+      "color": "#4682B4",
+      "mandalas": [5, 7],
+      "peakMandalas": [5],
+      "keyMyths": [
+        "Waters the earth",
+        "Makes plants grow",
+        "Thunderous roar"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "5.83",
+          "title": "Hymn to Parjanya",
+          "excerpt": "Speak out with thunder, roaring, slay the demons, pour down the rain-flood..."
+        }
+      ]
+    },
+    {
+      "id": "yama",
+      "name": "Yama",
+      "alternateNames": ["Lord of Death"],
+      "hymnCount": 3,
+      "category": "minor",
+      "domains": ["death", "afterlife", "ancestors"],
+      "description": "First mortal, king of the dead. Son of Vivasvat, twin of Yami.",
+      "attributes": ["just", "solemn", "kingly", "ancestral"],
+      "iconSuggestion": "⚰️",
+      "color": "#2F4F4F",
+      "mandalas": [10],
+      "peakMandalas": [10],
+      "keyMyths": [
+        "First to die",
+        "King of ancestors",
+        "Twin of Yami"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "10.14",
+          "title": "Hymn to Yama",
+          "excerpt": "Honor the King with thine oblations, Yama, Vivasvat's Son..."
+        }
+      ]
+    },
+    {
+      "id": "savitar",
+      "name": "Savitar",
+      "alternateNames": ["Stimulator"],
+      "hymnCount": 11,
+      "category": "minor",
+      "domains": ["solar-energy", "inspiration", "motion"],
+      "description": "Solar deity who stimulates and impels all beings. Associated with the Gayatri mantra.",
+      "attributes": ["inspiring", "golden", "all-moving", "powerful"],
+      "iconSuggestion": "✨",
+      "color": "#FFD700",
+      "mandalas": [1, 4, 5, 7],
+      "peakMandalas": [4, 5],
+      "keyMyths": [
+        "Stimulator of all",
+        "Golden hands",
+        "Inspirer of Gayatri"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "3.62",
+          "title": "Gayatri Mantra",
+          "excerpt": "We meditate on that excellent glory of the divine Savitar..."
+        }
+      ]
+    },
+    {
+      "id": "prithivi",
+      "name": "Prithivi",
+      "alternateNames": ["Earth Mother"],
+      "hymnCount": 8,
+      "category": "minor",
+      "domains": ["earth", "fertility", "stability"],
+      "description": "Earth goddess, mother of all. Often paired with Dyaus (sky).",
+      "attributes": ["nurturing", "stable", "fertile", "patient"],
+      "iconSuggestion": "🌍",
+      "color": "#8B4513",
+      "mandalas": [1, 5],
+      "peakMandalas": [5],
+      "keyMyths": [
+        "Mother Earth",
+        "Wife of Dyaus",
+        "Bearer of all"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "5.84",
+          "title": "Heaven and Earth",
+          "excerpt": "Great are the Heaven and Earth, liberal, sublime..."
+        }
+      ]
+    },
+    {
+      "id": "apas",
+      "name": "Apas",
+      "alternateNames": ["Waters"],
+      "hymnCount": 10,
+      "category": "minor",
+      "domains": ["water", "purification", "life"],
+      "description": "Personification of waters. Purifying and life-giving.",
+      "attributes": ["purifying", "nourishing", "flowing", "cleansing"],
+      "iconSuggestion": "💧",
+      "color": "#00CED1",
+      "mandalas": [1, 7, 10],
+      "peakMandalas": [10],
+      "keyMyths": [
+        "Waters of life",
+        "Purifiers",
+        "Bearers of amrita"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "10.9",
+          "title": "Hymn to the Waters",
+          "excerpt": "Waters, you are healing; bring us strength and health..."
+        }
+      ]
+    },
+    {
+      "id": "ratri",
+      "name": "Ratri",
+      "alternateNames": ["Night"],
+      "hymnCount": 1,
+      "category": "minor",
+      "domains": ["night", "darkness", "rest"],
+      "description": "Goddess of night, sister of dawn. Protective and peaceful.",
+      "attributes": ["protective", "peaceful", "dark", "restful"],
+      "iconSuggestion": "🌙",
+      "color": "#191970",
+      "mandalas": [10],
+      "peakMandalas": [10],
+      "keyMyths": [
+        "Sister of Ushas",
+        "Protector during darkness",
+        "Brings rest"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "10.127",
+          "title": "Hymn to Night",
+          "excerpt": "Night has come, looking around on many sides with her eyes..."
+        }
+      ]
+    },
+    {
+      "id": "dyaus",
+      "name": "Dyaus",
+      "alternateNames": ["Sky Father"],
+      "hymnCount": 6,
+      "category": "minor",
+      "domains": ["sky", "fatherhood"],
+      "description": "Sky god, father of gods. Consort of Prithivi (Earth).",
+      "attributes": ["fatherly", "vast", "protective", "ancient"],
+      "iconSuggestion": "☁️",
+      "color": "#87CEEB",
+      "mandalas": [1, 4],
+      "peakMandalas": [1],
+      "keyMyths": [
+        "Sky Father",
+        "Husband of Earth",
+        "Father of Ushas"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "1.160",
+          "title": "Heaven and Earth",
+          "excerpt": "These, Heaven and Earth, bestow prosperity on all..."
+        }
+      ]
+    },
+    {
+      "id": "aditi",
+      "name": "Aditi",
+      "alternateNames": ["Mother of Gods"],
+      "hymnCount": 4,
+      "category": "minor",
+      "domains": ["infinity", "motherhood", "freedom"],
+      "description": "Mother of the Adityas (solar deities). Personification of infinity.",
+      "attributes": ["maternal", "infinite", "protective", "ancient"],
+      "iconSuggestion": "♾️",
+      "color": "#DDA0DD",
+      "mandalas": [1, 8, 10],
+      "peakMandalas": [1],
+      "keyMyths": [
+        "Mother of Adityas",
+        "Boundless one",
+        "Protector of all"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "1.89",
+          "title": "Prayer to Aditi",
+          "excerpt": "May Aditi make us safe, with all her succors..."
+        }
+      ]
+    },
+    {
+      "id": "brihaspati",
+      "name": "Brihaspati",
+      "alternateNames": ["Lord of Prayer"],
+      "hymnCount": 14,
+      "category": "minor",
+      "domains": ["prayer", "wisdom", "eloquence"],
+      "description": "God of prayer and devotion. Divine priest and teacher.",
+      "attributes": ["wise", "eloquent", "priestly", "teaching"],
+      "iconSuggestion": "📿",
+      "color": "#DAA520",
+      "mandalas": [1, 2, 4, 10],
+      "peakMandalas": [2],
+      "keyMyths": [
+        "Priest of gods",
+        "Found hidden sun",
+        "Master of prayer"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "2.23",
+          "title": "Hymn to Brihaspati",
+          "excerpt": "Brihaspati, the Rishi, the leader of singers..."
+        }
+      ]
+    },
+    {
+      "id": "vac",
+      "name": "Vac",
+      "alternateNames": ["Speech", "Word"],
+      "hymnCount": 2,
+      "category": "minor",
+      "domains": ["speech", "knowledge", "revelation"],
+      "description": "Goddess of speech and sacred knowledge. Personification of the word.",
+      "attributes": ["eloquent", "creative", "powerful", "divine"],
+      "iconSuggestion": "🗣️",
+      "color": "#FF69B4",
+      "mandalas": [10],
+      "peakMandalas": [10],
+      "keyMyths": [
+        "Goddess of speech",
+        "Source of revelation",
+        "Power of mantras"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "10.125",
+          "title": "Vac Speaks",
+          "excerpt": "I am the Queen, the gatherer-up of treasures, most thoughtful..."
+        }
+      ]
+    },
+    {
+      "id": "vishvedevas",
+      "name": "Vishvedevas",
+      "alternateNames": ["All-Gods"],
+      "hymnCount": 67,
+      "category": "group",
+      "domains": ["collective", "universal"],
+      "description": "Collective group of all gods. Often invoked together.",
+      "attributes": ["collective", "universal", "protective", "comprehensive"],
+      "iconSuggestion": "👥",
+      "color": "#9370DB",
+      "mandalas": [1, 3, 5, 8, 10],
+      "peakMandalas": [1, 10],
+      "keyMyths": [
+        "Assembly of all gods",
+        "Collective worship",
+        "Universal protection"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "1.89",
+          "title": "To All the Gods",
+          "excerpt": "May the great Gods be gracious unto us..."
+        }
+      ]
+    },
+    {
+      "id": "ribhus",
+      "name": "Ribhus",
+      "alternateNames": ["Skilled Ones"],
+      "hymnCount": 11,
+      "category": "minor",
+      "domains": ["craftsmanship", "skill", "divine-artisans"],
+      "description": "Divine craftsmen who became gods through their skill. Created miraculous objects.",
+      "attributes": ["skilled", "creative", "innovative", "industrious"],
+      "iconSuggestion": "🔨",
+      "color": "#CD853F",
+      "mandalas": [1, 3, 4],
+      "peakMandalas": [4],
+      "keyMyths": [
+        "Made parents young",
+        "Created miraculous chariot",
+        "Gained immortality through skill"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "4.33",
+          "title": "Deeds of the Ribhus",
+          "excerpt": "The Ribhus, with the Asvins and with Indra..."
+        }
+      ]
+    },
+    {
+      "id": "tvashtar",
+      "name": "Tvashtar",
+      "alternateNames": ["Divine Craftsman"],
+      "hymnCount": 4,
+      "category": "minor",
+      "domains": ["creation", "craftsmanship", "forms"],
+      "description": "Divine architect and craftsman. Creator of forms and beings.",
+      "attributes": ["creative", "skilled", "forming", "generative"],
+      "iconSuggestion": "⚒️",
+      "color": "#A0522D",
+      "mandalas": [1, 10],
+      "peakMandalas": [10],
+      "keyMyths": [
+        "Fashioned all forms",
+        "Created Indra's vajra",
+        "Father of Saranyu"
+      ],
+      "sampleHymns": [
+        {
+          "reference": "10.184",
+          "title": "For Progeny",
+          "excerpt": "May Tvashtar fashion for you a pair of twin children..."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "totalDeities": 25,
+    "majorDeities": 10,
+    "minorDeities": 14,
+    "groupDeities": 1,
+    "source": "Based on Rig Veda Samhita analysis",
+    "note": "Hymn counts are approximate and include both primary and secondary mentions"
+  }
+}

@@ -8,6 +8,7 @@ import { AnimatePresence } from 'framer-motion'
 import './index.css'
 
 function App() {
+  // Always start with locked state - show sequence every time
   const [audioUnlocked, setAudioUnlocked] = useState(false);
   const [unlockFadeOut, setUnlockFadeOut] = useState(false);
   const [showLoading, setShowLoading] = useState(false);
@@ -16,22 +17,23 @@ function App() {
 
   // Handle audio unlock with fade transition
   const handleAudioUnlock = () => {
-    // Start fade out of unlock screen
+    console.log('🔥 AudioUnlock button clicked!');
     setUnlockFadeOut(true);
     
-    // After fade completes, show loading screen
     setTimeout(() => {
+      console.log('🔄 Transitioning to FireLoading');
       setAudioUnlocked(true);
       setShowLoading(true);
       setIsLoading(true);
-    }, 600); // Match CSS transition duration
+    }, 600);
   };
 
-  // Start loading sequence AFTER audio is unlocked
+  // FireLoading timer
   useEffect(() => {
     if (!isLoading) return;
 
-    const minLoadTime = 2000;
+    console.log('⏳ FireLoading started');
+    const minLoadTime = 3000; // 3 seconds for sound
     const startTime = Date.now();
 
     const checkLoad = () => {
@@ -39,9 +41,12 @@ function App() {
       const remainingTime = Math.max(0, minLoadTime - elapsedTime);
 
       setTimeout(() => {
+        console.log('✨ FireLoading complete');
         setLoadingFadeOut(true);
         setTimeout(() => {
+          console.log('🏠 Showing main app');
           setIsLoading(false);
+          setShowLoading(false);
         }, 600);
       }, remainingTime);
     };
@@ -55,43 +60,46 @@ function App() {
   }, [isLoading]);
 
   return (
-    <AnimatePresence mode="wait">
-      {/* Audio Unlock Screen - FIRST */}
-      {!audioUnlocked && (
-        <div 
-          key="unlock"
-          style={{
-            transition: 'opacity 600ms ease-out',
-            opacity: unlockFadeOut ? 0 : 1
-          }}
-        >
-          <AudioUnlock onUnlock={handleAudioUnlock} />
-        </div>
-      )}
+    <>
+      <AnimatePresence mode="wait">
+        {/* AudioUnlock Screen - ALWAYS shows first */}
+        {!audioUnlocked && (
+          <div 
+            key="unlock"
+            style={{
+              transition: 'opacity 600ms ease-out',
+              opacity: unlockFadeOut ? 0 : 1,
+              pointerEvents: unlockFadeOut ? 'none' : 'auto'
+            }}
+          >
+            <AudioUnlock onUnlock={handleAudioUnlock} />
+          </div>
+        )}
 
-      {/* Fire Loading Screen - SECOND (fades in after unlock fades out) */}
-      {showLoading && isLoading && (
-        <div 
-          key="loading"
-          style={{
-            transition: 'opacity 600ms ease-out',
-            opacity: loadingFadeOut ? 0 : 1
-          }}
-        >
-          <FireLoading playSound={audioUnlocked} />
-        </div>
-      )}
-      
-      {/* Main App - THIRD (fades in after loading fades out) */}
-      {audioUnlocked && !isLoading && (
-        <div 
-          key="app"
-          className="animate-fade-in-smooth"
-        >
-          <RouterProvider router={router} />
-        </div>
-      )}
-    </AnimatePresence>
+        {/* FireLoading Screen - Shows after AudioUnlock */}
+        {audioUnlocked && showLoading && isLoading && (
+          <div 
+            key="loading"
+            style={{
+              transition: 'opacity 600ms ease-out',
+              opacity: loadingFadeOut ? 0 : 1
+            }}
+          >
+            <FireLoading playSound={true} />
+          </div>
+        )}
+        
+        {/* Main App - Shows after loading complete */}
+        {audioUnlocked && !isLoading && (
+          <div 
+            key="app"
+            className="animate-fade-in-smooth"
+          >
+            <RouterProvider router={router} />
+          </div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
 

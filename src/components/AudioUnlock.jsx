@@ -1,49 +1,44 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const AudioUnlock = ({ onUnlock }) => {
-  const [isVisible, setIsVisible] = useState(true);
-
-  const handleUnlock = () => {
-    // Unlock audio context
-    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-    audioContext.resume().then(() => {
-      setIsVisible(false);
-      onUnlock();
-    });
-  };
-
-  if (!isVisible) return null;
-
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[--color-ink]/95 backdrop-blur-sm">
-      <div className="flex flex-col items-center gap-8 p-8 max-w-md text-center">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-amber-50">
+      <div className="text-center max-w-2xl px-8">
         {/* Om Symbol */}
-        <div className="text-8xl text-[--color-gold] animate-pulse">
+        <div className="text-9xl mb-8 animate-pulse">
           ॐ
         </div>
 
-        {/* Welcome Text */}
-        <div className="space-y-4">
-          <h2 className="text-3xl font-[family:--font-family-header] text-[--color-gold]">
-            Welcome to Project-RV
-          </h2>
-          <p className="text-lg text-[--color-parchment-light] font-[family:--font-family-body]">
-            Enable audio for the complete immersive experience
-          </p>
-        </div>
+        {/* Title */}
+        <h1 className="text-6xl font-serif font-bold text-amber-900 mb-6">
+          Welcome to Project-RV
+        </h1>
 
-        {/* Start Button */}
+        {/* Subtitle */}
+        <p className="text-2xl text-amber-700 mb-12 leading-relaxed">
+          Enable audio for the complete immersive experience
+        </p>
+
+        {/* Button */}
         <button
-          onClick={handleUnlock}
-          className="group relative px-12 py-5 bg-gradient-to-r from-[--color-gold] to-[--color-saffron] text-[--color-ink] font-[family:--font-family-header] text-xl rounded-lg shadow-2xl hover:shadow-[0_0_30px_rgba(244,196,48,0.6)] transition-all duration-300 transform hover:scale-105"
+          onClick={onUnlock}
+          className="group relative px-12 py-6 bg-gradient-to-r from-amber-600 to-orange-600 text-white text-2xl font-serif rounded-xl hover:from-amber-700 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105 active:scale-95"
         >
           <span className="relative z-10">Begin Journey</span>
-          <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 rounded-lg transition-opacity" />
+          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
         </button>
 
-        <p className="text-xs text-[--color-parchment-light]/50 italic">
-          Click to enable sound effects and immersive audio
+        {/* Info Text */}
+        <p className="mt-8 text-base text-amber-600 italic animate-pulse">
+          🔊 Click to enable sound effects and immersive audio
         </p>
+
+        {/* Decorative Elements */}
+        <div className="mt-12 flex justify-center gap-4 text-amber-700/50">
+          <span className="text-3xl">🔥</span>
+          <span className="text-3xl">📿</span>
+          <span className="text-3xl">🕉️</span>
+        </div>
       </div>
     </div>
   );

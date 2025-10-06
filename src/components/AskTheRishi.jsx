@@ -1,8 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import jsPDF from 'jspdf';
 
 const AskTheRishi = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  
   const [messages, setMessages] = useState(() => {
     const saved = localStorage.getItem('rigveda-chat-history');
     if (saved) {
@@ -42,6 +45,16 @@ const AskTheRishi = () => {
   const [smartSuggestions, setSmartSuggestions] = useState([]);
   const [isGeneratingSuggestions, setIsGeneratingSuggestions] = useState(false);
   const messagesEndRef = useRef(null);
+
+  // NEW: Prefill input from URL parameter
+  useEffect(() => {
+    const questionParam = searchParams.get('question');
+    if (questionParam) {
+      setInput(questionParam);
+      // Clear the URL parameter after setting input
+      setSearchParams({});
+    }
+  }, [searchParams, setSearchParams]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });

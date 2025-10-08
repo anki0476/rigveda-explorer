@@ -130,45 +130,48 @@ const Timeline = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 p-4 md:p-8">
+    <div className="min-h-screen bg-[--color-parchment] p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-amber-900 mb-4 flex items-center justify-center gap-3">
-            <span className="text-5xl">⏳</span>
-            Rigveda Timeline
-          </h1>
-          <p className="text-lg md:text-xl text-amber-700 max-w-3xl mx-auto leading-relaxed">
-            Journey through 3,500+ years of Vedic tradition - from ancient composition to modern preservation
-          </p>
+        {/* Ornate Header with Golden Border */}
+        <div className="ornate-golden-border text-center mb-12 bg-[--color-parchment-light]">
+          <div className="relative">
+            <h1 className="text-5xl md:text-6xl font-[family:--font-family-header] text-[--color-ink] mb-4 flex items-center justify-center gap-3">
+              <span className="text-5xl">⏳</span>
+              Rigveda Timeline
+            </h1>
+            <div className="ornate-divider ornate-divider-om my-6"></div>
+            <p className="text-lg md:text-xl font-[family:--font-family-body] text-[--color-ink-light] max-w-3xl mx-auto leading-relaxed">
+              Journey through 3,500+ years of Vedic tradition - from ancient composition to modern preservation
+            </p>
+          </div>
         </div>
 
-        {/* Timeline Overview Stats */}
+        {/* Timeline Stats with Manuscript Style */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          <div className="bg-white rounded-xl p-6 text-center border-4 border-amber-300 shadow-lg">
-            <div className="text-3xl md:text-4xl font-bold text-amber-900 mb-2">~1500 BCE</div>
-            <div className="text-sm text-amber-600">Composition Begins</div>
+          <div className="double-golden-border bg-[--color-parchment-light] rounded-xl p-6 text-center">
+            <div className="text-3xl md:text-4xl font-[family:--font-family-header] font-bold text-[--color-ink] mb-2">~1500 BCE</div>
+            <div className="text-sm font-[family:--font-family-body] text-[--color-gold]">Composition Begins</div>
           </div>
-          <div className="bg-white rounded-xl p-6 text-center border-4 border-orange-300 shadow-lg">
-            <div className="text-3xl md:text-4xl font-bold text-orange-900 mb-2">~300</div>
-            <div className="text-sm text-orange-600">Years of Composition</div>
+          <div className="double-golden-border bg-[--color-parchment-light] rounded-xl p-6 text-center">
+            <div className="text-3xl md:text-4xl font-[family:--font-family-header] font-bold text-[--color-ink] mb-2">~300</div>
+            <div className="text-sm font-[family:--font-family-body] text-[--color-saffron]">Years of Composition</div>
           </div>
-          <div className="bg-white rounded-xl p-6 text-center border-4 border-amber-300 shadow-lg">
-            <div className="text-3xl md:text-4xl font-bold text-amber-900 mb-2">~2000</div>
-            <div className="text-sm text-amber-600">Years Oral Only</div>
+          <div className="double-golden-border bg-[--color-parchment-light] rounded-xl p-6 text-center">
+            <div className="text-3xl md:text-4xl font-[family:--font-family-header] font-bold text-[--color-ink] mb-2">~2000</div>
+            <div className="text-sm font-[family:--font-family-body] text-[--color-gold]">Years Oral Only</div>
           </div>
-          <div className="bg-white rounded-xl p-6 text-center border-4 border-orange-300 shadow-lg">
-            <div className="text-3xl md:text-4xl font-bold text-orange-900 mb-2">3500+</div>
-            <div className="text-sm text-orange-600">Years Old Today</div>
+          <div className="double-golden-border bg-[--color-parchment-light] rounded-xl p-6 text-center">
+            <div className="text-3xl md:text-4xl font-[family:--font-family-header] font-bold text-[--color-ink] mb-2">3500+</div>
+            <div className="text-sm font-[family:--font-family-body] text-[--color-saffron]">Years Old Today</div>
           </div>
         </div>
 
-        {/* Timeline Visualization */}
+        {/* Timeline with Manuscript Aesthetic */}
         <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-amber-600 via-orange-600 to-amber-600 transform md:-translate-x-1/2"></div>
+          {/* Ornate Vertical Line */}
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-2 md:w-3 bg-gradient-to-b from-[--color-gold] via-[--color-saffron] to-[--color-gold] transform md:-translate-x-1/2 shadow-[0_0_25px_rgba(218,165,32,0.5)] border-l-2 border-r-2 border-[--color-gold]"></div>
 
-          {/* Timeline items */}
+          {/* Timeline Items */}
           <div className="space-y-12">
             {timelineData.map((item, index) => (
               <div
@@ -177,105 +180,143 @@ const Timeline = () => {
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 } flex-col md:gap-8`}
               >
-                {/* Content card */}
+                {/* Content Card with Ornate Border */}
                 <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'} ml-16 md:ml-0`}>
                   <div
-                    className={`bg-white rounded-2xl p-6 shadow-xl border-4 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-2xl ${
+                    className={`card-glare-container double-golden-border bg-[--color-parchment-light] rounded-2xl p-6 transition-all duration-300 cursor-pointer hover:scale-[1.02] ${
                       selectedPeriod?.id === item.id
-                        ? 'border-amber-500 ring-4 ring-amber-200'
-                        : 'border-amber-300'
+                        ? 'ring-4 ring-[--color-gold]/50 shadow-2xl'
+                        : 'shadow-xl'
                     }`}
-                    style={{ borderLeftColor: item.color, borderLeftWidth: '8px' }}
                     onClick={() => setSelectedPeriod(selectedPeriod?.id === item.id ? null : item)}
                   >
-                    <div className="flex items-center gap-3 mb-3">
+                    {/* Header */}
+                    <div className="flex items-center gap-3 mb-4 pb-3 border-b-2 border-[--color-gold]/30">
                       <span className="text-4xl">{item.icon}</span>
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-amber-900">{item.title}</h3>
-                        <p className="text-sm font-semibold text-orange-600">{item.period}</p>
+                        <h3 className="text-2xl font-[family:--font-family-header] font-bold text-[--color-ink]">
+                          {item.title}
+                        </h3>
+                        <p className="text-sm font-[family:--font-family-header] font-semibold text-[--color-gold]">
+                          {item.period}
+                        </p>
                       </div>
                     </div>
-                    <p className="text-amber-800 leading-relaxed mb-4">{item.description}</p>
-                    
+
+                    {/* Description */}
+                    <p className="font-[family:--font-family-body] text-[--color-ink-light] leading-relaxed mb-4">
+                      {item.description}
+                    </p>
+
+                    {/* Expanded Content */}
                     {selectedPeriod?.id === item.id && (
-                      <div className="mt-4 pt-4 border-t-2 border-amber-200 space-y-4">
-                        <div>
-                          <h4 className="font-bold text-amber-900 mb-2 flex items-center gap-2">
+                      <div className="mt-4 pt-4 border-t-2 border-[--color-gold]/30 space-y-4 animate-fade-in-smooth">
+                        {/* Key Events */}
+                        <div className="bg-gradient-to-r from-[--color-parchment] to-[--color-parchment-dark] p-4 rounded-lg border-2 border-[--color-gold]/20">
+                          <h4 className="font-[family:--font-family-header] font-bold text-[--color-ink] mb-3 flex items-center gap-2">
                             <span>🔖</span> Key Events
                           </h4>
                           <ul className="space-y-2">
                             {item.events.map((event, idx) => (
-                              <li key={idx} className="text-sm text-amber-700 flex items-start gap-2">
-                                <span className="text-orange-500 mt-1">•</span>
+                              <li key={idx} className="text-sm font-[family:--font-family-body] text-[--color-ink-light] flex items-start gap-2">
+                                <span className="text-[--color-gold] mt-1">◆</span>
                                 <span>{event}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
-                        <div className="bg-gradient-to-r from-amber-50 to-orange-50 p-4 rounded-lg border-2 border-amber-200">
-                          <h4 className="font-bold text-amber-900 mb-2 flex items-center gap-2">
+
+                        {/* World Context */}
+                        <div className="spine-border bg-gradient-to-r from-[--color-parchment-light] to-[--color-parchment] p-4 rounded-lg">
+                          <h4 className="font-[family:--font-family-header] font-bold text-[--color-ink] mb-2 flex items-center gap-2">
                             <span>🌏</span> World Context
                           </h4>
-                          <p className="text-sm text-amber-700">{item.worldContext}</p>
+                          <p className="text-sm font-[family:--font-family-body] text-[--color-ink-light] italic">
+                            {item.worldContext}
+                          </p>
                         </div>
                       </div>
                     )}
-                    
-                    <button className="mt-4 text-sm text-amber-600 hover:text-amber-800 font-semibold">
-                      {selectedPeriod?.id === item.id ? '▲ Show less' : '▼ Show more'}
+
+                    {/* Expand Button */}
+                    <button className="mt-4 px-4 py-2 text-sm font-[family:--font-family-header] text-[--color-gold] hover:text-[--color-saffron] font-semibold transition-colors border-2 border-[--color-gold] hover:border-[--color-saffron] rounded-lg">
+                      {selectedPeriod?.id === item.id ? '▲ Show Less' : '▼ Show More'}
                     </button>
                   </div>
                 </div>
 
-                {/* Timeline dot */}
-                <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 -translate-y-0 md:translate-y-0 top-6">
+                {/* Ornate Timeline Dot */}
+                <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 top-6 z-10">
                   <div
-                    className="w-16 h-16 rounded-full border-4 border-white shadow-lg flex items-center justify-center text-2xl"
+                    className="w-16 h-16 rounded-full border-4 border-[--color-parchment-light] shadow-2xl flex items-center justify-center text-2xl relative"
                     style={{ backgroundColor: item.color }}
                   >
                     {item.icon}
+                    {/* Ornate Ring */}
+                    <div className="absolute inset-0 rounded-full border-2 border-[--color-gold]/50" style={{ borderStyle: 'double' }}></div>
                   </div>
                 </div>
 
-                {/* Spacer for alternating layout */}
+                {/* Spacer */}
                 <div className="hidden md:block w-5/12"></div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Composition Layers Section */}
-        <div className="mt-16 bg-white rounded-2xl shadow-2xl p-8 border-4 border-amber-700">
-          <h2 className="text-3xl font-bold text-amber-900 mb-6 text-center">
+        {/* Chronological Layers - Manuscript Style */}
+        <div className="mt-16 ornate-golden-border bg-[--color-parchment-light] rounded-2xl shadow-2xl p-8">
+          <div className="manuscript-corner manuscript-corner-tl"></div>
+          <div className="manuscript-corner manuscript-corner-tr"></div>
+          <div className="manuscript-corner manuscript-corner-bl"></div>
+          <div className="manuscript-corner manuscript-corner-br"></div>
+
+          <h2 className="text-3xl font-[family:--font-family-header] font-bold text-[--color-ink] mb-2 text-center">
             📚 Chronological Layers of Rigveda
           </h2>
-          
+          <div className="ornate-divider mb-6"></div>
+
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-gradient-to-br from-amber-100 to-orange-100 p-6 rounded-xl border-2 border-amber-300">
+            {/* Oldest Layer */}
+            <div className="double-golden-border card-glare-container bg-gradient-to-br from-[--color-parchment-light] to-[--color-parchment] p-6 rounded-xl hover:scale-105 transition-transform">
               <div className="text-4xl mb-3 text-center">🏛️</div>
-              <h3 className="text-xl font-bold text-amber-900 mb-2 text-center">Oldest Layer</h3>
-              <p className="text-sm text-amber-700 mb-3 text-center font-semibold">Mandalas 2-7 (Family Books)</p>
-              <p className="text-sm text-amber-600 leading-relaxed">
+              <h3 className="text-xl font-[family:--font-family-header] font-bold text-[--color-ink] mb-2 text-center">
+                Oldest Layer
+              </h3>
+              <p className="text-sm font-[family:--font-family-header] text-[--color-gold] mb-3 text-center font-semibold">
+                Mandalas 2-7 (Family Books)
+              </p>
+              <p className="text-sm font-[family:--font-family-body] text-[--color-ink-light] leading-relaxed">
                 Composed ~1500-1200 BCE by specific Rishi families. Contains the most archaic language 
                 and consistent style. Focus on nature gods and fire rituals.
               </p>
             </div>
-            
-            <div className="bg-gradient-to-br from-orange-100 to-amber-100 p-6 rounded-xl border-2 border-orange-300">
+
+            {/* Middle Layer */}
+            <div className="double-golden-border card-glare-container bg-gradient-to-br from-[--color-parchment] to-[--color-parchment-light] p-6 rounded-xl hover:scale-105 transition-transform">
               <div className="text-4xl mb-3 text-center">📖</div>
-              <h3 className="text-xl font-bold text-orange-900 mb-2 text-center">Middle Layer</h3>
-              <p className="text-sm text-orange-700 mb-3 text-center font-semibold">Mandalas 8 & 9</p>
-              <p className="text-sm text-orange-600 leading-relaxed">
+              <h3 className="text-xl font-[family:--font-family-header] font-bold text-[--color-ink] mb-2 text-center">
+                Middle Layer
+              </h3>
+              <p className="text-sm font-[family:--font-family-header] text-[--color-saffron] mb-3 text-center font-semibold">
+                Mandalas 8 & 9
+              </p>
+              <p className="text-sm font-[family:--font-family-body] text-[--color-ink-light] leading-relaxed">
                 Mandala 9 entirely dedicated to Soma. Mandala 8 shows mixed authorship and 
                 transitional characteristics between old and new styles.
               </p>
             </div>
-            
-            <div className="bg-gradient-to-br from-amber-100 to-orange-100 p-6 rounded-xl border-2 border-amber-300">
+
+            {/* Youngest Layer */}
+            <div className="double-golden-border card-glare-container bg-gradient-to-br from-[--color-parchment-light] to-[--color-parchment] p-6 rounded-xl hover:scale-105 transition-transform">
               <div className="text-4xl mb-3 text-center">🌟</div>
-              <h3 className="text-xl font-bold text-amber-900 mb-2 text-center">Youngest Layer</h3>
-              <p className="text-sm text-amber-700 mb-3 text-center font-semibold">Mandalas 1 & 10</p>
-              <p className="text-sm text-amber-600 leading-relaxed">
+              <h3 className="text-xl font-[family:--font-family-header] font-bold text-[--color-ink] mb-2 text-center">
+                Youngest Layer
+              </h3>
+              <p className="text-sm font-[family:--font-family-header] text-[--color-gold] mb-3 text-center font-semibold">
+                Mandalas 1 & 10
+              </p>
+              <p className="text-sm font-[family:--font-family-body] text-[--color-ink-light] leading-relaxed">
                 Most philosophical and diverse. Mandala 10 contains famous Nasadiya Sukta (Creation Hymn), 
                 Purusha Sukta, and other speculative hymns showing advanced thought.
               </p>
@@ -283,11 +324,11 @@ const Timeline = () => {
           </div>
         </div>
 
-        {/* Back Navigation */}
+        {/* Back Button - Ornate Style */}
         <div className="mt-12 text-center">
           <button
             onClick={() => navigate('/')}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-lg transition-colors shadow-lg"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[--color-gold] to-[--color-saffron] hover:from-[--color-saffron] hover:to-[--color-gold] text-white font-[family:--font-family-header] font-semibold rounded-lg transition-all shadow-lg hover:shadow-2xl hover:scale-105 border-2 border-[--color-gold]"
           >
             ← Back to Home
           </button>

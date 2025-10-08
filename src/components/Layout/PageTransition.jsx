@@ -7,8 +7,13 @@ const PageTransition = ({ children }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{
-        duration: 0.4,
-        ease: [0.6, 0.05, 0.01, 0.9]
+        duration: 0.5,
+        ease: [0.43, 0.13, 0.23, 0.96], // Slightly smoother easing
+        when: "beforeChildren"
+      }}
+      style={{
+        width: '100%',
+        minHeight: '100vh'
       }}
     >
       {children}

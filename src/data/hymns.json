@@ -9,7 +9,10 @@
       "deityId": "agni",
       "rishi": "Madhucchandas Vaishvamitra",
       "meter": "Gayatri",
-      "topics": ["energy", "purpose"],
+      "topics": [
+        "energy",
+        "purpose"
+      ],
       "significance": "Opening hymn of entire Rig Veda",
       "translation": {
         "title": "Invocation to Agni",
@@ -23,7 +26,8 @@
         ],
         "context": "This hymn establishes the fundamental Vedic worldview: humans need intermediaries to reach the divine, and Agni (fire) is the primary mediator. Every Vedic ritual begins with kindling fire.",
         "modernApplication": "Can be read as celebrating the transformative power that bridges earthly and spiritual realms—whether literal fire or metaphorical inspiration."
-      }
+      },
+      "audioUrl": "/audio/hymns/1.1.mp3"
     },
     {
       "id": "1.32",
@@ -34,7 +38,10 @@
       "deityId": "indra",
       "rishi": "Hiranyastupa Angirasa",
       "meter": "Trishtubh",
-      "topics": ["success", "energy"],
+      "topics": [
+        "success",
+        "energy"
+      ],
       "significance": "Most famous Indra myth - slaying of Vritra",
       "translation": {
         "title": "Indra Slays Vritra",
@@ -50,7 +57,8 @@
         ],
         "context": "Vritra represents obstruction, drought, and chaos. Indra's victory releases waters (fertility, abundance, cosmic order). This is THE central myth of the Rig Veda.",
         "modernApplication": "Symbolic of overcoming obstacles that block flow of life/creativity. Can inspire tackling seemingly impossible challenges."
-      }
+      },
+      "audioUrl": "/audio/hymns/1.32.mp3"
     },
     {
       "id": "1.92",
@@ -61,7 +69,10 @@
       "deityId": "ushas",
       "rishi": "Gotama Rahugana",
       "meter": "Trishtubh",
-      "topics": ["nature", "wellbeing"],
+      "topics": [
+        "nature",
+        "wellbeing"
+      ],
       "significance": "Most beautiful hymn to Dawn",
       "translation": {
         "title": "Hymn to Ushas (Dawn)",
@@ -77,7 +88,8 @@
         ],
         "context": "Ushas is personified as a radiant young woman who never ages, renewing herself each morning. She represents hope, new beginnings, and consciousness awakening.",
         "modernApplication": "Inspires fresh starts, mindfulness of beginnings, appreciation for natural cycles of renewal."
-      }
+      },
+      "audioUrl": "/audio/hymns/1.92.mp3"
     },
     {
       "id": "1.154",
@@ -88,7 +100,10 @@
       "deityId": "vishnu",
       "rishi": "Dirghatamas Auchathya",
       "meter": "Trishtubh",
-      "topics": ["purpose", "nature"],
+      "topics": [
+        "purpose",
+        "nature"
+      ],
       "significance": "Vishnu's three cosmic strides",
       "translation": {
         "title": "The Three Strides of Vishnu",
@@ -103,7 +118,8 @@
         ],
         "context": "In Vedic mythology, Vishnu's three strides represent earth, atmosphere, and heaven—the entire cosmos. His 'highest footstep' is the transcendent realm.",
         "modernApplication": "Symbol of expansion, growth beyond limits, reaching for highest potential."
-      }
+      },
+      "audioUrl": "/audio/hymns/1.154.mp3"
     },
     {
       "id": "1.164",
@@ -114,7 +130,11 @@
       "deityId": "vishvedevas",
       "rishi": "Dirghatamas Auchathya",
       "meter": "Trishtubh",
-      "topics": ["mind", "purpose", "existence"],
+      "topics": [
+        "mind",
+        "purpose",
+        "existence"
+      ],
       "significance": "The great riddle hymn - deepest philosophical questions",
       "translation": {
         "title": "The Riddle Hymn (Asya Vamasya)",
@@ -130,7 +150,8 @@
         ],
         "context": "This hymn influenced all later Indian philosophy. The two-birds metaphor became central to Vedanta. The riddles encode astronomical, philosophical, and spiritual knowledge.",
         "modernApplication": "Encourages contemplative thinking, multiple perspectives on truth, comfort with mystery and paradox."
-      }
+      },
+      "audioUrl": "/audio/hymns/1.164.mp3"
     },
     {
       "id": "2.12",
@@ -141,7 +162,10 @@
       "deityId": "indra",
       "rishi": "Gritsamada Bhargava Shaunaka",
       "meter": "Trishtubh",
-      "topics": ["success", "purpose"],
+      "topics": [
+        "success",
+        "purpose"
+      ],
       "significance": "Definitive description of Indra's power",
       "translation": {
         "title": "Who Is Indra?",
@@ -157,7 +181,8 @@
         ],
         "context": "This hymn establishes Indra as supreme among gods—creator, orderer, warrior, and sustainer. The repeated refrain 'he is Indra' builds power.",
         "modernApplication": "Celebrates strength, courage, victory over obstacles. Can inspire confidence and determination."
-      }
+      },
+      "audioUrl": "/audio/hymns/2.12.mp3"
     },
     {
       "id": "2.33",
@@ -168,7 +193,10 @@
       "deityId": "rudra",
       "rishi": "Gritsamada Bhargava Shaunaka",
       "meter": "Trishtubh",
-      "topics": ["health", "energy"],
+      "topics": [
+        "health",
+        "energy"
+      ],
       "significance": "Principal hymn to Rudra - precursor to Shiva",
       "translation": {
         "title": "Prayer to Rudra",
@@ -184,7 +212,8 @@
         ],
         "context": "Rudra is ambivalent—both fierce destroyer and compassionate healer. This hymn shows the Vedic understanding that what can harm can also heal.",
         "modernApplication": "Honors the shadow side, integrating fierce and gentle aspects. Relevant to working with difficult emotions or energies."
-      }
+      },
+      "audioUrl": "/audio/hymns/2.33.mp3"
     },
     {
       "id": "3.62.10",
@@ -195,7 +224,11 @@
       "deityId": "savitar",
       "rishi": "Vishvamitra Gathina",
       "meter": "Gayatri",
-      "topics": ["mind", "purpose", "energy"],
+      "topics": [
+        "mind",
+        "purpose",
+        "energy"
+      ],
       "significance": "THE GAYATRI MANTRA - most sacred verse",
       "translation": {
         "title": "The Gayatri Mantra",
@@ -207,7 +240,8 @@
         ],
         "context": "This single verse is considered the essence of all Vedas. Chanted at sunrise for thousands of years. It invokes divine light to illumine consciousness.",
         "modernApplication": "Used worldwide for meditation, mental clarity, spiritual awakening. Scientific studies show positive effects on cognition and stress."
-      }
+      },
+      "audioUrl": "/audio/hymns/3.62.10.mp3"
     },
     {
       "id": "5.83",
@@ -218,7 +252,10 @@
       "deityId": "parjanya",
       "rishi": "Atri Bhauma",
       "meter": "Trishtubh",
-      "topics": ["nature", "health"],
+      "topics": [
+        "nature",
+        "health"
+      ],
       "significance": "Beautiful hymn to rain god",
       "translation": {
         "title": "Hymn to Parjanya (Rain)",
@@ -233,7 +270,8 @@
         ],
         "context": "Parjanya represents the generative power of rain. The sexual imagery (seed, fertility) shows understanding of rain as life-giver.",
         "modernApplication": "Appreciation for water cycle, ecology, interdependence of all life. Relevant to environmental consciousness."
-      }
+      },
+      "audioUrl": "/audio/hymns/5.83.mp3"
     },
     {
       "id": "7.86",
@@ -244,7 +282,11 @@
       "deityId": "varuna",
       "rishi": "Vasishtha Maitravaruni",
       "meter": "Trishtubh",
-      "topics": ["wellbeing", "ethics", "purpose"],
+      "topics": [
+        "wellbeing",
+        "ethics",
+        "purpose"
+      ],
       "significance": "Most moving prayer for forgiveness",
       "translation": {
         "title": "Varuna's Forgiveness",
@@ -260,7 +302,8 @@
         ],
         "context": "Shows profound psychological insight: acknowledging both personal responsibility and influences beyond control. Varuna represents cosmic justice tempered with mercy.",
         "modernApplication": "Relevant to therapy around guilt, shame, self-forgiveness, and acknowledging both agency and circumstances."
-      }
+      },
+      "audioUrl": "/audio/hymns/7.86.mp3"
     },
     {
       "id": "10.9",
@@ -271,7 +314,10 @@
       "deityId": "apas",
       "rishi": "Sindhukshit Praiyamedha",
       "meter": "Trishtubh",
-      "topics": ["health", "nature"],
+      "topics": [
+        "health",
+        "nature"
+      ],
       "significance": "Hymn to healing waters",
       "translation": {
         "title": "The Healing Waters",
@@ -286,7 +332,8 @@
         ],
         "context": "Water is seen as primordially pure, carrying both physical cleansing and spiritual purification. The link between Agni (fire) and Apas (water) shows balance.",
         "modernApplication": "Supports both physical hygiene and ritual purification. Relevant to water conservation and appreciation."
-      }
+      },
+      "audioUrl": "/audio/hymns/10.9.mp3"
     },
     {
       "id": "10.10",
@@ -297,7 +344,10 @@
       "deityId": "yama",
       "rishi": "Yami",
       "meter": "Trishtubh",
-      "topics": ["existence", "relationships"],
+      "topics": [
+        "existence",
+        "relationships"
+      ],
       "significance": "Dramatic dialogue between twins",
       "translation": {
         "title": "The Dialogue of Yama and Yami",
@@ -312,7 +362,8 @@
         ],
         "context": "Yama is the first mortal, the first to die. Yami represents life clinging to what is lost. Their dialogue explores death, desire, dharma, and letting go.",
         "modernApplication": "Speaks to grief, boundaries, letting go of what cannot be, accepting mortality."
-      }
+      },
+      "audioUrl": "/audio/hymns/10.10.mp3"
     },
     {
       "id": "10.14",
@@ -323,7 +374,10 @@
       "deityId": "yama",
       "rishi": "Yama",
       "meter": "Trishtubh",
-      "topics": ["existence", "purpose"],
+      "topics": [
+        "existence",
+        "purpose"
+      ],
       "significance": "Funeral hymn describing the afterlife",
       "translation": {
         "title": "Hymn to Yama, King of the Dead",
@@ -339,7 +393,8 @@
         ],
         "context": "This funeral hymn guides the deceased to the realm of ancestors. It promises reunification with loved ones and transformation into a 'glorious body.'",
         "modernApplication": "Offers comfort about death, continuity beyond mortality, reunion with those who have passed."
-      }
+      },
+      "audioUrl": "/audio/hymns/10.14.mp3"
     },
     {
       "id": "10.34",
@@ -350,7 +405,10 @@
       "deityId": null,
       "rishi": "Kavasha Aila",
       "meter": "Trishtubh",
-      "topics": ["wellbeing", "ethics"],
+      "topics": [
+        "wellbeing",
+        "ethics"
+      ],
       "significance": "The Gambler's Lament - remarkably modern psychology",
       "translation": {
         "title": "The Gambler's Lament",
@@ -366,7 +424,8 @@
         ],
         "context": "One of the most psychologically realistic hymns. Captures the entire cycle of addiction: compulsion, loss, shame, resolution, relapse. 3,500 years old but utterly contemporary.",
         "modernApplication": "Applicable to any addiction. Recovery wisdom: acknowledging powerlessness, community support, returning to productive life."
-      }
+      },
+      "audioUrl": "/audio/hymns/10.34.mp3"
     },
     {
       "id": "10.97",
@@ -377,7 +436,10 @@
       "deityId": null,
       "rishi": "Bhishak Atharvana",
       "meter": "Trishtubh",
-      "topics": ["health", "nature"],
+      "topics": [
+        "health",
+        "nature"
+      ],
       "significance": "Major hymn on medicinal plants",
       "translation": {
         "title": "Praise of Healing Herbs",
@@ -394,7 +456,8 @@
         ],
         "context": "Shows reverence for plant medicine and sophisticated categorization (by power, form, use). The 'three ages before gods' suggests ancient origins of botanical knowledge.",
         "modernApplication": "Validates herbal medicine, emphasizes biodiversity preservation, supports integrative medical approaches."
-      }
+      },
+      "audioUrl": "/audio/hymns/10.97.mp3"
     },
     {
       "id": "10.125",
@@ -405,7 +468,11 @@
       "deityId": "vac",
       "rishi": "Vac Ambhrini",
       "meter": "Trishtubh",
-      "topics": ["mind", "purpose", "energy"],
+      "topics": [
+        "mind",
+        "purpose",
+        "energy"
+      ],
       "significance": "Goddess Speech speaks in first person",
       "translation": {
         "title": "The Goddess Speech Speaks",
@@ -421,7 +488,8 @@
         ],
         "context": "One of the most powerful feminist statements in ancient literature. Vac claims creative power, omnipresence, and supremacy. Word/consciousness as ultimate reality.",
         "modernApplication": "Celebrates feminine divine power, creative word, consciousness as fundamental. Relevant to understanding language's creative power."
-      }
+      },
+      "audioUrl": "/audio/hymns/10.125.mp3"
     },
     {
       "id": "10.127",
@@ -432,7 +500,10 @@
       "deityId": "ratri",
       "rishi": "Kushika Kausika",
       "meter": "Trishtubh",
-      "topics": ["wellbeing", "nature"],
+      "topics": [
+        "wellbeing",
+        "nature"
+      ],
       "significance": "Beautiful hymn to Night",
       "translation": {
         "title": "Hymn to Night",
@@ -449,7 +520,8 @@
         ],
         "context": "Instead of fearing night, this hymn celebrates it as restful, protective, and necessary. Night is personified as a benevolent goddess watching over sleeping world.",
         "modernApplication": "Helps overcome fear of darkness, validates rest and sleep, celebrates natural cycles."
-      }
+      },
+      "audioUrl": "/audio/hymns/10.127.mp3"
     },
     {
       "id": "10.129",
@@ -460,7 +532,11 @@
       "deityId": null,
       "rishi": "Prajapati Parameshthin",
       "meter": "Trishtubh",
-      "topics": ["existence", "mind", "purpose"],
+      "topics": [
+        "existence",
+        "mind",
+        "purpose"
+      ],
       "significance": "THE NASADIYA SUKTA - Most famous philosophical hymn",
       "translation": {
         "title": "The Hymn of Creation (Nasadiya Sukta)",
@@ -476,7 +552,8 @@
         ],
         "context": "The most philosophically mature hymn. Instead of creation myth, it admits mystery. The final line—maybe even God doesn't know—is radical intellectual humility.",
         "modernApplication": "Validates living with uncertainty, mystery, not-knowing. Relevant to existential questions, cosmology, consciousness studies."
-      }
+      },
+      "audioUrl": "/audio/hymns/10.129.mp3"
     }
   ],
   "metadata": {

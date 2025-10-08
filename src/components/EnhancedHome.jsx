@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from './Layout/Navigation';
 import GlobalSearch from './GlobalSearch';
+import CountUp from './CountUp';
 import metadata from '../data/metadata.json';
 import deities from '../data/deities.json';
 import topics from '../data/topics.json';
@@ -9,11 +10,11 @@ import hymns from '../data/hymns.json';
 
 const EnhancedHome = () => {
   const sectionRef = useRef(null);
-  const bottomSectionRef = useRef(null); // NEW: ref for bottom section
+  const bottomSectionRef = useRef(null);
   const [activeCardIndex, setActiveCardIndex] = useState(0);
-  const [bottomCardIndex, setBottomCardIndex] = useState(0); // NEW: state for bottom cards
+  const [bottomCardIndex, setBottomCardIndex] = useState(0);
   const [isIntersecting, setIsIntersecting] = useState(false);
-  const [isBottomIntersecting, setIsBottomIntersecting] = useState(false); // NEW: state for bottom intersection
+  const [isBottomIntersecting, setIsBottomIntersecting] = useState(false);
   const ticking = useRef(false);
 
   const features = [
@@ -51,7 +52,6 @@ const EnhancedHome = () => {
     }
   ];
 
-  // NEW: Bottom section features
   const bottomFeatures = [
     {
       id: 1,
@@ -87,7 +87,6 @@ const EnhancedHome = () => {
     willChange: 'transform, opacity'
   };
 
-  // NEW: Smaller card style for bottom section
   const smallCardStyle = {
     height: '280px',
     borderRadius: '12px',
@@ -96,7 +95,6 @@ const EnhancedHome = () => {
   };
 
   useEffect(() => {
-    // Top section observer
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
@@ -105,7 +103,6 @@ const EnhancedHome = () => {
       { threshold: 0.1 }
     );
 
-    // Bottom section observer
     const bottomObserver = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
@@ -125,7 +122,6 @@ const EnhancedHome = () => {
     const handleScroll = () => {
       if (!ticking.current) {
         window.requestAnimationFrame(() => {
-          // Top section scroll logic
           if (sectionRef.current) {
             const sectionRect = sectionRef.current.getBoundingClientRect();
             const viewportHeight = window.innerHeight;
@@ -147,11 +143,10 @@ const EnhancedHome = () => {
             }
           }
 
-          // Bottom section scroll logic
           if (bottomSectionRef.current) {
             const bottomRect = bottomSectionRef.current.getBoundingClientRect();
             const viewportHeight = window.innerHeight;
-            const totalScrollDistance = viewportHeight * 1.5; // Shorter scroll for 3 cards
+            const totalScrollDistance = viewportHeight * 1.5;
 
             let bottomProgress = 0;
             if (bottomRect.top <= 0) {
@@ -193,7 +188,6 @@ const EnhancedHome = () => {
   const isThirdCardVisible = activeCardIndex >= 2;
   const isFourthCardVisible = activeCardIndex >= 3;
 
-  // Bottom cards visibility
   const isBottomFirstVisible = isBottomIntersecting;
   const isBottomSecondVisible = bottomCardIndex >= 1;
   const isBottomThirdVisible = bottomCardIndex >= 2;
@@ -295,30 +289,47 @@ const EnhancedHome = () => {
 
         <div className="ornate-divider ornate-divider-om"></div>
 
-        {/* Quick Stats */}
+        {/* Quick Stats with Count Up Animation */}
         <section className="py-8 px-4 bg-[--color-parchment-dark]">
           <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="text-center p-4">
               <div className="text-4xl font-[family:--font-family-header] text-[--color-saffron] mb-2">
-                {metadata.structure.totalMandalas || 10}
+                <CountUp 
+                  to={metadata.structure.totalMandalas || 10}
+                  duration={2}
+                  delay={0}
+                />
               </div>
               <div className="text-sm text-[--color-ink-light]">Mandalas</div>
             </div>
             <div className="text-center p-4">
               <div className="text-4xl font-[family:--font-family-header] text-[--color-saffron] mb-2">
-                {(metadata.structure.totalVerses || 10552).toLocaleString()}
+                <CountUp 
+                  to={metadata.structure.totalVerses || 10552}
+                  duration={2.5}
+                  delay={0.1}
+                  separator=","
+                />
               </div>
               <div className="text-sm text-[--color-ink-light]">Verses</div>
             </div>
             <div className="text-center p-4">
               <div className="text-4xl font-[family:--font-family-header] text-[--color-saffron] mb-2">
-                {deities.deities.length}
+                <CountUp 
+                  to={deities.deities.length}
+                  duration={2}
+                  delay={0.2}
+                />
               </div>
               <div className="text-sm text-[--color-ink-light]">Deities</div>
             </div>
             <div className="text-center p-4">
               <div className="text-4xl font-[family:--font-family-header] text-[--color-saffron] mb-2">
-                {topics.topics.length}
+                <CountUp 
+                  to={topics.topics.length}
+                  duration={2}
+                  delay={0.3}
+                />
               </div>
               <div className="text-sm text-[--color-ink-light]">Life Topics</div>
             </div>

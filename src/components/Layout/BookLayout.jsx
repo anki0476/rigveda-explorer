@@ -4,34 +4,16 @@ import Navigation from './Navigation';
 import GlobalSearch from '../GlobalSearch';
 
 const BookLayout = ({ children, pageNumber }) => {
-  // ← REMOVED all the AudioUnlock state and logic
-
   return (
     <>
       <Navigation />
       
       <div className="min-h-screen w-full texture-parchment relative overflow-hidden">
-        {/* Top Bar with Sanskrit Title and Global Search */}
-        <div className="absolute top-4 left-4 right-4 sm:top-6 sm:left-6 sm:right-6 z-10 flex items-start justify-between gap-4">
-          {/* Sanskrit Title - Left Side */}
-          <div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-amber-600 drop-shadow-sm">
-              ऋग्वेद
-            </h1>
-            <div className="text-xs sm:text-sm text-amber-700/80 font-serif mt-1">
-              Rig Veda
-            </div>
-          </div>
-
-          {/* Global Search - Right Side */}
-          <div className="hidden md:block flex-shrink-0 w-full max-w-md">
+        {/* Global Search - Centered at Top */}
+        <div className="absolute top-4 sm:top-6 left-0 right-0 z-10 flex justify-center px-4">
+          <div className="w-full max-w-xl">
             <GlobalSearch />
           </div>
-        </div>
-
-        {/* Mobile Search - Below Title on Small Screens */}
-        <div className="md:hidden absolute top-24 left-4 right-4 z-10">
-          <GlobalSearch />
         </div>
 
         {/* Page Number - Bottom Right Corner (if provided) */}
@@ -43,8 +25,8 @@ const BookLayout = ({ children, pageNumber }) => {
           </div>
         )}
 
-        {/* Main Content Container */}
-        <div className="w-full max-w-none sm:max-w-4xl lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 mt-16 md:mt-0">
+        {/* Main Content Container - Reduced top margin (cut in half) */}
+        <div className="w-full max-w-none sm:max-w-4xl lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 mt-16 sm:mt-20">
           {/* Content Wrapper with subtle inner shadow */}
           <div className="relative">
             {/* Subtle inner glow effect */}

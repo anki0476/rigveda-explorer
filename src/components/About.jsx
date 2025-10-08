@@ -1,4 +1,6 @@
 import React from 'react';
+import CountUp from './CountUp';
+import LogoLoop from './LogoLoop';
 import metadata from '../data/metadata.json';
 import deities from '../data/deities.json';
 import topics from '../data/topics.json';
@@ -7,6 +9,52 @@ import facts from '../data/surpriseFacts.json';
 import connections from '../data/connections.json';
 
 const About = () => {
+  // Technology logos - only what we actually use
+  const techLogos = [
+    {
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+      alt: 'React',
+      title: 'React 18',
+      href: 'https://react.dev',
+      height: 40
+    },
+    {
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+      alt: 'JavaScript',
+      title: 'JavaScript',
+      href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+      height: 40
+    },
+    {
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+      alt: 'Tailwind CSS',
+      title: 'Tailwind CSS v4',
+      href: 'https://tailwindcss.com',
+      height: 40
+    },
+    {
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/d3js/d3js-original.svg',
+      alt: 'D3.js',
+      title: 'D3.js',
+      href: 'https://d3js.org',
+      height: 40
+    },
+    {
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg',
+      alt: 'Vite',
+      title: 'Vite',
+      href: 'https://vitejs.dev',
+      height: 40
+    },
+    {
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactrouter/reactrouter-original.svg',
+      alt: 'React Router',
+      title: 'React Router v6',
+      href: 'https://reactrouter.com',
+      height: 40
+    }
+  ];
+
   return (
     <div className="max-w-6xl mx-auto p-8">
       {/* Hero Section */}
@@ -20,11 +68,15 @@ const About = () => {
         </p>
       </div>
 
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+      {/* Stats Grid - WITH COUNT UP ANIMATION */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
         <div className="bg-[--color-parchment-light] p-6 rounded-lg border-2 border-[--color-gold]/30 text-center">
           <div className="text-4xl font-[family:--font-family-header] text-[--color-saffron] mb-2">
-            {metadata.structure.totalMandalas || 10}
+            <CountUp 
+              to={metadata.structure.totalMandalas || 10}
+              duration={1.5}
+              delay={0}
+            />
           </div>
           <div className="text-sm text-[--color-ink-light] font-[family:--font-family-body] uppercase">
             Mandalas
@@ -33,7 +85,12 @@ const About = () => {
         
         <div className="bg-[--color-parchment-light] p-6 rounded-lg border-2 border-[--color-gold]/30 text-center">
           <div className="text-4xl font-[family:--font-family-header] text-[--color-saffron] mb-2">
-            {metadata.structure.totalSuktas || 1028}
+            <CountUp 
+              to={metadata.structure.totalSuktas || 1028}
+              duration={2}
+              delay={0.2}
+              separator=","
+            />
           </div>
           <div className="text-sm text-[--color-ink-light] font-[family:--font-family-body] uppercase">
             Suktas (Hymns)
@@ -42,7 +99,12 @@ const About = () => {
         
         <div className="bg-[--color-parchment-light] p-6 rounded-lg border-2 border-[--color-gold]/30 text-center">
           <div className="text-4xl font-[family:--font-family-header] text-[--color-saffron] mb-2">
-            {metadata.structure.totalVerses?.toLocaleString() || '10,552'}
+            <CountUp 
+              to={metadata.structure.totalVerses || 10552}
+              duration={2.5}
+              delay={0.4}
+              separator=","
+            />
           </div>
           <div className="text-sm text-[--color-ink-light] font-[family:--font-family-body] uppercase">
             Verses
@@ -51,7 +113,11 @@ const About = () => {
         
         <div className="bg-[--color-parchment-light] p-6 rounded-lg border-2 border-[--color-gold]/30 text-center">
           <div className="text-4xl font-[family:--font-family-header] text-[--color-saffron] mb-2">
-            {deities.deities.length}
+            <CountUp 
+              to={deities.deities.length}
+              duration={1.5}
+              delay={0.6}
+            />
           </div>
           <div className="text-sm text-[--color-ink-light] font-[family:--font-family-body] uppercase">
             Deities
@@ -83,7 +149,7 @@ const About = () => {
         <h2 className="text-3xl font-[family:--font-family-header] text-[--color-ink] mb-6 pb-2 border-b-2 border-[--color-gold]/30">
           About This Project
         </h2>
-        <div className="bg-[--color-parchment-light] p-8 rounded-lg space-y-4">
+        <div className="bg-[--color-parchment-light] p-8 rounded-lg space-y-6">
           <p className="text-[--color-ink-light] font-[family:--font-family-body] leading-relaxed">
             Rigveda Explorer is an immersive web experience designed to make ancient Vedic wisdom accessible 
             through modern technology. This project combines scholarly research, interactive visualizations, 
@@ -94,6 +160,25 @@ const About = () => {
             thematic explorations of life topics, surprise facts, and comprehensive content on deities, 
             hymns, and philosophical concepts—all presented with an ancient manuscript aesthetic.
           </p>
+
+          {/* Technology Logos Loop */}
+          <div className="mt-8">
+            <h3 className="text-center text-lg font-[family:--font-family-header] text-[--color-saffron] mb-4">
+              Built With
+            </h3>
+            <LogoLoop
+              logos={techLogos}
+              speed={50}
+              direction="left"
+              logoHeight={50}
+              gap={48}
+              pauseOnHover={true}
+              fadeOut={true}
+              fadeOutColor="#F5E6D3"
+              scaleOnHover={true}
+              ariaLabel="Technologies used in this project"
+            />
+          </div>
         </div>
       </section>
 
@@ -191,7 +276,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Project Stats */}
+      {/* Project Stats - WITH COUNT UP ANIMATION */}
       <section className="mb-12">
         <h2 className="text-3xl font-[family:--font-family-header] text-[--color-ink] mb-6 pb-2 border-b-2 border-[--color-gold]/30">
           Project Statistics
@@ -199,42 +284,68 @@ const About = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           <div className="bg-[--color-parchment-dark] p-4 rounded-lg text-center">
             <div className="text-2xl font-[family:--font-family-header] text-[--color-gold] mb-1">
-              {topics.topics.length}
+              <CountUp 
+                to={topics.topics.length}
+                duration={1.5}
+                delay={0}
+              />
             </div>
             <div className="text-xs text-[--color-ink-light]">Life Topics Explored</div>
           </div>
           
           <div className="bg-[--color-parchment-dark] p-4 rounded-lg text-center">
             <div className="text-2xl font-[family:--font-family-header] text-[--color-gold] mb-1">
-              {hymns.hymns.length}+
+              <CountUp 
+                to={hymns.hymns.length}
+                duration={1.5}
+                delay={0.1}
+              />
+              +
             </div>
             <div className="text-xs text-[--color-ink-light]">Hymns Referenced</div>
           </div>
           
           <div className="bg-[--color-parchment-dark] p-4 rounded-lg text-center">
             <div className="text-2xl font-[family:--font-family-header] text-[--color-gold] mb-1">
-              {facts.facts.length}
+              <CountUp 
+                to={facts.facts.length}
+                duration={1.5}
+                delay={0.2}
+              />
             </div>
             <div className="text-xs text-[--color-ink-light]">Surprise Facts</div>
           </div>
           
           <div className="bg-[--color-parchment-dark] p-4 rounded-lg text-center">
             <div className="text-2xl font-[family:--font-family-header] text-[--color-gold] mb-1">
-              {deities.deities.length}
+              <CountUp 
+                to={deities.deities.length}
+                duration={1.5}
+                delay={0.3}
+              />
             </div>
             <div className="text-xs text-[--color-ink-light]">Deities Mapped</div>
           </div>
           
           <div className="bg-[--color-parchment-dark] p-4 rounded-lg text-center">
             <div className="text-2xl font-[family:--font-family-header] text-[--color-gold] mb-1">
-              {connections.connections.length}
+              <CountUp 
+                to={connections.connections.length}
+                duration={1.5}
+                delay={0.4}
+              />
             </div>
             <div className="text-xs text-[--color-ink-light]">Deity Connections</div>
           </div>
           
           <div className="bg-[--color-parchment-dark] p-4 rounded-lg text-center">
             <div className="text-2xl font-[family:--font-family-header] text-[--color-gold] mb-1">
-              66KB+
+              <CountUp 
+                to={66}
+                duration={1.5}
+                delay={0.5}
+              />
+              KB+
             </div>
             <div className="text-xs text-[--color-ink-light]">Content Data</div>
           </div>

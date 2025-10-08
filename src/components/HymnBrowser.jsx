@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import hymnsData from '../data/hymns.json';
-import BookLoadingAnimation from './BookLoadingAnimation';  // ← ADDED
+import BookLoadingAnimation from './BookLoadingAnimation';
+import AudioPlayer from './AudioPlayer';
 
 const HymnBrowser = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedMandala, setSelectedMandala] = useState('all');
   const [selectedDeity, setSelectedDeity] = useState('all');
   const [selectedHymn, setSelectedHymn] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);  // ← ADDED
-  const [hymns, setHymns] = useState([]);  // ← ADDED
+  const [isLoading, setIsLoading] = useState(true);
+  const [hymns, setHymns] = useState([]);
 
   // Load hymns with delay
   useEffect(() => {
@@ -24,7 +25,7 @@ const HymnBrowser = () => {
   const mandalas = [...new Set(hymns.map(h => h.mandala))].sort((a, b) => a - b);
   const deities = [...new Set(hymns.map(h => h.deity).filter(d => d))].sort();
 
-  // Filter hymns (use hymns instead of hymnsData.hymns)
+  // Filter hymns
   const filteredHymns = hymns.filter(hymn => {
     const searchLower = searchQuery.toLowerCase();
     const matchesSearch = searchQuery === '' || 
@@ -109,7 +110,8 @@ const HymnBrowser = () => {
                 borderRadius: '50%',
                 cursor: 'pointer',
                 boxShadow: '0 4px 6px rgba(0,0,0,0.3)',
-                lineHeight: 1
+                lineHeight: 1,
+                zIndex: 10
               }}
               onMouseOver={(e) => e.target.style.backgroundColor = 'var(--color-gold)'}
               onMouseOut={(e) => e.target.style.backgroundColor = 'var(--color-saffron)'}
@@ -187,6 +189,13 @@ const HymnBrowser = () => {
                 </span>
               )}
             </div>
+
+            {/* AUDIO PLAYER */}
+            <AudioPlayer 
+              hymnId={selectedHymn.id}
+              hymnTitle={selectedHymn.translation?.title || `Hymn ${selectedHymn.id}`}
+              audioUrl={selectedHymn.audioUrl}
+            />
 
             {/* Summary */}
             {selectedHymn.translation?.summary && (
@@ -346,7 +355,6 @@ const HymnBrowser = () => {
     );
   };
 
-  // ← ADDED: Show book animation while loading
   if (isLoading) {
     return (
       <div className="max-w-7xl mx-auto p-8">
@@ -453,10 +461,15 @@ const HymnBrowser = () => {
               {hymn.translation?.summary || hymn.significance}
             </p>
 
-            {/* Stats */}
-            <div className="flex items-center gap-4 text-xs text-[--color-ink-light]">
+            {/* Stats - WITH AUDIO BADGE ADDED ✨ */}
+            <div className="flex items-center gap-4 text-xs text-[--color-ink-light] flex-wrap">
               <span>📜 {hymn.verses} verses</span>
               {hymn.rishi && <span className="line-clamp-1">✍️ {hymn.rishi}</span>}
+              {hymn.audioUrl && (
+                <span className="bg-[--color-saffron]/20 px-2 py-1 rounded text-[--color-saffron] font-semibold">
+                  🎵 Audio
+                </span>
+              )}
             </div>
           </div>
         ))}

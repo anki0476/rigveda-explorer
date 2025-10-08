@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import jsPDF from 'jspdf';
+import FastDecrypt from './FastDecrypt';
 
 const AskTheRishi = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -44,14 +45,13 @@ const AskTheRishi = () => {
   const [showFavorites, setShowFavorites] = useState(false);
   const [smartSuggestions, setSmartSuggestions] = useState([]);
   const [isGeneratingSuggestions, setIsGeneratingSuggestions] = useState(false);
+  const [latestMessageIndex, setLatestMessageIndex] = useState(-1);
   const messagesEndRef = useRef(null);
 
-  // NEW: Prefill input from URL parameter
   useEffect(() => {
     const questionParam = searchParams.get('question');
     if (questionParam) {
       setInput(questionParam);
-      // Clear the URL parameter after setting input
       setSearchParams({});
     }
   }, [searchParams, setSearchParams]);
@@ -302,6 +302,7 @@ Format: Return ONLY the 4 questions, one per line, without numbering or bullets.
       };
       setMessages([initialMessage]);
       setSmartSuggestions([]);
+      setLatestMessageIndex(-1);
       localStorage.setItem('rigveda-chat-history', JSON.stringify([initialMessage]));
     }
   };
@@ -382,11 +383,16 @@ Provide a thoughtful, well-cited answer as the Rishi:`;
         if (response.ok) {
           const data = await response.json();
           const text = data.candidates[0].content.parts[0].text;
-          setMessages(prev => [...prev, { 
-            role: 'assistant', 
-            content: text,
-            timestamp: new Date().toISOString()
-          }]);
+          
+          setMessages(prev => {
+            const newMessages = [...prev, { 
+              role: 'assistant', 
+              content: text,
+              timestamp: new Date().toISOString()
+            }];
+            setLatestMessageIndex(newMessages.length - 1);
+            return newMessages;
+          });
           
           generateSmartSuggestions(text);
           
@@ -408,6 +414,7 @@ Provide a thoughtful, well-cited answer as the Rishi:`;
         content: '🙏 Forgive me, I could not connect to any available Gemini model. Please:\n\n1. Verify your API key is correct\n2. Make sure the Generative AI API is enabled\n3. Try generating a new API key at https://aistudio.google.com/apikey',
         timestamp: new Date().toISOString()
       }]);
+      setLatestMessageIndex(messages.length);
     }
 
     setIsLoading(false);
@@ -492,6 +499,8 @@ Provide a thoughtful, well-cited answer as the Rishi:`;
           ) : (
             displayMessages.map((message, index) => {
               const actualIndex = showFavorites ? message.originalIndex : index;
+              const shouldAnimate = !showFavorites && actualIndex === latestMessageIndex && message.role === 'assistant';
+              
               return (
                 <div
                   key={`${message.timestamp}-${index}`}
@@ -545,20 +554,28 @@ Provide a thoughtful, well-cited answer as the Rishi:`;
                     )}
                     <div className="font-[family:--font-family-body] leading-relaxed prose prose-sm max-w-none">
                       {message.role === 'assistant' ? (
-                        <ReactMarkdown
-                          components={{
-                            p: ({node, ...props}) => <p className="mb-3" {...props} />,
-                            strong: ({node, ...props}) => <strong className="font-bold text-[--color-saffron]" {...props} />,
-                            em: ({node, ...props}) => <em className="italic" {...props} />,
-                            ul: ({node, ...props}) => <ul className="list-disc list-inside mb-3 space-y-1" {...props} />,
-                            ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-3 space-y-1" {...props} />,
-                            h1: ({node, ...props}) => <h1 className="text-2xl font-bold mb-2 text-[--color-gold]" {...props} />,
-                            h2: ({node, ...props}) => <h2 className="text-xl font-bold mb-2 text-[--color-gold]" {...props} />,
-                            h3: ({node, ...props}) => <h3 className="text-lg font-bold mb-2 text-[--color-gold]" {...props} />,
-                          }}
-                        >
-                          {message.content}
-                        </ReactMarkdown>
+                        shouldAnimate ? (
+                          <FastDecrypt 
+                            text={message.content} 
+                            duration={1200}
+                            className="whitespace-pre-wrap"
+                          />
+                        ) : (
+                          <ReactMarkdown
+                            components={{
+                              p: ({node, ...props}) => <p className="mb-3" {...props} />,
+                              strong: ({node, ...props}) => <strong className="font-bold text-[--color-saffron]" {...props} />,
+                              em: ({node, ...props}) => <em className="italic" {...props} />,
+                              ul: ({node, ...props}) => <ul className="list-disc list-inside mb-3 space-y-1" {...props} />,
+                              ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-3 space-y-1" {...props} />,
+                              h1: ({node, ...props}) => <h1 className="text-2xl font-bold mb-2 text-[--color-gold]" {...props} />,
+                              h2: ({node, ...props}) => <h2 className="text-xl font-bold mb-2 text-[--color-gold]" {...props} />,
+                              h3: ({node, ...props}) => <h3 className="text-lg font-bold mb-2 text-[--color-gold]" {...props} />,
+                            }}
+                          >
+                            {message.content}
+                          </ReactMarkdown>
+                        )
                       ) : (
                         <div className="whitespace-pre-wrap font-bold text-black">{message.content}</div>
                       )}

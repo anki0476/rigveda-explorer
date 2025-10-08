@@ -338,7 +338,7 @@ const GlobalSearch = () => {
     }
   };
 
-  // Loading Skeleton Portal with Glassmorphism
+  // Loading Skeleton Portal with Glassmorphism + BLUR
   const LoadingSkeletonPortal = () => {
     if (!isOpen || !isLoading) return null;
 
@@ -353,10 +353,10 @@ const GlobalSearch = () => {
           maxHeight: '400px',
           zIndex: 9998,
           
-          // 🔮 GLASSMORPHISM EFFECT
-          background: 'rgba(250, 248, 243, 0.75)',
-          backdropFilter: 'blur(16px) saturate(180%)',
-          WebkitBackdropFilter: 'blur(16px) saturate(180%)',
+          // 🔮 GLASSMORPHISM + BLUR EFFECT
+          background: 'rgba(250, 248, 243, 0.85)',
+          backdropFilter: 'blur(24px) saturate(200%)',
+          WebkitBackdropFilter: 'blur(24px) saturate(200%)',
           border: '1px solid rgba(218, 165, 32, 0.3)',
           borderRadius: '12px',
           boxShadow: '0 8px 32px 0 rgba(218, 165, 32, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.1)',
@@ -368,7 +368,7 @@ const GlobalSearch = () => {
     );
   };
 
-  // Results Dropdown Portal with Glassmorphism
+  // Results Dropdown Portal with Glassmorphism + BLUR
   const DropdownPortal = () => {
     if (!isOpen || isLoading || results.length === 0) return null;
 
@@ -386,10 +386,10 @@ const GlobalSearch = () => {
             overflowY: 'auto',
             zIndex: 9998,
             
-            // 🔮 GLASSMORPHISM EFFECT
-            background: 'rgba(250, 248, 243, 0.75)',
-            backdropFilter: 'blur(16px) saturate(180%)',
-            WebkitBackdropFilter: 'blur(16px) saturate(180%)',
+            // 🔮 GLASSMORPHISM + BLUR EFFECT
+            background: 'rgba(250, 248, 243, 0.85)',
+            backdropFilter: 'blur(24px) saturate(200%)',
+            WebkitBackdropFilter: 'blur(24px) saturate(200%)',
             border: '1px solid rgba(218, 165, 32, 0.3)',
             borderRadius: '12px',
             boxShadow: '0 8px 32px 0 rgba(218, 165, 32, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.1)',
@@ -481,7 +481,7 @@ const GlobalSearch = () => {
     );
   };
 
-  // No Results Portal with Glassmorphism
+  // No Results Portal with Glassmorphism + BLUR
   const NoResultsPortal = () => {
     if (!isOpen || isLoading || query.length < 2 || results.length > 0) return null;
 
@@ -495,10 +495,10 @@ const GlobalSearch = () => {
           width: `${dropdownPosition.width}px`,
           zIndex: 9998,
           
-          // 🔮 GLASSMORPHISM EFFECT
-          background: 'rgba(250, 248, 243, 0.75)',
-          backdropFilter: 'blur(16px) saturate(180%)',
-          WebkitBackdropFilter: 'blur(16px) saturate(180%)',
+          // 🔮 GLASSMORPHISM + BLUR EFFECT
+          background: 'rgba(250, 248, 243, 0.85)',
+          backdropFilter: 'blur(24px) saturate(200%)',
+          WebkitBackdropFilter: 'blur(24px) saturate(200%)',
           border: '1px solid rgba(218, 165, 32, 0.3)',
           borderRadius: '12px',
           boxShadow: '0 8px 32px 0 rgba(218, 165, 32, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.1)',

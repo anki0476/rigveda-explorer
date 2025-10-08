@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap');
+/* Google Fonts - Updated with better combinations */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif+Devanagari:wght@400;500;600;700;800&display=swap');
 
 /* Custom Theme Configuration */
 @theme {
@@ -18,18 +18,163 @@
   --color-vermillion: #E34234;
   --color-gold: #D4AF37;
   
-  /* Custom Fonts */
-  --font-family-header: Cinzel, serif;
-  --font-family-body: Lora, serif;
-  --font-family-sanskrit: 'Noto Sans Devanagari', serif;
+  /* Enhanced Custom Fonts */
+  --font-family-header: 'Cinzel', serif;
+  --font-family-body: 'Crimson Pro', serif;
+  --font-family-sanskrit: 'Noto Serif Devanagari', serif;
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
 }
+
+/* ========================================
+   BASE TYPOGRAPHY STYLES
+   ======================================== */
 
 /* Base Styles */
 body {
   background-color: var(--color-parchment);
   font-family: var(--font-family-body);
   color: var(--color-ink);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  font-size: 16px;
 }
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-header);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+  color: var(--color-ink);
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.75rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.06em;
+}
+
+h3 {
+  font-size: 2.25rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+}
+
+h4 {
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.03em;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-medium);
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Paragraph Text */
+p {
+  font-size: 1.125rem;
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+  font-weight: var(--font-weight-regular);
+}
+
+/* Sanskrit/Devanagari Text */
+.sanskrit,
+.devanagari {
+  font-family: var(--font-family-sanskrit);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.02em;
+  line-height: 1.8;
+}
+
+/* Button Text */
+button {
+  font-family: var(--font-family-header);
+  letter-spacing: 0.08em;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* Navigation */
+nav {
+  font-family: var(--font-family-header);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* Quotes & Special Text */
+blockquote {
+  font-family: var(--font-family-body);
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.9;
+  font-weight: var(--font-weight-regular);
+  border-left: 4px solid var(--color-gold);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  color: var(--color-ink-light);
+}
+
+/* Links */
+a {
+  font-family: inherit;
+  color: var(--color-gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-saffron);
+}
+
+/* Small Text */
+small {
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-regular);
+}
+
+/* Strong/Bold Text */
+strong, b {
+  font-weight: var(--font-weight-bold);
+}
+
+/* Emphasis/Italic Text */
+em, i {
+  font-style: italic;
+  font-weight: var(--font-weight-medium);
+}
+
+/* ========================================
+   CUSTOM COMPONENT CLASSES
+   ======================================== */
 
 /* Custom Component Classes */
 .book-page {
@@ -47,8 +192,9 @@ body {
 
 .sanskrit-text {
   font-family: var(--font-family-sanskrit);
-  font-size: 1.125rem;
-  line-height: 1.75;
+  font-size: 1.25rem;
+  line-height: 1.85;
+  font-weight: var(--font-weight-medium);
 }
 
 /* ========================================
@@ -164,16 +310,880 @@ body {
   }
 }
 
-/* Bouncing animation for loading dots */
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
+/* Force scroll on dropdown */
+.search-dropdown-scroll {
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.search-dropdown-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.search-dropdown-scroll::-webkit-scrollbar-track {
+  background: rgba(218, 165, 32, 0.1);
+  border-radius: 4px;
+}
+
+.search-dropdown-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 4px;
+}
+
+.search-dropdown-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--color-saffron);
+}
+
+/* ========================================
+   ORNATE GOLDEN BORDERS & CORNER DECORATIONS
+   ======================================== */
+
+/* Main ornate border with double golden frame */
+.ornate-golden-border {
+  position: relative;
+  border: 4px solid var(--color-gold);
+  padding: 2rem;
+  background: var(--color-parchment-light);
+  box-shadow: 
+    inset 0 0 0 8px var(--color-parchment),
+    inset 0 0 0 12px var(--color-gold),
+    0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Elaborate corner decorations */
+.ornate-golden-border::before,
+.ornate-golden-border::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 3px solid var(--color-gold);
+  pointer-events: none;
+}
+
+.ornate-golden-border::before {
+  top: -3px;
+  left: -3px;
+  border-right: none;
+  border-bottom: none;
+  background: 
+    linear-gradient(135deg, var(--color-gold) 0%, transparent 50%),
+    radial-gradient(circle at 0% 0%, var(--color-gold-light) 0%, transparent 70%);
+  opacity: 0.6;
+}
+
+.ornate-golden-border::after {
+  top: -3px;
+  right: -3px;
+  border-left: none;
+  border-bottom: none;
+  background: 
+    linear-gradient(225deg, var(--color-gold) 0%, transparent 50%),
+    radial-gradient(circle at 100% 0%, var(--color-gold-light) 0%, transparent 70%);
+  opacity: 0.6;
+}
+
+.ornate-golden-border > *:last-child::before,
+.ornate-golden-border > *:last-child::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 3px solid var(--color-gold);
+  pointer-events: none;
+}
+
+.ornate-golden-border > *:last-child::before {
+  bottom: -3px;
+  left: -3px;
+  border-right: none;
+  border-top: none;
+  background: 
+    linear-gradient(45deg, var(--color-gold) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, var(--color-gold-light) 0%, transparent 70%);
+  opacity: 0.6;
+}
+
+.ornate-golden-border > *:last-child::after {
+  bottom: -3px;
+  right: -3px;
+  border-left: none;
+  border-top: none;
+  background: 
+    linear-gradient(315deg, var(--color-gold) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, var(--color-gold-light) 0%, transparent 70%);
+  opacity: 0.6;
+}
+
+/* Decorative corner symbols */
+.manuscript-corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+}
+
+.manuscript-corner::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 50% 50%, var(--color-gold) 2px, transparent 2px),
+    radial-gradient(circle at 30% 30%, var(--color-gold-dark) 1px, transparent 1px),
+    radial-gradient(circle at 70% 70%, var(--color-gold-dark) 1px, transparent 1px);
+  background-size: 20px 20px, 10px 10px, 10px 10px;
+  opacity: 0.5;
+}
+
+.manuscript-corner-tl {
+  top: 15px;
+  left: 15px;
+}
+
+.manuscript-corner-tr {
+  top: 15px;
+  right: 15px;
+  transform: rotate(90deg);
+}
+
+.manuscript-corner-bl {
+  bottom: 15px;
+  left: 15px;
+  transform: rotate(-90deg);
+}
+
+.manuscript-corner-br {
+  bottom: 15px;
+  right: 15px;
+  transform: rotate(180deg);
+}
+
+/* Ornate section divider with flourishes */
+.ornate-divider {
+  position: relative;
+  height: 40px;
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ornate-divider::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    var(--color-gold-dark) 10%,
+    var(--color-gold) 30%,
+    var(--color-gold-light) 50%,
+    var(--color-gold) 70%,
+    var(--color-gold-dark) 90%,
+    transparent 100%
+  );
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+.ornate-divider::after {
+  content: '❖';
+  position: relative;
+  z-index: 1;
+  font-size: 28px;
+  color: var(--color-gold);
+  background: var(--color-parchment);
+  padding: 0 20px;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+}
+
+.ornate-divider-om::after {
+  content: 'ॐ';
+  font-size: 36px;
+  font-family: var(--font-family-sanskrit);
+  color: var(--color-gold);
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+}
+
+/* Decorative flourish pattern */
+.golden-flourish {
+  position: relative;
+  height: 20px;
+  margin: 2rem 0;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 20px,
+      var(--color-gold) 20px,
+      var(--color-gold) 22px,
+      transparent 22px,
+      transparent 30px
+    );
+  opacity: 0.4;
+}
+
+.golden-flourish::before,
+.golden-flourish::after {
+  content: '◆';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gold);
+  font-size: 18px;
+}
+
+.golden-flourish::before {
+  left: 0;
+}
+
+.golden-flourish::after {
+  right: 0;
+}
+
+/* Intricate border pattern */
+.spine-border {
+  position: relative;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-image: 
+    repeating-linear-gradient(
+      0deg,
+      var(--color-gold-dark) 0px,
+      var(--color-gold) 10px,
+      var(--color-gold-light) 20px,
+      var(--color-gold) 30px,
+      var(--color-gold-dark) 40px
+    ) 6;
+}
+
+/* Flame pattern border */
+.flame-pattern-border {
+  position: relative;
+  padding: 2rem;
+  background: var(--color-parchment-light);
+}
+
+.flame-pattern-border::before {
+  content: '🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 20px;
+  opacity: 0.3;
+  letter-spacing: 30px;
+  animation: flicker 3s ease-in-out infinite;
+}
+
+.flame-pattern-border::after {
+  content: '🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥';
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 20px;
+  opacity: 0.3;
+  letter-spacing: 30px;
+  animation: flicker 3.5s ease-in-out infinite;
+}
+
+/* Double border with inner glow */
+.double-golden-border {
+  border: 3px solid var(--color-gold);
+  box-shadow: 
+    inset 0 0 0 6px var(--color-parchment-light),
+    inset 0 0 0 9px var(--color-gold-dark),
+    inset 0 0 20px rgba(212, 175, 55, 0.2),
+    0 0 20px rgba(212, 175, 55, 0.3);
+  padding: 1.5rem;
+}
+
+/* Vedic geometric pattern corners */
+.vedic-pattern-corners::before,
+.vedic-pattern-corners::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-image: 
+    conic-gradient(
+      from 45deg at 50% 50%,
+      transparent 0deg,
+      var(--color-gold) 45deg,
+      transparent 90deg,
+      var(--color-gold) 135deg,
+      transparent 180deg,
+      var(--color-gold) 225deg,
+      transparent 270deg,
+      var(--color-gold) 315deg,
+      transparent 360deg
+    );
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.vedic-pattern-corners::before {
+  top: -10px;
+  left: -10px;
+}
+
+.vedic-pattern-corners::after {
+  bottom: -10px;
+  right: -10px;
+}
+
+/* Sanskrit syllable decorative border */
+.sanskrit-border {
+  border-top: 2px solid var(--color-gold);
+  border-bottom: 2px solid var(--color-gold);
+  padding: 1rem 0;
+  position: relative;
+}
+
+.sanskrit-border::before {
+  content: 'ॐ मणि पद्मे हूँ ॐ';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-parchment);
+  padding: 0 1rem;
+  color: var(--color-gold);
+  font-family: var(--font-family-sanskrit);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* ========================================
+   TEXT ANIMATIONS
+   ======================================== */
+
+/* Typewriter cursor blink animation */
+@keyframes blink {
+  0%, 100% { 
+    opacity: 1; 
   }
-  50% {
-    transform: translateY(-10px);
+  50% { 
+    opacity: 0; 
   }
 }
 
-.animate-bounce {
-  animation: bounce 1s ease-in-out infinite;
+.animate-blink {
+  animation: blink 1s infinite;
 }
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes shimmer-progress {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(-10px) translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(-50%);
+  }
+}
+
+/* TextType Component Styles */
+.text-type {
+  display: inline-block;
+  white-space: pre-wrap;
+}
+
+.text-type__content {
+  display: inline;
+}
+
+.text-type__cursor {
+  margin-left: 0.25rem;
+  display: inline-block;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.text-type__cursor--hidden {
+  display: none;
+}
+
+/* Shiny Text Animation */
+.shiny-button-text {
+  background: linear-gradient(
+    110deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0.8) 20%,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 1) 60%,
+    rgba(255, 255, 255, 0.8) 80%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  animation: shine-text 2.5s ease-in-out infinite;
+  display: inline-block;
+  will-change: background-position;
+  filter: brightness(1.2);
+}
+
+@keyframes shine-text {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.shiny-button-text.disabled {
+  animation: none;
+  background: white;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* ========================================
+   GLARE HOVER EFFECT FOR CARDS
+   ======================================== */
+
+.card-glare-container {
+  position: relative;
+}
+
+.card-glare-container .double-golden-border {
+  position: relative;
+  overflow: visible !important;
+}
+
+.card-glare-container .double-golden-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    -45deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 60%
+  );
+  transition: 650ms ease;
+  background-size: 250% 250%;
+  background-repeat: no-repeat;
+  background-position: -200% -200%;
+  pointer-events: none;
+  z-index: 10;
+  border-radius: inherit;
+}
+
+.card-glare-container:hover .double-golden-border::before {
+  background-position: 200% 200%;
+}
+
+.card-glare-container .double-golden-border > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ========================================
+   LOGO LOOP ANIMATION
+   ======================================== */
+
+.logoloop {
+  position: relative;
+  overflow-x: hidden;
+  --logoloop-gap: 32px;
+  --logoloop-logoHeight: 28px;
+  --logoloop-fadeColorAuto: #F5E6D3;
+}
+
+.logoloop--scale-hover {
+  padding-top: calc(var(--logoloop-logoHeight) * 0.1);
+  padding-bottom: calc(var(--logoloop-logoHeight) * 0.1);
+}
+
+.logoloop__track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  user-select: none;
+}
+
+.logoloop__list {
+  display: flex;
+  align-items: center;
+}
+
+.logoloop__item {
+  flex: 0 0 auto;
+  margin-right: var(--logoloop-gap);
+  font-size: var(--logoloop-logoHeight);
+  line-height: 1;
+}
+
+.logoloop__item:last-child {
+  margin-right: var(--logoloop-gap);
+}
+
+.logoloop__node {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logoloop__item img {
+  height: var(--logoloop-logoHeight);
+  width: auto;
+  display: block;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  -webkit-user-drag: none;
+  pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logoloop--scale-hover .logoloop__item {
+  overflow: visible;
+}
+
+.logoloop--scale-hover .logoloop__item:hover img,
+.logoloop--scale-hover .logoloop__item:hover .logoloop__node {
+  transform: scale(1.2);
+  transform-origin: center center;
+}
+
+.logoloop--scale-hover .logoloop__node {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logoloop__link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.logoloop__link:hover {
+  opacity: 0.8;
+}
+
+.logoloop__link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.logoloop--fade::before,
+.logoloop--fade::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(24px, 8%, 120px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.logoloop--fade::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto)) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.logoloop--fade::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto)) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logoloop__track {
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+  .logoloop__item img,
+  .logoloop__node {
+    transition: none !important;
+  }
+}
+
+/* ========================================
+   FLOATING ANIMATIONS
+   ======================================== */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotateY(-10deg);
+  }
+  50% {
+    transform: translateY(-20px) rotateY(-10deg);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.rotate-y-10 {
+  transform: rotateY(-10deg);
+}
+
+/* ========================================
+   VIDEO INTRO - NO CONTROLS
+   ======================================== */
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+video::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-timeline {
+  display: none !important;
+}
+
+video::-webkit-media-controls-current-time-display {
+  display: none !important;
+}
+
+video::-webkit-media-controls-time-remaining-display {
+  display: none !important;
+}
+
+video::-webkit-media-controls-mute-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-volume-slider {
+  display: none !important;
+}
+
+video::-webkit-media-controls-fullscreen-button {
+  display: none !important;
+}
+
+video::-moz-media-controls {
+  display: none !important;
+}
+
+video::-ms-media-controls {
+  display: none !important;
+}
+
+video {
+  pointer-events: none;
+}
+
+/* 3D Card Flip Styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Smooth animations */
+@keyframes fadeInFromBlack {
+  from {
+    opacity: 0;
+    background-color: #000;
+  }
+  to {
+    opacity: 1;
+    background-color: transparent;
+  }
+}
+
+/* Game-specific animations */
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+/* Card collection animation */
+@keyframes card-collect {
+  0% {
+    transform: scale(1) rotateY(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotateY(180deg);
+  }
+  100% {
+    transform: scale(1) rotateY(360deg);
+  }
+}
+
+.animate-card-collect {
+  animation: card-collect 0.8s ease-in-out;
+}
+
+/* Achievement unlock animation */
+@keyframes achievement-unlock {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-achievement-unlock {
+  animation: achievement-unlock 0.6s ease-out;
+}
+
+/* XP gain animation */
+@keyframes xp-gain {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate-xp-gain {
+  animation: xp-gain 1s ease-out;
+}
+
+/* Floating animation for rewards */
+@keyframes float-up {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+}
+
+.animate-float-up {
+  animation: float-up 1.5s ease-out;
+}
+
+/* Game button hover effects */
+.game-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.game-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.5s;
+}
+
+.game-button:hover::before {
+  left: 100%;
+}
+
+/* ========================================
+   SMOOTH PAGE TRANSITIONS
+   ======================================== */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent layout shift during transitions */
+main {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Fade out animation for loading overlay */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+

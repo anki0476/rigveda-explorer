@@ -1,0 +1,125 @@
+{
+    "episodes": [
+      {
+        "id": 1,
+        "title": "मंडल एक - अग्नि की प्रथम ज्योति",
+        "subtitle": "The First Light of Agni",
+        "description": "Journey into Mandala 1, the longest book of the Rigveda. Discover how Agni, the sacred fire, illuminates the path to divine wisdom and learn about Indra's epic battle with Vritra.",
+        "duration": "8:00",
+        "audioUrl": null,
+        "thumbnail": "/images/mandala-1.jpg",
+        "mandalaNumbers": [1],
+        "scriptFile": "/data/podcastScriptsM1.json",
+        "highlights": ["Agni - Sacred Fire", "Indra vs Vritra", "191 Suktas"]
+      },
+      {
+        "id": 2,
+        "title": "मंडल दो - अश्विन देव",
+        "subtitle": "The Divine Physicians",
+        "description": "Meet the celestial healers - the Ashwins, twin gods who ride the golden chariot at dawn and possess miraculous healing powers.",
+        "duration": "7:30",
+        "audioUrl": null,
+        "thumbnail": "/images/mandala-2.jpg",
+        "mandalaNumbers": [2],
+        "scriptFile": "/data/podcastScriptsM2&M3.json",
+        "highlights": ["Twin Divine Doctors", "Miraculous Healings", "Dawn Mythology"]
+      },
+      {
+        "id": 3,
+        "title": "मंडल तीन - विश्वामित्र का ज्ञान",
+        "subtitle": "Vishwamitra's Wisdom",
+        "description": "Explore the profound hymns composed by the great sage Vishwamitra, including the sacred Gayatri Mantra.",
+        "duration": "8:15",
+        "audioUrl": null,
+        "thumbnail": "/images/mandala-3.jpg",
+        "mandalaNumbers": [3],
+        "scriptFile": "/data/podcastScriptsM2&M3.json",
+        "highlights": ["Gayatri Mantra", "Vishwamitra", "Solar Wisdom"]
+      },
+      {
+        "id": 4,
+        "title": "मंडल चार - वामदेव की दृष्टि",
+        "subtitle": "Vamadeva's Vision",
+        "description": "Delve into the mystical visions of Rishi Vamadeva and his profound understanding of cosmic order.",
+        "duration": "7:45",
+        "audioUrl": null,
+        "thumbnail": "/images/mandala-4.jpg",
+        "mandalaNumbers": [4],
+        "scriptFile": "/data/podcastScriptsM4&M5.json",
+        "highlights": ["Cosmic Order", "Divine Vision", "Ritual Hymns"]
+      },
+      {
+        "id": 5,
+        "title": "मंडल पांच - अत्रि की उपासना",
+        "subtitle": "Atri's Devotion",
+        "description": "Experience the devotional hymns of the Atri family, celebrating the gods of nature and cosmic forces.",
+        "duration": "8:00",
+        "audioUrl": null,
+        "thumbnail": "/images/mandala-5.jpg",
+        "mandalaNumbers": [5],
+        "scriptFile": "/data/podcastScriptsM4&M5.json",
+        "highlights": ["Atri Family", "Nature Gods", "Cosmic Forces"]
+      },
+      {
+        "id": 6,
+        "title": "मंडल छह - भरद्वाज का मार्ग",
+        "subtitle": "Bharadvaja's Path",
+        "description": "Follow the spiritual path illuminated by Rishi Bharadvaja through powerful invocations to Indra and Agni.",
+        "duration": "7:30",
+        "audioUrl": null,
+        "thumbnail": "/images/mandala-6.jpg",
+        "mandalaNumbers": [6],
+        "scriptFile": "/data/podcastScriptsM6,M7&M8.json",
+        "highlights": ["Spiritual Path", "Indra Hymns", "Divine Power"]
+      },
+      {
+        "id": 7,
+        "title": "मंडल सात - वशिष्ठ की वाणी",
+        "subtitle": "Vasishtha's Voice",
+        "description": "Listen to the eloquent hymns of Vasishtha, one of the greatest sages, praising Varuna and the cosmic order.",
+        "duration": "8:30",
+        "audioUrl": null,
+        "thumbnail": "/images/mandala-7.jpg",
+        "mandalaNumbers": [7],
+        "scriptFile": "/data/podcastScriptsM6,M7&M8.json",
+        "highlights": ["Vasishtha", "Varuna", "Cosmic Law"]
+      },
+      {
+        "id": 8,
+        "title": "मंडल आठ - कण्व की कविता",
+        "subtitle": "Kanva's Poetry",
+        "description": "Immerse yourself in the poetic beauty of the Kanva family's compositions celebrating divine glory.",
+        "duration": "7:45",
+        "audioUrl": null,
+        "thumbnail": "/images/mandala-8.jpg",
+        "mandalaNumbers": [8],
+        "scriptFile": "/data/podcastScriptsM6,M7&M8.json",
+        "highlights": ["Poetic Beauty", "Divine Glory", "Kanva Family"]
+      },
+      {
+        "id": 9,
+        "title": "मंडल नौ - सोम का स्तोत्र",
+        "subtitle": "Hymns to Soma",
+        "description": "Discover the mystical hymns dedicated entirely to Soma, the divine nectar of immortality and enlightenment.",
+        "duration": "9:00",
+        "audioUrl": null,
+        "thumbnail": "/images/mandala-9.jpg",
+        "mandalaNumbers": [9],
+        "scriptFile": "/data/podcastScriptsM9&M10.json",
+        "highlights": ["Soma Rasa", "Divine Nectar", "Purification"]
+      },
+      {
+        "id": 10,
+        "title": "मंडल दस - ब्रह्मांड के रहस्य",
+        "subtitle": "Mysteries of the Universe",
+        "description": "Conclude the journey with the profound philosophical hymns exploring creation, death, and the ultimate reality.",
+        "duration": "9:30",
+        "audioUrl": null,
+        "thumbnail": "/images/mandala-10.jpg",
+        "mandalaNumbers": [10],
+        "scriptFile": "/data/podcastScriptsM9&M10.json",
+        "highlights": ["Creation Hymn", "Nasadiya Sukta", "Ultimate Truth"]
+      }
+    ]
+  }
+  

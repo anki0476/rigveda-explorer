@@ -17,12 +17,14 @@ import {
   Network
 } from 'lucide-react';
 
+
 const Navigation = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0, width: 0 });
   const dropdownTimeoutRef = useRef(null);
   const buttonRef = useRef(null);
   const location = useLocation();
+
 
   const updateDropdownPosition = () => {
     if (buttonRef.current && isDropdownOpen) {
@@ -35,6 +37,7 @@ const Navigation = () => {
     }
   };
 
+
   const handleMouseEnter = () => {
     if (dropdownTimeoutRef.current) {
       clearTimeout(dropdownTimeoutRef.current);
@@ -42,15 +45,18 @@ const Navigation = () => {
     setIsDropdownOpen(true);
   };
 
+
   const handleMouseLeave = () => {
     dropdownTimeoutRef.current = setTimeout(() => {
       setIsDropdownOpen(false);
     }, 500);
   };
 
+
   useEffect(() => {
     updateDropdownPosition();
   }, [isDropdownOpen]);
+
 
   useEffect(() => {
     if (isDropdownOpen) {
@@ -67,6 +73,7 @@ const Navigation = () => {
     }
   }, [isDropdownOpen]);
 
+
   useEffect(() => {
     return () => {
       if (dropdownTimeoutRef.current) {
@@ -75,7 +82,9 @@ const Navigation = () => {
     };
   }, []);
 
+
   const isActive = (path) => location.pathname === path;
+
 
   const navItemClass = (path) => `
     nav-item relative px-4 py-2 rounded-lg font-[family:--font-family-body] font-semibold
@@ -85,6 +94,7 @@ const Navigation = () => {
       : 'text-[#3d2f1f] hover:text-[--color-gold] hover:bg-[--color-gold]/5 hover:shadow-[0_0_20px_rgba(218,165,32,0.4)]'
     }
   `;
+
 
   const dropdownItemClass = (path) => `
     dropdown-item flex items-center gap-3 px-4 py-3 
@@ -96,18 +106,21 @@ const Navigation = () => {
     }
   `;
 
-  // Explore dropdown routes
+
+  // ✅ FIXED: Explore dropdown routes - match routes.jsx
   const exploreRoutes = [
     '/vedic-identity',
-    '/rigveda-online', 
+    '/rigveda-on',        // ✅ FIXED from /rigveda-online
     '/hymns',
-    '/ten-mandalas',
+    '/mandalas',          // ✅ FIXED from /ten-mandalas
     '/mandala-wheel',
-    '/rigveda-observatory'
+    '/star-map'           // ✅ FIXED from /rigveda-observatory
   ];
+
 
   const DropdownPortal = () => {
     if (!isDropdownOpen) return null;
+
 
     return createPortal(
       <div
@@ -127,9 +140,9 @@ const Navigation = () => {
             <span>My Vedic Identity</span>
           </Link>
           
-          <Link to="/rigveda-online" className={dropdownItemClass('/rigveda-online')}>
+          <Link to="/rigveda-on" className={dropdownItemClass('/rigveda-on')}>
             <BookOpen size={20} />
-            <span>Rig Veda Online</span>
+            <span>RigVeda On...</span>
           </Link>
           
           <Link to="/hymns" className={dropdownItemClass('/hymns')}>
@@ -137,7 +150,7 @@ const Navigation = () => {
             <span>Hymns</span>
           </Link>
           
-          <Link to="/ten-mandalas" className={dropdownItemClass('/ten-mandalas')}>
+          <Link to="/mandalas" className={dropdownItemClass('/mandalas')}>
             <BookText size={20} />
             <span>Ten Mandalas</span>
           </Link>
@@ -147,7 +160,7 @@ const Navigation = () => {
             <span>Mandala Wheel</span>
           </Link>
           
-          <Link to="/rigveda-observatory" className={dropdownItemClass('/rigveda-observatory')}>
+          <Link to="/star-map" className={dropdownItemClass('/star-map')}>
             <Telescope size={20} />
             <span>RigVeda Observatory</span>
           </Link>
@@ -156,6 +169,7 @@ const Navigation = () => {
       document.body
     );
   };
+
 
   return (
     <>
@@ -170,6 +184,7 @@ const Navigation = () => {
                 <span className="hidden sm:inline">HOME</span>
               </div>
             </Link>
+
 
             {/* EXPLORE (formerly INDEX) */}
             <div
@@ -197,6 +212,7 @@ const Navigation = () => {
               </button>
             </div>
 
+
             {/* DEITY NETWORK */}
             <Link to="/deity-network" className={navItemClass('/deity-network')}>
               <div className="flex items-center gap-2">
@@ -205,13 +221,15 @@ const Navigation = () => {
               </div>
             </Link>
 
-            {/* SURPRISE ME */}
-            <Link to="/surprise" className={navItemClass('/surprise')}>
+
+            {/* SURPRISE ME - ✅ FIXED */}
+            <Link to="/surprise-me" className={navItemClass('/surprise-me')}>
               <div className="flex items-center gap-2">
                 <Sparkles size={20} />
                 <span className="hidden sm:inline">SURPRISE ME!</span>
               </div>
             </Link>
+
 
             {/* ASK THE RISHI */}
             <Link to="/ask-rishi" className={navItemClass('/ask-rishi')}>
@@ -221,6 +239,7 @@ const Navigation = () => {
               </div>
             </Link>
 
+
             {/* GAMES */}
             <Link to="/games" className={navItemClass('/games')}>
               <div className="flex items-center gap-2">
@@ -228,6 +247,7 @@ const Navigation = () => {
                 <span className="hidden sm:inline">GAMES</span>
               </div>
             </Link>
+
 
             {/* ABOUT */}
             <Link to="/about" className={navItemClass('/about')}>
@@ -237,13 +257,16 @@ const Navigation = () => {
               </div>
             </Link>
 
+
           </div>
         </div>
       </nav>
+
 
       <DropdownPortal />
     </>
   );
 };
+
 
 export default Navigation;

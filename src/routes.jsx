@@ -16,263 +16,274 @@ import NotFound from './components/NotFound';
 import ErrorBoundary from './components/ErrorBoundary';
 import TimelineComponent from './components/Timeline';
 
-
 // GAME IMPORTS
 import GamesHub from './pages/GamesHub';
 import StoryMode from './components/StoryMode/StoryMode';
 import DeityCollector from './components/DeityCollector/DeityCollector';
 import AchievementPanel from './components/Achievements/AchievementPanel';
 
-
 // NEW: Vedic Identity Quiz Import
 import VedicIdentityQuiz from './components/VedicIdentityQuiz';
 
+// ✅ ADD THIS IMPORT
+import ScrollToTop from './components/ScrollToTop';
 
 // Home route WITHOUT BookLayout wrapper for full scroll control
 const Home = () => (
-  <PageTransition>
-    <EnhancedHomeComponent />
-  </PageTransition>
+  <>
+    <ScrollToTop />
+    <PageTransition>
+      <EnhancedHomeComponent />
+    </PageTransition>
+  </>
 );
-
 
 const Timeline = () => (
-  <PageTransition>
-    <BookLayout pageNumber="10">
+  <BookLayout>
+    <ScrollToTop />
+    <PageTransition>
       <TimelineComponent />
-    </BookLayout>
-  </PageTransition>
+    </PageTransition>
+  </BookLayout>
 );
-
 
 const DeityNetwork = () => (
-  <PageTransition>
-    <BookLayout pageNumber="2">
+  <BookLayout>
+    <ScrollToTop />
+    <PageTransition>
       <DeityNetworkComponent />
-    </BookLayout>
-  </PageTransition>
+    </PageTransition>
+  </BookLayout>
 );
-
 
 const RigVedaOn = () => (
-  <PageTransition>
-    <BookLayout pageNumber="3">
+  <BookLayout>
+    <ScrollToTop />
+    <PageTransition>
       <TopicGridComponent />
-    </BookLayout>
-  </PageTransition>
+    </PageTransition>
+  </BookLayout>
 );
-
 
 const TopicDetail = () => (
-  <PageTransition>
-    <BookLayout pageNumber="3">
+  <BookLayout>
+    <ScrollToTop />
+    <PageTransition>
       <TopicDetailComponent />
-    </BookLayout>
-  </PageTransition>
+    </PageTransition>
+  </BookLayout>
 );
-
 
 const SurpriseMe = () => (
-  <PageTransition>
-    <BookLayout pageNumber="4">
+  <BookLayout>
+    <ScrollToTop />
+    <PageTransition>
       <SurpriseMeComponent />
-    </BookLayout>
-  </PageTransition>
+    </PageTransition>
+  </BookLayout>
 );
-
 
 const AskRishi = () => (
-  <PageTransition>
-    <BookLayout pageNumber="5">
+  <BookLayout>
+    <ScrollToTop />
+    <PageTransition>
       <AskTheRishiComponent />
-    </BookLayout>
-  </PageTransition>
+    </PageTransition>
+  </BookLayout>
 );
-
 
 const Mandalas = () => (
-  <PageTransition>
-    <BookLayout pageNumber="6">
+  <BookLayout>
+    <ScrollToTop />
+    <PageTransition>
       <TenMandalasComponent />
-    </BookLayout>
-  </PageTransition>
+    </PageTransition>
+  </BookLayout>
 );
-
 
 const MandalaWheel = () => (
-  <PageTransition>
-    <BookLayout pageNumber="9">
+  <BookLayout>
+    <ScrollToTop />
+    <PageTransition>
       <MandalaWheelComponent />
-    </BookLayout>
-  </PageTransition>
+    </PageTransition>
+  </BookLayout>
 );
-
 
 const About = () => (
-  <PageTransition>
-    <BookLayout pageNumber="7">
+  <BookLayout>
+    <ScrollToTop />
+    <PageTransition>
       <AboutComponent />
-    </BookLayout>
-  </PageTransition>
+    </PageTransition>
+  </BookLayout>
 );
-
 
 const HymnBrowser = () => (
-  <PageTransition>
-    <BookLayout pageNumber="8">
+  <BookLayout>
+    <ScrollToTop />
+    <PageTransition>
       <HymnBrowserComponent />
-    </BookLayout>
-  </PageTransition>
+    </PageTransition>
+  </BookLayout>
 );
-
 
 const VedicStarMap = () => (
-  <PageTransition>
-    <BookLayout pageNumber="11">
+  <BookLayout>
+    <ScrollToTop />
+    <PageTransition>
       <VedicStarMapComponent />
-    </BookLayout>
-  </PageTransition>
+    </PageTransition>
+  </BookLayout>
 );
-
 
 // GAME ROUTES (WITHOUT BookLayout for full-screen game experience)
 const Games = () => (
-  <PageTransition>
-    <GamesHub />
-  </PageTransition>
+  <>
+    <ScrollToTop />
+    <PageTransition>
+      <GamesHub />
+    </PageTransition>
+  </>
 );
-
 
 const Story = () => (
-  <PageTransition>
-    <StoryMode />
-  </PageTransition>
+  <>
+    <ScrollToTop />
+    <PageTransition>
+      <StoryMode />
+    </PageTransition>
+  </>
 );
-
 
 const Collection = () => (
-  <PageTransition>
-    <DeityCollector />
-  </PageTransition>
+  <>
+    <ScrollToTop />
+    <PageTransition>
+      <DeityCollector />
+    </PageTransition>
+  </>
 );
-
 
 const Achievements = () => (
-  <PageTransition>
-    <AchievementPanel />
-  </PageTransition>
+  <>
+    <ScrollToTop />
+    <PageTransition>
+      <AchievementPanel />
+    </PageTransition>
+  </>
 );
-
 
 // NEW: Vedic Identity Quiz Route (Full-screen experience without BookLayout)
 const VedicIdentity = () => (
-  <PageTransition>
-    <VedicIdentityQuiz />
-  </PageTransition>
+  <>
+    <ScrollToTop />
+    <PageTransition>
+      <VedicIdentityQuiz />
+    </PageTransition>
+  </>
 );
-
 
 // 404 Route (NO PageTransition or BookLayout)
 const NotFoundPage = () => <NotFound />;
 
-
 // Router configuration
 export const router = createBrowserRouter([
-  { 
-    path: '/', 
+  {
+    path: '/',
     element: <Home />,
     errorElement: <ErrorBoundary />
   },
-  { 
-    path: '/deity-network', 
+  {
+    path: '/deity-network',
     element: <DeityNetwork />,
     errorElement: <ErrorBoundary />
   },
-  { 
-    path: '/rigveda-on', 
+  {
+    path: '/rigveda-on',
     element: <RigVedaOn />,
     errorElement: <ErrorBoundary />
   },
-  { 
-    path: '/rigveda-on/:topic', 
+  {
+    path: '/rigveda-on/:topic',
     element: <TopicDetail />,
     errorElement: <ErrorBoundary />
   },
-  { 
-    path: '/surprise-me', 
+  {
+    path: '/surprise-me',
     element: <SurpriseMe />,
     errorElement: <ErrorBoundary />
   },
-  { 
-    path: '/ask-rishi', 
+  {
+    path: '/ask-rishi',
     element: <AskRishi />,
     errorElement: <ErrorBoundary />
   },
-  { 
-    path: '/mandalas', 
+  {
+    path: '/mandalas',
     element: <Mandalas />,
     errorElement: <ErrorBoundary />
   },
-  { 
-    path: '/mandalas/:number', 
+  {
+    path: '/mandalas/:number',
     element: <Mandalas />,
     errorElement: <ErrorBoundary />
   },
-  { 
-    path: '/mandala-wheel', 
+  {
+    path: '/mandala-wheel',
     element: <MandalaWheel />,
     errorElement: <ErrorBoundary />
   },
-  { 
-    path: '/hymns', 
+  {
+    path: '/hymns',
     element: <HymnBrowser />,
     errorElement: <ErrorBoundary />
   },
-  { 
+  {
     path: '/timeline',
     element: <Timeline />,
     errorElement: <ErrorBoundary />
   },
-  { 
+  {
     path: '/star-map',
     element: <VedicStarMap />,
     errorElement: <ErrorBoundary />
   },
-  { 
-    path: '/about', 
+  {
+    path: '/about',
     element: <About />,
     errorElement: <ErrorBoundary />
   },
   // GAME ROUTES
-  { 
+  {
     path: '/games',
     element: <Games />,
     errorElement: <ErrorBoundary />
   },
-  { 
+  {
     path: '/games/story',
     element: <Story />,
     errorElement: <ErrorBoundary />
   },
-  { 
+  {
     path: '/games/collection',
     element: <Collection />,
     errorElement: <ErrorBoundary />
   },
-  { 
+  {
     path: '/games/achievements',
     element: <Achievements />,
     errorElement: <ErrorBoundary />
   },
   // NEW: Vedic Identity Quiz Route
-  { 
+  {
     path: '/vedic-identity',
     element: <VedicIdentity />,
     errorElement: <ErrorBoundary />
   },
   // 404 Catch-all (MUST BE LAST!)
-  { 
-    path: '*', 
+  {
+    path: '*',
     element: <NotFoundPage />,
     errorElement: <ErrorBoundary />
   }

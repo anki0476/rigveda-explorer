@@ -7,6 +7,12 @@ const round = (value, precision = 3) => parseFloat(value.toFixed(precision));
 const adjust = (value, fromMin, fromMax, toMin, toMax) =>
   round(toMin + ((toMax - toMin) * (value - fromMin)) / (fromMax - fromMin));
 
+const getDeityImagePath = (deityName) => {
+  const imageName = deityName.toLowerCase().replace(/\s+/g, '-');
+  return `/images/deities/${imageName}.png`;
+};
+
+
 const DeityCard = ({ deity, isUnlocked, onFlip }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const wrapRef = useRef(null);
@@ -178,6 +184,50 @@ const DeityCard = ({ deity, isUnlocked, onFlip }) => {
               minHeight: '450px'
             }}
           >
+                {/* Deity Image - Upper 50% */}
+    {isUnlocked && (
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          height: '50%',
+          zIndex: 0,
+          overflow: 'hidden',
+          borderTopLeftRadius: '18px',
+          borderTopRightRadius: '18px'
+        }}
+      >
+        <img
+          src={getDeityImagePath(deity.name)}
+          alt={deity.name}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+            display: 'block'
+          }}
+          onError={(e) => {
+            e.target.style.display = 'none';
+          }}
+        />
+        <div
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: '150px',
+            background: `linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.7) 100%)`,
+            pointerEvents: 'none', 
+            zIndex: 1
+          }}
+        />
+      </div>
+    )}
+
             <div 
               className={`double-golden-border rounded-2xl p-6 h-full transition-all ${
                 isUnlocked 
@@ -187,7 +237,12 @@ const DeityCard = ({ deity, isUnlocked, onFlip }) => {
               style={{
                 borderTopColor: isUnlocked ? deity.color : '#666',
                 borderTopWidth: '6px',
-                minHeight: '450px'
+                minHeight: '450px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'flex-start', 
+                
+                position: 'relative'
               }}
             >
               {isUnlocked ? (
@@ -200,59 +255,58 @@ const DeityCard = ({ deity, isUnlocked, onFlip }) => {
                     {deity.rarity}
                   </div>
 
-                  {/* Icon */}
-                  <div className="text-6xl text-center mb-4 relative z-10">
-                    {deity.icon}
-                  </div>
 
-                  {/* Name */}
-                  <h3 className="text-2xl font-[family:--font-family-header] font-bold text-[--color-ink] text-center mb-1 relative z-10">
-                    {deity.name}
-                  </h3>
+                
+                  <div style={{ position: 'absolute', top: '50%', left: 0, right: 0,height:'50%', padding: '20px',  boxSizing: 'border-box', display: 'flex',flexDirection: 'column',justifyContent: 'flex-start',overflow: 'hidden',zIndex: 10 }}>
+                    {/* Name */}
+                    <h3 className="text-xl font-[family:--font-family-header] font-bold text-white text-center mb-0 relative z-10">
+                      {deity.name}
+                    </h3>
                   
-                  {/* Sanskrit */}
-                  <p className="text-lg sanskrit text-[--color-gold] text-center mb-2 relative z-10">
+                    {/* Sanskrit */}
+                    <p className="text-sm sanskrit text-[--color-gold] text-center mb-1 relative z-10">
                     {deity.sanskrit}
-                  </p>
+                    </p>
 
-                  {/* Title */}
-                  <p className="text-sm font-[family:--font-family-body] text-[--color-ink-light] text-center italic mb-4 relative z-10">
-                    {deity.title}
-                  </p>
+                    {/* Title */}
+                    <p className="text-sm font-[family:--font-family-body] text-[--color-ink-light] text-center italic mb-2 relative z-10">
+                      {deity.title}
+                    </p>
 
-                  {/* Stats */}
-                  <div className="space-y-2 mb-4 relative z-10">
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="font-[family:--font-family-header] text-[--color-ink]">Power</span>
-                      <div className="flex-1 mx-2 bg-[--color-parchment-dark] rounded-full h-2 overflow-hidden">
-                        <div 
-                          className="bg-gradient-to-r from-[--color-gold] to-[--color-saffron] h-full rounded-full transition-all duration-500"
-                          style={{ width: `${deity.power}%` }}
-                        ></div>
+                    {/* Stats */}
+                    <div className="space-y-2 mb-4 relative z-10">
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="font-[family:--font-family-header] text-[--color-ink]">Power</span>
+                        <div className="flex-1 mx-2 bg-[--color-parchment-dark] rounded-full h-2 overflow-hidden">
+                          <div 
+                            className="bg-gradient-to-r from-[--color-gold] to-[--color-saffron] h-full rounded-full transition-all duration-500"
+                            style={{ width: `${deity.power}%` }}
+                          ></div>
+                        </div>
+                        <span className="font-[family:--font-family-body] font-bold text-[--color-ink]">{deity.power}</span>
                       </div>
-                      <span className="font-[family:--font-family-body] font-bold text-[--color-ink]">{deity.power}</span>
+
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="font-[family:--font-family-header] text-[--color-ink]">Wisdom</span>
+                        <div className="flex-1 mx-2 bg-[--color-parchment-dark] rounded-full h-2 overflow-hidden">
+                          <div 
+                            className="bg-gradient-to-r from-blue-400 to-purple-500 h-full rounded-full transition-all duration-500"
+                            style={{ width: `${deity.wisdom}%` }}
+                          ></div>
+                        </div>
+                        <span className="font-[family:--font-family-body] font-bold text-[--color-ink]">{deity.wisdom}</span>
+                      </div>
                     </div>
 
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="font-[family:--font-family-header] text-[--color-ink]">Wisdom</span>
-                      <div className="flex-1 mx-2 bg-[--color-parchment-dark] rounded-full h-2 overflow-hidden">
-                        <div 
-                          className="bg-gradient-to-r from-blue-400 to-purple-500 h-full rounded-full transition-all duration-500"
-                          style={{ width: `${deity.wisdom}%` }}
-                        ></div>
-                      </div>
-                      <span className="font-[family:--font-family-body] font-bold text-[--color-ink]">{deity.wisdom}</span>
+                    {/* Hymn Count */}
+                    <div className="text-center text-sm font-[family:--font-family-body] text-[--color-ink-light] relative z-10 mb-1">
+                      📖 {deity.hymns} Hymns
                     </div>
-                  </div>
 
-                  {/* Hymn Count */}
-                  <div className="text-center text-sm font-[family:--font-family-body] text-[--color-ink-light] relative z-10">
-                    📖 {deity.hymns} Hymns
-                  </div>
-
-                  {/* Click to flip hint */}
-                  <div className="mt-4 text-center text-xs font-[family:--font-family-body] text-[--color-gold] relative z-10">
-                    Click to flip →
+                    {/* Click to flip hint */}
+                    <div className="mt-1 text-center text-xs font-[family:--font-family-body] text-[--color-gold] relative z-10">
+                      Click to flip →
+                    </div>
                   </div>
                 </>
               ) : (

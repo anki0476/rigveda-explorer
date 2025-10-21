@@ -606,15 +606,24 @@ const EnhancedHome = () => {
                   <p className="text-[--color-ink-light] mb-6">
                     Dive into interactive visualizations, discover fascinating facts, explore deity relationships, and find timeless insights for modern living.
                   </p>
-                  <button 
-                    onClick={() => {
-                      const element = document.querySelector('#timeline-section');
-                      element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }}
-                    className="inline-block bg-[--color-gold] hover:bg-[--color-saffron] text-white px-8 py-3 rounded-lg font-[family:--font-family-header] text-lg transition-all transform hover:scale-105 shadow-lg"
-                  >
-                    Start Your Journey ✨
-                  </button>
+                  <button
+                   onClick={() => setShowJourneyModal(true)}
+                   className="inline-block px-8 py-3 rounded-lg border-2 transition-all transform hover:scale-105 font-family--font-family-header text-lg shadow-lg"
+                   style={{
+                     borderColor: '#d4af37',
+                     color: '#d4af37',
+                   }}
+                   onMouseEnter={(e) => {
+                     e.currentTarget.style.backgroundColor = '#d4af37';
+                     e.currentTarget.style.color = '#fff';
+                   }}
+                   onMouseLeave={(e) => {
+                     e.currentTarget.style.backgroundColor = 'transparent';
+                     e.currentTarget.style.color = '#d4af37';
+                   }}
+                 >
+                   START YOUR JOURNEY →
+                 </button>
                 </div>
               </div>
             </div>
@@ -729,8 +738,6 @@ const EnhancedHome = () => {
 
         <div className="ornate-divider ornate-divider-om"></div>
 
-        <div className="ornate-divider ornate-divider-om"></div>
-
         {/* RigVeda Timeline Section - MOVED TO BOTTOM */}
         <section className="py-16 px-4 bg-[--color-parchment-dark]">
           <div className="max-w-4xl mx-auto">
@@ -793,8 +800,6 @@ const EnhancedHome = () => {
             </div>
           </div>
         </section>
-
-        <div className="golden-flourish"></div>
 
         <div className="golden-flourish"></div>
 

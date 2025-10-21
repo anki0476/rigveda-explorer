@@ -1,0 +1,98 @@
+/* ========== NEW: Slideshow Background Styles ========== */
+.slideshow-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.slideshow-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.slideshow-image.active {
+  opacity: 1;
+}
+
+/* Dark overlay for text readability */
+.slideshow-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.6)
+  );
+  z-index: 1;
+}
+/* ========== END NEW STYLES ========== */
+
+
+/* ========== EXISTING STYLES (UNCHANGED) ========== */
+/* Shiny glare animation for logo */
+@keyframes shine {
+  0% {
+    left: -150%;
+  }
+  50%, 100% {
+    left: 150%;
+  }
+}
+
+.logo-container {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.logo-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shine 3s ease-in-out infinite;
+  transform: skewX(-25deg);
+  z-index: 1;
+}
+
+.logo-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}

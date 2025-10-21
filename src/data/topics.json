@@ -1,0 +1,468 @@
+{
+  "topics": [
+    {
+      "id": "mind",
+      "title": "Mind & Consciousness",
+      "shortTitle": "The Mind",
+      "icon": "🧠",
+      "color": "#9B59B6",
+      "gradient": "linear-gradient(135deg, #9B59B6 0%, #E056FD 100%)",
+      "description": "Explore the Vedic understanding of consciousness, thought, and awareness",
+      "summary": "The Rig Veda explores consciousness through manas (mind), chitta (awareness), and buddhi (intellect) - concepts that still resonate in neuroscience and meditation today.",
+      "keywords": [
+        "manas",
+        "chitta",
+        "buddhi",
+        "consciousness",
+        "thought",
+        "awareness"
+      ],
+      "hymnCount": 8,
+      "deities": [
+        "vishvedevas",
+        "agni",
+        "soma"
+      ],
+      "relatedTopics": [
+        "wellbeing",
+        "purpose"
+      ],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "health",
+      "title": "Physical Health & Vitality",
+      "shortTitle": "Health",
+      "icon": "💪",
+      "color": "#E74C3C",
+      "gradient": "linear-gradient(135deg, #E74C3C 0%, #FF6B6B 100%)",
+      "description": "Discover ancient wisdom on physical strength, vitality, and well-being",
+      "summary": "The Ashvins, divine physicians, represent healing and vitality. Hymns celebrate life force (prana), strength (bala), and the power of natural remedies.",
+      "keywords": [
+        "prana",
+        "bala",
+        "ojas",
+        "healing",
+        "vitality",
+        "strength"
+      ],
+      "hymnCount": 6,
+      "deities": [
+        "ashvins",
+        "soma",
+        "apas"
+      ],
+      "relatedTopics": [
+        "wellbeing",
+        "energy"
+      ],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "wellbeing",
+      "title": "Mental Wellbeing",
+      "shortTitle": "Wellbeing",
+      "icon": "❤️",
+      "color": "#E91E63",
+      "gradient": "linear-gradient(135deg, #E91E63 0%, #FF6B9D 100%)",
+      "description": "Ancient approaches to peace, contentment, and emotional balance",
+      "summary": "Hymns address inner peace (shanti), contentment (santosha), and overcoming fear. The Vedic approach to mental health combines ritual, meditation, and community.",
+      "keywords": [
+        "shanti",
+        "santosha",
+        "peace",
+        "contentment",
+        "balance"
+      ],
+      "hymnCount": 7,
+      "deities": [
+        "varuna",
+        "mitra",
+        "vishvedevas"
+      ],
+      "relatedTopics": [
+        "mind",
+        "purpose"
+      ],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "purpose",
+      "title": "Purpose & Dharma",
+      "shortTitle": "Purpose",
+      "icon": "🎯",
+      "color": "#3498DB",
+      "gradient": "linear-gradient(135deg, #3498DB 0%, #5DADE2 100%)",
+      "description": "Understand duty, righteousness, and life's meaning",
+      "summary": "Dharma (righteous duty) and rita (cosmic order) form the foundation of purposeful living. Hymns guide seekers toward their unique path in the cosmic dance.",
+      "keywords": [
+        "dharma",
+        "rita",
+        "duty",
+        "purpose",
+        "righteousness"
+      ],
+      "hymnCount": 9,
+      "deities": [
+        "varuna",
+        "mitra",
+        "indra"
+      ],
+      "relatedTopics": [
+        "ethics",
+        "mind"
+      ],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "nature",
+      "title": "Nature & Environment",
+      "shortTitle": "Nature",
+      "icon": "🌅",
+      "color": "#27AE60",
+      "gradient": "linear-gradient(135deg, #27AE60 0%, #2ECC71 100%)",
+      "description": "Celebrate the natural world and humanity's relationship with it",
+      "summary": "Hymns to Ushas (dawn), Surya (sun), Apas (waters), and Prithivi (earth) express profound reverence for nature and ecological interdependence.",
+      "keywords": [
+        "nature",
+        "earth",
+        "waters",
+        "sun",
+        "dawn",
+        "environment"
+      ],
+      "hymnCount": 12,
+      "deities": [
+        "ushas",
+        "surya",
+        "prithivi",
+        "apas",
+        "parjanya"
+      ],
+      "relatedTopics": [
+        "energy"
+      ],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "ethics",
+      "title": "Ethics & Righteousness",
+      "shortTitle": "Ethics",
+      "icon": "⚖️",
+      "color": "#F39C12",
+      "gradient": "linear-gradient(135deg, #F39C12 0%, #F1C40F 100%)",
+      "description": "Explore truth, justice, and moral conduct",
+      "summary": "The concept of satya (truth) and rita (cosmic law) guide ethical behavior. Varuna watches over oaths and punishes transgressions of moral order.",
+      "keywords": [
+        "satya",
+        "rita",
+        "truth",
+        "justice",
+        "morality",
+        "oath"
+      ],
+      "hymnCount": 8,
+      "deities": [
+        "varuna",
+        "mitra",
+        "vishvedevas"
+      ],
+      "relatedTopics": [
+        "purpose"
+      ],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "relationships",
+      "title": "Relationships & Community",
+      "shortTitle": "Relationships",
+      "icon": "🤝",
+      "color": "#16A085",
+      "gradient": "linear-gradient(135deg, #16A085 0%, #1ABC9C 100%)",
+      "description": "Understanding bonds of friendship, family, and society",
+      "summary": "Mitra embodies friendship and social bonds. Hymns emphasize hospitality, brotherhood, and the sacred nature of human connection.",
+      "keywords": [
+        "mitra",
+        "friendship",
+        "family",
+        "community",
+        "hospitality"
+      ],
+      "hymnCount": 5,
+      "deities": [
+        "mitra",
+        "vishvedevas"
+      ],
+      "relatedTopics": [
+        "ethics",
+        "wellbeing"
+      ],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "existence",
+      "title": "Death & Existence",
+      "shortTitle": "Existence",
+      "icon": "💭",
+      "color": "#8E44AD",
+      "gradient": "linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%)",
+      "description": "Contemplate mortality, the afterlife, and the nature of being",
+      "summary": "The Nasadiya Sukta questions creation itself. Yama, first mortal, rules the realm of ancestors. Deep philosophical inquiries into existence and non-existence.",
+      "keywords": [
+        "death",
+        "yama",
+        "creation",
+        "existence",
+        "afterlife",
+        "mortality"
+      ],
+      "hymnCount": 7,
+      "deities": [
+        "yama",
+        "agni",
+        "vishvedevas"
+      ],
+      "relatedTopics": [
+        "mind",
+        "purpose"
+      ],
+      "difficulty": "advanced"
+    },
+    {
+      "id": "energy",
+      "title": "Energy & Transformation",
+      "shortTitle": "Energy",
+      "icon": "🔥",
+      "color": "#E67E22",
+      "gradient": "linear-gradient(135deg, #E67E22 0%, #FF6B35 100%)",
+      "description": "Harness transformative power and vital energy",
+      "summary": "Agni transforms offerings into divine nourishment. Soma catalyzes change. Understanding tejas (inner fire) and tapas (transformative heat).",
+      "keywords": [
+        "agni",
+        "tejas",
+        "tapas",
+        "transformation",
+        "power",
+        "fire"
+      ],
+      "hymnCount": 10,
+      "deities": [
+        "agni",
+        "soma",
+        "surya"
+      ],
+      "relatedTopics": [
+        "health",
+        "nature"
+      ],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "success",
+      "title": "Success & Prosperity",
+      "shortTitle": "Success",
+      "icon": "🌟",
+      "color": "#F39C12",
+      "gradient": "linear-gradient(135deg, #F39C12 0%, #FFD700 100%)",
+      "description": "Achieve goals and cultivate abundance",
+      "summary": "Indra grants victory and strength. Lakshmi (wealth) and prosperity hymns guide material and spiritual success. Balance ambition with dharma.",
+      "keywords": [
+        "success",
+        "prosperity",
+        "wealth",
+        "victory",
+        "abundance"
+      ],
+      "hymnCount": 8,
+      "deities": [
+        "indra",
+        "pushan",
+        "vishvedevas"
+      ],
+      "relatedTopics": [
+        "purpose",
+        "energy"
+      ],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "resilience",
+      "title": "Resilience & Overcoming Adversity",
+      "shortTitle": "Resilience",
+      "icon": "⚡",
+      "color": "#FF6B6B",
+      "gradient": "linear-gradient(135deg, #FF6B6B 0%, #C44569 100%)",
+      "description": "Build unshakeable inner strength and bounce back from setbacks",
+      "summary": "Indra's battles teach resilience. Agni rises from every offering. Ancient wisdom on facing obstacles, recovering from failure, and developing antifragility.",
+      "keywords": [
+        "resilience",
+        "adversity",
+        "strength",
+        "courage",
+        "obstacles",
+        "failure",
+        "growth"
+      ],
+      "hymnCount": 9,
+      "deities": [
+        "indra",
+        "agni",
+        "rudra"
+      ],
+      "relatedTopics": [
+        "energy",
+        "success",
+        "mind"
+      ],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "leadership",
+      "title": "Leadership & Influence",
+      "shortTitle": "Leadership",
+      "icon": "👑",
+      "color": "#6C5CE7",
+      "gradient": "linear-gradient(135deg, #6C5CE7 0%, #A29BFE 100%)",
+      "description": "Lead with wisdom, inspire others, and create lasting impact",
+      "summary": "Indra leads gods to victory. Varuna maintains cosmic order. Hymns reveal principles of righteous leadership, ethical power, and inspiring others.",
+      "keywords": [
+        "leadership",
+        "influence",
+        "power",
+        "authority",
+        "inspiration",
+        "vision",
+        "command"
+      ],
+      "hymnCount": 10,
+      "deities": [
+        "indra",
+        "varuna",
+        "mitra",
+        "brihaspati"
+      ],
+      "relatedTopics": [
+        "success",
+        "ethics",
+        "purpose"
+      ],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "creativity",
+      "title": "Creativity & Innovation",
+      "shortTitle": "Creativity",
+      "icon": "💡",
+      "color": "#FD79A8",
+      "gradient": "linear-gradient(135deg, #FD79A8 0%, #FDCB6E 100%)",
+      "description": "Unlock creative potential and birth new ideas into reality",
+      "summary": "The Ribhus craft divine wonders. Sarasvati flows with creative inspiration. Ancient insights on imagination, innovation, and manifesting visions.",
+      "keywords": [
+        "creativity",
+        "innovation",
+        "imagination",
+        "inspiration",
+        "creation",
+        "art",
+        "vision"
+      ],
+      "hymnCount": 8,
+      "deities": [
+        "sarasvati",
+        "ribhus",
+        "tvashtar",
+        "vishvedevas"
+      ],
+      "relatedTopics": [
+        "mind",
+        "energy",
+        "purpose"
+      ],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "ambition",
+      "title": "Ambition & Achievement",
+      "shortTitle": "Ambition",
+      "icon": "🚀",
+      "color": "#00B894",
+      "gradient": "linear-gradient(135deg, #00B894 0%, #00CEC9 100%)",
+      "description": "Channel desire into action and achieve extraordinary goals",
+      "summary": "Indra's hunger for soma represents divine ambition. Agni's upward flame shows aspiration. Balance fierce drive with dharma and wisdom.",
+      "keywords": [
+        "ambition",
+        "achievement",
+        "drive",
+        "goals",
+        "success",
+        "excellence",
+        "victory"
+      ],
+      "hymnCount": 9,
+      "deities": [
+        "indra",
+        "agni",
+        "pushan",
+        "soma"
+      ],
+      "relatedTopics": [
+        "success",
+        "energy",
+        "leadership"
+      ],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "authenticity",
+      "title": "Authenticity & Self-Truth",
+      "shortTitle": "Authenticity",
+      "icon": "✨",
+      "color": "#A29BFE",
+      "gradient": "linear-gradient(135deg, #A29BFE 0%, #74B9FF 100%)",
+      "description": "Live your truth, align with your essence, and be unapologetically yourself",
+      "summary": "Satya (truth) means living authentically. Rita is cosmic order you must honor. Be true to your nature (svabhava) while serving the greater good.",
+      "keywords": [
+        "authenticity",
+        "truth",
+        "self",
+        "satya",
+        "essence",
+        "identity",
+        "integrity"
+      ],
+      "hymnCount": 8,
+      "deities": [
+        "varuna",
+        "mitra",
+        "vishvedevas",
+        "vac"
+      ],
+      "relatedTopics": [
+        "purpose",
+        "ethics",
+        "mind"
+      ],
+      "difficulty": "intermediate"
+    }
+  ],
+  "metadata": {
+    "totalTopics": 15,
+    "totalHymns": 124,
+    "categories": [
+      "Mind & Consciousness",
+      "Physical Wellbeing",
+      "Purpose & Meaning",
+      "Relationships",
+      "Success & Achievement",
+      "Leadership & Influence"
+    ],
+    "difficultyLevels": {
+      "beginner": 6,
+      "intermediate": 8,
+      "advanced": 1
+    },
+    "note": "Topics span from ancient wisdom to modern concerns, making Vedic insights accessible to Gen Z and high-performers",
+    "version": "2.0",
+    "lastUpdated": "2025-10-17"
+  }
+}

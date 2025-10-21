@@ -1,0 +1,149 @@
+{
+    "constellations": [
+      {
+        "id": "krittika",
+        "name": "Krittika",
+        "englishName": "The Pleiades",
+        "rigvedaReference": "RV 10.85.13",
+        "deity": "Agni (Fire God)",
+        "significance": "Marks the beginning of the Vedic year. This constellation is mentioned in the famous wedding hymn and represents divine fire and purification.",
+        "modernConstellation": "Pleiades (M45)",
+        "meaning": "The Cutters / The Nurses of Kartikeya",
+        "symbolism": "Razor, Flame, Spear",
+        "stars": [
+          { "x": 300, "y": 150, "size": 3, "name": "Alcyone" },
+          { "x": 320, "y": 160, "size": 2.5, "name": "Atlas" },
+          { "x": 310, "y": 140, "size": 2, "name": "Electra" },
+          { "x": 290, "y": 165, "size": 2, "name": "Maia" },
+          { "x": 330, "y": 155, "size": 2, "name": "Merope" },
+          { "x": 315, "y": 170, "size": 2, "name": "Taygeta" },
+          { "x": 295, "y": 145, "size": 2, "name": "Pleione" }
+        ]
+      },
+      {
+        "id": "rohini",
+        "name": "Rohini",
+        "englishName": "Aldebaran",
+        "rigvedaReference": "RV 9.86.36",
+        "deity": "Prajapati (Creator) / Brahma",
+        "significance": "The Moon's favorite wife among the 27 Nakshatras. Associated with creation, growth, and fertility. Mentioned in Soma hymns.",
+        "modernConstellation": "Taurus (Aldebaran)",
+        "meaning": "The Red One / The Growing One",
+        "symbolism": "Chariot, Temple, Banyan Tree",
+        "stars": [
+          { "x": 400, "y": 200, "size": 4, "name": "Aldebaran" },
+          { "x": 385, "y": 190, "size": 2, "name": "Gamma Tauri" },
+          { "x": 415, "y": 195, "size": 2, "name": "Delta Tauri" },
+          { "x": 395, "y": 210, "size": 2, "name": "Epsilon Tauri" },
+          { "x": 420, "y": 205, "size": 1.5, "name": "Theta Tauri" }
+        ]
+      },
+      {
+        "id": "mrigashirsha",
+        "name": "Mrigashirsha",
+        "englishName": "Orion's Head",
+        "rigvedaReference": "RV 10.61.8",
+        "deity": "Soma (Moon God)",
+        "significance": "The deer's head constellation. Associated with seeking, searching, and the hunt for knowledge. Represents curiosity and exploration.",
+        "modernConstellation": "Orion (Lambda Orionis)",
+        "meaning": "The Deer's Head",
+        "symbolism": "Deer's Head, Snake, Honeycomb",
+        "stars": [
+          { "x": 500, "y": 250, "size": 3, "name": "Lambda Orionis" },
+          { "x": 490, "y": 235, "size": 2, "name": "Phi1 Orionis" },
+          { "x": 510, "y": 240, "size": 2, "name": "Phi2 Orionis" },
+          { "x": 495, "y": 260, "size": 2, "name": "Meissa" }
+        ]
+      },
+      {
+        "id": "ardra",
+        "name": "Ardra",
+        "englishName": "Betelgeuse",
+        "rigvedaReference": "RV 1.23.8-10",
+        "deity": "Rudra (Storm God)",
+        "significance": "The fierce constellation associated with storms, destruction, and renewal. Represents transformation through difficulty.",
+        "modernConstellation": "Orion (Betelgeuse)",
+        "meaning": "The Moist One / The Storm",
+        "symbolism": "Teardrop, Diamond, Human Head",
+        "stars": [
+          { "x": 350, "y": 300, "size": 4, "name": "Betelgeuse" },
+          { "x": 340, "y": 285, "size": 2, "name": "Gamma Orionis" },
+          { "x": 360, "y": 290, "size": 2, "name": "Mu Orionis" },
+          { "x": 355, "y": 315, "size": 2, "name": "Nu Orionis" }
+        ]
+      },
+      {
+        "id": "punarvasu",
+        "name": "Punarvasu",
+        "englishName": "Castor & Pollux",
+        "rigvedaReference": "RV 6.66.7",
+        "deity": "Aditi (Mother of Gods)",
+        "significance": "The return of light. Represents renewal, restoration, and the cyclic nature of existence. Associated with abundance.",
+        "modernConstellation": "Gemini (Castor & Pollux)",
+        "meaning": "The Two Restorers of Goods",
+        "symbolism": "Bow and Quiver, House",
+        "stars": [
+          { "x": 250, "y": 200, "size": 3.5, "name": "Castor" },
+          { "x": 270, "y": 195, "size": 3.5, "name": "Pollux" },
+          { "x": 255, "y": 215, "size": 2, "name": "Alhena" },
+          { "x": 265, "y": 180, "size": 2, "name": "Mebsuta" }
+        ]
+      },
+      {
+        "id": "pushya",
+        "name": "Pushya",
+        "englishName": "Cancer Cluster",
+        "rigvedaReference": "RV 10.127.1",
+        "deity": "Brihaspati (Jupiter)",
+        "significance": "The nourisher. Most auspicious Nakshatra. Associated with spiritual nourishment and growth. Mentioned in night hymns.",
+        "modernConstellation": "Cancer (M44 Beehive)",
+        "meaning": "The Nourisher / The Flower",
+        "symbolism": "Cow's Udder, Lotus, Arrow",
+        "stars": [
+          { "x": 450, "y": 350, "size": 2.5, "name": "Delta Cancri" },
+          { "x": 440, "y": 345, "size": 2, "name": "Theta Cancri" },
+          { "x": 460, "y": 355, "size": 2, "name": "Gamma Cancri" },
+          { "x": 455, "y": 340, "size": 2, "name": "Eta Cancri" },
+          { "x": 445, "y": 360, "size": 1.5, "name": "Acubens" }
+        ]
+      },
+      {
+        "id": "ashwini",
+        "name": "Ashwini",
+        "englishName": "Beta Arietis",
+        "rigvedaReference": "RV 1.112.1-25",
+        "deity": "Ashwini Kumaras (Divine Physicians)",
+        "significance": "The horse tamers. First Nakshatra in the cycle. Associated with healing, speed, and new beginnings. Extensively praised in Rigveda.",
+        "modernConstellation": "Aries (Beta & Gamma Arietis)",
+        "meaning": "Born of a Female Horse",
+        "symbolism": "Horse's Head",
+        "stars": [
+          { "x": 200, "y": 250, "size": 3, "name": "Hamal" },
+          { "x": 210, "y": 240, "size": 2.5, "name": "Sheratan" },
+          { "x": 220, "y": 255, "size": 2, "name": "Mesarthim" },
+          { "x": 195, "y": 260, "size": 2, "name": "41 Arietis" }
+        ]
+      },
+      {
+        "id": "saptarishi",
+        "name": "Saptarishi",
+        "englishName": "The Big Dipper",
+        "rigvedaReference": "RV 10.82.2",
+        "deity": "The Seven Sages",
+        "significance": "The Seven Great Sages who preserved Vedic knowledge. Represents wisdom, guidance, and spiritual authority. Central to Vedic cosmology.",
+        "modernConstellation": "Ursa Major",
+        "meaning": "The Seven Sages",
+        "symbolism": "Seven Stars / Celestial Bear",
+        "stars": [
+          { "x": 550, "y": 150, "size": 3, "name": "Dubhe" },
+          { "x": 570, "y": 140, "size": 3, "name": "Merak" },
+          { "x": 590, "y": 155, "size": 2.5, "name": "Phecda" },
+          { "x": 605, "y": 165, "size": 2.5, "name": "Megrez" },
+          { "x": 620, "y": 155, "size": 2.5, "name": "Alioth" },
+          { "x": 635, "y": 145, "size": 2.5, "name": "Mizar" },
+          { "x": 650, "y": 140, "size": 2.5, "name": "Alkaid" }
+        ]
+      }
+    ]
+  }
+  

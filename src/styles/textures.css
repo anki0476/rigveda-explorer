@@ -1,0 +1,183 @@
+/* Ancient Manuscript Textures for Rig Veda Explorer */
+
+/* Aged Parchment Texture - Multi-layered paper effect */
+.texture-parchment {
+  background-color: #F4E8D0; /* Base aged paper color */
+  background-image: 
+    /* Subtle vertical aging lines */
+    linear-gradient(90deg, transparent 0%, rgba(139, 69, 19, 0.03) 50%, transparent 100%),
+    /* Horizontal paper fiber lines */
+    linear-gradient(0deg, transparent 0%, rgba(160, 82, 45, 0.02) 50%, transparent 100%),
+    /* Diagonal aging streaks */
+    linear-gradient(45deg, transparent 0%, rgba(101, 67, 33, 0.02) 25%, transparent 50%, rgba(139, 69, 19, 0.02) 75%, transparent 100%),
+    /* Subtle paper texture overlay */
+    radial-gradient(circle at 20% 30%, rgba(160, 82, 45, 0.01) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(139, 69, 19, 0.01) 0%, transparent 50%),
+    /* CSS noise effect for paper grain */
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(101, 67, 33, 0.01) 2px,
+      rgba(101, 67, 33, 0.01) 4px
+    );
+  background-size: 100% 100%, 100% 100%, 100% 100%, 200px 200px, 200px 200px, 4px 4px;
+  background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+  position: relative;
+}
+
+/* Add subtle shadow and border to enhance parchment effect */
+.texture-parchment::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    /* Edge darkening for aged effect */
+    linear-gradient(90deg, rgba(101, 67, 33, 0.05) 0%, transparent 2%, transparent 98%, rgba(101, 67, 33, 0.05) 100%),
+    linear-gradient(0deg, rgba(101, 67, 33, 0.05) 0%, transparent 2%, transparent 98%, rgba(101, 67, 33, 0.05) 100%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Paper Grain Texture - Subtle fiber pattern */
+.texture-grain {
+  background-color: #F4E8D0;
+  background-image: 
+    /* Fine horizontal grain lines */
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 1px,
+      rgba(160, 82, 45, 0.015) 1px,
+      rgba(160, 82, 45, 0.015) 2px
+    ),
+    /* Subtle vertical grain */
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 3px,
+      rgba(139, 69, 19, 0.01) 3px,
+      rgba(139, 69, 19, 0.01) 4px
+    ),
+    /* Random grain spots */
+    radial-gradient(circle at 15% 25%, rgba(101, 67, 33, 0.008) 0%, transparent 1px),
+    radial-gradient(circle at 85% 15%, rgba(160, 82, 45, 0.006) 0%, transparent 1px),
+    radial-gradient(circle at 45% 75%, rgba(139, 69, 19, 0.007) 0%, transparent 1px),
+    radial-gradient(circle at 75% 85%, rgba(101, 67, 33, 0.005) 0%, transparent 1px);
+  background-size: 100% 2px, 4px 100%, 50px 50px, 60px 60px, 40px 40px, 70px 70px;
+  background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+}
+
+/* Ornate Border - Decorative manuscript border */
+.border-ornate {
+  border: 3px solid transparent;
+  background: 
+    /* Inner parchment background */
+    linear-gradient(#F4E8D0, #F4E8D0) padding-box,
+    /* Ornate border pattern */
+    repeating-linear-gradient(
+      45deg,
+      #8B4513 0px,
+      #8B4513 2px,
+      #D2B48C 2px,
+      #D2B48C 4px,
+      #8B4513 4px,
+      #8B4513 6px,
+      #F4E8D0 6px,
+      #F4E8D0 8px
+    ) border-box;
+  position: relative;
+}
+
+/* Enhanced ornate border with corner decorations */
+.border-ornate::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: 
+    /* Corner decorative elements */
+    radial-gradient(circle at 0% 0%, #8B4513 0%, #8B4513 8px, transparent 8px),
+    radial-gradient(circle at 100% 0%, #8B4513 0%, #8B4513 8px, transparent 8px),
+    radial-gradient(circle at 0% 100%, #8B4513 0%, #8B4513 8px, transparent 8px),
+    radial-gradient(circle at 100% 100%, #8B4513 0%, #8B4513 8px, transparent 8px);
+  background-size: 16px 16px, 16px 16px, 16px 16px, 16px 16px;
+  background-position: 0 0, 100% 0, 0 100%, 100% 100%;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Alternative ornate border with more intricate pattern */
+.border-ornate-intricate {
+  border: 4px solid transparent;
+  background: 
+    linear-gradient(#F4E8D0, #F4E8D0) padding-box,
+    /* Complex border pattern with Sanskrit-inspired motifs */
+    repeating-conic-gradient(
+      from 0deg at 50% 50%,
+      #8B4513 0deg 10deg,
+      #D2B48C 10deg 20deg,
+      #A0522D 20deg 30deg,
+      #F4E8D0 30deg 40deg,
+      #8B4513 40deg 50deg,
+      #D2B48C 50deg 60deg,
+      #A0522D 60deg 70deg,
+      #F4E8D0 70deg 80deg,
+      #8B4513 80deg 90deg
+    ) border-box;
+  position: relative;
+}
+
+/* Subtle shadow for depth */
+.texture-parchment,
+.texture-grain,
+.border-ornate,
+.border-ornate-intricate {
+  box-shadow: 
+    0 2px 8px rgba(101, 67, 33, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Hover effects for interactive elements */
+.texture-parchment:hover,
+.texture-grain:hover {
+  box-shadow: 
+    0 4px 12px rgba(101, 67, 33, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .texture-parchment,
+  .texture-grain {
+    background-size: 100% 100%, 100% 100%, 100% 100%, 150px 150px, 150px 150px, 3px 3px;
+  }
+  
+  .border-ornate::before {
+    background-size: 12px 12px, 12px 12px, 12px 12px, 12px 12px;
+  }
+}
+
+/* Print-friendly versions (remove shadows and complex effects) */
+@media print {
+  .texture-parchment,
+  .texture-grain,
+  .border-ornate,
+  .border-ornate-intricate {
+    box-shadow: none;
+    background-image: none;
+    background-color: #F4E8D0;
+  }
+  
+  .border-ornate,
+  .border-ornate-intricate {
+    border: 2px solid #8B4513;
+  }
+}

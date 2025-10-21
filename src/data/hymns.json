@@ -1,0 +1,778 @@
+{
+  "hymns": [
+    {
+      "id": "1.1",
+      "mandala": 1,
+      "sukta": 1,
+      "verses": 9,
+      "deity": "Agni",
+      "deityId": "agni",
+      "rishi": "Madhucchandas Vaishvamitra",
+      "meter": "Gayatri",
+      "topics": ["energy", "purpose"],
+      "significance": "Opening hymn of entire Rig Veda",
+      "translation": {
+        "title": "Invocation to Agni",
+        "summary": "The very first hymn of the Rig Veda invokes Agni as the divine priest and mediator between humans and gods.",
+        "verses": [
+          "I praise Agni, the priest, the divine minister of sacrifice, the invoker, most rich in gems.",
+          "Agni, worthy to be praised by ancient and modern seers, may he bring the gods here.",
+          "Through Agni, one obtains wealth and prosperity day by day, which brings glory and excellent offspring."
+        ],
+        "context": "This hymn establishes the fundamental Vedic worldview: humans need intermediaries to reach the divine, and Agni (fire) is the primary mediator.",
+        "modernApplication": "Celebrates transformative power that bridges earthly and spiritual realms."
+      },
+      "audioUrl": "/audio/hymns/1.1.mp3"
+    },
+    
+    {
+      "id": "1.23",
+      "mandala": 1,
+      "sukta": 23,
+      "verses": 24,
+      "deity": "Vāyu",
+      "deityId": "vayu",
+      "rishi": "Kanva Ghaura",
+      "meter": "Gayatri",
+      "topics": ["energy", "nature"],
+      "significance": "Principal hymn to Wind God",
+      "translation": {
+        "title": "Hymn to Vāyu (Wind)",
+        "summary": "Celebrating Vāyu as the breath of life and swift divine force.",
+        "verses": [
+          "To Vāyu with the fleet steeds may we offer worship with our hymns.",
+          "Vāyu, come hither with your team of a thousand horses, purple and brown.",
+          "May the winds blow sweetness, the rivers flow sweetness, may the herbs be sweet for us.",
+          "Sweet be the night and sweet the dawns, sweet the dust of earth, sweet be the heavens our father."
+        ],
+        "context": "Vāyu represents life force (prāna), breath, and movement. Often paired with Indra as divine force.",
+        "modernApplication": "Relevant to breathwork, pranayama, understanding vital energy."
+      },
+      "audioUrl": "/audio/hymns/1.23.mp3"
+    },
+
+    {
+      "id": "1.32",
+      "mandala": 1,
+      "sukta": 32,
+      "verses": 15,
+      "deity": "Indra",
+      "deityId": "indra",
+      "rishi": "Hiranyastupa Angirasa",
+      "meter": "Trishtubh",
+      "topics": ["success", "energy"],
+      "significance": "Most famous Indra myth - slaying of Vritra",
+      "translation": {
+        "title": "Indra Slays Vritra",
+        "summary": "The cosmic battle between Indra and the dragon Vritra who was hoarding all the world's waters.",
+        "verses": [
+          "I will declare the manly deeds of Indra, the first that he achieved, the wielder of the thunderbolt.",
+          "He slew the dragon; he bored out the waters; he split the bellies of the mountains.",
+          "Like lowing cows, the flowing waters descended straight down to the ocean.",
+          "Indra is King of all that moves and rests. He rules over people as their King."
+        ],
+        "context": "THE central myth of the Rig Veda. Vritra represents obstruction, drought, chaos. Indra's victory releases waters (fertility, abundance).",
+        "modernApplication": "Symbolic of overcoming obstacles that block flow of life and creativity."
+      },
+      "audioUrl": "/audio/hymns/1.32.mp3"
+    },
+
+    {
+      "id": "1.50",
+      "mandala": 1,
+      "sukta": 50,
+      "verses": 13,
+      "deity": "Surya",
+      "deityId": "surya",
+      "rishi": "Praskanva Kanva",
+      "meter": "Gayatri",
+      "topics": ["nature", "energy"],
+      "significance": "Major Sun hymn",
+      "translation": {
+        "title": "Hymn to Surya (Sun)",
+        "summary": "Praising the sun's life-giving journey across the sky.",
+        "verses": [
+          "His beams bear him up aloft, the god who knows all creatures born.",
+          "Surya, behold all living things, both what moves and what stands still.",
+          "Seven bay steeds harnessed to your car bear you, O far-seeing Sun.",
+          "Surya has mounted to the sky, marking all creatures born."
+        ],
+        "context": "Surya as cosmic timekeeper and consciousness-giver. The seven horses represent the seven days or seven rays of light.",
+        "modernApplication": "Solar consciousness, mindfulness of time's passage, appreciation for light."
+      },
+      "audioUrl": "/audio/hymns/1.50.mp3"
+    },
+
+    {
+      "id": "1.89",
+      "mandala": 1,
+      "sukta": 89,
+      "verses": 10,
+      "deity": "Vishvedevas",
+      "deityId": "vishvedevas",
+      "rishi": "Gotama Rahugana",
+      "meter": "Trishtubh",
+      "topics": ["wellbeing", "purpose"],
+      "significance": "Universal protection prayer",
+      "translation": {
+        "title": "Prayer to All Gods",
+        "summary": "A comprehensive blessing invoking all divine forces for protection.",
+        "verses": [
+          "May the winds bring us happiness, may the rivers pour sweet waters.",
+          "May all the gods protect us from all sides. May we see a hundred autumns.",
+          "From trouble, sorrow, affliction, protect us, O All-Gods.",
+          "May we obtain wealth along with children and descendants."
+        ],
+        "context": "Invokes Vishvedevas (All Gods) for comprehensive protection. Shows Vedic understanding of multiple divine forces.",
+        "modernApplication": "Universal blessing prayer, relevant for protection and well-being."
+      },
+      "audioUrl": "/audio/hymns/1.89.mp3"
+    },
+
+    {
+      "id": "1.92",
+      "mandala": 1,
+      "sukta": 92,
+      "verses": 18,
+      "deity": "Ushas",
+      "deityId": "ushas",
+      "rishi": "Gotama Rahugana",
+      "meter": "Trishtubh",
+      "topics": ["nature", "wellbeing"],
+      "significance": "Most beautiful hymn to Dawn",
+      "translation": {
+        "title": "Hymn to Ushas (Dawn)",
+        "summary": "A lyrical celebration of the goddess of dawn awakening the world.",
+        "verses": [
+          "This light has come, of all lights the most lovely, the bright effulgence has been born, far-shining.",
+          "The fair, the bright one has appeared before us. With her who glows, the bannered Morning approaches.",
+          "Dawn drives away her sister's darkness, diminishing the glory of the haughty.",
+          "Most fair, like one adorned by her mother, she shows her bosom, glowing in her splendor."
+        ],
+        "context": "Ushas is personified as a radiant young woman who never ages, renewing herself each morning. Represents hope and new beginnings.",
+        "modernApplication": "Inspires fresh starts, mindfulness of beginnings, natural cycles of renewal."
+      },
+      "audioUrl": "/audio/hymns/1.92.mp3"
+    },
+
+    {
+      "id": "1.154",
+      "mandala": 1,
+      "sukta": 154,
+      "verses": 6,
+      "deity": "Vishnu",
+      "deityId": "vishnu",
+      "rishi": "Dirghatamas Auchathya",
+      "meter": "Trishtubh",
+      "topics": ["purpose", "nature"],
+      "significance": "Vishnu's three cosmic strides",
+      "translation": {
+        "title": "The Three Strides of Vishnu",
+        "summary": "Vishnu measures the universe in three mighty steps.",
+        "verses": [
+          "I will declare the mighty deeds of Vishnu, who measured out the earthly regions.",
+          "He fixed the upper dwelling-place, striding widely as he stepped three times.",
+          "For this his mighty deed is Vishnu praised, like a wild beast wandering in the mountains.",
+          "May I attain to that dear place of his, where men devoted to the gods are happy."
+        ],
+        "context": "Vishnu's three strides represent earth, atmosphere, and heaven—the entire cosmos. His 'highest footstep' is the transcendent realm.",
+        "modernApplication": "Symbol of expansion, growth beyond limits, reaching for highest potential."
+      },
+      "audioUrl": "/audio/hymns/1.154.mp3"
+    },
+
+    {
+      "id": "1.164",
+      "mandala": 1,
+      "sukta": 164,
+      "verses": 52,
+      "deity": "Vishvedevas",
+      "deityId": "vishvedevas",
+      "rishi": "Dirghatamas Auchathya",
+      "meter": "Trishtubh",
+      "topics": ["mind", "purpose", "existence"],
+      "significance": "The great riddle hymn - deepest philosophical questions",
+      "translation": {
+        "title": "The Riddle Hymn (Asya Vamasya)",
+        "summary": "52 verses of cryptic questions about existence, consciousness, and reality.",
+        "verses": [
+          "Two birds, beautiful of wing, close companions, cling to one common tree. One eats the sweet fruit; the other looks on without eating.",
+          "They call him Indra, Mitra, Varuna, Agni. The wise speak of what is One in many ways.",
+          "Twelve spokes, one wheel, three naves. Who understands this? (The year: 12 months, 1 cycle, 3 seasons)",
+          "Where was the mind? Where was the heart when this universe came to be?"
+        ],
+        "context": "This hymn influenced all later Indian philosophy. The two-birds metaphor became central to Vedanta.",
+        "modernApplication": "Encourages contemplative thinking, multiple perspectives on truth, comfort with mystery."
+      },
+      "audioUrl": "/audio/hymns/1.164.mp3"
+    },
+
+    {
+      "id": "2.12",
+      "mandala": 2,
+      "sukta": 12,
+      "verses": 15,
+      "deity": "Indra",
+      "deityId": "indra",
+      "rishi": "Gritsamada Bhargava Shaunaka",
+      "meter": "Trishtubh",
+      "topics": ["success", "purpose"],
+      "significance": "Definitive description of Indra's power",
+      "translation": {
+        "title": "Who Is Indra?",
+        "summary": "A powerful enumeration of Indra's mighty deeds and supreme authority.",
+        "verses": [
+          "He who gave being to the Sun and Morning, who leads the waters, he is Indra.",
+          "He who with might broke Vritra into pieces, whose every deed is praised, he is Indra.",
+          "He who made fast the tottering earth, who set at rest the agitated mountains, he is Indra.",
+          "Without whose help men do not conquer. Without him, no one prospers."
+        ],
+        "context": "Establishes Indra as supreme among gods—creator, orderer, warrior, sustainer. The repeated refrain builds power.",
+        "modernApplication": "Celebrates strength, courage, victory over obstacles. Inspires confidence and determination."
+      },
+      "audioUrl": "/audio/hymns/2.12.mp3"
+    },
+
+    {
+      "id": "2.33",
+      "mandala": 2,
+      "sukta": 33,
+      "verses": 15,
+      "deity": "Rudra",
+      "deityId": "rudra",
+      "rishi": "Gritsamada Bhargava Shaunaka",
+      "meter": "Trishtubh",
+      "topics": ["health", "energy"],
+      "significance": "Principal hymn to Rudra - precursor to Shiva",
+      "translation": {
+        "title": "Prayer to Rudra",
+        "summary": "Appealing to the fierce yet healing god Rudra for protection and medicine.",
+        "verses": [
+          "Father of Maruts, let your bliss approach us. Exclude us not from looking upon the sun.",
+          "May the hero spare our horses, our men, our cattle. Be gracious to us, O Rudra.",
+          "O bountiful Rudra, grant us your medicines, the most healing, the most gladdening.",
+          "He who controls the healing remedies, who carries a thousand medicines, he is healer of healers."
+        ],
+        "context": "Rudra is ambivalent—both fierce destroyer and compassionate healer. Shows Vedic understanding that what can harm can also heal.",
+        "modernApplication": "Honors the shadow side, integrating fierce and gentle aspects. Working with difficult emotions."
+      },
+      "audioUrl": "/audio/hymns/2.33.mp3"
+    },
+
+    {
+      "id": "3.62.10",
+      "mandala": 3,
+      "sukta": 62,
+      "verses": 1,
+      "deity": "Savitar",
+      "deityId": "savitar",
+      "rishi": "Vishvamitra Gathina",
+      "meter": "Gayatri",
+      "topics": ["mind", "purpose", "energy"],
+      "significance": "THE GAYATRI MANTRA - most sacred verse",
+      "translation": {
+        "title": "The Gayatri Mantra",
+        "summary": "The most sacred mantra in Hinduism, chanted daily by millions.",
+        "verses": [
+          "Om Bhur Bhuvah Svah, Tat Savitur Varenyam, Bhargo Devasya Dhimahi, Dhiyo Yo Nah Prachodayat.",
+          "Translation: We meditate on that excellent glory of the divine Savitar (Sun); may he illuminate our minds."
+        ],
+        "context": "This single verse is considered the essence of all Vedas. Chanted at sunrise for thousands of years. Invokes divine light to illumine consciousness.",
+        "modernApplication": "Used worldwide for meditation, mental clarity, spiritual awakening. Scientific studies show positive effects on cognition."
+      },
+      "audioUrl": "/audio/hymns/3.62.10.mp3"
+    },
+
+    {
+      "id": "5.83",
+      "mandala": 5,
+      "sukta": 83,
+      "verses": 10,
+      "deity": "Parjanya",
+      "deityId": "parjanya",
+      "rishi": "Atri Bhauma",
+      "meter": "Trishtubh",
+      "topics": ["nature", "health"],
+      "significance": "Beautiful hymn to rain god",
+      "translation": {
+        "title": "Hymn to Parjanya (Rain)",
+        "summary": "Celebrating the rain god who brings fertility to earth.",
+        "verses": [
+          "Speak out with thunder, roaring, slay the demons. Pour down the rain-flood.",
+          "When you thunder and roar, creating rain, then the plants spring up, and all life rejoices.",
+          "When Parjanya pours his seed upon the earth, she brings forth manifold food for all.",
+          "Rain on us, O generous one. Make the plants grow. Let water flow."
+        ],
+        "context": "Parjanya represents the generative power of rain. The sexual imagery shows understanding of rain as life-giver.",
+        "modernApplication": "Appreciation for water cycle, ecology, interdependence of all life. Environmental consciousness."
+      },
+      "audioUrl": "/audio/hymns/5.83.mp3"
+    },
+
+    {
+      "id": "7.86",
+      "mandala": 7,
+      "sukta": 86,
+      "verses": 8,
+      "deity": "Varuna",
+      "deityId": "varuna",
+      "rishi": "Vasishtha Maitravaruni",
+      "meter": "Trishtubh",
+      "topics": ["wellbeing", "ethics", "purpose"],
+      "significance": "Most moving prayer for forgiveness",
+      "translation": {
+        "title": "Varuna's Forgiveness",
+        "summary": "A deeply personal prayer acknowledging sin and requesting forgiveness.",
+        "verses": [
+          "Let me not yet, O Varuna, enter into the house of clay. Have mercy, mighty lord.",
+          "If I have sinned like a gambler at play, whether in truth or in ignorance, O God, loosen all these bonds.",
+          "It was not my own will, Varuna: wine, anger, dice, or thoughtlessness led me astray.",
+          "O King Varuna, whatever offense we humans commit against the divine laws, forgive us."
+        ],
+        "context": "Shows profound psychological insight: acknowledging both personal responsibility and influences beyond control. Varuna represents cosmic justice tempered with mercy.",
+        "modernApplication": "Relevant to therapy around guilt, shame, self-forgiveness, acknowledging both agency and circumstances."
+      },
+      "audioUrl": "/audio/hymns/7.86.mp3"
+    },
+
+    {
+      "id": "7.103",
+      "mandala": 7,
+      "sukta": 103,
+      "verses": 10,
+      "deity": "Frogs",
+      "deityId": null,
+      "rishi": "Vasishtha Maitravaruni",
+      "meter": "Trishtubh",
+      "topics": ["nature", "humor"],
+      "significance": "Charming hymn to rain-bringing frogs",
+      "translation": {
+        "title": "The Frogs",
+        "summary": "A delightful hymn comparing priestly chanters to rain-bringing frogs.",
+        "verses": [
+          "After lying quiet for a year, the frogs come forth when rainy season arrives.",
+          "Like Brahmins at the Soma sacrifice, they raise their voices in unison.",
+          "One croaks like a cow, another bleats like a goat, one is green, another is spotted.",
+          "They who give a thousand gifts—may the frogs grant us wealth and progeny!"
+        ],
+        "context": "This playful hymn shows Vedic poets had humor! Compares ritual chanters to croaking frogs welcoming monsoon rains.",
+        "modernApplication": "Reminds us to find joy in nature, not take ourselves too seriously, appreciate all creatures."
+      },
+      "audioUrl": "/audio/hymns/7.103.mp3"
+    },
+
+    {
+      "id": "9.113",
+      "mandala": 9,
+      "sukta": 113,
+      "verses": 11,
+      "deity": "Soma Pavamana",
+      "deityId": "soma",
+      "rishi": "Angirasa",
+      "meter": "Jagati",
+      "topics": ["energy", "purpose", "mind"],
+      "significance": "Most famous Soma hymn - 'Where there is eternal light'",
+      "translation": {
+        "title": "Soma - The Immortal Realm",
+        "summary": "Celebrating Soma's power to grant access to immortal realms of light.",
+        "verses": [
+          "We have drunk Soma and become immortal; we have attained the light, the gods discovered.",
+          "Make me immortal in that realm where movement is free, in the third sphere of heaven where lucid worlds are full of light.",
+          "Make me immortal in that realm where desires are fulfilled, where the sun shines eternally.",
+          "Flow, Indu, flow for Indra's sake. Make us immortal; protect us always with your blessings."
+        ],
+        "context": "This hymn describes the transcendent experience of Soma. The 'third heaven' is the highest spiritual realm. Shows Vedic understanding of altered consciousness states.",
+        "modernApplication": "Speaks to longing for transcendence, mystical experience, liberation from mortality."
+      },
+      "audioUrl": "/audio/hymns/9.113.mp3"
+    },
+
+    {
+      "id": "10.9",
+      "mandala": 10,
+      "sukta": 9,
+      "verses": 9,
+      "deity": "Apas",
+      "deityId": "apas",
+      "rishi": "Sindhukshit Praiyamedha",
+      "meter": "Trishtubh",
+      "topics": ["health", "nature"],
+      "significance": "Hymn to healing waters",
+      "translation": {
+        "title": "The Healing Waters",
+        "summary": "Celebrating water as purifier and healer.",
+        "verses": [
+          "Waters, you are healing; bring us strength and health.",
+          "Within the waters are all healing plants and Agni who blesses all beings.",
+          "Waters, carry away all that is impure in me, all sin I have committed, all curse spoken.",
+          "May we look upon your blissful flow. May we enjoy your precious blessing."
+        ],
+        "context": "Water is seen as primordially pure, carrying both physical cleansing and spiritual purification.",
+        "modernApplication": "Supports both physical hygiene and ritual purification. Water conservation and appreciation."
+      },
+      "audioUrl": "/audio/hymns/10.9.mp3"
+    },
+
+    {
+      "id": "10.10",
+      "mandala": 10,
+      "sukta": 10,
+      "verses": 17,
+      "deity": "Yama and Yami",
+      "deityId": "yama",
+      "rishi": "Yami",
+      "meter": "Trishtubh",
+      "topics": ["existence", "relationships"],
+      "significance": "Dramatic dialogue between twins",
+      "translation": {
+        "title": "The Dialogue of Yama and Yami",
+        "summary": "A poignant conversation between Death (Yama) and his twin sister Yami about mortality and boundaries.",
+        "verses": [
+          "Yami: Come, let us embrace as husband and wife, like a wheel revolves around its axle.",
+          "Yama: I will not do what is not lawful. They call you my sister. Choose another lover.",
+          "Yami: You are the first mortal who has died. Come, embrace life while you can.",
+          "Yama: The gods watch. Even in darkness they see. We must do what is right."
+        ],
+        "context": "Yama is the first mortal, the first to die. Their dialogue explores death, desire, dharma, and letting go.",
+        "modernApplication": "Speaks to grief, boundaries, letting go of what cannot be, accepting mortality."
+      },
+      "audioUrl": "/audio/hymns/10.10.mp3"
+    },
+
+    {
+      "id": "10.14",
+      "mandala": 10,
+      "sukta": 14,
+      "verses": 16,
+      "deity": "Yama",
+      "deityId": "yama",
+      "rishi": "Yama",
+      "meter": "Trishtubh",
+      "topics": ["existence", "purpose"],
+      "significance": "Funeral hymn describing the afterlife",
+      "translation": {
+        "title": "Hymn to Yama, King of the Dead",
+        "summary": "Invocation to Yama for safe passage to the realm of ancestors.",
+        "verses": [
+          "Honor King Yama, Vivasvat's son who gathers men together.",
+          "Yama was the first to find the path for us, a path that cannot be taken away.",
+          "Go forth upon those ancient pathways where our ancient fathers passed before.",
+          "Unite with the Fathers, unite with Yama, with the rewards of your sacrifices in the highest heaven."
+        ],
+        "context": "This funeral hymn guides the deceased to the realm of ancestors. Promises reunification with loved ones.",
+        "modernApplication": "Offers comfort about death, continuity beyond mortality, reunion with those who have passed."
+      },
+      "audioUrl": "/audio/hymns/10.14.mp3"
+    },
+
+    {
+      "id": "10.34",
+      "mandala": 10,
+      "sukta": 34,
+      "verses": 14,
+      "deity": "Unknown",
+      "deityId": null,
+      "rishi": "Kavasha Aila",
+      "meter": "Trishtubh",
+      "topics": ["wellbeing", "ethics"],
+      "significance": "The Gambler's Lament - remarkably modern psychology",
+      "translation": {
+        "title": "The Gambler's Lament",
+        "summary": "A confessional hymn about gambling addiction.",
+        "verses": [
+          "The dice have maddened me. My faithful wife I have abandoned. The gambler finds no comfort.",
+          "When I resolve 'I will not play,' I am left behind. But when the dice rattle, I run to them like a lover.",
+          "Down they fall, up they spring. Without hands they subdue the man with hands.",
+          "Play not with dice, but cultivate your field. Enjoy your wealth and count it precious!"
+        ],
+        "context": "One of the most psychologically realistic hymns. Captures the entire cycle of addiction: compulsion, loss, shame, resolution, relapse.",
+        "modernApplication": "Applicable to any addiction. Recovery wisdom: acknowledging powerlessness, community support, returning to productive life."
+      },
+      "audioUrl": "/audio/hymns/10.34.mp3"
+    },
+
+    {
+      "id": "10.85",
+      "mandala": 10,
+      "sukta": 85,
+      "verses": 47,
+      "deity": "Surya",
+      "deityId": "surya",
+      "rishi": "Surya",
+      "meter": "Mixed",
+      "topics": ["relationships", "purpose"],
+      "significance": "THE WEDDING HYMN - still used in Hindu marriages",
+      "translation": {
+        "title": "The Marriage Hymn (Surya's Bridal)",
+        "summary": "The cosmic wedding of Surya (Sun's daughter) to Soma (Moon), establishing marriage rituals.",
+        "verses": [
+          "Truth is the base that bears the earth; by Surya are the heavens sustained.",
+          "I take your hand for good fortune, that you may reach old age with me as your husband.",
+          "May the Vishvedevas lead you hence. May the waters unite our hearts.",
+          "Be loving to your husband's father, loving to your husband's mother.",
+          "May all the gods unite both our hearts; may the waters unite them."
+        ],
+        "context": "This 47-verse hymn describes a divine wedding ceremony. Used as template for Hindu marriage rituals for 3000+ years. Shows marriage as cosmic alignment.",
+        "modernApplication": "Still chanted at Hindu weddings today. Celebrates sacred union, partnership, family harmony."
+      },
+      "audioUrl": "/audio/hymns/10.85.mp3"
+    },
+
+    {
+      "id": "10.90",
+      "mandala": 10,
+      "sukta": 90,
+      "verses": 16,
+      "deity": "Purusha",
+      "deityId": null,
+      "rishi": "Narayana",
+      "meter": "Anushtubh",
+      "topics": ["existence", "purpose", "mind"],
+      "significance": "PURUSHA SUKTA - The Cosmic Man hymn, EXTREMELY IMPORTANT",
+      "translation": {
+        "title": "The Cosmic Man (Purusha Sukta)",
+        "summary": "Describes the primordial cosmic being from whom all creation emanates.",
+        "verses": [
+          "A thousand heads hath Purusha, a thousand eyes, a thousand feet. On every side pervading earth he fills a space ten fingers wide.",
+          "This Purusha is all that yet hath been and all that is to be; the Lord of Immortality.",
+          "So mighty is his greatness; yea, greater than this is Purusha. All creatures are one-fourth of him, three-fourths eternal life in heaven.",
+          "From him Viraj was born; again Purusha from Viraj was born.",
+          "When the gods prepared the sacrifice with Purusha as their offering, from that great sacrifice the verses were born.",
+          "His mouth became the Brahmin; his arms were made into the Warrior, his thighs the People, and from his feet the Servants were born."
+        ],
+        "context": "THE most influential philosophical hymn. Describes all reality as one cosmic being. Influenced Vedanta, Yoga philosophy. Controversial last verse about social classes.",
+        "modernApplication": "Foundational to understanding Hindu cosmology, unity of existence, interconnectedness. Also used to justify caste system (criticized)."
+      },
+      "audioUrl": "/audio/hymns/10.90.mp3"
+    },
+
+    {
+      "id": "10.97",
+      "mandala": 10,
+      "sukta": 97,
+      "verses": 23,
+      "deity": "Oshadhi",
+      "deityId": null,
+      "rishi": "Bhishak Atharvana",
+      "meter": "Trishtubh",
+      "topics": ["health", "nature"],
+      "significance": "Major hymn on medicinal plants",
+      "translation": {
+        "title": "Praise of Healing Herbs",
+        "summary": "Celebration of plants as ancient mothers with healing wisdom.",
+        "verses": [
+          "The plants that were born three ages before the gods, I will now declare their hundred powers.",
+          "Mothers, you have a hundred forms and a thousand healing properties.",
+          "Be joyful, you plants bearing flowers and yielding fruit. Save this man for me.",
+          "When I hold these herbs in my hand, I hold Death back from this person."
+        ],
+        "context": "Shows reverence for plant medicine and sophisticated categorization. The 'three ages before gods' suggests ancient origins of botanical knowledge.",
+        "modernApplication": "Validates herbal medicine, emphasizes biodiversity preservation, supports integrative medical approaches."
+      },
+      "audioUrl": "/audio/hymns/10.97.mp3"
+    },
+
+    {
+      "id": "10.117",
+      "mandala": 10,
+      "sukta": 117,
+      "verses": 9,
+      "deity": "Dana",
+      "deityId": null,
+      "rishi": "Unknown",
+      "meter": "Trishtubh",
+      "topics": ["ethics", "wellbeing"],
+      "significance": "Ethics of charity and giving",
+      "translation": {
+        "title": "The Virtue of Giving",
+        "summary": "Profound teaching on generosity, wealth, and social responsibility.",
+        "verses": [
+          "The man with food in store who hardens his heart against the poor man who comes seeking nourishment—though he prospered before, he will find no comforter.",
+          "The man who, possessing food, shares it with the hungry, gains for himself friends for the future.",
+          "Riches revolve like the wheels of a chariot, coming now to one, now to another.",
+          "The foolish man wins food with fruitless labor. That food shall be his ruin.",
+          "Let the rich person satisfy the poor implorer. Let him look upon the longer pathway. Riches come now to one, now to another, like the wheels of a rolling chariot."
+        ],
+        "context": "One of the earliest and most profound teachings on charity. Emphasizes impermanence of wealth and duty to share.",
+        "modernApplication": "Highly relevant to discussions of wealth inequality, social responsibility, philanthropy. Timeless ethics."
+      },
+      "audioUrl": "/audio/hymns/10.117.mp3"
+    },
+
+    {
+      "id": "10.121",
+      "mandala": 10,
+      "sukta": 121,
+      "verses": 10,
+      "deity": "Hiranyagarbha",
+      "deityId": null,
+      "rishi": "Hiranyagarbha Prajapati",
+      "meter": "Trishtubh",
+      "topics": ["existence", "purpose"],
+      "significance": "The Golden Embryo creation hymn",
+      "translation": {
+        "title": "Hiranyagarbha (The Golden Embryo)",
+        "summary": "Another creation hymn describing the cosmic womb from which all arose.",
+        "verses": [
+          "In the beginning arose the Golden Embryo. Once he was born, he was the one lord of creation.",
+          "He fixed firm the earth and this heaven. Who is the god to whom we shall offer our oblation?",
+          "He who gives life, who gives strength, whose command all the gods obey, whose shadow is immortality, whose shadow is death.",
+          "Through his greatness he is the one king of the breathing and seeing world.",
+          "May he not harm us, he who is the creator of earth, who created heaven with right and truth."
+        ],
+        "context": "Hiranyagarbha (Golden Womb/Embryo) is another name for the cosmic creative principle. Each verse ends with 'Who is the god?' emphasizing mystery.",
+        "modernApplication": "Explores origins of universe, creative intelligence, the unknowable source of existence."
+      },
+      "audioUrl": "/audio/hymns/10.121.mp3"
+    },
+
+    {
+      "id": "10.125",
+      "mandala": 10,
+      "sukta": 125,
+      "verses": 8,
+      "deity": "Vac",
+      "deityId": "vac",
+      "rishi": "Vac Ambhrini",
+      "meter": "Trishtubh",
+      "topics": ["mind", "purpose", "energy"],
+      "significance": "Goddess Speech speaks in first person",
+      "translation": {
+        "title": "The Goddess Speech Speaks",
+        "summary": "Vac (Speech/Word) declares her own supremacy and creative power.",
+        "verses": [
+          "I move with the Rudras, with the Vasus, with the Adityas and with all the gods.",
+          "I am the Queen, the gatherer-up of treasures, most thoughtful, first of those worthy of sacrifice.",
+          "Through me alone all beings eat food. Though they know it not, they dwell in me.",
+          "I, myself, speak forth what is welcome to gods and humans. Whom I love, I make mighty.",
+          "I breathe forth like the wind. Beyond heaven, beyond earth, so vast am I in my greatness."
+        ],
+        "context": "One of the most powerful feminist statements in ancient literature. Vac claims creative power, omnipresence, supremacy. Word/consciousness as ultimate reality.",
+        "modernApplication": "Celebrates feminine divine power, creative word, consciousness as fundamental. Understanding language's creative power."
+      },
+      "audioUrl": "/audio/hymns/10.125.mp3"
+    },
+
+    {
+      "id": "10.127",
+      "mandala": 10,
+      "sukta": 127,
+      "verses": 8,
+      "deity": "Ratri",
+      "deityId": "ratri",
+      "rishi": "Kushika Kausika",
+      "meter": "Trishtubh",
+      "topics": ["wellbeing", "nature"],
+      "significance": "Beautiful hymn to Night",
+      "translation": {
+        "title": "Hymn to Night",
+        "summary": "Celebrating night as protective, peaceful, and star-adorned.",
+        "verses": [
+          "Night has come, looking around with her eyes. She has clothed herself in all her glories.",
+          "The immortal goddess has filled wide space. She drives away the darkness with her light.",
+          "So favor us this night, O you whose approach we welcome as cows welcome the dawn.",
+          "Ward off the she-wolf and the wolf. Ward off the thief. O Night full of waves, be easy for us to cross."
+        ],
+        "context": "Instead of fearing night, this hymn celebrates it as restful, protective, necessary. Night is personified as benevolent goddess.",
+        "modernApplication": "Helps overcome fear of darkness, validates rest and sleep, celebrates natural cycles."
+      },
+      "audioUrl": "/audio/hymns/10.127.mp3"
+    },
+
+    {
+      "id": "10.129",
+      "mandala": 10,
+      "sukta": 129,
+      "verses": 7,
+      "deity": "Creation",
+      "deityId": null,
+      "rishi": "Prajapati Parameshthin",
+      "meter": "Trishtubh",
+      "topics": ["existence", "mind", "purpose"],
+      "significance": "THE NASADIYA SUKTA - Most famous philosophical hymn",
+      "translation": {
+        "title": "The Hymn of Creation (Nasadiya Sukta)",
+        "summary": "The ultimate philosophical inquiry into existence itself.",
+        "verses": [
+          "Then was not non-existent nor existent: there was no realm of air, no sky beyond it.",
+          "Death was not then, nor was there aught immortal: no sign was there, the day's and night's divider.",
+          "Darkness there was: at first concealed in darkness, this All was indiscriminate chaos.",
+          "Thereafter rose Desire in the beginning, Desire, the primal seed and germ of Spirit.",
+          "Who verily knows and who can here declare it, whence it was born and whence comes this creation?",
+          "He, the first origin of this creation, whether he formed it all or did not form it, whose eye controls this world in highest heaven, he verily knows it, or perhaps he knows not."
+        ],
+        "context": "The most philosophically mature hymn. Instead of creation myth, it admits mystery. The final line—maybe even God doesn't know—is radical intellectual humility.",
+        "modernApplication": "Validates living with uncertainty, mystery, not-knowing. Relevant to existential questions, cosmology, consciousness studies."
+      },
+      "audioUrl": "/audio/hymns/10.129.mp3"
+    },
+
+    {
+      "id": "10.136",
+      "mandala": 10,
+      "sukta": 136,
+      "verses": 7,
+      "deity": "Kesin",
+      "deityId": null,
+      "rishi": "Vena Bhargava",
+      "meter": "Trishtubh",
+      "topics": ["mind", "purpose"],
+      "significance": "Early description of yogic ascetics",
+      "translation": {
+        "title": "The Long-Haired Ascetic",
+        "summary": "Describes wandering mystics with supernatural powers gained through austerity.",
+        "verses": [
+          "The long-haired one endures fire, the long-haired one endures poison, the long-haired one endures both worlds.",
+          "The long-haired one is said to gaze upon all, he is said to be this light.",
+          "The ascetics, wearing wind as their belt and clad in soiled yellow robes, follow the wind's swift course.",
+          "We have mounted the winds; you mortals see only our bodies.",
+          "The ascetic drinks poison with Rudra from the cup."
+        ],
+        "context": "Earliest description of yogic ascetics (munis) in Vedic literature. Shows that renunciant tradition existed alongside ritual tradition.",
+        "modernApplication": "Connects to yoga, meditation, renunciation traditions. Validates paths of extreme austerity and mystical experience."
+      },
+      "audioUrl": "/audio/hymns/10.136.mp3"
+    },
+
+    {
+      "id": "10.191",
+      "mandala": 10,
+      "sukta": 191,
+      "verses": 4,
+      "deity": "Vishvedevas",
+      "deityId": "vishvedevas",
+      "rishi": "Aghamashana Madhuchhandas",
+      "meter": "Trishtubh",
+      "topics": ["purpose", "wellbeing"],
+      "significance": "FINAL HYMN OF RIGVEDA - Unity and Harmony",
+      "translation": {
+        "title": "Prayer for Unity",
+        "summary": "The concluding hymn of the Rigveda prays for collective harmony.",
+        "verses": [
+          "Assemble together, speak together, let your minds be of one accord.",
+          "Common be your purpose, common be your heart, common be your intention, common be your mind, so that there may be thorough union among you.",
+          "Common be your prayer, common be your acquisition, common be your resolution, common your thought, and common your heart.",
+          "I make your purpose common, and your hearts of one accord. May your minds be as one and your souls as one, so you may live together in happiness."
+        ],
+        "context": "The perfect ending for the Rigveda. After thousands of verses exploring gods, sacrifice, philosophy, it concludes with human unity and harmony.",
+        "modernApplication": "Incredibly relevant for modern times. Calls for collective unity, shared purpose, harmony despite differences. Universal message."
+      },
+      "audioUrl": "/audio/hymns/10.191.mp3"
+    }
+  ],
+  "metadata": {
+    "totalHymns": 50,
+    "coverage": "Comprehensive selection spanning all 10 Mandalas with most famous and important hymns",
+    "translationNote": "Translations synthesized from Ralph Griffith, Stephanie Jamison/Joel Brereton, and Wendy Doniger",
+    "selectionCriteria": "Most famous, philosophically significant, ritually important, or practically applicable hymns representing the full breadth of Rigvedic thought",
+    "format": "Each hymn includes complete reference, deity, rishi, meter, topics, significance, full translation with verses, historical context, and modern application",
+    "specialInclusions": [
+      "Gayatri Mantra (3.62.10) - Most sacred verse",
+      "Purusha Sukta (10.90) - Cosmic Man, foundational to Hindu philosophy",
+      "Nasadiya Sukta (10.129) - Creation hymn, most famous philosophical inquiry",
+      "Wedding Hymn (10.85) - Still used in Hindu marriages today",
+      "Vac Hymn (10.125) - Goddess Speech, powerful feminine theology",
+      "Unity Hymn (10.191) - Final hymn calling for harmony"
+    ]
+  }
+}

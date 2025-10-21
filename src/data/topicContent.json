@@ -1,0 +1,1790 @@
+{
+  "topicContent": {
+    "nature": {
+      "introduction": {
+        "opening": "How do we relate to the natural world? What wisdom lies in sunrise, rain, and rivers?",
+        "body": [
+          "The Rig Veda expresses profound reverence for nature through hymns to Ushas (dawn), Surya (sun), Apas (waters), Prithivi (earth), and Parjanya (rain). These aren't mere nature worship but recognition of the sacred in the natural world and humanity's interdependence with all life.",
+          "Nature in the Vedic worldview is alive, conscious, and responsive. Dawn awakens the world with maternal care, waters purify and nourish, earth supports all beings, and rain brings fertility. This perspective sees humans not as masters of nature but as participants in a cosmic ecosystem.",
+          "These hymns offer ecological wisdom urgently relevant today: reverence for elements, gratitude for abundance, understanding of cycles, and recognition that human wellbeing depends on environmental health."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Prithivi",
+          "sanskrit": "पृथिवी",
+          "definition": "Earth Mother, the terrestrial realm",
+          "explanation": "Prithivi is personified as a patient, nurturing mother who bears all beings, provides all food, and endures all burdens without complaint.",
+          "modernParallel": "Similar to Gaia hypothesis - Earth as living, self-regulating system"
+        },
+        {
+          "term": "Apas",
+          "sanskrit": "आपः",
+          "definition": "Waters - rivers, rain, cosmic waters",
+          "explanation": "Waters are both physical (rivers, rain) and metaphysical (cosmic ocean). They purify, nourish, and are the source of all life.",
+          "modernParallel": "Recognition of water as fundamental to all life, water cycle understanding"
+        },
+        {
+          "term": "Vayu",
+          "sanskrit": "वायु",
+          "definition": "Wind, air, life-breath",
+          "explanation": "Vayu is the moving air that brings life-breath (prana) to all beings. Invisible but essential, like consciousness itself.",
+          "modernParallel": "Atmosphere, air quality, breath as life connection"
+        },
+        {
+          "term": "Vriksha",
+          "sanskrit": "वृक्ष",
+          "definition": "Tree, cosmic tree of life",
+          "explanation": "Trees represent the axis connecting earth and heaven. The cosmic tree (later Ashvattha) symbolizes the universe itself.",
+          "modernParallel": "Trees as carbon sinks, oxygen producers, ecosystem keystones"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "1.92",
+          "title": "Hymn to Ushas (Dawn)",
+          "mandala": 1,
+          "sukta": 92,
+          "deity": "Ushas",
+          "rishi": "Gotama Rahugana",
+          "verses": 18,
+          "excerpt": "This light has come, of all lights the most lovely, the bright effulgence has been born, far-shining. Urged onward for god Savitar's uprising, Night has yielded up her place to Morning. She yokes her chariot far away, the goddess. She goes to men with a hundred chariots loaded.",
+          "context": "Dawn is celebrated as a radiant goddess who never ages, renewing herself each morning. She represents hope, new beginnings, and the awakening of consciousness in both nature and humans.",
+          "significance": "Shows that ancient people saw the divine in daily natural phenomena. Dawn isn't just physical sunrise but spiritual awakening.",
+          "modernRelevance": "Encourages mindfulness of natural cycles, appreciation for daily renewal, consciousness of transitions (night to day, sleep to waking)"
+        },
+        {
+          "reference": "1.115",
+          "title": "Hymn to Surya (Sun)",
+          "mandala": 1,
+          "sukta": 115,
+          "deity": "Surya",
+          "rishi": "Kutsa Angirasa",
+          "verses": 6,
+          "excerpt": "The brilliant presence of the Gods has risen, the eye of Mitra, Varuna, and Agni. The Sun has filled heaven and earth and the firmament. He is the soul of all that moves and rests. Like a young man following a maiden, the Sun pursues the Dawn who shines with all her splendor.",
+          "context": "The sun is described as the eye of cosmic order (rita), the soul of all existence. It's both physical (light, warmth) and metaphysical (consciousness, truth).",
+          "significance": "Recognizes sun as source of all energy on Earth - a scientific truth understood spiritually.",
+          "modernRelevance": "Solar energy, photosynthesis, circadian rhythms - ancient recognition of solar dependence"
+        },
+        {
+          "reference": "5.83",
+          "title": "Hymn to Parjanya (Rain)",
+          "mandala": 5,
+          "sukta": 83,
+          "deity": "Parjanya",
+          "rishi": "Atri Bhauma",
+          "verses": 10,
+          "excerpt": "Speak out with thunder, roaring, slay the demons. Pour down the rain-flood, you who are full of life-giving water. When you thunder and roar, creating rain, then the plants spring up, and all life rejoices. You make plants grow; you make rivers flow. You bellow like a bull. The rain has fallen. The winds blow cool.",
+          "context": "Parjanya is the rain god whose 'seed' (rain) fertilizes earth (Prithivi). The sexual imagery recognizes rain as life-giver and earth as receiver/mother.",
+          "significance": "Understanding of hydrological cycle and rain's role in agriculture and ecology.",
+          "modernRelevance": "Climate change, drought, water security - ancient recognition of rain's vital importance"
+        },
+        {
+          "reference": "10.9",
+          "title": "The Waters of Life",
+          "mandala": 10,
+          "sukta": 9,
+          "deity": "Apas",
+          "rishi": "Sindhukshit Praiyamedha",
+          "verses": 9,
+          "excerpt": "Waters, you are healing; bring us strength and health. Within the waters, Soma told me, are all healing plants and Agni who blesses all beings. Waters, carry away all that is impure in me, all sin I have committed, all curse spoken. May we look upon your blissful flow.",
+          "context": "Waters are celebrated as purifiers (physically and spiritually), healers, and life-sustainers. They carry away impurity and bring blessing.",
+          "significance": "Recognition of water's purifying properties - both literal (hygiene) and symbolic (spiritual cleansing).",
+          "modernRelevance": "Water quality, public health, sacred river protection, water as human right"
+        },
+        {
+          "reference": "5.84",
+          "title": "Heaven and Earth",
+          "mandala": 5,
+          "sukta": 84,
+          "deity": "Prithivi and Dyaus",
+          "rishi": "Atri Bhauma",
+          "verses": 6,
+          "excerpt": "Great are Heaven and Earth, liberal, sublime, strong through their progeny. These parents of the Gods, with their creative power, have made all creatures. They established the two worlds which are beyond measure. Heaven and Earth, you two sustain through law all creatures.",
+          "context": "Sky Father (Dyaus) and Earth Mother (Prithivi) are the primal parents. Their union creates and sustains all life. They represent the fundamental polarity of existence.",
+          "significance": "Ecological understanding: life exists in the space between earth and sky, sustained by both.",
+          "modernRelevance": "Atmosphere-biosphere interaction, planetary boundaries, earth systems science"
+        },
+        {
+          "reference": "7.49",
+          "title": "The Seven Rivers",
+          "mandala": 7,
+          "sukta": 49,
+          "deity": "Waters/Rivers",
+          "rishi": "Vasishtha Maitravaruni",
+          "verses": 4,
+          "excerpt": "The seven rivers, flowing, divine, mothers of the world, nourish the earth. Sindhu (Indus) most excellent among rivers, surges with roaring sound. Like mothers with their children, like milk-cows with their calves, the waters flow toward the ocean.",
+          "context": "The seven rivers (Sapta Sindhu) define Vedic geography and civilization. Rivers are personified as mothers and milk-cows - givers of life and nourishment.",
+          "significance": "Entire civilization was river-centered. Shows understanding of watershed ecology.",
+          "modernRelevance": "River conservation, watershed management, riparian rights, sacred geography"
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Cosmic Tree",
+          "description": "Universe as a tree with roots in heaven, branches reaching earth",
+          "symbolism": "Inverted tree shows spiritual nourishment flowing downward to material world. All life interconnected like branches.",
+          "hymnReference": "1.164"
+        },
+        {
+          "image": "The Womb of Waters",
+          "description": "Cosmic waters as womb from which all existence emerges",
+          "symbolism": "Water as primordial element, source of all life. Return to waters is return to origin.",
+          "hymnReference": "10.129"
+        },
+        {
+          "image": "The Wheel of Seasons",
+          "description": "Year as a wheel with twelve spokes (months)",
+          "symbolism": "Cyclical time, eternal return, harmony with natural rhythms.",
+          "hymnReference": "1.164"
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Ecology & Environmentalism",
+          "connection": "Vedic reverence for nature provides spiritual foundation for environmental protection.",
+          "example": "India's sacred river movement draws on Vedic hymns to protect Ganges and other rivers from pollution"
+        },
+        {
+          "field": "Climate Science",
+          "connection": "Ancient recognition of interconnected natural systems (water cycle, seasons, ecosystems) parallels modern earth systems science.",
+          "example": "Hymns describe feedback loops: rain → plants → food → life, anticipating ecological understanding"
+        },
+        {
+          "field": "Sustainability",
+          "connection": "Living in harmony with natural cycles rather than exploiting resources aligns with sustainability principles.",
+          "example": "Traditional water management (tanks, wells) based on Vedic reverence for water still functions in parts of India"
+        },
+        {
+          "field": "Biophilia",
+          "connection": "Innate human connection to nature (biophilia hypothesis) is celebrated in Vedic nature hymns.",
+          "example": "Studies show exposure to natural elements (sunrise, water) improves mental health - Vedic hymns recognized this millennia ago"
+        }
+      ],
+      "suggestedQuestions": [
+        "How did ancient people relate to nature differently than we do?",
+        "What can Vedic ecology teach us about sustainability?",
+        "Why are waters considered sacred?",
+        "How do natural cycles affect consciousness?",
+        "What is the relationship between outer nature and inner nature (consciousness)?"
+      ]
+    },
+    "ethics": {
+      "introduction": {
+        "opening": "What is right? How do we know truth? What guides moral behavior?",
+        "body": [
+          "Ethics in the Rig Veda centers on two foundational concepts: satya (truth/reality) and rita (cosmic order/natural law). Satya means alignment with reality as it is - both truthful speech and authentic living. Rita is the fundamental order underlying existence, violation of which causes chaos.",
+          "Varuna, guardian of cosmic law, watches over oaths and punishes those who break moral order. But Vedic ethics isn't punitive legalism - it's understood that humans err through ignorance, passion, or influence. Forgiveness and restoration are as important as justice.",
+          "These hymns reveal sophisticated ethical thinking: the tension between universal principles and situational application, the role of intention versus action, the importance of both individual integrity and social harmony, and the recognition that ethical life requires both wisdom and courage."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Satya",
+          "sanskrit": "सत्य",
+          "definition": "Truth, reality, honesty, that which is",
+          "explanation": "Satya operates on multiple levels: truthful speech, living authentically, and alignment with ultimate reality. It's both a moral virtue and a metaphysical principle.",
+          "modernParallel": "Integrity, authenticity, honesty - but deeper, including alignment between inner truth and outer expression"
+        },
+        {
+          "term": "Rita",
+          "sanskrit": "ऋत",
+          "definition": "Cosmic order, natural law, truth, righteousness",
+          "explanation": "Rita is the fundamental principle that keeps cosmos functioning: planets in orbit, seasons cycling, societies stable. Violating rita causes chaos; following it brings harmony.",
+          "modernParallel": "Natural law, cosmic order, perhaps even physical laws - but with moral dimension"
+        },
+        {
+          "term": "Anrita",
+          "sanskrit": "अनृत",
+          "definition": "Untruth, disorder, chaos, falsehood",
+          "explanation": "Opposite of rita. Anrita is lie, disorder, violation of natural law. It's both moral failing and cosmic disruption.",
+          "modernParallel": "Chaos, entropy, moral disorder, systemic dysfunction"
+        },
+        {
+          "term": "Vratya",
+          "sanskrit": "व्रत",
+          "definition": "Vow, sacred commitment, oath",
+          "explanation": "Vratas are sacred commitments that bind one's word to cosmic order. Breaking a vow violates rita itself.",
+          "modernParallel": "Oath, commitment, integrity of word - but with cosmic significance"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "7.86",
+          "title": "Varuna's Forgiveness",
+          "mandala": 7,
+          "sukta": 86,
+          "deity": "Varuna",
+          "rishi": "Vasishtha Maitravaruni",
+          "verses": 8,
+          "excerpt": "If we have sinned against one who loves us, against a friend or companion, O Varuna, or against someone who has harmed us, release us from that sin. Whatever offense we have committed, if we have broken your laws like gamers breaking rules, do not let that destroy us, O God. It was not my own will, Varuna: wine, anger, dice, or thoughtlessness led me astray.",
+          "context": "This moving prayer acknowledges human moral failing while requesting divine mercy. It shows psychological sophistication: recognizing both personal responsibility and mitigating factors.",
+          "significance": "Demonstrates that Vedic ethics includes forgiveness, understanding of circumstances, and belief in moral restoration rather than permanent condemnation.",
+          "modernRelevance": "Applicable to restorative justice, acknowledging mistakes while seeking growth, self-compassion in moral failure"
+        },
+        {
+          "reference": "10.85",
+          "title": "The Marriage Hymn",
+          "mandala": 10,
+          "sukta": 85,
+          "deity": "Various",
+          "rishi": "Surya",
+          "verses": 47,
+          "excerpt": "May your intention be in harmony, your hearts united, your minds of one accord. I unite you two in harmony. May you be devoted to each other. Love each other as the cow loves her newborn calf. Let your speech be sweet like honey. Let your eyes be kind. Let your prosperity increase together.",
+          "context": "Marriage hymn establishing ethical basis for partnership: harmony, devotion, sweet speech, kindness, mutual prosperity. Sets high ethical standard for relationships.",
+          "significance": "Shows that ethics isn't just about prohibitions but about positive cultivation of virtue in relationships.",
+          "modernRelevance": "Relevant to relationship ethics, communication, partnership values, family ethics"
+        },
+        {
+          "reference": "4.23",
+          "title": "Rita and the Gods",
+          "mandala": 4,
+          "sukta": 23,
+          "deity": "Indra",
+          "rishi": "Vamadeva Gautama",
+          "verses": 10,
+          "excerpt": "By rita, truth and cosmic law, the Adityas stand firm. By rita the earth is supported. By rita the sun shines and by rita fires burn. All this universe is set in rita. Rita is the foundation on which truth and law are based. Through rita, long life is obtained.",
+          "context": "Establishes rita as the fundamental principle underlying all existence - physical, moral, and spiritual. Even gods must follow rita.",
+          "significance": "Provides objective grounding for ethics: not arbitrary divine command but cosmic structure itself.",
+          "modernRelevance": "Similar to natural law theory - ethics grounded in nature of reality itself"
+        },
+        {
+          "reference": "1.89",
+          "title": "Prayer to All Gods",
+          "mandala": 1,
+          "sukta": 89,
+          "deity": "Vishvedevas",
+          "rishi": "Gotama Rahugana",
+          "verses": 10,
+          "excerpt": "May we not provoke you, O Gods, through our evil, not through senseless actions, not through ignorance, not through poverty. Keep watch over us with care, like herdsmen over cattle. May all beings be happy, may all beings be free from suffering, may all beings see good, may no one suffer.",
+          "context": "Acknowledges different sources of wrongdoing: intentional evil, thoughtless action, ignorance, and desperate poverty. Asks for divine protection and extends ethical concern to all beings.",
+          "significance": "Shows nuanced understanding of ethics: intention matters, context matters, universal compassion is ideal.",
+          "modernRelevance": "Universal human rights, animal ethics, understanding of systemic factors in wrongdoing"
+        },
+        {
+          "reference": "10.117",
+          "title": "The Virtue of Generosity",
+          "mandala": 10,
+          "sukta": 117,
+          "deity": "Unknown",
+          "rishi": "Unknown",
+          "verses": 9,
+          "excerpt": "The gods do not eat; they do not consume. Fools say the generous man is a fool. But truly, no one who gives freely ever goes hungry. The miser accumulates only enemies. Let wealth flow like water. The generous person finds friends wherever they go. Share your food with the hungry. Wealth is like a wheel, rolling from one to another.",
+          "context": "Powerful argument for generosity against hoarding. Uses both practical (you'll have friends) and spiritual (like the gods) reasoning.",
+          "significance": "Economic ethics: wealth should circulate, not accumulate. Generosity is wisdom, not foolishness.",
+          "modernRelevance": "Relevant to wealth inequality, philanthropy, economic justice, circular economy thinking"
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Cosmic Net",
+          "description": "Varuna's net that catches wrongdoers",
+          "symbolism": "Can't escape consequences of unethical action. The universe itself enforces moral order.",
+          "hymnReference": "7.86"
+        },
+        {
+          "image": "The Path",
+          "description": "Rita as the path or road",
+          "symbolism": "Ethics is like following a road - deviation leads to danger, staying on path leads safely forward.",
+          "hymnReference": "1.23"
+        },
+        {
+          "image": "The Wheel of Wealth",
+          "description": "Wealth as a wheel rolling from person to person",
+          "symbolism": "Resources should circulate, not be hoarded. What goes around comes around.",
+          "hymnReference": "10.117"
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Philosophy of Ethics",
+          "connection": "Rita provides grounding for natural law ethics - morality based on cosmic structure rather than arbitrary authority.",
+          "example": "Similar to Stoic concept of logos or Taoist tao - living in harmony with natural order"
+        },
+        {
+          "field": "Legal Systems",
+          "connection": "Distinction between rita (universal law) and dharma (contextual application) parallels distinction between principles and precedents.",
+          "example": "Constitutional principles (rita) applied to specific cases (dharma)"
+        },
+        {
+          "field": "Business Ethics",
+          "connection": "Generosity hymns challenge accumulation mentality, support stakeholder (vs shareholder-only) capitalism.",
+          "example": "Conscious capitalism, B-corporations - business serving all stakeholders, not just profit maximization"
+        },
+        {
+          "field": "Restorative Justice",
+          "connection": "Varuna hymns emphasize restoration and forgiveness alongside accountability.",
+          "example": "Modern restorative justice practices focus on healing harm rather than pure punishment"
+        }
+      ],
+      "suggestedQuestions": [
+        "How does rita differ from human-made laws?",
+        "Can ethics be objective if based on cosmic order?",
+        "How do we balance universal principles with situational factors?",
+        "What is the relationship between truth (satya) and cosmic order (rita)?",
+        "How does Vedic ethics handle moral complexity and grey areas?"
+      ]
+    },
+    "relationships": {
+      "introduction": {
+        "opening": "How do we connect with others? What makes relationships sacred? How do we build community?",
+        "body": [
+          "The Rig Veda celebrates relationships through the deity Mitra (friend/ally), hymns about hospitality, and rituals that bind communities together. Friendship isn't just personal affection but a sacred bond that reflects cosmic harmony. The guest is divine; the host has sacred duty.",
+          "Vedic society was clan-based, with kinship bonds defining identity. But relationships extended beyond blood: ritual friendships (mitra), patron-priest bonds, guest-host relationships, and the reciprocal relationship between humans and gods through sacrifice. Each relationship had ethical obligations.",
+          "These hymns reveal that healthy relationships require: honesty (satya), loyalty (mitra), generosity (dana), respect (namaskara), and recognition of interdependence. They also acknowledge relationship challenges: betrayal, conflict, the pain of separation - offering wisdom for navigating complexity."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Mitra",
+          "sanskrit": "मित्र",
+          "definition": "Friend, ally, companion; also deity of friendship and contracts",
+          "explanation": "Mitra represents the bonds of friendship, alliance, and mutual obligation. As a deity, Mitra oversees oaths and agreements between people.",
+          "modernParallel": "Friendship, alliance, social contract, mutual commitment"
+        },
+        {
+          "term": "Bandhu",
+          "sanskrit": "बन्धु",
+          "definition": "Kinsman, relative, connection",
+          "explanation": "Bandhu is both blood relationship and metaphysical connection - the bonds that link all beings in the cosmic web.",
+          "modernParallel": "Kinship, connection, relationship, bonds - both familial and universal"
+        },
+        {
+          "term": "Atithi",
+          "sanskrit": "अतिथि",
+          "definition": "Guest, literally 'one without a fixed day' (unexpected visitor)",
+          "explanation": "The guest is sacred in Vedic culture. Hospitality (atithi-devo-bhava: the guest is god) is a fundamental duty.",
+          "modernParallel": "Hospitality, welcoming the stranger, sacred duty to visitors"
+        },
+        {
+          "term": "Yajna",
+          "sanskrit": "यज्ञ",
+          "definition": "Sacrifice, but also reciprocity, exchange, mutual giving",
+          "explanation": "Yajna is the principle of reciprocal exchange that binds humans to gods, humans to each other, and humans to nature. All relationships are forms of yajna.",
+          "modernParallel": "Reciprocity, mutual aid, gift economy, social exchange"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "3.59",
+          "title": "Mitra and Varuna",
+          "mandala": 3,
+          "sukta": 59,
+          "deity": "Mitra-Varuna",
+          "rishi": "Vishvamitra Gathina",
+          "verses": 9,
+          "excerpt": "To Mitra and to Varuna we sing, the two wide-rulers, strong through law. Through their divine power, they sit on their thrones maintaining order. Mitra, when honored, grants abundant blessings. Never may we break the sacred laws of friendly Mitra.",
+          "context": "Mitra and Varuna are often paired: Mitra rules day and friendship, Varuna rules night and cosmic law. Together they maintain balance and oversee all relationships.",
+          "significance": "Shows that friendship (mitra) is not just personal but cosmic principle. Breaking friendship violates cosmic order.",
+          "modernRelevance": "Elevates friendship to sacred status, emphasizes reliability and trust as spiritual virtues"
+        },
+        {
+          "reference": "10.85",
+          "title": "The Marriage Hymn",
+          "mandala": 10,
+          "sukta": 85,
+          "deity": "Various",
+          "rishi": "Surya",
+          "verses": 47,
+          "excerpt": "May your hearts be united, your minds of one accord, so that you may live together in happiness. I unite you in matrimony with the word of law and with the producing rite. May you be devoted to each other. Love each other as a cow loves her newborn calf.",
+          "context": "The wedding hymn establishes marriage as sacred partnership based on harmony, devotion, and mutual support. It's still recited in Hindu weddings today.",
+          "significance": "Treats marriage as spiritual union requiring conscious commitment to harmony and mutual care.",
+          "modernRelevance": "Applicable to any committed partnership - emphasizes communication, unity of purpose, devotion"
+        },
+        {
+          "reference": "10.10",
+          "title": "Yama and Yami Dialogue",
+          "mandala": 10,
+          "sukta": 10,
+          "deity": "Yama and Yami",
+          "rishi": "Yami",
+          "verses": 17,
+          "excerpt": "Yami says: 'Come, let us embrace, my brother. Why do you reject me?' Yama responds: 'The gods are watching. I cannot do what is forbidden. The rules of right and wrong apply even in grief and loneliness. Seek another companion.'",
+          "context": "A moving dialogue between twins - Yami desires her brother Yama after he dies. He refuses, upholding dharma even in death. She grieves alone.",
+          "significance": "Explores boundaries in relationships: what is permitted, what is forbidden, the pain of limits, duty vs. desire.",
+          "modernRelevance": "Relevant to boundary-setting, appropriate vs. inappropriate relationships, grief and letting go"
+        },
+        {
+          "reference": "1.89",
+          "title": "Prayer for Community Wellbeing",
+          "mandala": 1,
+          "sukta": 89,
+          "deity": "Vishvedevas",
+          "rishi": "Gotama Rahugana",
+          "verses": 10,
+          "excerpt": "May we be dear to you, O Gods, as sons are dear to their father. May we be like brothers and companions. May all beings be happy. May all beings be free from harm. May we see good in all. May no one suffer pain.",
+          "context": "Extends the circle of care from family to all beings. Uses familial metaphors (father-son, brothers) to describe universal relationships.",
+          "significance": "Progressive ethics: from clan loyalty to universal compassion. All beings matter.",
+          "modernRelevance": "Universal human rights, animal welfare, expanding circle of moral concern"
+        },
+        {
+          "reference": "10.117",
+          "title": "Generosity and Community",
+          "mandala": 10,
+          "sukta": 117,
+          "deity": "Unknown",
+          "rishi": "Unknown",
+          "verses": 9,
+          "excerpt": "The generous person finds friends wherever they go. Friends flock to the generous one like bees to nectar. But the miser, though rich, has no friends. What use is wealth without friendship? Share your food with the hungry who come to your door.",
+          "context": "Practical wisdom about relationships: generosity creates bonds, stinginess isolates. Wealth's value is in what it enables - connection, care, community.",
+          "significance": "Links ethics (generosity) with social wellbeing (friendship). Wealth exists to strengthen relationships.",
+          "modernRelevance": "Community building, mutual aid, the social dimension of economics"
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Chariot Wheel",
+          "description": "Society as a wheel with spokes (individuals) connecting to hub (community)",
+          "symbolism": "Each person is essential spoke; remove one and wheel weakens. We're interdependent parts of whole.",
+          "hymnReference": "1.164"
+        },
+        {
+          "image": "The Woven Fabric",
+          "description": "Relationships as threads woven together",
+          "symbolism": "Each relationship is a thread; together they create the fabric of society. Pattern emerges from interwoven bonds.",
+          "hymnReference": "10.71"
+        },
+        {
+          "image": "The Guest as God",
+          "description": "Atithi devo bhava - the guest is divine",
+          "symbolism": "Every stranger might be a god in disguise. Hospitality is sacred duty. Honor the unknown visitor.",
+          "hymnReference": "Various"
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Community Building",
+          "connection": "Vedic emphasis on reciprocity, hospitality, and mutual obligation provides model for community resilience.",
+          "example": "Mutual aid networks, community supported agriculture, time banks - modern forms of yajna (reciprocal exchange)"
+        },
+        {
+          "field": "Relationship Psychology",
+          "connection": "Marriage hymn's emphasis on unity while respecting individuality mirrors modern healthy relationship research.",
+          "example": "Gottman Method emphasizes fondness and admiration, turning toward each other - similar to Vedic 'hearts united' concept"
+        },
+        {
+          "field": "Ethics of Care",
+          "connection": "Extending care from kin to stranger to all beings reflects care ethics' emphasis on relationship as moral foundation.",
+          "example": "Nel Noddings' care ethics: morality grounded in relationships and responsibility to others"
+        },
+        {
+          "field": "Social Capital",
+          "connection": "Generosity creating social bonds parallels research on social capital and community trust.",
+          "example": "Robert Putnam's work shows generosity and reciprocity build social trust and community cohesion"
+        }
+      ],
+      "suggestedQuestions": [
+        "What makes a relationship sacred?",
+        "How do we balance loyalty to friends with ethical principles?",
+        "What are our obligations to strangers?",
+        "How does generosity create community?",
+        "What is the relationship between individual and collective wellbeing?"
+      ]
+    },
+    "existence": {
+      "introduction": {
+        "opening": "Why do we exist? What happens after death? What is the nature of reality itself?",
+        "body": [
+          "The Rig Veda contains humanity's earliest recorded philosophical inquiries into existence. The Nasadiya Sukta (Hymn of Creation, 10.129) asks fundamental questions: What existed before existence? How did something arise from nothing? Perhaps even the creator doesn't know - remarkable intellectual humility.",
+          "Death and afterlife are explored through hymns to Yama, the first mortal who became king of the ancestors. The Vedic afterlife isn't heaven or hell but the realm of fathers (pitrs) where one rejoins departed relatives. Death is transition, not termination.",
+          "These hymns confront existential questions with both poetry and philosophy: the mystery of consciousness, the problem of finite life, the search for immortal essence within mortal form, and ultimately the possibility that reality defies final explanation. They invite contemplation rather than demanding belief."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Sat",
+          "sanskrit": "सत्",
+          "definition": "Being, existence, that which is",
+          "explanation": "Sat is pure existence or is-ness. In the creation hymn, the question arises: did even sat exist before creation? If not, what did?",
+          "modernParallel": "Being itself, existence as such"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "10.129",
+          "title": "Hymn of Creation (Nasadiya Sukta)",
+          "mandala": 10,
+          "sukta": 129,
+          "deity": "Creation",
+          "rishi": "Prajapati Parameshthin",
+          "verses": 7,
+          "excerpt": "Neither non-existence nor existence was there. Who really knows? Who can declare it? Whence was this creation produced? The gods came afterwards. Who then knows whence it arose?",
+          "context": "Questions the origin of consciousness itself. If neither being nor non-being existed before creation, what was the nature of the first awareness? This hymn admits ultimate uncertainty with remarkable intellectual honesty.",
+          "significance": "Perhaps the first recorded expression of metaphysical agnosticism. The final verse admits even the gods might not know the answer.",
+          "modernRelevance": "Resonates with modern physics' questions about the origin of the universe and the role of consciousness in quantum mechanics"
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Cosmic Egg",
+          "description": "Universe emerging from a primordial egg",
+          "symbolism": "All existence contained within potential, waiting to unfold",
+          "hymnReference": "10.129"
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Philosophy",
+          "connection": "The Nasadiya Sukta's agnosticism about ultimate origins parallels modern philosophical skepticism about final explanations.",
+          "example": "Similar to Wittgenstein's 'whereof one cannot speak, thereof one must be silent' - recognizing limits of language and knowledge"
+        }
+      ],
+      "suggestedQuestions": [
+        "What existed before existence?",
+        "How do we grapple with ultimate questions?",
+        "What is the relationship between being and non-being?",
+        "Can we know the origin of consciousness?"
+      ]
+    },
+    "energy": {
+      "introduction": {
+        "opening": "What is the nature of cosmic energy? How do transformation and change operate in the universe?",
+        "body": [
+          "The Rig Veda presents energy as a dynamic, transformative force pervading all existence. Through concepts like Tejas (luminous energy), Tapas (transformative heat), and Shakti (divine power), the hymns explore how energy manifests, transforms, and sustains the cosmos.",
+          "These ancient texts recognize that transformation is fundamental to existence. Fire transforms offerings, dawn transforms night into day, soma transforms consciousness, and ritual transforms the mundane into the sacred. This understanding parallels modern physics' insights into energy, entropy, and transformation.",
+          "The Vedic sages understood that energy is never static—it flows, changes form, and enables all processes of life and consciousness. These hymns offer profound insights into the nature of change, power, and the dynamic processes underlying reality."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Tejas",
+          "sanskrit": "तेजस्",
+          "definition": "Luminous energy, radiance, vital fire",
+          "explanation": "Tejas represents the radiant, transformative energy that manifests as light, heat, and vital force. It's the brilliance in fire, the glow of health, and the power of digestion and metabolism in the body.",
+          "modernParallel": "Similar to thermodynamics and metabolic energy—the power that drives transformation and maintains biological systems"
+        },
+        {
+          "term": "Tapas",
+          "sanskrit": "तपस्",
+          "definition": "Transformative heat, ascetic power, creative force",
+          "explanation": "Tapas is the heat generated through discipline, concentration, or ritual. It's described as the primordial force that generated creation itself—the cosmic heat that transformed potential into manifestation.",
+          "modernParallel": "Resonates with concepts of activation energy in chemistry and focused intention in psychology"
+        },
+        {
+          "term": "Shakti",
+          "sanskrit": "शक्ति",
+          "definition": "Divine power, active force, dynamic energy",
+          "explanation": "Shakti is the active, dynamic principle that enables manifestation and change. Often personified as feminine divine energy, it represents the power through which all actions and transformations occur.",
+          "modernParallel": "Comparable to kinetic energy and the concept of force in physics—the active principle that causes change"
+        },
+        {
+          "term": "Soma",
+          "sanskrit": "सोम",
+          "definition": "The nectar of transformation, divine elixir",
+          "explanation": "Soma represents transformative essence—both as a ritual substance and as metaphor for consciousness-altering experiences. Its pressing and purification symbolize transformation processes.",
+          "modernParallel": "Similar to neurotransmitters and altered states of consciousness in neuroscience"
+        }
+      ],
+      "hymns": [
+        {
+          "title": "Hymn to Agni as Transformative Fire",
+          "reference": "1.1.1-9",
+          "mandala": 1,
+          "sukta": 1,
+          "verses": 9,
+          "deity": "Agni",
+          "rishi": "Madhucchandas Vaishvamitra",
+          "excerpt": "I invoke Agni, the priest placed foremost, the god of sacrifice, the invoker, the lavisher of treasures... He who transforms offerings through his brilliant mouth, conducting the sacred work of gods and mortals.",
+          "context": "The very first hymn of the Rig Veda celebrates Agni as the supreme transformative force. Fire transforms physical offerings into smoke and energy, symbolizing the transformation of matter into spirit.",
+          "significance": "This hymn establishes the central Vedic principle that energy and transformation are sacred processes. Agni bridges earth and heaven, matter and consciousness, through his transformative power.",
+          "modernRelevance": "Reflects understanding of energy transformation (thermodynamics), the role of catalysts in transformation, and the sacred dimension of physical and chemical processes."
+        },
+        {
+          "title": "The Creation Hymn - Tapas as Cosmic Force",
+          "reference": "10.129",
+          "mandala": 10,
+          "sukta": 129,
+          "verses": 7,
+          "deity": "Creation",
+          "rishi": "Prajapati Parameshthin",
+          "excerpt": "Then even nothingness was not, nor existence. There was no air then, nor the heavens beyond it... That One which came to be, enclosed in nothing, arose at last, born of the power of heat (Tapas).",
+          "context": "This cosmological hymn describes Tapas (transformative heat-energy) as the primordial force that brought the universe into being from undifferentiated potential.",
+          "significance": "Presents one of humanity's earliest scientific-philosophical models of creation—not through divine fiat but through energy transformation. The universe emerges through the action of Tapas on primordial potential.",
+          "modernRelevance": "Remarkably parallels Big Bang cosmology and thermodynamic principles—the universe beginning as concentrated energy that transforms into matter and structure."
+        },
+        {
+          "title": "Hymn to Soma - Transformative Purification",
+          "reference": "9.1.1-10",
+          "mandala": 9,
+          "sukta": 1,
+          "verses": 10,
+          "deity": "Soma Pavamana",
+          "rishi": "Madhucchandas Vaishvamitra",
+          "excerpt": "Flow onwards, Soma, winning kine and treasure. Flow onwards, conquering the waters' offspring... The gold-hued filter you pass through, becoming pure and bright, bringing powers from heaven.",
+          "context": "The ninth Mandala is entirely dedicated to Soma's purification—describing the ritual pressing, filtering, and transformation of soma juice as it flows through filters.",
+          "significance": "The purification process symbolizes transformation through stages—from crude to refined, from potential to actualized. Each stage requires energy and produces transformation.",
+          "modernRelevance": "Analogous to distillation, purification processes in chemistry, and psychological transformation through stages of refinement and integration."
+        },
+        {
+          "title": "Hymn to Indra's Dynamic Power",
+          "reference": "1.32.1-15",
+          "mandala": 1,
+          "sukta": 32,
+          "verses": 15,
+          "deity": "Indra",
+          "rishi": "Hiranyastupa Angirasa",
+          "excerpt": "I will declare the manly deeds of Indra, the first that he achieved, the thunderer... With his vast destroying thunder he smote down Vritra, releasing the waters, splitting the cloud-mountains.",
+          "context": "This hymn celebrates Indra's victory over Vritra, the chaos-serpent who held back the waters. The battle represents the transformation of chaos into order through dynamic energy.",
+          "significance": "Symbolizes how concentrated force breaks stagnation and releases blocked energy. The waters' release represents the flow of life-force, creativity, and abundance.",
+          "modernRelevance": "Represents breakthrough moments—overcoming obstacles, releasing blocked potential, and transforming stagnation into flow. Relevant to psychology, organizational change, and personal transformation."
+        }
+      ],
+      "metaphors": [
+        {
+          "title": "Fire as Universal Transformer",
+          "description": "Agni transforms everything it touches—wood to ash, offerings to smoke, matter to energy. This symbolizes the universal principle of transformation."
+        },
+        {
+          "title": "Soma Pressing",
+          "description": "The ritual pressing of soma plants represents transformation through pressure, purification through filtering, and elevation through mixing with milk."
+        },
+        {
+          "title": "Dawn Breaking Darkness",
+          "description": "Ushas (dawn) transforming night into day represents the perpetual cycle of transformation—darkness yields to light, unconsciousness to awareness."
+        },
+        {
+          "title": "Waters Released from Mountains",
+          "description": "Indra releasing imprisoned waters symbolizes blocked energy liberated, potential actualized, and stagnation transformed into dynamic flow."
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Physics & Thermodynamics",
+          "connection": "Vedic insights into energy transformation parallel the laws of thermodynamics—energy changing forms but never destroyed, entropy and order, heat as transformative force."
+        },
+        {
+          "field": "Chemistry",
+          "connection": "The soma purification process demonstrates understanding of transformation through stages, catalysts, and purification—fundamental to chemical processes and material science."
+        },
+        {
+          "field": "Psychology",
+          "connection": "Transformation through Tapas (discipline) parallels psychological concepts of personal growth through intentional practice, shadow work, and integration of fragmented aspects of self."
+        },
+        {
+          "field": "Ecology & Systems Theory",
+          "connection": "Understanding energy flow through systems, transformation of resources, and cyclical processes of regeneration align with ecological and systems thinking."
+        }
+      ],
+      "suggestedQuestions": [
+        "How does understanding energy as sacred change our relationship with consumption and waste?",
+        "What personal transformations might require the 'heat' of Tapas—sustained discipline and focus?",
+        "How do we work with blocked energy in our lives, relationships, or communities?",
+        "What processes in modern life parallel the Vedic soma purification—transformation through stages?",
+        "How might recognizing transformation as fundamental help us navigate life changes with greater wisdom?"
+      ]
+    },
+    "success": {
+      "introduction": {
+        "opening": "What constitutes true prosperity? How does one achieve success aligned with cosmic order?",
+        "body": [
+          "The Rig Veda presents prosperity not as mere material accumulation but as alignment with Rita (cosmic order) and cultivation of inner wealth. Through concepts like Shri (auspicious prosperity), Lakshmi (abundance), and Pushti (nourishment and growth), the hymns reveal a holistic vision of success.",
+          "Vedic prosperity encompasses multiple dimensions: material wealth (Dhana), progeny and legacy (Prajana), good reputation (Yashas), long life (Ayus), and spiritual wisdom (Jnana). True success comes not from hoarding but from generous circulation of resources in harmony with natural and social rhythms.",
+          "These hymns emphasize that prosperity flows from right action (Dharma), generosity (Dana), skillful work (Karma), and divine grace. Success is not opposed to ethics but depends on it—sustainable abundance requires alignment with cosmic principles and social wellbeing."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Rita",
+          "sanskrit": "ऋत",
+          "definition": "Cosmic order, natural law, truth",
+          "explanation": "Rita is the fundamental principle of cosmic and moral order. Success and prosperity that violate Rita are unsustainable. Alignment with Rita ensures long-term flourishing for individuals and communities.",
+          "modernParallel": "Similar to concepts of sustainable development, natural law, and long-term value creation in modern economics"
+        },
+        {
+          "term": "Shri",
+          "sanskrit": "श्री",
+          "definition": "Auspicious prosperity, abundance, good fortune",
+          "explanation": "Shri represents prosperity in its fullness—material wealth combined with beauty, auspiciousness, and harmony. It is abundance that brings joy and supports flourishing, not mere accumulation.",
+          "modernParallel": "Resonates with holistic wealth concepts—financial capital plus social, cultural, and natural capital"
+        },
+        {
+          "term": "Pushti",
+          "sanskrit": "पुष्टि",
+          "definition": "Nourishment, growth, thriving",
+          "explanation": "Pushti emphasizes qualitative prosperity—the flourishing of body, mind, family, and community. It is about healthy growth and robust vitality, not just quantity.",
+          "modernParallel": "Similar to thriving and wellbeing in positive psychology and sustainable growth in economics"
+        },
+        {
+          "term": "Dana",
+          "sanskrit": "दान",
+          "definition": "Generosity, giving, charitable distribution",
+          "explanation": "Dana is the practice of generous giving that prevents wealth from stagnating. The hymns emphasize that prosperity increases through circulation—generous hosts are blessed with abundance.",
+          "modernParallel": "Aligns with economic theories of circulation, philanthropy studies, and reciprocity in social capital"
+        }
+      ],
+      "hymns": [
+        {
+          "title": "Hymn to Indra the Wealth-Giver",
+          "reference": "2.12.1-15",
+          "mandala": 2,
+          "sukta": 12,
+          "verses": 15,
+          "deity": "Indra",
+          "rishi": "Gritsamada Shaunaka",
+          "excerpt": "Who grants wealth to the worshipper, who leads the waters from the mountain, who is invoked by both armies in battle—he is Indra... Who gives horses, cattle, food, and treasure without measure to the generous sacrificer.",
+          "context": "This hymn celebrates Indra as the supreme giver of wealth and success. His generosity flows to those who maintain ritual order and act generously themselves.",
+          "significance": "Establishes the principle that prosperity is granted to those who honor cosmic order and practice generosity—not to hoarders but to generous givers who maintain social circulation.",
+          "modernRelevance": "Reflects economic principles of reciprocity and circulation—wealth grows through exchange, not hoarding. Generosity attracts opportunities and builds social capital."
+        },
+        {
+          "title": "Hymn to Vishnu the All-Pervader",
+          "reference": "1.154.1-6",
+          "mandala": 1,
+          "sukta": 154,
+          "verses": 6,
+          "deity": "Vishnu",
+          "rishi": "Dirghatamas Auchatya",
+          "excerpt": "I will now declare the mighty works of Vishnu, who measured out the earthly regions, who fixed the upper dwelling-place... The third step cannot be seen by mortals—that highest place where gods rejoice.",
+          "context": "Vishnu's three strides measure the universe—earth, atmosphere, and the highest heaven. This cosmic ordering creates stable space for prosperity to flourish.",
+          "significance": "Success requires proper structure and order. Vishnu's cosmic measurement represents the establishment of boundaries, laws, and systems that enable sustainable prosperity.",
+          "modernRelevance": "Relates to institutional economics—prosperity requires rule of law, property rights, stable systems, and well-ordered social structures."
+        },
+        {
+          "title": "Hymn to Savitri for Prosperity",
+          "reference": "4.53.1-6",
+          "mandala": 4,
+          "sukta": 53,
+          "verses": 6,
+          "deity": "Savitri",
+          "rishi": "Vamadeva Gautama",
+          "excerpt": "We call upon divine Savitri, the god who prospers our possessions, who grants us strength and wealth... May he bestow upon us all desirable things, long life and progeny, glory and riches.",
+          "context": "Savitri, the solar deity of inspiration and impulsion, is invoked for comprehensive prosperity—wealth, children, reputation, and longevity.",
+          "significance": "Demonstrates the holistic Vedic view of prosperity—not just wealth but health, family, reputation, and long life. True success encompasses all dimensions of flourishing.",
+          "modernRelevance": "Aligns with comprehensive wellbeing frameworks—material prosperity combined with health, relationships, meaning, and longevity."
+        },
+        {
+          "title": "Hymn Requesting Cattle and Wealth",
+          "reference": "10.169.1-4",
+          "mandala": 10,
+          "sukta": 169,
+          "verses": 4,
+          "deity": "Various",
+          "rishi": "Sharyata Manava",
+          "excerpt": "May these cattle come to me, may horses come, may men come... May all possessions come to me—I call them with the mind, I draw them with devotion.",
+          "context": "This is a straightforward prayer for material prosperity—cattle, horses, servants, and wealth. It demonstrates that the Vedas do not reject material success but seek it through proper means.",
+          "significance": "Shows that prosperity is achieved through mental focus (calling with the mind) and devotional practice—not passive wishing but active alignment of intention and action.",
+          "modernRelevance": "Reflects principles of manifestation psychology, goal-setting, and the power of focused intention combined with aligned action."
+        }
+      ],
+      "metaphors": [
+        {
+          "title": "Rivers Flowing to the Ocean",
+          "description": "Prosperity is compared to rivers flowing into the ocean—constant movement toward fullness. Stagnant water becomes foul; flowing water remains fresh and life-giving."
+        },
+        {
+          "title": "The Generous Sacrificer",
+          "description": "Those who offer abundantly to gods and guests receive multiplied returns. Generosity creates circulation that attracts more abundance."
+        },
+        {
+          "title": "The Cow as Wealth",
+          "description": "Cattle represent sustainable wealth—they reproduce, provide milk, and support agriculture. True prosperity is self-renewing, not depleting."
+        },
+        {
+          "title": "Gold from Fire",
+          "description": "Just as gold is purified through fire, genuine prosperity emerges through the trials of right action and ethical discipline."
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Economics and Business",
+          "connection": "Vedic principles of circulation, sustainable growth, and stakeholder prosperity align with modern concepts of circular economy, stakeholder capitalism, and long-term value creation."
+        },
+        {
+          "field": "Ethics and Social Justice",
+          "connection": "The emphasis on prosperity through ethical means and generous distribution resonates with discussions of just wealth, corporate social responsibility, and equitable development."
+        },
+        {
+          "field": "Positive Psychology",
+          "connection": "Holistic prosperity—combining material success with relationships, meaning, health, and contribution—mirrors modern wellbeing research on comprehensive flourishing."
+        },
+        {
+          "field": "Sustainability Studies",
+          "connection": "The Rita-based model of prosperity in harmony with natural order directly relates to sustainable development goals and ecological economics."
+        }
+      ],
+      "suggestedQuestions": [
+        "How can we redefine success to include ecological and social wellbeing alongside material prosperity?",
+        "What practices of generosity might increase rather than decrease our own prosperity?",
+        "How do we distinguish between sustainable abundance and unsustainable extraction?",
+        "In what ways does hoarding versus circulating wealth affect both personal and societal prosperity?",
+        "How might businesses and economies be restructured around Vedic principles of holistic sustainable prosperity?"
+      ]
+    },
+    "mind": {
+      "introduction": {
+        "opening": "What is the nature of thought? How does consciousness arise? Where does the mind reside?",
+        "body": [
+          "The Rig Veda explores the mind through the Sanskrit concept of 'manas' (मनस्), which represents the processing, perceiving, and thinking faculty. These ancient hymns delve into questions of awareness, thought, and the nature of human consciousness that still fascinate philosophers and neuroscientists today.",
+          "The Vedic sages distinguished between different aspects of mental experience: manas (the processing mind), chitta (pure consciousness or awareness), and buddhi (discriminating intellect). This sophisticated psychological model predates Western philosophy by millennia.",
+          "These hymns don't just describe the mind—they question its very nature, explore its limits, and celebrate its power to comprehend the universe."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Manas",
+          "sanskrit": "मनस्",
+          "definition": "The processing mind - the faculty that receives sensory input and generates thought",
+          "explanation": "Manas is the lower mind that constantly processes information. It's compared to a chariot that must be controlled by buddhi (intellect).",
+          "modernParallel": "Similar to what neuroscience calls 'working memory' or 'cognitive processing'"
+        },
+        {
+          "term": "Chitta",
+          "sanskrit": "चित्त",
+          "definition": "Pure consciousness or awareness itself, beyond thought",
+          "explanation": "Chitta is the witnessing consciousness that observes thoughts without being caught in them. It's the screen on which mental activity plays.",
+          "modernParallel": "Related to concepts in mindfulness meditation and the 'observer self' in psychology"
+        },
+        {
+          "term": "Buddhi",
+          "sanskrit": "बुद्धि",
+          "definition": "Higher intellect - discriminating wisdom and judgment",
+          "explanation": "Buddhi is the faculty that can distinguish between real and unreal, eternal and temporary. It's the wise driver of the chariot of manas.",
+          "modernParallel": "Executive function, meta-cognition, or 'wise mind' in modern psychology"
+        },
+        {
+          "term": "Prana",
+          "sanskrit": "प्राण",
+          "definition": "Life force or vital energy that animates the mind and body",
+          "explanation": "Prana is the subtle energy that connects mind and body. When prana moves, thoughts arise; when it's still, peace emerges.",
+          "modernParallel": "Somewhat analogous to 'vitality' or 'life energy' in various healing traditions"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "10.58",
+          "title": "The Return of the Mind",
+          "mandala": 10,
+          "sukta": 58,
+          "deity": "Manas (Mind)",
+          "rishi": "Sumitra Kautsa",
+          "verses": 12,
+          "excerpt": "Let my mind return to me for wisdom and long life. Let my breath and life-force return. May my awareness not wander from me like birds flying to distant trees.",
+          "context": "This hymn addresses the mind as an entity that can wander away and must be called back - a concept remarkably similar to modern meditation practices where attention is continually brought back to the present.",
+          "significance": "One of the few hymns directly addressing the mind as a deity or force. Shows early understanding that mental focus requires effort and practice.",
+          "modernRelevance": "Directly applicable to mindfulness meditation practices and attention training"
+        },
+        {
+          "reference": "1.164",
+          "title": "The Riddle Hymn",
+          "mandala": 1,
+          "sukta": 164,
+          "deity": "Vishvedevas",
+          "rishi": "Dirghatamas Auchathya",
+          "verses": 52,
+          "excerpt": "Who has seen the first-born when he who has no bones bears him who has bones? Where was the mind? Where was the heart? Where was the life-force when this came to be?",
+          "context": "A cryptic exploration of consciousness emerging from the formless. This may be the earliest philosophical inquiry into the mind-body problem and the hard problem of consciousness.",
+          "significance": "Shows that 3,500 years ago, thinkers were grappling with the same questions that perplex philosophers and neuroscientists today.",
+          "modernRelevance": "Directly addresses the 'hard problem of consciousness' - how does subjective experience arise from matter?"
+        },
+        {
+          "reference": "10.129",
+          "title": "Hymn of Creation (Nasadiya Sukta)",
+          "mandala": 10,
+          "sukta": 129,
+          "deity": "Creation",
+          "rishi": "Prajapati Parameshthin",
+          "verses": 7,
+          "excerpt": "Neither non-existence nor existence was there. Who really knows? Who can declare it? Whence was this creation produced? The gods came afterwards. Who then knows whence it arose?",
+          "context": "Questions the origin of consciousness itself. If neither being nor non-being existed before creation, what was the nature of the first awareness? This hymn admits ultimate uncertainty with remarkable intellectual honesty.",
+          "significance": "Perhaps the first recorded expression of metaphysical agnosticism. The final verse admits even the gods might not know the answer.",
+          "modernRelevance": "Resonates with modern physics' questions about the origin of the universe and the role of consciousness in quantum mechanics"
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Chariot",
+          "description": "Mind (manas) as a chariot driven by intellect (buddhi)",
+          "symbolism": "Just as a chariot needs a skilled driver, the mind requires wisdom to direct its power constructively.",
+          "hymnReference": "6.75"
+        },
+        {
+          "image": "The Ocean",
+          "description": "Consciousness as vast and deep, with hidden depths",
+          "symbolism": "The surface mind is choppy with thoughts, but deep consciousness remains still and clear.",
+          "hymnReference": "10.129"
+        },
+        {
+          "image": "The Bird",
+          "description": "Thought as a bird that flies and must return to roost",
+          "symbolism": "Wandering attention can fly to distant concerns but must be called back to the present.",
+          "hymnReference": "10.58"
+        },
+        {
+          "image": "The Wind",
+          "description": "Mind as invisible yet powerful, moving through all things",
+          "symbolism": "Like wind, the mind cannot be seen but its effects are evident everywhere.",
+          "hymnReference": "10.168"
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Neuroscience",
+          "connection": "The distinction between manas (processing mind), buddhi (executive function), and chitta (awareness) mirrors modern understanding of different brain regions and cognitive functions.",
+          "example": "The prefrontal cortex (buddhi) regulates the limbic system (manas), while consciousness (chitta) remains a mystery science is still exploring."
+        },
+        {
+          "field": "Meditation & Mindfulness",
+          "connection": "The concept of calling the wandering mind back (Hymn 10.58) is the foundation of mindfulness practices worldwide.",
+          "example": "Modern MBSR (Mindfulness-Based Stress Reduction) uses the exact technique described: noticing when attention wanders and gently returning it."
+        },
+        {
+          "field": "Philosophy of Mind",
+          "connection": "Questions raised 3,500 years ago about consciousness, awareness, and the hard problem of subjective experience remain central to philosophy today.",
+          "example": "David Chalmers' 'hard problem of consciousness' is essentially the same question posed in the Riddle Hymn: how does subjective experience arise?"
+        },
+        {
+          "field": "Cognitive Science",
+          "connection": "The Vedic model of layered consciousness anticipates modern theories of conscious vs unconscious processing.",
+          "example": "Dual-process theory (System 1 and System 2 thinking) parallels the distinction between manas (automatic processing) and buddhi (deliberate thinking)."
+        }
+      ],
+      "suggestedQuestions": [
+        "What did ancient sages think about the subconscious mind?",
+        "How does the Rig Veda define wisdom versus knowledge?",
+        "What practices did they use for mental clarity?",
+        "How is buddhi different from manas?",
+        "What role does breath play in controlling the mind?"
+      ]
+    },
+    "health": {
+      "introduction": {
+        "opening": "What gives us vitality? How do we maintain strength and overcome disease?",
+        "body": [
+          "The Rig Veda approaches health holistically, recognizing the interconnection between physical vitality (bala), life force (prana), and vital essence (ojas). The Ashvins, divine twin physicians, represent the healing power that restores wholeness.",
+          "Health in the Vedic worldview isn't merely absence of disease but a state of optimal vitality where body, mind, and spirit function in harmony. Hymns celebrate strength, longevity, and the power of natural elements—particularly water and herbs—to heal.",
+          "These ancient verses reveal sophisticated understanding of preventive care, the mind-body connection, and the importance of maintaining balance in all aspects of life."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Prana",
+          "sanskrit": "प्राण",
+          "definition": "Life force or vital breath that animates all living beings",
+          "explanation": "Prana is the subtle energy that sustains life. When prana flows freely, health flourishes; when blocked or depleted, disease arises.",
+          "modernParallel": "Similar to concepts of 'chi' in Chinese medicine or 'vitality' in Western holistic health"
+        },
+        {
+          "term": "Bala",
+          "sanskrit": "बल",
+          "definition": "Physical strength, vigor, and power",
+          "explanation": "Bala represents muscular strength and robust physical health. Hymns pray for bala to protect against enemies and accomplish great deeds.",
+          "modernParallel": "Physical fitness, strength, and resilience in modern wellness terminology"
+        },
+        {
+          "term": "Ojas",
+          "sanskrit": "ओजस्",
+          "definition": "Vital essence, the subtle substance that maintains immunity and vitality",
+          "explanation": "Ojas is considered the finest product of perfect digestion and healthy living. It creates a glow of health and protects against disease.",
+          "modernParallel": "Somewhat analogous to immune function and overall constitutional strength"
+        },
+        {
+          "term": "Ayus",
+          "sanskrit": "आयुस्",
+          "definition": "Lifespan, longevity, duration of life",
+          "explanation": "Ayus represents not just length of life but quality of years. Prayers often request 'hundred autumns' of healthy life.",
+          "modernParallel": "Healthspan - not just living long but living well"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "1.116",
+          "title": "The Healing Deeds of the Ashvins",
+          "mandala": 1,
+          "sukta": 116,
+          "deity": "Ashvins",
+          "rishi": "Kakshivan Dairghatamasa",
+          "verses": 25,
+          "excerpt": "O Ashvins, you restored sight to Rijrashva who was blind. You gave legs to Vispala who had been crippled. You rescued Bhujyu from drowning in the ocean. You rejuvenated the aged Cyavana.",
+          "context": "This hymn catalogs the miraculous healings performed by the divine physicians. Each story represents a different type of restoration: sight, mobility, rescue from death, and renewal of youth.",
+          "significance": "Shows that healing was viewed as divine intervention working through natural means. The Ashvins represent the ideal physicians—swift, skillful, and compassionate.",
+          "modernRelevance": "Emphasizes holistic healing that addresses root causes, not just symptoms. The variety of healings suggests different approaches for different conditions."
+        },
+        {
+          "reference": "10.97",
+          "title": "Hymn to the Healing Herbs",
+          "mandala": 10,
+          "sukta": 97,
+          "deity": "Oshadhi (Herbs)",
+          "rishi": "Bhishak Atharvana",
+          "verses": 23,
+          "excerpt": "The plants that were born three ages before the gods, I will declare the hundred powers of herbs. Mothers, you have a hundred forms and a thousand healing properties.",
+          "context": "One of the most important hymns about medicinal plants. It personifies herbs as mothers with wisdom older than the gods themselves, suggesting deep respect for plant medicine.",
+          "significance": "Documents early pharmaceutical knowledge. The 'hundred forms' likely refers to different species, while 'thousand properties' suggests multiple uses per plant.",
+          "modernRelevance": "Validates traditional herbal medicine and the importance of preserving plant diversity for future pharmaceutical discoveries."
+        },
+        {
+          "reference": "10.9",
+          "title": "The Waters of Life",
+          "mandala": 10,
+          "sukta": 9,
+          "deity": "Apas (Waters)",
+          "rishi": "Sindhukshit Praiyamedha",
+          "verses": 9,
+          "excerpt": "Waters, you are healing; bring us strength and health. Waters, you carry away all that is impure and diseased. May we look upon your blissful flow.",
+          "context": "Water is celebrated as the primary healing element. The hymn emphasizes both external cleansing and internal purification through drinking pure water.",
+          "significance": "Shows understanding of water's crucial role in health - both for hygiene and as medicine. The concept of 'healing waters' appears across cultures.",
+          "modernRelevance": "Validates importance of clean water for public health and the therapeutic use of hydrotherapy."
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Tree of Life",
+          "description": "The body as a tree with roots, trunk, and branches",
+          "symbolism": "Just as a tree needs nourishment from roots, the body requires proper diet and rest to sustain vitality.",
+          "hymnReference": "1.59"
+        },
+        {
+          "image": "The Sacred Fire",
+          "description": "Digestive fire (agni) that transforms food into vitality",
+          "symbolism": "Health depends on strong digestive fire. When it burns bright, all food becomes medicine; when weak, even medicine becomes poison.",
+          "hymnReference": "10.79"
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Holistic Medicine",
+          "connection": "The Vedic approach treats the whole person, not isolated symptoms—a principle central to modern integrative medicine.",
+          "example": "Mind-body medicine recognizes that mental state affects physical health, just as the Vedas connected consciousness (manas) with vitality (prana)."
+        },
+        {
+          "field": "Preventive Care",
+          "connection": "Emphasis on maintaining health rather than just treating disease aligns with modern preventive medicine.",
+          "example": "The concept of ojas (vital essence) is similar to building robust immune function through lifestyle choices."
+        },
+        {
+          "field": "Herbal Medicine",
+          "connection": "The Rig Veda's reverence for medicinal plants laid groundwork for Ayurvedic pharmacy, which modern science continues to validate.",
+          "example": "Many plants mentioned in Vedic hymns (like turmeric, ashwagandha) are now scientifically proven to have therapeutic properties."
+        }
+      ],
+      "suggestedQuestions": [
+        "What herbs did ancient healers use most?",
+        "How did the Ashvins perform their miraculous healings?",
+        "What is the connection between prana and physical health?",
+        "How can I build ojas according to Vedic wisdom?",
+        "What role does water play in Vedic healing?"
+      ]
+    },
+    "wellbeing": {
+      "introduction": {
+        "opening": "How do we find inner peace? What brings contentment in a turbulent world?",
+        "body": [
+          "Mental wellbeing in the Rig Veda is understood through the concept of shanti (peace), santosha (contentment), and freedom from fear. These hymns recognize that true happiness comes not from external circumstances but from inner alignment with cosmic order (rita).",
+          "The Vedic approach to wellbeing is both practical and spiritual. It acknowledges human emotions—fear, anxiety, grief—while providing practices and perspectives to transcend them. Prayer, ritual, and community are seen as essential supports for mental health.",
+          "These ancient verses offer remarkably modern insights: that peace comes from acceptance, that we must actively cultivate positive mental states, and that connection to something greater than ourselves provides resilience in difficult times."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Shanti",
+          "sanskrit": "शान्ति",
+          "definition": "Peace, tranquility, absence of disturbance",
+          "explanation": "Shanti is threefold: peace in body, peace in mind, and peace in one's environment. True shanti arises when all three are aligned.",
+          "modernParallel": "Similar to concepts of 'inner peace' or 'equanimity' in modern mindfulness"
+        },
+        {
+          "term": "Santosha",
+          "sanskrit": "सन्तोष",
+          "definition": "Contentment, satisfaction with what is",
+          "explanation": "Santosha is not complacency but deep acceptance of the present moment while still striving for dharma. It's peace with what is, not resignation.",
+          "modernParallel": "Related to 'acceptance' in ACT (Acceptance and Commitment Therapy) and gratitude practices"
+        },
+        {
+          "term": "Abhaya",
+          "sanskrit": "अभय",
+          "definition": "Fearlessness, freedom from fear",
+          "explanation": "Abhaya isn't recklessness but courage rooted in understanding. When one aligns with cosmic law (rita), fear naturally dissolves.",
+          "modernParallel": "Courage, psychological safety, freedom from anxiety in modern terminology"
+        },
+        {
+          "term": "Mudita",
+          "sanskrit": "मुदिता",
+          "definition": "Joy, delight, sympathetic happiness",
+          "explanation": "Mudita is the ability to feel joy in others' happiness. It's antidote to envy and key to social wellbeing.",
+          "modernParallel": "Compersion, vicarious joy—opposite of schadenfreude"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "7.86",
+          "title": "Varuna's Forgiveness",
+          "mandala": 7,
+          "sukta": 86,
+          "deity": "Varuna",
+          "rishi": "Vasishtha Maitravaruni",
+          "verses": 7,
+          "excerpt": "If we have sinned against one who loves us, against a friend or companion, O Varuna, or against someone who has harmed us, release us from that sin. Whatever offense we have committed, if we have broken your laws like gamers breaking the rules, do not let that destroy us, O God.",
+          "context": "A moving prayer for forgiveness and release from guilt. It shows psychological insight: guilt and shame corrode wellbeing, and forgiveness (divine and self-forgiveness) heals.",
+          "significance": "One of the most emotionally honest hymns. Acknowledges human failing while requesting compassion—both for oneself and from the divine.",
+          "modernRelevance": "Directly applicable to therapy around shame, self-compassion, and the healing power of forgiveness"
+        },
+        {
+          "reference": "10.34",
+          "title": "The Gambler's Lament",
+          "mandala": 10,
+          "sukta": 34,
+          "deity": "Unknown",
+          "rishi": "Kavasha Aila",
+          "verses": 14,
+          "excerpt": "The dice have maddened me. They drove me away from my faithful wife. My mother-in-law hates me. My wife pushes me away. But when I hear the dice rattling, I run to them like a lover to his beloved. Yet I counsel others: do not play with dice!",
+          "context": "A raw confession of addiction and its consequences. Shows that addiction struggles—and the self-knowledge that comes with them—existed 3,500 years ago.",
+          "significance": "One of the most psychologically modern hymns. It captures the essence of addiction: knowing better but being unable to stop, ruining relationships, yet being drawn back repeatedly.",
+          "modernRelevance": "Applicable to any addiction. Shows that recovery begins with honest self-examination and that community support matters"
+        },
+        {
+          "reference": "1.89",
+          "title": "Prayer for Protection",
+          "mandala": 1,
+          "sukta": 89,
+          "deity": "Vishvedevas",
+          "rishi": "Gotama Rahugana",
+          "verses": 10,
+          "excerpt": "May we be free from fear of you, O Gods, free from fear of anyone. Let us see a hundred autumns. May we live a hundred autumns in joy and peace. May all beings be happy.",
+          "context": "A comprehensive prayer for wellbeing—freedom from fear, long life, joy, and peace. The final line extends this wish to all beings, showing that personal wellbeing is connected to universal wellbeing.",
+          "significance": "Shows that mental health was understood to require safety, longevity, joy, and connection to others.",
+          "modernRelevance": "The 'may all beings be happy' mirrors modern loving-kindness meditation practices"
+        },
+        {
+          "reference": "10.127",
+          "title": "Hymn to Night",
+          "mandala": 10,
+          "sukta": 127,
+          "deity": "Ratri",
+          "rishi": "Kushika Kausika",
+          "verses": 8,
+          "excerpt": "Night has come, looking around on many sides with her eyes. She has clothed herself in all her glories. The immortal goddess has filled wide space, the depths and heights. She drives away the darkness with her light.",
+          "context": "A gentle hymn celebrating night as protective and peaceful. Instead of fearing darkness, it's seen as restful and renewing.",
+          "significance": "Shows healthy relationship with darkness and rest. Night isn't threatening but nurturing.",
+          "modernRelevance": "Applicable to sleep hygiene, rest, and overcoming fear of darkness or night anxiety"
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Calm Lake",
+          "description": "Mind as a lake that can be turbulent or still",
+          "symbolism": "When winds of desire and fear blow, the lake churns. When they cease, the surface becomes mirror-clear, reflecting reality as it is.",
+          "hymnReference": "10.129"
+        },
+        {
+          "image": "The Sheltered Fire",
+          "description": "Inner peace as a flame protected from winds",
+          "symbolism": "Just as fire needs shelter from wind to burn steadily, peace requires protection from constant disturbance.",
+          "hymnReference": "5.4"
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Psychology & Therapy",
+          "connection": "The Gambler's Lament shows that ancient people understood addiction's psychology remarkably well.",
+          "example": "Modern addiction treatment emphasizes the same elements: acknowledging powerlessness, community support, and gradual recovery"
+        },
+        {
+          "field": "Mindfulness Practices",
+          "connection": "The concept of shanti (peace) as actively cultivated rather than passively received aligns with modern mindfulness training.",
+          "example": "MBSR teaches that peace comes from present-moment awareness and acceptance, not from controlling circumstances"
+        },
+        {
+          "field": "Positive Psychology",
+          "connection": "The emphasis on santosha (contentment) and mudita (sympathetic joy) anticipates modern gratitude and positive psychology practices.",
+          "example": "Research shows that practicing gratitude and feeling joy for others increases personal wellbeing"
+        }
+      ],
+      "suggestedQuestions": [
+        "How did ancient people deal with anxiety?",
+        "What is the Vedic cure for excessive worry?",
+        "How can I cultivate santosha (contentment)?",
+        "What role does forgiveness play in mental health?",
+        "How are community and wellbeing connected?"
+      ]
+    },
+    "purpose": {
+      "introduction": {
+        "opening": "What is my purpose? How do I know what is right? What gives life meaning?",
+        "body": [
+          "The Rig Veda addresses life's purpose through two interconnected concepts: dharma (righteous duty) and rita (cosmic order). Dharma is one's personal path aligned with universal law; rita is that universal law itself—the fundamental order underlying reality.",
+          "Purpose in the Vedic worldview isn't something you invent but something you discover by understanding your unique role in the cosmic dance. Each being has svadharma (own dharma)—the specific contribution only they can make.",
+          "These hymns teach that meaning comes from participation in something greater than oneself, from fulfilling one's role with excellence, and from maintaining harmony between personal will and cosmic order."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Dharma",
+          "sanskrit": "धर्म",
+          "definition": "Righteous duty, cosmic law, one's proper role",
+          "explanation": "Dharma operates at multiple levels: universal dharma (truth, non-violence), social dharma (duties of one's role), and personal dharma (unique life purpose).",
+          "modernParallel": "Similar to concepts of 'calling,' 'vocation,' or 'life purpose' in modern psychology"
+        },
+        {
+          "term": "Rita",
+          "sanskrit": "ऋत",
+          "definition": "Cosmic order, fundamental truth, natural law",
+          "explanation": "Rita is the underlying principle that keeps planets in orbit, seasons in cycle, and societies functioning. Living in alignment with rita brings harmony; violating it causes chaos.",
+          "modernParallel": "Somewhat analogous to 'natural law' in philosophy or even natural laws in physics"
+        },
+        {
+          "term": "Satya",
+          "sanskrit": "सत्य",
+          "definition": "Truth, reality, that which is",
+          "explanation": "Satya is both truthfulness in speech and alignment with reality as it is. Speaking satya means your words match reality; living satya means your life matches your truth.",
+          "modernParallel": "Integrity, authenticity, alignment between values and actions"
+        },
+        {
+          "term": "Yajna",
+          "sanskrit": "यज्ञ",
+          "definition": "Sacrifice, offering, ritual action",
+          "explanation": "Yajna is selfless action offered to the cosmic order. The fire ritual is literal yajna, but any action done without selfish motive is yajna.",
+          "modernParallel": "Service, contribution, giving without expectation of return"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "10.129",
+          "title": "The Creation Hymn (Nasadiya Sukta)",
+          "mandala": 10,
+          "sukta": 129,
+          "deity": "Creation",
+          "rishi": "Prajapati Parameshthin",
+          "verses": 7,
+          "excerpt": "Then was neither existence nor non-existence. There was no realm of air, no sky beyond. What covered all? Where was it? In whose protection? What was that deep abyss of water? Who really knows? Who here can declare it? Whence was it born? Whence this creation?",
+          "context": "The ultimate philosophical hymn questioning existence itself. Rather than providing dogmatic answers, it embraces mystery and uncertainty.",
+          "significance": "Shows that true purpose may involve living meaningfully even without ultimate answers. Purpose isn't certainty but participation in the mystery.",
+          "modernRelevance": "Relevant to existential therapy and meaning-making in the face of uncertainty"
+        },
+        {
+          "reference": "1.164",
+          "title": "The Riddle Hymn",
+          "mandala": 1,
+          "sukta": 164,
+          "deity": "Vishvedevas",
+          "rishi": "Dirghatamas Auchathya",
+          "verses": 52,
+          "excerpt": "Two birds, beautiful of wing, close companions, cling to one common tree. One eats the sweet fruit; the other looks on without eating. On this same tree, a person sits grieving, deluded by his powerlessness. But when he sees the other, the Lord who is worshipped, and his glory, then his grief disappears.",
+          "context": "A profound metaphor for the self. The bird eating fruit is the ego caught in experience; the bird watching is the witnessing self. Purpose emerges when we identify with the watcher, not the doer.",
+          "significance": "Teaches that true purpose comes from understanding our nature as consciousness (the watcher) not just the personality (the eater).",
+          "modernRelevance": "Applicable to self-awareness practices and the distinction between ego and true self"
+        },
+        {
+          "reference": "4.23",
+          "title": "Indra and Rita",
+          "mandala": 4,
+          "sukta": 23,
+          "deity": "Indra",
+          "rishi": "Vamadeva Gautama",
+          "verses": 10,
+          "excerpt": "By rita, truth and cosmic law, the Adityas stand firm. By rita the earth is supported. By rita the sun shines and by rita fires burn. All this universe is set in rita.",
+          "context": "Explains that cosmic order (rita) is the fundamental principle underlying all existence. Understanding and aligning with rita gives life purpose and meaning.",
+          "significance": "Shows that purpose isn't arbitrary but rooted in cosmic structure. Finding your place in that order is finding purpose.",
+          "modernRelevance": "Similar to finding one's place in the 'web of life' or understanding ecological interconnection"
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Wheel",
+          "description": "Universe as a wheel with rita as the axle",
+          "symbolism": "Just as a wheel needs a central axle to turn smoothly, life needs alignment with cosmic order to function harmoniously.",
+          "hymnReference": "1.164"
+        },
+        {
+          "image": "The Sacred Tree",
+          "description": "The universe as a tree with two birds (hymn 1.164)",
+          "symbolism": "The tree is existence itself. One bird (ego) experiences; the other (soul) witnesses. Purpose is realizing you're the watcher, not just the experiencer.",
+          "hymnReference": "1.164"
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Existential Psychology",
+          "connection": "The Vedic search for dharma parallels Viktor Frankl's 'search for meaning' as central to human wellbeing.",
+          "example": "Logotherapy teaches that meaning comes from fulfilling responsibilities and contributing to something greater—exactly what dharma teaches"
+        },
+        {
+          "field": "Vocation & Calling",
+          "connection": "The concept of svadharma (one's own dharma) is similar to discovering one's unique calling or gifts.",
+          "example": "Modern career counseling emphasizes finding work aligned with values and strengths—discovering your dharma"
+        },
+        {
+          "field": "Ethics & Morality",
+          "connection": "Rita as cosmic law provides objective grounding for ethics, while dharma allows for situational application.",
+          "example": "Universal human rights (rita) combined with cultural context (dharma) creates balanced ethical framework"
+        }
+      ],
+      "suggestedQuestions": [
+        "How do I discover my personal dharma?",
+        "What is the relationship between dharma and free will?",
+        "How does rita differ from dharma?",
+        "Can purpose change over a lifetime?",
+        "How do I know if I'm aligned with cosmic order?"
+      ]
+    },
+    "creativity": {
+      "introduction": {
+        "opening": "Where do ideas come from? How do we channel inspiration? What is the source of creative genius?",
+        "body": [
+          "The Rig Veda presents creativity not as human invention but as cosmic channeling. Sarasvati flows with creative inspiration—she IS the flow of creativity itself, literal river and metaphorical muse. The Ribhus were mortal craftsmen whose skills became so refined they achieved divinity through mastery alone. Poets (kavis) don't 'make up' hymns—they 'see' eternal truths and give them linguistic form. Creation is revelation, not fabrication. The universe itself was created through 'maya'—not illusion but divine creative power to manifest forms.",
+          "Vedic thought distinguishes between kavi (inspired seer-poet who channels divine vision) and shilpi (skilled craftsperson who executes through technique). Both are creative, but kavi receives while shilpi produces. The greatest creators—like the divine Ribhus—master both: they SEE the vision (pratibha) AND possess the skill to manifest it (karma). Vision without craft remains ethereal; craft without vision becomes mechanical. The synthesis is genius.",
+          "These hymns reveal that creativity requires three integrated elements working together: pratibha (intuitive flash of insight), manisha (intelligent discernment to refine the vision), and kriya (disciplined execution to bring it into reality). You must receive the vision through openness, refine it through intelligence, and manifest it through persistent work. Ancient wisdom for modern creators, entrepreneurs, artists, and innovators seeking to birth new realities into existence."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Kavi",
+          "sanskrit": "कवि",
+          "definition": "Inspired poet, seer, visionary creator who perceives hidden realities",
+          "explanation": "The kavi doesn't invent or fabricate—they SEE what already exists in subtle realms and bring it into manifest form through words, art, or action. Like Michelangelo seeing the statue hidden in marble and merely removing excess stone to reveal it. The kavi's power is perception, not creation. They tune into frequencies others miss, download insights from the cosmic intelligence field (brahman), and translate subtle truth into dense reality. This requires receptivity, stillness, and refined consciousness.",
+          "modernParallel": "Visionary entrepreneur who 'sees' future markets before they exist, artist channeling muse, inventor perceiving solutions, the person who says 'I saw it so clearly' about an idea that seemed to arrive whole"
+        },
+        {
+          "term": "Pratibha",
+          "sanskrit": "प्रतिभा",
+          "definition": "Intuitive flash, creative genius, sudden illumination that arrives complete",
+          "explanation": "Pratibha is the 'aha!' moment—sudden, complete understanding arriving in a flash. Not gradual reasoning but instant insight. It's Mozart hearing entire symphonies in his mind fully formed, Tesla seeing inventions in three-dimensional mental space, Einstein receiving E=mc² in a vision. Pratibha can't be forced through will or logic; it can only be cultivated through preparation (study, practice) and receptivity (silence, openness). It arrives as gift, not achievement. The Vedas suggest pratibha comes when individual mind (manas) momentarily aligns with universal intelligence (brahman).",
+          "modernParallel": "Eureka moment, creative breakthrough, flow state insights, the shower/walk insight phenomenon, sudden solutions to long-pondered problems"
+        },
+        {
+          "term": "Manisha",
+          "sanskrit": "मनीषा",
+          "definition": "Creative intelligence, poetic discernment, wisdom that shapes raw inspiration",
+          "explanation": "Manisha is the intelligence that refines raw inspiration into elegant execution. Pratibha gives you the rough diamond; manisha cuts and polishes it into brilliance. It's the critical thinking, aesthetic judgment, and strategic refinement that transforms chaotic vision into coherent creation. Without manisha, creativity remains undisciplined chaos. With it, wild inspiration becomes masterpiece. Manisha knows what to keep, what to cut, how to structure, when to stop. It's creative wisdom—not just having ideas but judging which ideas are worth executing and how to execute them powerfully.",
+          "modernParallel": "Design thinking, product sense, artistic judgment, editorial skill, the 'taste' that Steve Jobs called the difference between good and great products"
+        },
+        {
+          "term": "Maya",
+          "sanskrit": "माया",
+          "definition": "Creative power, magical making, divine ability to manifest forms from potential",
+          "explanation": "Maya in the Rig Veda isn't 'illusion' (that's later Vedanta)—it's creative power. Gods use maya to shape reality, to manifest forms, to bring potential into actuality. Like a filmmaker creating immersive worlds or a composer generating emotional landscapes from sound, maya is world-building power. It's the ability to make the unreal become real through focused intention and skill. Every human creator wields a fragment of divine maya when they bring something new into existence. The artist's canvas was empty; through maya it becomes a world. The entrepreneur's market didn't exist; through maya it does.",
+          "modernParallel": "Creative production, worldbuilding in fiction/games, bringing vision to reality, entrepreneurship as creating something from nothing, manifestation"
+        },
+        {
+          "term": "Kriya",
+          "sanskrit": "क्रिया",
+          "definition": "Action, execution, work, the discipline of making",
+          "explanation": "Kriya is doing the work. Vision is nothing without execution. Pratibha gives the flash, manisha refines it, but kriya BUILDS it. The daily practice, the persistent effort, the 10,000 hours, the unsexy grinding work of bringing creation into form. Kriya is craft—the learned skill that allows you to translate vision into reality. The Ribhus achieved divinity through kriya: obsessive practice of craft until mortal skill became divine mastery. Inspiration is moment; creation is sustained action. Kriya is showing up every day even when inspiration doesn't.",
+          "modernParallel": "Execution, deliberate practice, craft, discipline, 'ship it' mentality, consistent action over time, the work that 99% of creativity actually is"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "1.161",
+          "title": "The Ribhus: Mortal Craftsmen Who Became Gods",
+          "mandala": 1,
+          "sukta": 161,
+          "deity": "Ribhus (Divine Craftsmen)",
+          "rishi": "Agastya Maitravaruni",
+          "verses": 13,
+          "excerpt": "Drink, Ribhus, of this meath, the sons of strength, immortal through your skill. You made your aged parents young again through your craft and devotion. You made one drinking cup into four through your divine art. You fashioned swift horses for Indra's chariot. You renewed your parents' youth—through your work you conquered death. For these great works, O Ribhus, the gods invited you to join them. Through skill perfected over long practice, you mortals achieved what gods inherit by birth. Drink now with Indra and the gods. You earned divinity through mastery of craft.",
+          "context": "The Ribhus were three mortal brothers—Ribhu, Vibhvan, and Vaja—who through obsessive dedication to craftsmanship achieved such skill that the gods invited them to become immortal. They represent the path of mastery: practice so perfect it transcends human limits. They made one cup into four (multiplication through skill), rejuvenated their aging parents (mastery over time), crafted horses for Indra (serving higher purposes). Their creativity wasn't random inspiration but disciplined excellence refined through years of focused work. They literally skilled their way to divinity—the ultimate validation of practice over talent.",
+          "significance": "Creativity isn't just inspiration—it's disciplined craft refined to divine levels through persistent practice. You can LITERALLY skill your way to transcendence. Talent might give you a head start, but mastery comes through kriya (consistent action). The Ribhus prove that humans can match gods through dedication—what gods have by birth, mortals can achieve through work. This is profoundly democratic and empowering: creativity is accessible to anyone willing to practice obsessively. The 'one cup into four' shows that mastery multiplies capacity—expert creators do in one hour what novices can't do in ten.",
+          "modernRelevance": "The 10,000-hour rule of mastery. Craftsperson mentality that prioritizes skill over shortcuts. The obsessive practice of masters—athletes, musicians, programmers, chefs who refine their craft daily. Cal Newport's 'So Good They Can't Ignore You'—skill beats passion. Startups that succeed through execution excellence (Ribhus) over flashy ideas. The Japanese concept of 'shokunin' (craftsman) as spiritual practice. LeBron James in the gym daily for 20 years, Mozart composing from age 5, Ray Kroc perfecting McDonald's systems obsessively."
+        },
+        {
+          "reference": "6.61",
+          "title": "Sarasvati: The River of Creative Flow",
+          "mandala": 6,
+          "sukta": 61,
+          "deity": "Sarasvati",
+          "rishi": "Bharadvaja Barhaspatya",
+          "verses": 14,
+          "excerpt": "Sarasvati, best mother, best river, best goddess—we crave your blessings and gifts. Come to us with your waves of inspiration. Flow through us with creative abundance. You are the flowing waters of consciousness itself. Let your streams—clear, bright, golden, inexhaustible—fill our minds with poetic vision, our hands with skilled craft, our speech with persuasive power. Pure one, holy one, she who surpasses all rivers in greatness—Sarasvati, may you never abandon us. Seven sisters are the waters, but you, Sarasvati, shine brightest. Pour your streams into our creative work. Nourish our vision as you nourish fields. We, your supplicants, pray: fill us, flow through us, create through us.",
+          "context": "Sarasvati is simultaneously a literal river (now dried up, traced by satellite), goddess of speech/learning, and the PRINCIPLE of creative flow itself. When she flows, creativity flows. When she's dry (blocked river), inspiration dies. This triple identity—physical water, divine presence, creative principle—shows the Vedic understanding that creativity isn't ego-production but channeling of cosmic energy. You don't CREATE; you ALLOW creation to flow through you. Sarasvati represents that flow. The creator's job is removing blocks, opening channels, creating conditions—then Sarasvati flows and creation happens naturally, abundantly, effortlessly.",
+          "significance": "Creativity as flowing water, not forced manufacture. You can't make Sarasvati flow—you can only invite her, create conditions, remove obstacles blocking her passage. This reframes creative blocks: you're not broken; the channel is blocked. Clear the block (through meditation, rest, new inputs, environment change) and flow returns naturally. The hymn's language—'pour through us,' 'fill us,' 'flow through us'—emphasizes receptivity over ego-effort. The greatest creators describe feeling like channels, not sources. The Vedic view: creativity isn't yours; it flows through you from the cosmic source (Sarasvati).",
+          "modernRelevance": "Creative flow state research—Csikszentmihalyi's 'flow' is literally Sarasvati flowing through you. Unblocking creative rivers—therapy for creative blocks, changing environments when stuck, rest as creative practice. Accessing inspiration rather than forcing it—going for walks, showers, meditation to receive insights. Elizabeth Gilbert's Big Magic concept of ideas as entities seeking collaborators. Julia Cameron's Artist's Way: morning pages as clearing channels. The understanding that creativity requires creating space (silence, openness) for Sarasvati to flow into, not just grinding harder."
+        },
+        {
+          "reference": "10.125",
+          "title": "Vac: The Goddess of Creative Speech",
+          "mandala": 10,
+          "sukta": 125,
+          "deity": "Vac (Speech/Sound)",
+          "rishi": "Vac Ambhrini",
+          "verses": 8,
+          "excerpt": "I am the Queen of existence, the gatherer of treasures, most thoughtful, first of those who merit worship. The gods have established me in many places, in many homes, entering many beings. I move with the Rudras and the Vasus, with the Adityas and All-Gods. I support both Mitra and Varuna, Indra and Agni, both Ashvins together. Through me alone all eat the food that feeds them, though they don't realize it. I make the man I love exceedingly mighty, make him a sage, a seer, a poet. I bend the bow for Rudra to slay the enemy of prayer. I wage war for my devotees. I am the one who blows like wind, holding together all existence. Beyond heaven, beyond earth, such is my greatness.",
+          "context": "Vac (Speech) declares her own creative supremacy in this extraordinary hymn—the goddess herself speaks, and her speech CREATES as she speaks. Vac is the principle that sound/word/communication creates reality. 'In the beginning was the Word'—this is Vedic doctrine thousands of years before Biblical echo. Through vac (creative speech), the formless takes form. The poet's words don't describe reality; they CREATE it. The artist's expression doesn't represent world; it MAKES world. Vac is creative power channeled through sound, symbol, language, and all communication. Those who master vac wield god-like creative force.",
+          "significance": "Your voice, your creative expression, is divine power when authentically used. Words create worlds—literally. The speeches that moved nations, the books that shifted paradigms, the songs that defined generations. Vac teaches that authentic creative expression (not imitation, not manipulation) channels divine force. When you speak/create from your deepest truth, you channel Vac's power. When you create from ego or conformity, you're cut off from the source. Vac 'makes mighty whom she loves'—creative power flows to those who honor it, who create authentically, who don't abuse it for mere ego gratification.",
+          "modernRelevance": "The power of authentic voice in creative work—writers who 'find their voice,' artists who develop signature styles. Personal branding as discovering and expressing your unique vac. Rhetoric and communication as creative power—MLK's speeches literally creating new social realities. Music as world-creation (Beethoven's 9th creating democracy paradigms). Storytelling as reality-shaping—narratives that change how we see ourselves and world. Journaling/writing as self-creation—writing the self into being. The understanding that how we speak about reality SHAPES reality (narrative power)."
+        },
+        {
+          "reference": "10.81",
+          "title": "Vishvakarman: The Divine Architect",
+          "mandala": 10,
+          "sukta": 81,
+          "deity": "Vishvakarman (All-Creator)",
+          "rishi": "Vishvakarman Bhauvana",
+          "verses": 7,
+          "excerpt": "The father of the eye, wise in mind, created these two worlds as dwelling places. When the primeval matter was still undifferentiated, he shaped heaven and earth. He is the one God above gods, the creator who gave form to all. What was the wood, what was the tree from which they carved heaven and earth? O Vishvakarman, disclose this to the wise: on what did you stand when you held up the spheres? You who see all, tell us your secret names—one, two, three. Through what power did you create? How did you hold the earth and create the sky? Vishvakarman, growing in grandeur, with creative power and divine vision, creator, disposer, supreme teacher—may he grant us inspiration.",
+          "context": "Vishvakarman ('All-Maker') is the cosmic craftsman, divine architect who designed the universe itself. This hymn directly asks: what materials did you use? What tools? Where did you stand (what foundation)? How did you hold it up while building? These are EXACTLY the questions creative makers face: what medium? What technique? What principles? How to support the structure while building? The hymn shows deep understanding of the creative process—whether building universes or building products, the challenges are parallel. Vishvakarman represents creativity as conscious design and skilled execution at the highest level.",
+          "significance": "Creative work is about solving design problems—structure, materials, process, principles. The hymn's questions are the creator's eternal questions: how to give form to vision? Vishvakarman shows that even cosmic creation followed craft logic—there were design decisions, material choices, structural engineering. Your creative work participates in cosmic creativity—you're doing on small scale what Vishvakarman did cosmically. Every designer, architect, engineer, entrepreneur, product creator is channeling Vishvakarman's energy. Respect the craft, understand the principles, master the tools.",
+          "modernRelevance": "Design thinking and systems thinking as modern Vishvakarman. Architects, engineers, product designers who create structures—buildings, software, systems. Entrepreneurs designing business models and customer experiences. The question 'how did you build this?' applied to any complex creation. Elon Musk's first principles thinking—breaking down to fundamentals (Vishvakarman's wood/tree question) before building up. The maker movement—creating physical things with understanding of materials and processes. Game designers creating entire playable worlds. Film directors architecting cinematic experiences."
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Flowing River",
+          "description": "Sarasvati's waters of creative inspiration flowing abundantly",
+          "symbolism": "Creativity flows like water—can't force it, only channel it. You don't make the river; you clear obstacles so it can flow naturally. Build the right channels (habits, practices, environment) and inspiration flows abundantly. Try to control it completely and it dries up or floods chaotically. Water also teaches that creativity needs both movement (flow) and stillness (depth). Rushing stream or deep lake—both have creative value. The dried Sarasvati River reminds us that creative flow can stop if not nourished by right conditions (inputs, rest, care).",
+          "hymnReference": "6.61"
+        },
+        {
+          "image": "The Divine Craftsmen",
+          "description": "Ribhus perfecting their skills until mortality transcends into divinity",
+          "symbolism": "Mastery elevates craft to magic. Through persistent refinement—thousand cups made to learn how to make one perfect cup—human work becomes divine art. Quantity becomes quality; practice becomes genius. The Ribhus' transformation from mortal to god through sheer skill shows that dedication redeems limitations. You might not have divine talent, but you can achieve divine results through divine commitment. Mastery is the alchemy that transforms lead into gold, mortal into immortal, ordinary into extraordinary.",
+          "hymnReference": "1.161"
+        },
+        {
+          "image": "The Cosmic Architect",
+          "description": "Vishvakarman designing the universe with divine vision and skilled hands",
+          "symbolism": "True creativity requires both vision (seeing what should be) and skill (making it so). Vishvakarman represents the complete creator: perceives the design, understands the principles, masters the techniques, executes flawlessly. He's not just imagining universes in daydreams—he's BUILDING them. The hymn asking about his tools, materials, and methods reminds us that even cosmic creation follows craft logic. Vision without skill remains fantasy; skill without vision becomes mechanical. Synthesis is genius. You are the Vishvakarman of your life/business/art.",
+          "hymnReference": "10.81"
+        },
+        {
+          "image": "The Sacred Voice",
+          "description": "Vac's speech that creates reality through divine sound and word",
+          "symbolism": "Your authentic voice has creative power—it literally shapes reality. Not just describing world but MAKING world through authentic expression. Words aren't labels on pre-existing things; words bring things into being. The artist's work doesn't represent their inner world; it CREATES their inner world into external form. Speech (vac) as creative action, not passive description. Your unique voice—what only you can say/create—is your fragment of divine creative power. Authenticity (real voice) has power; imitation (fake voice) is hollow. Find and use your vac.",
+          "hymnReference": "10.125"
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Tech Innovation & Startups",
+          "connection": "Steve Jobs was pure kavi (visionary seeing futures) combined with obsessive shilpi (craft execution). Apple products succeeded through: pratibha (vision of elegant computing), manisha (design judgment—what to remove as much as add), kriya (manufacturing excellence). The iPhone wasn't invented through R&D grinding—Jobs 'saw' it should exist, then Apple crafted it obsessively.",
+          "example": "iPhone: Vision (kavi) of computing-phone-music device + Craft (Ribhus) of materials/design + Flow (Sarasvati) of user experience. Pixar: Technical mastery (Ribhus) + storytelling vision (kavi) + emotional flow (Sarasvati) = new medium. SpaceX: Vishvakarman-level systems design + Ribhus-level engineering craft + kavi vision of multiplanetary species."
+        },
+        {
+          "field": "Content Creation & Media",
+          "connection": "Successful creators balance pratibha (fresh ideas) with kriya (consistent execution). YouTubers who succeed: weekly uploads (discipline, Ribhus) + occasional viral inspiration (pratibha, Sarasvati) + authentic voice (vac). The flow: prepare conditions (inputs, rest), stay open (receptivity to Sarasvati), receive ideas (pratibha), refine (manisha), execute (kriya), repeat.",
+          "example": "MrBeast: Pratibha (innovative video concepts) + Kriya (10,000 hours of uploads refining craft) + Manisha (what works/doesn't in thumbnails, pacing). Joe Rogan: Authentic voice (vac) + consistent kriya (3+ podcasts weekly for years) = massive creative success through discipline more than genius."
+        },
+        {
+          "field": "Music & Arts",
+          "connection": "Musicians describe receiving compositions (pratibha from Sarasvati) rather than composing them. Mozart: 'I don't write music, music writes me.' Beatles: songs 'came through' during flow states. But: 10,000 hours of practice (Ribhus craft) created capacity to RECEIVE those downloads. Skill makes you fit channel for inspiration.",
+          "example": "Jimi Hendrix: Pratibha (revolutionary guitar concepts) + Kriya (practiced till fingers bled) + Vac (authentic voice/style). Beethoven: Vishvakarman-level structural design + Ribhus mastery + pratibha inspiration even while deaf. Billie Eilish: Authentic vac (voice) + bedroom production kriya + dark aesthetic manisha."
+        },
+        {
+          "field": "Design & Architecture",
+          "connection": "Great designers channel Vishvakarman's systems thinking—understanding principles, materials, user needs, structural integrity. Design isn't just aesthetic (though that matters); it's solving complex constraint problems. Form follows function BUT great design makes function beautiful. Bauhaus motto: 'form and function are one' is pure Vishvakarman.",
+          "example": "Dieter Rams: Manisha-level design judgment (10 principles of good design) + Ribhus craft (every detail perfect) + Vishvakarman systems thinking (products as ecosystems). Frank Lloyd Wright: Architectural Vishvakarman—organic design integrating structure with nature. Zaha Hadid: Kavi vision (parametric impossible forms) + structural Vishvakarman (engineering actually buildable)."
+        }
+      ],
+      "suggestedQuestions": [
+        "Am I trying to force creativity (ego) or channel it (Sarasvati)?",
+        "Do I practice craft obsessively (Ribhus) or just wait for inspiration?",
+        "How do I open myself to pratibha (sudden insight)?",
+        "Where do I need more manisha (judgment/refinement) vs more pratibha (vision)?",
+        "What blocks my creative flow? How can I clear those Sarasvati-blocks?",
+        "Am I creating from authentic voice (vac) or imitating others?",
+        "How can I practice mastery like Ribhus—transform through sheer skill?",
+        "Do I honor kriya (the work) as much as I love pratibha (the inspiration)?",
+        "What's my unique creative maya—how do I manifest vision into reality?",
+        "Am I asking Vishvakarman's questions: what materials, what tools, what principles for my creation?"
+      ]
+    },
+    "ambition": {
+      "introduction": {
+        "opening": "Is ambition good or evil? How much is too much? Can you be spiritual AND driven?",
+        "body": [
+          "The Rig Veda doesn't condemn ambition—it sanctifies it when aligned with dharma. Indra's hunger for soma represents divine ambition, the cosmic urge to grow, conquer, achieve. Agni's upward flame symbolizes natural aspiration—fire's essence is to rise. The gods themselves are ambitious, competitive, striving for supremacy. Desire (kama) is celebrated as a cosmic creative force in hymn 10.129—the universe arose from primordial desire. Your ambitions, when dharmic, are fragments of that creative cosmic hunger.",
+          "But Vedic ambition has essential guardrails: iccha (desire) must align with dharma (cosmic order). Unbounded ambition becomes rakshasic (demonic)—Vritra hoarding waters, Ravana seeking unlimited power. Indra's power comes from SERVING rita (cosmic law), not violating it. You can be fiercely ambitious AND righteous. The question isn't whether to have ambition but how to direct it: toward collective good (dharmic) or mere ego gratification (adharmic). Sacred ambition builds; selfish ambition destroys.",
+          "The hymns teach that ambition fuels evolution, progress, creation itself. Without kama (desire), nothing would exist—the cosmos itself arose from divine wanting. Your ambitions—to build companies, create art, achieve mastery, transform society—are cosmic creative forces channeled through you. But balance fierce drive (Indra's hunger) with wisdom (Varuna's dharma) and service (Agni's upward gift of light and warmth). Ancient wisdom for the driven: be ambitious like gods, not demons."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Iccha",
+          "sanskrit": "इच्छा",
+          "definition": "Desire, wish, ambition, the wanting that moves creation",
+          "explanation": "Iccha is the wanting that moves you forward—essential, not sinful. The cosmos itself runs on divine iccha. Hymn 10.129 describes creation arising from kama (desire): 'Desire in the beginning came upon it, that was the earliest seed, the primal germ.' Your ambitions are fragments of that primordial creative desire manifesting through you. The key: does your iccha serve life (dharmic) or just ego (adharmic)?",
+          "modernParallel": "Drive, motivation, hunger for success, ambition, aspiration"
+        },
+        {
+          "term": "Kratu",
+          "sanskrit": "क्रतु",
+          "definition": "Willpower, determination, resolute intention to achieve",
+          "explanation": "Kratu is focused will—the power to accomplish goals despite obstacles. It's Indra's defining quality: he WILL win, he WILL defeat Vritra, he WILL drink soma, he WILL protect his people. Kratu isn't wishful thinking; it's determined commitment backed by action. It's deciding and following through. Weak iccha (desire) gets overwhelmed by first obstacle; strong kratu (willpower) persists until breakthrough.",
+          "modernParallel": "Willpower, grit, determination, resolve, executive function"
+        },
+        {
+          "term": "Sankalpa",
+          "sanskrit": "संकल्प",
+          "definition": "Sacred intention, solemn vow, determined resolve aligned with cosmic forces",
+          "explanation": "Sankalpa is more than goal-setting—it's sacred commitment that invokes cosmic support. When you make sankalpa (clear intention aligned with dharma), you're not just personally deciding; you're declaring your intention to universal forces and requesting their aid. It's goal + prayer + commitment. Athletes, entrepreneurs, and spiritual practitioners use sankalpa: 'I will achieve this, and I invoke all supportive forces to help me.'",
+          "modernParallel": "Goal-setting, OKRs, vision statements, mission, New Year's resolution done right"
+        },
+        {
+          "term": "Abhilasha",
+          "sanskrit": "अभिलाषा",
+          "definition": "Strong longing, passionate desire, burning ambition",
+          "explanation": "Abhilasha is intense wanting—fire in the belly. The passionate ambition that drives extraordinary achievement. It's deeper than casual wanting; it's longing that keeps you up at night, that makes you sacrifice comfort, that won't let you rest. Indra has abhilasha for victory; Agni has abhilasha to rise; the seeker has abhilasha for truth. This intensity, when directed properly, moves mountains.",
+          "modernParallel": "Passion, burning desire, obsessive drive, 'fire in the belly'"
+        },
+        {
+          "term": "Vīrya",
+          "sanskrit": "वीर्य",
+          "definition": "Heroic energy, virility, vigorous power",
+          "explanation": "Vīrya is the energetic force behind ambitious action—not just wanting but having energy to pursue. It's vigor, vitality, powerful aliveness. Indra embodies vīrya: he's not passively ambitious; he's energetically, forcefully, vigorously ambitious. He doesn't just want victory; he attacks toward it. Vīrya transforms desire into dynamic action.",
+          "modernParallel": "High energy, vitality, aggressive pursuit of goals, vigor"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "8.89",
+          "title": "Indra's Insatiable Hunger",
+          "mandala": 8,
+          "sukta": 89,
+          "deity": "Indra",
+          "rishi": "Parvata and Narada",
+          "verses": 7,
+          "excerpt": "Indra drinks the soma, filling his mighty belly. Three lakes he drains in one gulp, yet his thirst remains. His hunger is never satisfied—he always wants more power, more glory, more victories, more soma. This divine hunger, this eternal unsatisfied striving, makes him supreme among gods. The other gods are content; Indra alone always wants MORE. And this is why he reigns.",
+          "context": "Indra's constant hunger for soma represents divine ambition elevated to cosmic principle. He's NEVER satisfied, ALWAYS striving for more. This isn't criticized—it's celebrated as WHY he's king of gods. His refusal to be content, his eternal hunger, his drive for more power and glory—these make him supreme. The hymn suggests that ambition itself is a divine quality, that the driven person reflects divine nature.",
+          "significance": "Ambition is divine when directed toward growth and dharmic ends. Indra's hunger protects cosmic order—his ambition SERVES, even as it drives him. The lesson: be insatiably ambitious in service of something beyond yourself. Entrepreneurs, athletes, artists who can't stop creating/competing/achieving are channeling Indra. The driven personality isn't a bug; it's a feature—when aligned with right purpose.",
+          "modernRelevance": "Relentless drive of founders who can't stop at one success (Elon Musk building Tesla, SpaceX, Neuralink, etc.). Athletes who can't retire even after winning championships (Tom Brady, Serena Williams). Artists who create obsessively (Picasso's 50,000 works). The understanding that some people are MEANT to be insatiably ambitious—it's their svabhava (nature). The key: channel it toward dharmic ends (serving others) not just ego."
+        },
+        {
+          "reference": "3.1",
+          "title": "Agni's Upward Flame",
+          "mandala": 3,
+          "sukta": 1,
+          "deity": "Agni",
+          "rishi": "Gathina Vishvamitra",
+          "verses": 23,
+          "excerpt": "Agni always moves upward, climbing toward heaven. His nature is to rise, to ascend, to reach higher realms. Place him on earth—he leaps skyward. Born in wood—he burns upward. His every movement is aspiration made visible. This upward motion is his essence, his svabhava. He cannot help but climb. The flame that rises is Agni's dharma.",
+          "context": "Agni's flame naturally rises—aspiration is literally in fire's nature. It can't help but move upward. This represents the human (or divine) drive to transcend, improve, achieve, climb. Some beings—like some flames—naturally ascend. It's not forced or artificial; it's their inherent nature (svabhava). For them, staying low is violation of essence; rising is fulfilling nature.",
+          "significance": "Aspiration is natural for some, not manufactured or culturally imposed. Like fire rising, some souls are naturally ambitious—it's their svabhava (inherent nature), not just conditioning. Trying to suppress natural ambition is like trying to make fire burn downward—violence against nature. The wisdom: if you're naturally ambitious (Agni-natured), honor it. Don't feel guilty for wanting to rise, achieve, transcend. It's your dharma. But like Agni, give light and warmth as you rise (serve while achieving).",
+          "modernRelevance": "Natural high-achievers who can't help but strive—it's not about proving anything; it's their nature. Gifted athletes who naturally compete intensely. Entrepreneurs who can't NOT build. Artists who must create. Understanding that ambition isn't always trauma or ego; sometimes it's essence. The Type-A personality isn't always pathological—sometimes it's Agni-nature. Michael Jordan's competitiveness, Kobe's Mamba Mentality, Bezos's relentlessness—not forced but natural."
+        },
+        {
+          "reference": "10.129",
+          "title": "The Hymn of Creation: Desire as Primal Force",
+          "mandala": 10,
+          "sukta": 129,
+          "deity": "Creation",
+          "rishi": "Prajapati Parameshthin",
+          "verses": 7,
+          "excerpt": "Then there was neither existence nor non-existence. There was no atmosphere, no sky beyond. What moved? Where? In whose protection? Was there deep water? Death was not then, nor immortality. There was no sign of night nor day. That One breathed, windless, by its own energy. Other than that there was nothing. In the beginning was darkness hidden in darkness. All this was undifferentiated water. That which became enclosed in void, the One, emerged through power of heat (tapas). In the beginning desire (kama) descended on it—that was the earliest seed, the primal germ of mind. Poets, seeking in their hearts with wisdom, found the bond of existence in non-existence.",
+          "context": "This profound creation hymn describes the universe emerging from primordial desire (kama). Before anything existed, desire arose—and that desire became the seed of creation. The cosmos itself is born from wanting, from the creative urge to manifest. Your ambitions, your desires to create/build/achieve are literally fragments of the original creative desire that birthed existence. Ambition isn't separate from spirituality; it's the mechanism of cosmic manifestation.",
+          "significance": "Desire (kama) is not evil—it's the ORIGIN of creation itself. The universe arose from divine wanting. Your ambitions are echoes of that primal creative desire channeling through you. This radically reframes ambition: not as ego-flaw but as cosmic creative force. The driven entrepreneur creating new markets, the artist manifesting visions, the scientist pursuing discovery—all are channeling the original kama that created worlds. The key: is your ambition creative (birthing new possibilities) or merely acquisitive (hoarding existing resources)?",
+          "modernRelevance": "Reframing ambition positively—it's not greed but creative desire. Founders who 'must' build their vision are channeling primordial kama. Ambition as creative force, not moral flaw. Understanding that the desire to achieve, create, build isn't separate from spiritual life—it IS spiritual life expressing through you. Jeff Bezos's vision of space colonization, Elon's multiplanetary species drive, any 'unreasonable' ambition that seems to possess the person—cosmic creative desire manifesting. The question isn't 'should I be ambitious?' but 'is my ambition creative or destructive?'"
+        },
+        {
+          "reference": "2.12",
+          "title": "Indra the Achiever",
+          "mandala": 2,
+          "sukta": 12,
+          "deity": "Indra",
+          "rishi": "Gritsamada Bhargava",
+          "verses": 15,
+          "excerpt": "He who makes the weak strong, who gives victory to his devotees, who stirs men to action—he is Indra. He whose wrath none can withstand, whose generosity all celebrate, he who conquered all worlds—he is Indra. He drives forward through obstacles like a bull, he achieves the impossible, he reaches goals others only dream of. Through his kratu (willpower), through his shakti (power), through his vīrya (heroic energy)—he conquers. Victory is his nature; achievement is his essence.",
+          "context": "Indra isn't just ambitious—he's accomplishment personified. Every verse celebrates his achievements: slaying serpents, releasing waters, conquering worlds, empowering others. He doesn't just want; he ACHIEVES. This hymn celebrates not just ambition but RESULTS. Indra-energy is drive that actually delivers, ambition that actually accomplishes, hunger that actually feeds itself through victory.",
+          "significance": "True ambition (dharmic ambition) delivers results that serve others. Indra 'makes the weak strong'—his achievements aren't just ego-gratification but service. His victories liberate waters, protect people, maintain cosmic order. This is the model: ambitious achievers whose success lifts others. The entrepreneur whose company creates jobs. The athlete whose excellence inspires millions. The artist whose work moves hearts. Ambition measured by impact, not just acquisition.",
+          "modernRelevance": "Results-oriented ambition. People who don't just dream but DELIVER. Indra-type founders who actually ship products, actually build companies, actually create value (not just raise money). Athletes who win championships, not just talk about winning. The driven achiever whose ambition creates tangible positive results. Oprah building media empire that empowers. Gates transitioning from business ambition to philanthropic ambition. Ambition as service multiplier."
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "The Upward Flame",
+          "description": "Agni's natural rising toward heaven",
+          "symbolism": "Ambition as fire rising—natural, inevitable, divine. Some beings MUST rise; it's their nature. Don't apologize for your upward nature; honor it. But like fire, give light and warmth as you climb—serve while ascending. The ambitious person isn't selfish; they're following their svabhava (essential nature) as flame follows its nature to rise."
+        },
+        {
+          "image": "The Soma-Drinker",
+          "description": "Indra's insatiable thirst for soma",
+          "symbolism": "Divine hunger for excellence. Never satisfied, always striving, eternally ambitious. This isn't greed—it's what makes heroes, what drives evolution, what moves history forward. The insatiable hunger that refuses contentment with mediocrity. Entrepreneurial hunger, championship hunger, creative hunger—all reflections of Indra's cosmic ambition."
+        },
+        {
+          "image": "Primal Desire",
+          "description": "Kama (desire) as the first cause of creation",
+          "symbolism": "Your ambitions are cosmic creative forces. The universe arose from desire; your desires continue that creative impulse. Ambition isn't ego-flaw but participation in cosmic creativity. The driven person channels the same kama that birthed galaxies. Holy hunger, sacred ambition, divine drive—these aren't oxymorons but cosmic truth."
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Entrepreneurship",
+          "connection": "Founder ambition is Indra energy—hunger to build, compete, win. Ethical when serving customers (dharma), toxic when purely ego-driven. The best founders combine Indra's drive with Varuna's ethics: ambitious AND principled.",
+          "example": "Elon Musk: Indra-level ambition (Mars, sustainable energy, neural interfaces). Controversial but undeniably driven by big vision. Jeff Bezos: Customer obsession (dharma) + relentless ambition (Indra) = Amazon. Sara Blakely: Ambition to build billion-dollar company + service (better products for women) = Spanx."
+        },
+        {
+          "field": "Athletics",
+          "connection": "Champion mentality is iccha + kratu + vīrya: desire to win + willpower to train obsessively + vigorous execution. The greatest athletes embody Indra's insatiable hunger.",
+          "example": "Kobe Bryant's 'Mamba Mentality': pure Indra energy. Relentless hunger for excellence, never satisfied with 'enough' rings. Serena Williams: Indra-level competitive drive + Agni aspiration to transcend limits. Cristiano Ronaldo training obsessively into 30s—Indra's eternal hunger."
+        },
+        {
+          "field": "Arts & Creativity",
+          "connection": "Prolific creators channel Indra's insatiability. Picasso's 50,000 works, Prince's vault of unreleased music, Stephen King's 60+ novels. Creative ambition—must make more, must reach higher, must create better.",
+          "example": "Beyoncé's perfectionism and output: Indra ambition + Agni aspiration + disciplined craft. Lin-Manuel Miranda: Hamilton as Indra-level ambitious project (hip-hop + founding fathers). Taylor Swift re-recording entire catalog—Indra-level determined reclamation."
+        },
+        {
+          "field": "Social Impact",
+          "connection": "Dharmic ambition: using Indra-level drive for collective good. Ambition to eradicate disease, end poverty, spread education. The most ambitious social entrepreneurs combine Indra's scale-thinking with service dharma.",
+          "example": "Muhammad Yunus: Indra-level ambition (banking revolution) + dharma (serving poor) = microfinance. Melinda Gates: Ambitious philanthropy aiming to eradicate diseases globally. Greta Thunberg: Teen with Indra-level ambition to shift global climate action."
+        }
+      ],
+      "suggestedQuestions": [
+        "Is my ambition aligned with dharma (serving others) or just ego?",
+        "What's the difference between holy hunger (Indra) and toxic greed (Vritra)?",
+        "How do I channel iccha (desire) productively toward creation?",
+        "Am I naturally ambitious (Agni-nature) or forcing it to fit expectations?",
+        "What would dharmic success look like for ME specifically?",
+        "Do I have kratu (willpower) to match my iccha (desire)?",
+        "How can I be insatiably ambitious (Indra) while serving (Agni's light)?",
+        "Is my ambition creative (birthing new value) or acquisitive (hoarding resources)?",
+        "What cosmic creative desire (kama) is trying to manifest through my ambitions?",
+        "Am I achieving results (Indra) or just fantasizing about achievement?"
+      ]
+    },
+    "authenticity": {
+      "introduction": {
+        "opening": "What does it mean to be real? How do I know my true self? Is there a 'me' beneath the masks?",
+        "body": [
+          "The Rig Veda teaches that authenticity (satya) isn't mere self-expression—it's alignment with cosmic truth. Your 'true self' isn't whatever you feel or choose moment-to-moment—it's your svadharma, your unique cosmic role in the universal order (rita). Being authentic means finding and fulfilling YOUR specific dharma, not society's expectations or Instagram's performance standards. Varuna the all-seeing represents absolute truth that witnesses everything; under his thousand eyes, all pretense dissolves.",
+          "Vedic authenticity has two inseparable aspects working together: satya (truth in speech and action—being honest, keeping commitments, living with integrity) and rita (alignment with cosmic order—fulfilling your unique role in the universal pattern). You can be honestly yourself but out of sync with your deeper purpose—that's satya without rita. Or you can fulfill outer roles while betraying inner truth—that's rita without satya. True authenticity requires both: honest expression AND cosmic alignment.",
+          "These hymns reveal that authenticity isn't relativistic ('be whatever you want!') but cosmic ('be what you truly ARE'). There's a you beneath conditioning, trauma, and social performance—your svabhava (essential nature). The spiritual path is discovering that essence and living from it consistently. Under Varuna's witnessing gaze, pretense becomes impossible. In Vac's (Speech) teaching, authentic voice has divine power while fake voice is hollow. Ancient wisdom for modern identity crisis: you have a cosmic identity deeper than personality, preferences, or politics."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Satya",
+          "sanskrit": "सत्य",
+          "definition": "Truth, reality, authenticity, what IS without distortion",
+          "explanation": "Satya means correspondence with reality—things as they actually are, not as we wish or pretend them to be. In personal terms, satya is being who you actually are, not who you perform being for approval or safety. It's the courage to show up authentically even when masks would be easier. Satya-people keep their word (commitments match actions), speak truth (words match reality), and live honestly (outer presentation matches inner reality). Satya is integrity: inner and outer aligned.",
+          "modernParallel": "Authenticity, integrity, being real, vulnerability, 'keeping it 100'"
+        },
+        {
+          "term": "Svabhava",
+          "sanskrit": "स्वभाव",
+          "definition": "One's own nature, innate character, essential disposition",
+          "explanation": "Svabhava is your core nature—fire's svabhava is to burn, water's is to flow, Agni's is to rise. What's YOUR svabhava? What are you like when not performing, not trying, not conforming? Your svabhava is discovered, not chosen. You don't decide it; you uncover it beneath conditioning. Living according to your svabhava is effortless (like water flowing downhill); violating it is exhausting (like water forced uphill). Authenticity means honoring YOUR svabhava, not imitating others'.",
+          "modernParallel": "Core self, personality type, natural strengths, 'who you are when no one's watching'"
+        },
+        {
+          "term": "Svadharma",
+          "sanskrit": "स्वधर्म",
+          "definition": "One's own duty, personal cosmic role, unique calling",
+          "explanation": "Svadharma is YOUR specific dharma—not universal dharma (don't kill, don't lie) but your unique calling within the cosmic order. Better to fail at your svadharma than succeed at someone else's. Arjuna's svadharma is warrior; a pacifist path would violate his essence. Your svadharma emerges from your svabhava (nature) meeting your situation. Authenticity means living YOUR dharma, not the dharma your parents/culture/society projects onto you. Discovery question: 'What am I uniquely suited to do that serves the whole?'",
+          "modernParallel": "Personal calling, unique contribution, ikigai (intersection of what you love, what you're good at, what world needs, what you can be paid for)"
+        },
+        {
+          "term": "Rita",
+          "sanskrit": "ऋत",
+          "definition": "Cosmic order, universal law, the truth of how things work",
+          "explanation": "Rita is the cosmic pattern, the underlying order of reality—seasons cycling, sun rising, rivers flowing to ocean, karma ripening. Everything has its place and function in rita. Authenticity isn't arbitrary self-invention but alignment with your place in this cosmic order. You're not free to be ANYTHING; you're free to discover and become what you TRULY are within rita. Like a puzzle piece being authentic: it doesn't choose its shape, but it fits perfectly when placed correctly. Rita is 'the way things actually are'—living authentically means aligning with that truth.",
+          "modernParallel": "Natural law, universal principles, 'the way things work,' reality's grain that you work with or against"
+        },
+        {
+          "term": "Vac",
+          "sanskrit": "वाच्",
+          "definition": "Speech, voice, authentic expression, the power of true communication",
+          "explanation": "Vac is divine Speech—not just words but authentic expression of truth. Your voice (vac) is sacred when aligned with satya (truth) and your svabhava (nature). Authentic voice has power; performed voice is hollow. When you speak from your deepest truth, you channel Vac's creative force. When you speak from conformity or fear, you're disconnected from source. Finding your voice (in writing, speaking, art, how you show up) is discovering your unique vac. Only you can speak YOUR truth; that's your fragment of divine creative speech-power.",
+          "modernParallel": "Finding your voice, authentic communication, personal expression, 'speaking your truth'"
+        }
+      ],
+      "hymns": [
+        {
+          "reference": "5.85",
+          "title": "Varuna the All-Seeing Witness",
+          "mandala": 5,
+          "sukta": 85,
+          "deity": "Varuna",
+          "rishi": "Atri Bhauma",
+          "verses": 8,
+          "excerpt": "Varuna sees all—the truth beneath lies, the reality beneath masks, the authentic self beneath persona. His thousand eyes penetrate every deception, every pretense, every false front. You cannot hide from cosmic witness. Even your secret thoughts are visible to the all-knowing one. He knows when you speak falsely, when you act inauthentically, when your outer presentation betrays inner reality. But he's not merely judge—he's the one who helps you align with truth. 'O Varuna, whatever sin we have committed against you, forgive. Loosen the bonds of our falsehood. Let us live in your truth.' Under his gaze, become real.",
+          "context": "Varuna represents the witnessing consciousness that sees your true nature without filters or denial. Under his thousand eyes (or omniscient gaze), all pretense dissolves because it's pointless—he already sees through it. This forces authenticity: if you're seen anyway, why pretend? But Varuna isn't cruel judge; he's truth-revealer who helps you become authentic by showing you what you actually are. The prayer for forgiveness of 'sins' is really prayer to be freed from living falsely. Varuna's witness makes authenticity possible because it makes inauthenticity transparent.",
+          "significance": "True authenticity requires being witnessed—having someone (even cosmic someone) see you completely, including your shadows and pretenses, and accepting you anyway (or at least not destroying you for being seen). Therapy, trusted friends, spiritual practice, even journaling creates this witnessing function. Under compassionate witness, you can stop performing and start being. Varuna teaches: you're always already seen (by cosmos/God/deeper self), so you might as well be authentic. Pretense doesn't hide you; it just exhausts you.",
+          "modernRelevance": "Therapy as Varuna-space: being fully seen without judgment enables authenticity. Trusted friendships where you can be real. Spiritual practice that cultivates inner witness (Varuna within). Social media creating opposite problem: performing for invisible audience rather than being witnessed compassionately. Brené Brown's vulnerability research: being seen in your truth (even messy truth) creates connection. The need for 'Varuna figures'—people/practices that allow authentic showing up without performance."
+        },
+        {
+          "reference": "10.125",
+          "title": "Vac: Speech-Truth Goddess",
+          "mandala": 10,
+          "sukta": 125,
+          "deity": "Vac (Speech)",
+          "rishi": "Vac Ambhrini",
+          "verses": 8,
+          "excerpt": "I am the Queen, the gatherer of treasures, most thoughtful, first of those who merit worship. Through me alone all eat the food that feeds them—though they don't realize it. I make the man I love exceedingly mighty—make him sage, seer, poet. I move with all the gods. I extend through all worlds. I am the one who blows like wind, holding together all existence. I speak both heaven and earth. Such is my greatness. Whoever honors me, I make powerful. Whoever speaks truth through me commands reality itself.",
+          "context": "Vac (divine Speech) declares her own supremacy: authentic speech literally creates reality. This isn't metaphor—in Vedic cosmology, sound/speech/word shapes existence. When your speech aligns with cosmic truth (satya + rita + your svabhava), you channel divine Vac's creative power. Your voice becomes powerful, your words shape outcomes, your expression moves people. But when you speak inauthentically (lying, conforming, performing), you're cut off from Vac's power. Empty words, hollow expression, speech without impact—that's disconnection from authentic vac.",
+          "significance": "Authenticity is speaking your truth—your unique vac emerging from your specific svabhava. Your voice (in all senses—literal speech, creative expression, how you show up) has power ONLY when authentic. Performed voice, borrowed voice, conformist voice—these are powerless because disconnected from source. The power of authentic communication: speeches that move millions, writing that changes paradigms, art that shifts consciousness. All channeling Vac through authentic expression. The warning: inauthenticity isn't just moral failure; it's power failure. You literally can't impact reality meaningfully from fake self.",
+          "modernRelevance": "Personal branding as discovering authentic vac—your unique voice in crowded marketplace. Writers who 'find their voice' suddenly connecting with audiences. Authentic communication in leadership (Jacinda Ardern's empathy, Obama's rhetoric) vs scripted politicians nobody trusts. Influencers who succeed through authentic showing-up vs those performing. The understanding that your competitive advantage is precisely what makes you YOU—your unique vac that nobody else can replicate. Authentic voice as superpower in age of generic content."
+        },
+        {
+          "reference": "1.164",
+          "title": "The Riddle of Existence",
+          "mandala": 1,
+          "sukta": 164,
+          "deity": "Vishvedevas (All-Gods)",
+          "rishi": "Dirghatamas Aucathya",
+          "verses": 52,
+          "excerpt": "I ask, unknowing, those who know, the sages, as one all-ignorant for the sake of knowledge: What is the One who in the unborn's image has established and fixed firm these worlds' six regions? They call it Indra, Mitra, Varuna, Agni—or heavenly Garutman. The Real is One; the wise call it by many names. Who truly knows? Who can declare whence this creation came? The gods themselves came later. Who then knows whence it arose? This creation—from where it came, whether it was formed or not—only he who watches from highest heaven knows. Or perhaps even he does not know.",
+          "context": "This profound philosophical hymn includes the famous line: 'Truth (sat) is One, but the wise call it by many names.' Applied to authenticity: your essential self (svabhava) is ONE, but it can be expressed many ways in different contexts. You're not fragmenting yourself by showing different aspects in different relationships—you're expressing your one truth through many forms. But underneath must be coherent core. Also: the hymn's humility ('perhaps even the highest god doesn't know') teaches authentic not-knowing. Pretending to know what you don't is inauthentic. Authentic includes saying 'I don't know.'",
+          "significance": "Authenticity isn't showing same face everywhere (that's rigidity, not integrity). It's having coherent core (satya) that expresses differently in appropriate contexts. You're authentic parent AND authentic professional AND authentic friend—different expressions of same essence. The question isn't 'am I being consistent?' but 'am I being coherently me?' Also: authentic includes honest uncertainty. 'I don't know' is sometimes the most authentic answer. Pretending certainty to appear authoritative is actually inauthentic. Wisdom and authenticity both include humble not-knowing.",
+          "modernRelevance": "Understanding that authentic doesn't mean 'same in all contexts' but 'coherently yourself.' Different aspects for different relationships while maintaining core integrity. The danger of social media 'authenticity' that becomes rigid performance of 'realness.' Brené Brown's distinction: authenticity vs oversharing everything everywhere. Professional authenticity: being genuinely yourself while honoring context. The power of 'I don't know'—leaders who admit uncertainty often trusted MORE than those who pretend omniscience. Authentic includes your confusion, your questions, your evolution."
+        },
+        {
+          "reference": "10.90",
+          "title": "The Cosmic Person (Purusha Sukta)",
+          "mandala": 10,
+          "sukta": 90,
+          "deity": "Purusha (Cosmic Being)",
+          "rishi": "Narayana",
+          "verses": 16,
+          "excerpt": "The Purusha has thousand heads, thousand eyes, thousand feet. He pervades the earth everywhere and extends ten fingers' breadth beyond. All this universe is the Purusha—what has been and what will be. From him arose Viraj (creative power), and from Viraj came Purusha again. From his mind came the moon; from his eye, the sun; from his mouth, Indra and Agni; from his breath, wind. When they divided the Purusha, into how many parts? What did his mouth become? What his arms, thighs, feet? The brahmin was his mouth; the warrior his arms; the merchant his thighs; the servant his feet. Each part has its place, its role, its svadharma in the cosmic body.",
+          "context": "This cosmological hymn describes universe as body of cosmic Purusha, with everything having specific place and function. Applied to authenticity: you're a unique cell in cosmic body with specific function (your svadharma). Your authenticity isn't whatever you choose but discovering your actual role in the whole. A hand cell trying to be liver cell is inauthentic—violating its svabhava. BUT: knowing your role isn't limiting; it's liberating. Hand does hand-things brilliantly; liver does liver-things brilliantly. You do your-things brilliantly when you stop trying to be someone else.",
+          "significance": "Authenticity means discovering and fulfilling your cosmic function—your unique role in the body of reality. You're not free to be ANYTHING (that's delusion), but you're free to fully be WHAT YOU ACTUALLY ARE. This reframes authenticity from endless self-invention to joyful self-discovery. The peace of finding your place, your fit, your function. Like puzzle piece discovering its shape and position—it's not limitation but completion. Your svadharma (unique role) is your authenticity. Fighting it is exhausting; embracing it is energizing.",
+          "modernRelevance": "Finding your niche, your unique contribution, your specific value in ecosystem. The freedom that comes from accepting your actual strengths rather than pursuing idealized self. Career authenticity: choosing work that fits your svabhava rather than prestigious roles that drain you. The liberation of limits: when you accept you're hand not liver, you can be brilliant hand. Cal Newport's 'career capital' in YOUR domain, not trying to master everything. Marcus Buckingham's 'StandOut Strengths'—finding your specific zone of genius rather than fixing weaknesses into mediocrity."
+        }
+      ],
+      "metaphors": [
+        {
+          "image": "Varuna's Thousand Eyes",
+          "description": "The all-seeing cosmic witness who perceives all",
+          "symbolism": "You're always seen—by cosmos if not humans. Authenticity means living as if someone who knows everything is watching. Because they are (whether you call it God, universal consciousness, or deeper self). Pretense doesn't hide you from this witness; it just exhausts you with performance. The liberation: if you're seen anyway, you might as well be real. Varuna's gaze is compassionate truth-seeing, not cruel judgment. Under his eyes, become authentic because masks don't work anyway."
+        },
+        {
+          "image": "The Sacred Voice (Vac)",
+          "description": "Authentic speech that has divine creative power",
+          "symbolism": "Your voice has power when it speaks truth from your essence. Authentic expression channels divine force; performed expression is powerless. Words that come from your svabhava (true nature) aligned with satya (truth) literally shape reality. Fake voice—borrowed phrases, conformist speech, performance—just makes noise. Find and use your authentic vac (voice), and you wield cosmic creative power. Your unique expression is your contribution to universal symphony."
+        },
+        {
+          "image": "The Cosmic Puzzle Piece",
+          "description": "Each part of Purusha's body having its perfect place",
+          "symbolism": "You're a unique piece in cosmic puzzle—your authenticity is your specific shape that fits nowhere else. Trying to be different piece (imitating others) prevents you from fitting. Being authentic (your actual shape) allows perfect fit with whole. You're not free to be any shape, but you're free to fully be YOUR shape. And only your shape fits your space. Liberation through limits: accepting your actual nature enables you to fulfill irreplaceable role."
+        },
+        {
+          "image": "Truth is One, Names are Many",
+          "description": "One reality expressed through infinite forms",
+          "symbolism": "Your authentic self is ONE coherent essence expressed many ways in different contexts. You're not fragmenting by being different in different relationships; you're expressing your one truth through contextually appropriate forms. The question isn't 'am I same everywhere?' but 'am I coherently myself?' Flexibility in expression doesn't mean inauthenticity if rooted in solid core (svabhava)."
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Social Media & Personal Branding",
+          "connection": "The gap between curated life and real life. Vac teaches: authentic voice has power; performed voice is hollow. Influencers who share real struggles (satya) build deeper connection than perfect facades. Authenticity as competitive advantage—your uniqueness (svabhava) that nobody can copy.",
+          "example": "Brené Brown: Built career on authentic vulnerability. Chrissy Teigen: Shares messy real moments alongside glamour. Marcus Aurelius's Meditations: private journal of emperor's struggles—authentic because not meant for public, now powerful BECAUSE authentic. The exhaustion of maintaining perfect Instagram vs liberation of showing real life."
+        },
+        {
+          "field": "Career & Calling",
+          "connection": "Finding work that aligns with svabhava (nature) and svadharma (calling). Not just any success—YOUR success. Better to fail at your svadharma than succeed at someone else's dharma. The exhaustion of prestigious careers that violate your essence vs energizing work aligned with who you are.",
+          "example": "Lawyer leaving practice to become yoga teacher—honoring svabhava over status. Engineer discovering svadharma is teaching, transitioning careers. The 'quarter-life crisis' of discovering that path you're on isn't YOUR path. Cal Newport's 'So Good They Can't Ignore You' combined with 'find your niche'—mastery in YOUR domain, not trying to be someone else brilliantly. Mike Rowe's 'Dirty Jobs'—dignity in doing YOUR work authentically vs chasing prestigious roles inauthentically."
+        },
+        {
+          "field": "Relationships & Community",
+          "connection": "Authenticity creates real connection; performance creates shallow networking. Varuna-space in friendship: being fully seen, including shadows. The exhaustion of maintaining image vs ease of being known. Intimate relationships require authentic showing up—vulnerability, truth, realness.",
+          "example": "Esther Perel's relationship work: authenticity (including autonomous selfhood) creates erotic aliveness. Gay people coming out: choosing authentic self-expression over closeted safety. The power of 'found family'—communities accepting authentic self vs biological families requiring performance. Alcoholics Anonymous: radical authenticity ('my name is X, I'm an alcoholic') as healing practice. Showing up real (including mess) builds deeper bonds than showing up perfect."
+        },
+        {
+          "field": "Leadership & Influence",
+          "connection": "Authentic leaders inspire; performing leaders generate cynicism. People follow authentic vision expressed from svabhava, not borrowed corporate-speak. Vac-power: leaders whose authentic voice shapes culture (Jobs, Obama, Mandela) vs scripted executives nobody remembers.",
+          "example": "Jacinda Ardern's authentic empathetic leadership during crises. Howard Schultz returning to Starbucks to realign company with original authentic vision. Patagonia's Yvon Chouinard: authentic values (earth over profit) creating cult brand. The failure of leaders who try to be someone they're not vs success of those who lead from authentic values/personality. Simon Sinek's 'Start With Why'—authentic purpose vs manufactured mission statements."
+        }
+      ],
+      "suggestedQuestions": [
+        "What's my svabhava (true nature) beneath conditioning and performance?",
+        "Am I living MY dharma or living society's/family's expectations?",
+        "Where am I performing rather than being real?",
+        "What would Varuna see if he looked at my whole life without filters?",
+        "Is my voice (vac) authentic (my truth) or curated (what gets likes)?",
+        "What's my svadharma—my unique cosmic role that only I can fill?",
+        "Where does my inner truth (satya) conflict with my outer presentation?",
+        "Am I trying to be someone else brilliantly or myself authentically?",
+        "What would it look like to honor my actual nature rather than ideal image?",
+        "Do I have 'Varuna spaces'—relationships where I can be fully seen and real?"
+      ]
+    }
+  }
+}

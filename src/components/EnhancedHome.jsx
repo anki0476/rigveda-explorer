@@ -353,7 +353,7 @@ const EnhancedHome = () => {
                      {/* Rishi Mascot - Left Side */}
                      <div className="hidden md:flex md:w-2/5 bg-gradient-to-b from-amber-100 to-orange-100 p-4 flex-col items-center justify-center border-r-2 border-amber-300 overflow-hidden">
                         <motion.img
-                           src="/images/rishi-mascot.jpg"
+                           src="/images/rishi-mascot.png"
                            alt="Rishi Guide"
                            className="w-full max-w-[180px] h-auto rounded-lg shadow-lg mb-3"
                            initial={{ scale: 0.8, opacity: 0 }}

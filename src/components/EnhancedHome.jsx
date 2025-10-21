@@ -38,6 +38,9 @@ const EnhancedHome = () => {
   const [isBottomIntersecting, setIsBottomIntersecting] = useState(false);
   const [showJourneyModal, setShowJourneyModal] = useState(false);
   const ticking = useRef(false);
+  const [rishiText, setRishiText] = useState('');
+  const fullRishiText = "I am your guide through the ancient wisdom of the Rigveda. Choose your path, and let us begin this sacred journey together.";
+
 
   const journeyOptions = [
     {
@@ -203,6 +206,18 @@ const EnhancedHome = () => {
   };
 
   useEffect(() => {
+    if (showJourneyModal && rishiText.length < fullRishiText.length) {
+      const timer = setTimeout(() => {
+        setRishiText(fullRishiText.substring(0, rishiText.length + 1));
+      }, 30); // 30ms per character
+      return () => clearTimeout(timer);
+    } else if (!showJourneyModal) {
+      setRishiText(''); // Reset when modal closes
+    }
+  }, [showJourneyModal, rishiText]);
+  
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
@@ -325,7 +340,7 @@ const EnhancedHome = () => {
                      animate={{ scale: 1, opacity: 1 }}
                      exit={{ scale: 0.9, opacity: 0 }}
                      transition={{ duration: 0.3, ease: "easeOut" }}
-                     className="relative max-w-2xl w-full max-h-[85vh] bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-2xl ornate-golden-border overflow-hidden"
+                     className="relative max-w-4xl w-full max-h-[85vh] bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-2xl ornate-golden-border overflow-hidden flex"
                   >
                      {/* Close Button */}
                      <button
@@ -335,68 +350,94 @@ const EnhancedHome = () => {
                         <X className="w-6 h-6 text-[--color-ink]" />
                      </button>
 
-                     {/* Header */}
-                     <div className="p-4 pb-2 text-center">
-                        <div className="mb-2 text-4xl om-symbol">ॐ</div>
-                        <h2 className="text-2xl font-bold text-[--color-ink] mb-1 font-[family:--font-family-header]">
-                           Begin Your Journey
-                        </h2>
-                        <p className="text-sm text-[--color-ink-light]">
-                           Choose your path through the ancient wisdom of the Rigveda
-                        </p>
+                     {/* Rishi Mascot - Left Side */}
+                     <div className="hidden md:flex md:w-2/5 bg-gradient-to-b from-amber-100 to-orange-100 p-4 flex-col items-center justify-center border-r-2 border-amber-300 overflow-hidden">
+                        <motion.img
+                           src="/images/rishi-mascot.jpg"
+                           alt="Rishi Guide"
+                           className="w-full max-w-[180px] h-auto rounded-lg shadow-lg mb-3"
+                           initial={{ scale: 0.8, opacity: 0 }}
+                           animate={{ scale: 1, opacity: 1 }}
+                           transition={{ delay: 0.2, duration: 0.5 }}
+                           style={{
+                              imageRendering: 'pixelated',
+                              filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.3))'
+                           }}
+                        />
+                        <motion.div
+                           initial={{ opacity: 0, y: 20 }}
+                           animate={{ opacity: 1, y: 0 }}
+                           transition={{ delay: 0.4, duration: 0.5 }}
+                           className="text-center px-2"
+                        >
+                           <h3 className="text-base font-bold text-amber-900 mb-1.5" style={{ fontFamily: 'Georgia, Garamond, serif' }}>
+                              Greetings, Seeker! <Sparkles className="w-4 h-4 text-amber-600" />
+                           </h3>
+                           <p className="text-[11px] text-amber-700 leading-snug min-h-[60px]" style={{ fontFamily: 'Georgia, Garamond, serif', fontStyle: 'italic' }}>
+                              {rishiText}
+                              {rishiText.length < fullRishiText.length && <span className="animate-pulse">|</span>}
+                           </p>
+                        </motion.div>
                      </div>
 
-                     {/* Journey Options - Single Column List */}
-                     <div className="px-8 pb-8 pt-2 max-h-[65vh] overflow-y-auto">
-                        {journeyOptions.map((option, index) => (
-                           <AnimatedJourneyItem
-                              key={option.id}
-                              delay={index * 0.05}
-                              index={index}
-                           >
-                              <button
-                                 onClick={() => handleJourneyClick(option)}
-                                 className="w-full text-left p-3 bg-white rounded-lg ornate-golden-border hover:bg-amber-50 hover:scale-[1.02] transition-all duration-300 mb-3"
-                                 style={{
-                                    transition: 'all 0.3s ease',
-                                 }}
-                                 onMouseEnter={(e) => {
-                                    e.currentTarget.style.boxShadow = '0 0 25px rgba(251, 191, 36, 0.8), 0 0 50px rgba(251, 191, 36, 0.4)';
-                                 }}
-                                 onMouseLeave={(e) => {
-                                    e.currentTarget.style.boxShadow = 'none';
-                                 }}
+
+                     {/* Journey Options - Right Side */}
+                     <div className="flex-1 md:w-3/5 flex flex-col">
+                        {/* Header */}
+                        <div className="p-3 pb-1.5 text-center flex-shrink-0">
+                           <div className="mb-1 text-2xl om-symbol">ॐ</div>
+                           <h2 className="text-lg font-bold text-[--color-ink] mb-0.5 font-[family:--font-family-header]">
+                              Begin Your Journey
+                           </h2>
+                           <p className="text-[11px] text-[--color-ink-light] mb-1">
+                              Choose your path through the ancient wisdom of the Rigveda
+                           </p>
+                        </div>
+
+                        {/* Journey Options - Single Column List */}
+                        <div className="px-4 pb-3 flex-1 overflow-y-auto">
+                           {journeyOptions.map((option, index) => (
+                              <motion.div
+                                 key={option.id}
+                                 initial={{ scale: 0.7, opacity: 0 }}
+                                 animate={{ scale: 1, opacity: 1 }}
+                                 transition={{ duration: 0.2, delay: 0 }}
                               >
-                                 <div className="flex items-center gap-3">
-                                    <div className="p-2 bg-gradient-to-br from-amber-100 to-orange-100 rounded-lg text-[--color-gold] flex-shrink-0">
-                                       {option.icon}
+                                 <button
+                                    onClick={() => handleJourneyClick(option)}
+                                    className="w-full text-left p-2 bg-white rounded-lg ornate-golden-border hover:bg-amber-50 hover:scale-[1.02] transition-all duration-300 mb-1.5"
+                                    style={{
+                                       transition: 'all 0.3s ease',
+                                    }}
+                                    onMouseEnter={(e) => {
+                                       e.currentTarget.style.boxShadow = '0 0 25px rgba(251, 191, 36, 0.8), 0 0 50px rgba(251, 191, 36, 0.4)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                       e.currentTarget.style.boxShadow = 'none';
+                                    }}
+                                 >
+                                    <div className="flex items-center gap-2">
+                                       <div className="p-1.5 bg-gradient-to-br from-amber-100 to-orange-100 rounded-lg text-[--color-gold] flex-shrink-0">
+                                          {option.icon}
+                                       </div>
+                                       <div className="flex-1 min-w-0">
+                                          <h3 className="font-bold text-[--color-ink] text-xs font-[family:--font-family-header]">
+                                             {option.title}
+                                          </h3>
+                                          <p className="text-[10px] text-[--color-ink-light] font-[family:--font-family-body] mt-0.5 leading-tight">
+                                             {option.description}
+                                          </p>
+                                       </div>
                                     </div>
-                                    <div className="flex-1 min-w-0">
-                                       <h3 className="font-bold text-[--color-ink] text-sm font-[family:--font-family-header]">
-                                          {option.title}
-                                       </h3>
-                                       <p className="text-xs text-[--color-ink-light] font-[family:--font-family-body] mt-0.5">
-                                          {option.description}
-                                       </p>
-                                    </div>
-                                 </div>
-                              </button>
-
-                           </AnimatedJourneyItem>
-                        ))}
-                     </div>
-
-                     {/* Footer */}
-                     <div className="px-6 pb-4 text-center border-t border-amber-200/50 pt-3">
-                        <p className="text-sm text-[--color-ink-light] italic font-[family:--font-family-body]">
-                           "The wise speak of what is One in many ways" — Rigveda 1.164.46
-                        </p>
+                                 </button>
+                              </motion.div>
+                           ))}
+                        </div>
                      </div>
                   </motion.div>
                </motion.div>
             )}
          </AnimatePresence>
-
 
 
       <div className="fixed top-20 left-0 right-0 z-50 flex justify-center px-4">

@@ -108,7 +108,7 @@ const EnhancedHome = () => {
       icon: <Network size={20} />,
       title: 'DEITY NETWORK',
       description: 'EXPLORE RELATIONSHIPS BETWEEN VEDIC DEITIES',
-      path: '/deity-network'
+      link: '/deity-network'
     },
     
     {

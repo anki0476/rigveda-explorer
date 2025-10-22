@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Sparkles, Share2, Download, RefreshCw, Home, ChevronLeft } from 'lucide-react';
+import RishiWelcome from '../components/RishiWelcome';
+
 
 const VedicIdentityQuiz = () => {
   const navigate = useNavigate();
@@ -8,6 +10,7 @@ const VedicIdentityQuiz = () => {
   const [answers, setAnswers] = useState({});
   const [identity, setIdentity] = useState(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+
 
   // Load saved results from localStorage
   useEffect(() => {
@@ -24,6 +27,7 @@ const VedicIdentityQuiz = () => {
       }
     }
   }, []);
+
 
   // 10 QUESTIONS (5 original + 5 new)
   const questions = [
@@ -145,6 +149,7 @@ const VedicIdentityQuiz = () => {
     }
   ];
 
+
   const deityProfiles = {
     agni: {
       name: 'Agni',
@@ -247,9 +252,11 @@ const VedicIdentityQuiz = () => {
     }
   };
 
+
   const calculateIdentity = (answers) => {
     let scores = {};
     Object.keys(deityProfiles).forEach(deity => scores[deity] = 0);
+
 
     if (answers.element === 'fire') {
       scores.agni += 3;
@@ -265,10 +272,12 @@ const VedicIdentityQuiz = () => {
       scores.prithvi += 3;
     }
 
+
     if (answers.time === 'dawn') scores.ushas += 3;
     if (answers.time === 'noon') scores.surya += 3;
     if (answers.time === 'dusk') scores.soma += 2;
     if (answers.time === 'night') scores.soma += 3;
+
 
     if (answers.purpose === 'knowledge') scores.saraswati += 3;
     if (answers.purpose === 'justice') {
@@ -284,6 +293,7 @@ const VedicIdentityQuiz = () => {
       scores.indra += 2;
     }
 
+
     if (answers.challenge === 'courage') scores.indra += 3;
     if (answers.challenge === 'wisdom') scores.saraswati += 3;
     if (answers.challenge === 'patience') scores.prithvi += 3;
@@ -291,6 +301,7 @@ const VedicIdentityQuiz = () => {
       scores.ushas += 2;
       scores.saraswati += 2;
     }
+
 
     if (answers.nature === 'sky') {
       scores.vayu += 2;
@@ -303,6 +314,7 @@ const VedicIdentityQuiz = () => {
     }
     if (answers.nature === 'forests') scores.prithvi += 2;
 
+
     // NEW questions scoring
     if (answers.obstacle) scores[answers.obstacle] = (scores[answers.obstacle] || 0) + 3;
     if (answers.values) scores[answers.values] = (scores[answers.values] || 0) + 3;
@@ -310,7 +322,9 @@ const VedicIdentityQuiz = () => {
     if (answers.learning) scores[answers.learning] = (scores[answers.learning] || 0) + 3;
     if (answers.conflict) scores[answers.conflict] = (scores[answers.conflict] || 0) + 3;
 
+
     const totalScore = Object.values(scores).reduce((a, b) => a + b, 0);
+
 
     const sortedDeities = Object.entries(scores)
       .sort((a, b) => b[1] - a[1])
@@ -320,7 +334,9 @@ const VedicIdentityQuiz = () => {
         score: score
       }));
 
+
     const [primary, secondary, tertiary] = sortedDeities.slice(0, 3);
+
 
     return {
       primary,
@@ -330,9 +346,11 @@ const VedicIdentityQuiz = () => {
     };
   };
 
+
   const handleAnswer = (questionId, value) => {
     const newAnswers = { ...answers, [questionId]: value };
     setAnswers(newAnswers);
+
 
     if (currentQuestionIndex < questions.length - 1) {
       setTimeout(() => {
@@ -354,6 +372,7 @@ const VedicIdentityQuiz = () => {
     }
   };
 
+
   const handleBack = () => {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex(prev => prev - 1);
@@ -363,6 +382,7 @@ const VedicIdentityQuiz = () => {
       setAnswers(newAnswers);
     }
   };
+
 
   const handleShare = () => {
     if (!identity || !identity.primary) return;
@@ -383,9 +403,11 @@ const VedicIdentityQuiz = () => {
     }
   };
 
+
   const handleDownload = () => {
     alert('Download feature coming in Phase 2! 📸');
   };
+
 
   const handleRetake = () => {
     setAnswers({});
@@ -394,6 +416,7 @@ const VedicIdentityQuiz = () => {
     setStep('intro');
     localStorage.removeItem('vedicIdentityResults');
   };
+
 
   const BackButton = () => (
     <button
@@ -409,71 +432,85 @@ const VedicIdentityQuiz = () => {
     </button>
   );
 
+
   if (step === 'intro') {
     const hasSavedResults = localStorage.getItem('vedicIdentityResults');
     
     return (
-      <div className="min-h-screen bg-gradient-to-br from-[#F5E6D3] via-[#EDE5D8] to-[#E8D5C4] flex items-center justify-center p-4">
-        <BackButton />
-        <div className="max-w-2xl w-full">
-          <div className="double-golden-border bg-[var(--color-parchment-light)] p-12 rounded-2xl text-center">
-            <div className="text-7xl mb-6 animate-pulse">🕉️</div>
-            <h1 className="text-5xl font-[family:--font-family-header] text-[var(--color-ink)] mb-4">
-              Discover Your Vedic Identity
-            </h1>
-            <p className="text-xl text-[var(--color-ink-light)] mb-8 leading-relaxed">
-              Answer 10 sacred questions to reveal which Vedic deity aligns with your soul. 
-              Receive your personalized Sanskrit name, power attributes, and sacred mantra.
-            </p>
-            
-            <div className="flex items-center justify-center gap-8 mb-8 text-[var(--color-ink-light)]">
-              <div className="flex items-center gap-2">
-                <Sparkles size={20} className="text-[var(--color-gold)]" />
-                <span>10 Questions</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">⏱️</span>
-                <span>3 Minutes</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Share2 size={20} className="text-[var(--color-gold)]" />
-                <span>Shareable</span>
-              </div>
-            </div>
+      <>
+        {/* Rishi Welcome Popup */}
+        <RishiWelcome
+          image="/images/rishi-mascot-vedic-id.png"
+          dialogue="Come discover which deities align with you the most by answering few simple self reflective questions about yourself!!"
+          storageKey="vedicIdentityWelcome"
+        />
 
-            {hasSavedResults && (
+        <div className="min-h-screen bg-gradient-to-br from-[#F5E6D3] via-[#EDE5D8] to-[#E8D5C4] flex items-center justify-center p-4">
+          <BackButton />
+          <div className="max-w-2xl w-full">
+            <div className="double-golden-border bg-[var(--color-parchment-light)] p-12 rounded-2xl text-center">
+              <div className="text-7xl mb-6 animate-pulse">🕉️</div>
+              <h1 className="text-5xl font-[family:--font-family-header] text-[var(--color-ink)] mb-4">
+                Discover Your Vedic Identity
+              </h1>
+              <p className="text-xl text-[var(--color-ink-light)] mb-8 leading-relaxed">
+                Answer 10 sacred questions to reveal which Vedic deity aligns with your soul. 
+                Receive your personalized Sanskrit name, power attributes, and sacred mantra.
+              </p>
+              
+              <div className="flex items-center justify-center gap-8 mb-8 text-[var(--color-ink-light)]">
+                <div className="flex items-center gap-2">
+                  <Sparkles size={20} className="text-[var(--color-gold)]" />
+                  <span>10 Questions</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-2xl">⏱️</span>
+                  <span>3 Minutes</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Share2 size={20} className="text-[var(--color-gold)]" />
+                  <span>Shareable</span>
+                </div>
+              </div>
+
+
+              {hasSavedResults && (
+                <button
+                  onClick={() => {
+                    const saved = JSON.parse(localStorage.getItem('vedicIdentityResults'));
+                    setIdentity(saved.identity);
+                    setAnswers(saved.answers);
+                    setStep('result');
+                  }}
+                  className="mb-4 text-[var(--color-gold)] hover:underline text-sm"
+                >
+                  ← View My Previous Results
+                </button>
+              )}
+
+
               <button
-                onClick={() => {
-                  const saved = JSON.parse(localStorage.getItem('vedicIdentityResults'));
-                  setIdentity(saved.identity);
-                  setAnswers(saved.answers);
-                  setStep('result');
+                onClick={() => setStep('questions')}
+                className="px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                style={{
+                  backgroundColor: 'var(--color-gold)',
+                  color: 'var(--color-ink)',
                 }}
-                className="mb-4 text-[var(--color-gold)] hover:underline text-sm"
               >
-                ← View My Previous Results
+                Begin Your Journey
               </button>
-            )}
-
-            <button
-              onClick={() => setStep('questions')}
-              className="px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-              style={{
-                backgroundColor: 'var(--color-gold)',
-                color: 'var(--color-ink)',
-              }}
-            >
-              Begin Your Journey
-            </button>
+            </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
+
 
   if (step === 'questions') {
     const currentQuestion = questions[currentQuestionIndex];
     const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+
 
     return (
       <div className="min-h-screen bg-gradient-to-br from-[#F5E6D3] via-[#EDE5D8] to-[#E8D5C4] flex items-center justify-center p-4">
@@ -492,6 +529,7 @@ const VedicIdentityQuiz = () => {
             </div>
           </div>
 
+
           {currentQuestionIndex > 0 && (
             <button
               onClick={handleBack}
@@ -503,11 +541,13 @@ const VedicIdentityQuiz = () => {
             </button>
           )}
 
+
           <div className="double-golden-border bg-[var(--color-parchment-light)] p-8 rounded-2xl">
             <div className="text-6xl text-center mb-6">{currentQuestion.emoji}</div>
             <h2 className="text-3xl font-[family:--font-family-header] text-[var(--color-ink)] text-center mb-8">
               {currentQuestion.question}
             </h2>
+
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {currentQuestion.options.map((option) => (
@@ -534,6 +574,7 @@ const VedicIdentityQuiz = () => {
     );
   }
 
+
   if (step === 'result' && identity) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-[#F5E6D3] via-[#EDE5D8] to-[#E8D5C4] flex items-center justify-center p-4">
@@ -545,6 +586,7 @@ const VedicIdentityQuiz = () => {
             </h1>
             <p className="text-[var(--color-ink-light)]">Your complete spiritual profile with top 3 deity alignments</p>
           </div>
+
 
           <div 
             className="double-golden-border p-8 rounded-2xl relative overflow-hidden mb-8"
@@ -569,6 +611,7 @@ const VedicIdentityQuiz = () => {
               </p>
             </div>
 
+
             <div className="text-center mb-6 p-4 bg-[var(--color-gold)]/10 rounded-lg">
               <p className="text-sm text-[var(--color-ink-light)] mb-1">Your Sanskrit Name</p>
               <p className="text-2xl font-[family:--font-family-sanskrit] text-[var(--color-gold)]">
@@ -576,9 +619,11 @@ const VedicIdentityQuiz = () => {
               </p>
             </div>
 
+
             <p className="text-center text-lg text-[var(--color-ink-light)] mb-6 leading-relaxed">
               {identity.primary.description}
             </p>
+
 
             <div className="grid grid-cols-2 gap-4 mb-6">
               {Object.entries(identity.primary.attributes).map(([attr, value]) => (
@@ -597,6 +642,7 @@ const VedicIdentityQuiz = () => {
               ))}
             </div>
 
+
             <div className="text-center p-4 bg-[var(--color-gold)]/5 rounded-lg border-2 border-[var(--color-gold)]/30 mb-6">
               <p className="text-sm text-[var(--color-ink-light)] mb-2">Your Sacred Mantra</p>
               <p className="text-xl font-[family:--font-family-sanskrit] text-[var(--color-ink)]">
@@ -604,6 +650,7 @@ const VedicIdentityQuiz = () => {
               </p>
             </div>
           </div>
+
 
           {(identity.secondary || identity.tertiary) && (
             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -657,6 +704,7 @@ const VedicIdentityQuiz = () => {
             </div>
           )}
 
+
           <div className="flex flex-wrap justify-center gap-4">
             <button
               onClick={handleShare}
@@ -697,7 +745,9 @@ const VedicIdentityQuiz = () => {
     );
   }
 
+
   return null;
 };
+
 
 export default VedicIdentityQuiz;

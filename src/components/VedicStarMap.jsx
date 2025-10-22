@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import constellationsData from '../data/constellations.json';
+import RishiWelcome from './RishiWelcome';
 
 const VedicStarMap = () => {
   const [randomStars, setRandomStars] = useState([]);
@@ -164,6 +165,15 @@ const VedicStarMap = () => {
   };
 
   return (
+    <>
+      {/* Rishi Welcome Popup */}
+      <RishiWelcome
+        image="/images/rishi-mascot-rigveda-observatory.png"
+        dialogue="Welcome to the RigVeda Observatory! Gaze upon the celestial map and discover the Vedic constellations mentioned in ancient hymns. Click on constellations to unveil their cosmic stories!!"
+        storageKey="vedicStarMapWelcome"
+      />
+
+
     <div className="max-w-7xl mx-auto p-8">
       {/* Header */}
       <div className="text-center mb-8">
@@ -476,6 +486,7 @@ const VedicStarMap = () => {
         }
       `}</style>
     </div>
+    </>
   );
 };
 

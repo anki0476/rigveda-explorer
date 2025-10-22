@@ -144,7 +144,6 @@ const Navigation = () => {
     '/deity-network',
     '/ask-rishi',
     '/hymns',
-    '/mandala-wheel',
     '/star-map'
   ];
 
@@ -182,11 +181,6 @@ const Navigation = () => {
           <Link to="/hymns" className={dropdownItemClass('/hymns')} onMouseEnter={playHover} onClick={playClick}>
             <Scroll size={20} />
             <span>Hymns</span>
-          </Link>
-          
-          <Link to="/mandala-wheel" className={dropdownItemClass('/mandala-wheel')} onMouseEnter={playHover} onClick={playClick}>
-            <CircleDot size={20} />
-            <span>Mandala Wheel</span>
           </Link>
           
           <Link to="/star-map" className={dropdownItemClass('/star-map')} onMouseEnter={playHover} onClick={playClick}>
@@ -237,11 +231,6 @@ const Navigation = () => {
               <Link to="/hymns" className={mobileMenuItemClass('/hymns')} onClick={playClick}>
                 <Scroll size={20} />
                 <span>Hymns</span>
-              </Link>
-              
-              <Link to="/mandala-wheel" className={mobileMenuItemClass('/mandala-wheel')} onClick={playClick}>
-                <CircleDot size={20} />
-                <span>Mandala Wheel</span>
               </Link>
               
               <Link to="/star-map" className={mobileMenuItemClass('/star-map')} onClick={playClick}>

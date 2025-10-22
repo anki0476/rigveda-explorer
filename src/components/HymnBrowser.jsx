@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import hymnsData from '../data/hymns.json';
 import BookLoadingAnimation from './BookLoadingAnimation';
 import AudioPlayer from './AudioPlayer';
+import RishiWelcome from './RishiWelcome';
 
 const HymnBrowser = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -372,6 +373,13 @@ const HymnBrowser = () => {
   }
 
   return (
+    <>
+      {/* Rishi Welcome Popup */}
+      <RishiWelcome
+        image="/images/rishi-mascot-hymns.png"
+        dialogue="Welcome to the Hymn Browser! Dive deep into the sacred verses of the RigVeda. Listen, read, and explore the ancient wisdom through interactive hymns!"
+        storageKey="hymnBrowserWelcome"
+      />
     <div className="max-w-7xl mx-auto p-8">
       {/* Header */}
       <div className="text-center mb-8">
@@ -487,6 +495,7 @@ const HymnBrowser = () => {
       {/* Render Modal */}
       <Modal />
     </div>
+    </>
   );
 };
 

@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import jsPDF from 'jspdf';
 import FastDecrypt from './FastDecrypt';
 import { MessageCircleQuestion } from 'lucide-react'
+import RishiWelcome from './RishiWelcome';
 
 const AskTheRishi = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -422,6 +423,13 @@ Provide a thoughtful, well-cited answer as the Rishi:`;
   };
 
   return (
+    <>
+      {/* Rishi Welcome Popup */}
+      <RishiWelcome
+        image="/images/rishi-mascot-AI-chat.png"
+        dialogue="Heyy there!! Ask me whatever you want about RigVeda or anything basically. I am all set and ready to kick things right off the bat!!"
+        storageKey="askTheRishiWelcome"
+      />
     <div className="min-h-screen p-4 flex flex-col">
       <div className="text-center mb-6">
         <h1 className="text-4xl font-[family:--font-family-header] text-[--color-ink] mb-2">
@@ -709,6 +717,7 @@ Provide a thoughtful, well-cited answer as the Rishi:`;
         )}
       </div>
     </div>
+    </>
   );
 };
 

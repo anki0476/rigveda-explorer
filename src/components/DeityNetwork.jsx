@@ -5,6 +5,8 @@ import * as d3 from 'd3';
 import deitiesData from '../data/deities.json';
 import connectionsData from '../data/connections.json';
 import BookLoadingAnimation from './BookLoadingAnimation';
+import RishiWelcome from './RishiWelcome';
+
 
 const DeityNetwork = () => {
   const svgRef = useRef();
@@ -12,20 +14,25 @@ const DeityNetwork = () => {
   const [tooltip, setTooltip] = useState({ visible: false, content: '', x: 0, y: 0 });
   const [isLoading, setIsLoading] = useState(true);  // ← ADDED
 
+
   useEffect(() => {
     // Simulate loading
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);
 
+
     return () => clearTimeout(timer);
   }, []);
+
 
   useEffect(() => {
     if (isLoading) return;  // ← ADDED - Don't render D3 until loaded
 
+
     const width = 1200;
     const height = 800;
+
 
     const svg = d3.select(svgRef.current)
       .attr('width', width)
@@ -33,7 +40,9 @@ const DeityNetwork = () => {
       .style('background', 'var(--color-parchment-light)')
       .style('border-radius', '12px');
 
+
     svg.selectAll('*').remove();
+
 
     const nodes = deitiesData.deities.map(d => ({
       id: d.id,
@@ -52,17 +61,20 @@ const DeityNetwork = () => {
       peakMandalas: d.peakMandalas
     }));
 
+
     const links = connectionsData.connections.map(c => ({
       source: c.source,
       target: c.target,
       type: c.type
     }));
 
+
     const simulation = d3.forceSimulation(nodes)
       .force('link', d3.forceLink(links).id(d => d.id).distance(150))
       .force('charge', d3.forceManyBody().strength(-400))
       .force('center', d3.forceCenter(width / 2, height / 2))
       .force('collision', d3.forceCollide().radius(50));
+
 
     const link = svg.append('g')
       .selectAll('line')
@@ -71,6 +83,7 @@ const DeityNetwork = () => {
       .attr('stroke', '#d4af37')
       .attr('stroke-opacity', 0.3)
       .attr('stroke-width', 2);
+
 
     const node = svg.append('g')
       .selectAll('g')
@@ -94,9 +107,11 @@ const DeityNetwork = () => {
           y
         });
 
+
         // Highlight connected nodes and links
         const connectedNodeIds = new Set();
         connectedNodeIds.add(d.id);
+
 
         // Find all connected links
         link
@@ -115,11 +130,13 @@ const DeityNetwork = () => {
             return 2;
           });
 
+
         // Dim non-connected nodes
         node.style('opacity', n => connectedNodeIds.has(n.id) ? 1 : 0.2);
       })
       .on('mouseleave', () => {
         setTooltip({ visible: false, content: '', x: 0, y: 0 });
+
 
         // Reset all nodes and links
         link
@@ -128,6 +145,7 @@ const DeityNetwork = () => {
         
         node.style('opacity', 1);
       });
+
 
     node.append('circle')
       .attr('r', d => d.category === 'major' ? 25 : 15)
@@ -148,6 +166,7 @@ const DeityNetwork = () => {
           .attr('r', d.category === 'major' ? 25 : 15);
       });
 
+
     node.append('text')
       .text(d => d.iconSuggestion || '✨')
       .attr('text-anchor', 'middle')
@@ -155,6 +174,7 @@ const DeityNetwork = () => {
       .style('font-size', d => d.category === 'major' ? '20px' : '12px')
       .style('pointer-events', 'none')
       .style('user-select', 'none');
+
 
     node.append('text')
       .text(d => d.name)
@@ -166,6 +186,7 @@ const DeityNetwork = () => {
       .style('pointer-events', 'none')
       .style('user-select', 'none');
 
+
     simulation.on('tick', () => {
       link
         .attr('x1', d => d.source.x)
@@ -173,8 +194,10 @@ const DeityNetwork = () => {
         .attr('x2', d => d.target.x)
         .attr('y2', d => d.target.y);
 
+
       node.attr('transform', d => `translate(${d.x},${d.y})`);
     });
+
 
     function dragstarted(event, d) {
       if (!event.active) simulation.alphaTarget(0.3).restart();
@@ -182,10 +205,12 @@ const DeityNetwork = () => {
       d.fy = d.y;
     }
 
+
     function dragged(event, d) {
       d.fx = event.x;
       d.fy = event.y;
     }
+
 
     function dragended(event, d) {
       if (!event.active) simulation.alphaTarget(0);
@@ -193,12 +218,15 @@ const DeityNetwork = () => {
       d.fy = null;
     }
 
+
     return () => simulation.stop();
   }, [isLoading]);  // ← ADDED isLoading to dependency array
+
 
   // Modal Component
   const Modal = () => {
     if (!selectedDeity) return null;
+
 
     return createPortal(
       <div
@@ -258,6 +286,7 @@ const DeityNetwork = () => {
               ×
             </button>
 
+
             {/* Deity Icon & Name */}
             <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
               <div style={{ fontSize: '5rem', marginBottom: '1rem' }}>
@@ -277,6 +306,7 @@ const DeityNetwork = () => {
                 </p>
               )}
             </div>
+
 
             {/* Stats Bar */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '1.5rem' }}>
@@ -300,6 +330,7 @@ const DeityNetwork = () => {
               </div>
             </div>
 
+
             {/* Description */}
             <div style={{ marginBottom: '1.5rem' }}>
               <h3 style={{ fontSize: '1.5rem', fontFamily: 'var(--font-family-header)', color: 'var(--color-ink)', marginBottom: '0.75rem' }}>
@@ -309,6 +340,7 @@ const DeityNetwork = () => {
                 {selectedDeity.description}
               </p>
             </div>
+
 
             {/* Domains */}
             {selectedDeity.domains && selectedDeity.domains.length > 0 && (
@@ -336,6 +368,7 @@ const DeityNetwork = () => {
               </div>
             )}
 
+
             {/* Key Myths */}
             {selectedDeity.keyMyths && selectedDeity.keyMyths.length > 0 && (
               <div style={{ marginBottom: '1.5rem' }}>
@@ -361,6 +394,7 @@ const DeityNetwork = () => {
     );
   };
 
+
   // ← ADDED: Show book animation while loading
   if (isLoading) {
     return (
@@ -379,47 +413,60 @@ const DeityNetwork = () => {
     );
   }
 
+
   return (
-    <div className="p-4">
-      <div className="mb-6 text-center">
-          <h1 className="text-4xl font-[family:--font-family-header] text-[--color-ink] mb-3 flex items-center justify-center gap-2">
-            <Network size={36} className="text-[--color-ink]" />
-            Deity Network
-          </h1>
-        <p className="text-lg text-[--color-ink-light] font-[family:--font-family-body]">
-          Explore {deitiesData.deities.length} Vedic deities and their interconnections. Click any deity for details!
-        </p>
-      </div>
+    <>
+      {/* Rishi Welcome Popup */}
+      <RishiWelcome
+        image="/images/rishi-mascot-deity-network.png"
+        dialogue="Explore the relation between the deities mentioned in the RigVeda through an interactive Deity Network Web!!"
+        storageKey="deityNetworkWelcome"
+      />
 
-      <div className="flex justify-center mb-4 relative">
-        <svg ref={svgRef} className="shadow-lg" />
-        
-        {/* Tooltip */}
-        {tooltip.visible && (
-          <div
-            style={{
-              position: 'absolute',
-              left: tooltip.x + 10,
-              top: tooltip.y + 10,
-              backgroundColor: 'var(--color-ink)',
-              color: 'white',
-              padding: '0.5rem 0.75rem',
-              borderRadius: '0.375rem',
-              fontSize: '0.875rem',
-              pointerEvents: 'none',
-              zIndex: 10,
-              boxShadow: '0 4px 6px rgba(0,0,0,0.3)',
-              whiteSpace: 'nowrap'
-            }}
-          >
-            {tooltip.content}
-          </div>
-        )}
-      </div>
+      <div className="p-4">
+        <div className="mb-6 text-center">
+            <h1 className="text-4xl font-[family:--font-family-header] text-[--color-ink] mb-3 flex items-center justify-center gap-2">
+              <Network size={36} className="text-[--color-ink]" />
+              Deity Network
+            </h1>
+          <p className="text-lg text-[--color-ink-light] font-[family:--font-family-body]">
+            Explore {deitiesData.deities.length} Vedic deities and their interconnections. Click any deity for details!
+          </p>
+        </div>
 
-      <Modal />
-    </div>
+
+        <div className="flex justify-center mb-4 relative">
+          <svg ref={svgRef} className="shadow-lg" />
+          
+          {/* Tooltip */}
+          {tooltip.visible && (
+            <div
+              style={{
+                position: 'absolute',
+                left: tooltip.x + 10,
+                top: tooltip.y + 10,
+                backgroundColor: 'var(--color-ink)',
+                color: 'white',
+                padding: '0.5rem 0.75rem',
+                borderRadius: '0.375rem',
+                fontSize: '0.875rem',
+                pointerEvents: 'none',
+                zIndex: 10,
+                boxShadow: '0 4px 6px rgba(0,0,0,0.3)',
+                whiteSpace: 'nowrap'
+              }}
+            >
+              {tooltip.content}
+            </div>
+          )}
+        </div>
+
+
+        <Modal />
+      </div>
+    </>
   );
 };
+
 
 export default DeityNetwork;

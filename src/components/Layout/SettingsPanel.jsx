@@ -110,29 +110,6 @@ const SettingsPanel = ({ isOpen, onClose }) => {
               <div className="w-9 h-5 bg-gray-300 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-0.5 after:left-[3px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-gradient-to-r peer-checked:from-orange-500 peer-checked:to-amber-600"></div>
             </label>
           </div>
-
-
-          {/* GUIDED TOUR - COMPACT */}
-          <div className="flex items-center justify-between py-1">
-            <div className="flex items-center gap-1.5">
-              <span className="text-sm">🧙</span>
-              <div>
-                <h3 className="font-bold text-amber-900 text-xs">Guided Tour</h3>
-                <p className="text-[8px] text-amber-700">Replay welcome tour</p>
-              </div>
-            </div>
-            <button
-              onClick={() => {
-                playClick();
-                window.restartTour?.();
-                onClose();
-              }}
-              onMouseEnter={playHover}
-              className="px-2 py-1 bg-gradient-to-r from-orange-500 to-amber-600 text-white text-[9px] font-bold rounded hover:from-orange-600 hover:to-amber-700 transition-all shadow-sm hover:scale-105"
-            >
-              🔄 REPLAY
-            </button>
-          </div>
         </div>
 
 

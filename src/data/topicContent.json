@@ -325,6 +325,339 @@
         "How does Vedic ethics handle moral complexity and grey areas?"
       ]
     },
+
+    "leadership": {
+      "introduction": {
+        "opening": "What makes a true leader? How does one wield power with wisdom and inspire others toward a shared vision?",
+        "body": [
+          "The Rig Veda presents profound teachings on leadership through Indra (king of gods), Varuna (cosmic sovereign), Mitra (keeper of covenants), and Brihaspati (lord of sacred speech). These divine leaders embody different aspects of righteous authority—strength, wisdom, trustworthiness, and eloquence.",
+          "Vedic leadership is fundamentally about dharma (righteous duty) rather than personal ambition. True leaders maintain Rita (cosmic order), protect their people, inspire through example, and wield power with restraint. They understand that authority is a sacred trust, not a privilege to exploit.",
+          "These ancient hymns reveal timeless leadership principles: the balance of strength and compassion, the importance of keeping promises, the power of inspiring speech, and the responsibility to serve the greater good. Leadership emerges not from domination but from alignment with universal order and genuine concern for those led."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Rājya",
+          "sanskrit": "राज्य",
+          "definition": "Sovereignty, kingdom, righteous rule",
+          "explanation": "Rājya represents legitimate authority exercised for the welfare of all. A true king (rāja) rules not by force alone but through dharma, protecting subjects, maintaining order, and ensuring prosperity. Leadership is stewardship, not ownership.",
+          "modernParallel": "Similar to servant leadership and stakeholder theory—authority exists to serve, not to exploit"
+        },
+        {
+          "term": "Brahmavarcas",
+          "sanskrit": "ब्रह्मवर्चस",
+          "definition": "Spiritual authority, commanding presence, sacred power",
+          "explanation": "Brahmavarcas is the radiant authority that comes from wisdom, integrity, and alignment with truth. It's the presence that commands respect without coercion—Brihaspati's eloquence that persuades through truth rather than manipulation.",
+          "modernParallel": "Comparable to authentic leadership, personal power, and the authority that comes from demonstrated competence and character"
+        },
+        {
+          "term": "Satyavrata",
+          "sanskrit": "सत्यव्रत",
+          "definition": "Vow of truth, commitment to promises, trustworthiness",
+          "explanation": "Satyavrata embodies the leader's obligation to keep promises. Varuna and Mitra maintain cosmic order through unwavering commitment to truth. A leader's word must be inviolable; broken promises destroy the foundation of authority.",
+          "modernParallel": "Reflects integrity-based leadership and the research showing trust as the foundation of effective leadership"
+        },
+        {
+          "term": "Tejasvi",
+          "sanskrit": "तेजस्वी",
+          "definition": "Radiant with power, luminous energy, commanding brilliance",
+          "explanation": "Tejasvi describes the leader who radiates confidence, clarity, and vital energy. Indra's tejas enables him to inspire and command. It's the visible manifestation of inner strength, purpose, and certainty.",
+          "modernParallel": "Similar to executive presence, charisma, and the confidence that inspires followership"
+        }
+      ],
+      "hymns": [
+        {
+          "title": "Indra - King of Gods, Model of Leadership",
+          "reference": "2.12",
+          "mandala": 2,
+          "sukta": 12,
+          "verses": 15,
+          "deity": "Indra",
+          "rishi": "Gritsamada Bhargava Shaunaka",
+          "excerpt": "He who gave being to the sun and morning, who leads the waters, he, O men, is Indra... He who fixed fast and firm the earth that staggers, and set at rest the agitated mountains... He who slew the serpent, freed the seven rivers... He made the channels for the rivers' outflow... The people ask, 'Where is Indra?' when he conquers. Yet he is here, proclaiming 'I am Indra!'",
+          "context": "This hymn catalogs Indra's leadership accomplishments—creating cosmic order, defeating chaos (Vritra), liberating resources (rivers), and establishing stability. He leads through decisive action and visible results.",
+          "significance": "Presents the archetype of the decisive leader who acts boldly to solve problems, liberates blocked potential, creates order from chaos, and leads from the front. Leadership proved through accomplishment, not mere position.",
+          "modernRelevance": "Parallels transformational leadership—leaders who fundamentally change situations rather than merely managing them. Relevant to crisis leadership, organizational transformation, and decisive change management."
+        },
+        {
+          "title": "Varuna - The Sovereign Who Maintains Order",
+          "reference": "1.25",
+          "mandala": 1,
+          "sukta": 25,
+          "verses": 21,
+          "deity": "Varuna",
+          "rishi": "Shunahshepa Ajigarti",
+          "excerpt": "Wise Varuna upholds the cosmic laws, the ancient statutes... He knows the path of birds that fly through heaven, he knows the ships that sail the ocean... He marks the true and false... Varuna sees all—the wink of every eye, the throwing of every dice... No creature stirs without Varuna knowing.",
+          "context": "Portrays Varuna as the all-seeing sovereign who maintains universal order through knowledge and justice. He doesn't micromanage but ensures adherence to cosmic law (Rita).",
+          "significance": "Represents leadership through systems, principles, and justice rather than personality alone. The leader who creates fair structures, sees the big picture, and holds everyone (including themselves) accountable to higher standards.",
+          "modernRelevance": "Mirrors systems thinking in leadership, governance through principles rather than personalities, and the importance of accountability and transparency in organizations."
+        },
+        {
+          "title": "Mitra - Leader Through Covenant and Trust",
+          "reference": "3.59",
+          "mandala": 3,
+          "sukta": 59,
+          "verses": 9,
+          "deity": "Mitra",
+          "rishi": "Vishvamitra Gathina",
+          "excerpt": "To Mitra of true speech, the god who knows all creatures, we pray... He who breaks not the laws of Mitra, he dwells secure... Mitra, when lauded, brings together adversaries, makes firm what shakes... By the law of Mitra, the earth stands firm.",
+          "context": "Celebrates Mitra as the deity of contracts, promises, and mutual trust. His name means 'friend' and 'covenant'—leadership built on reciprocal commitment and trustworthy relationships.",
+          "significance": "Reveals that lasting leadership requires building trust through consistent integrity. Broken promises destroy authority; kept commitments create unshakeable bonds. Leadership through relationship, not domination.",
+          "modernRelevance": "Foundational to trust-based leadership, relationship management, and the understanding that organizational culture is built on mutual commitments kept over time."
+        },
+        {
+          "title": "Brihaspati - Leadership Through Wisdom and Eloquence",
+          "reference": "2.23",
+          "mandala": 2,
+          "sukta": 23,
+          "verses": 18,
+          "deity": "Brihaspati",
+          "rishi": "Gritsamada Bhargava",
+          "excerpt": "Brihaspati, first-born of the cosmic order, mighty in wisdom and strength of spirit... By his word he slew the demon, by his voice he opened the fortified places... He who found the light and brought forth the dawn by his powerful word... Lord of prayer, lord of holy speech.",
+          "context": "Honors Brihaspati (lord of speech and wisdom) as the leader who conquers through eloquence, wisdom, and the power of the word. He defeats obstacles not through brute force but through inspired communication.",
+          "significance": "Establishes that leadership requires the ability to articulate vision, inspire through speech, and lead through wisdom. The tongue can be mightier than the sword when wielded with skill and truth.",
+          "modernRelevance": "Essential for visionary leadership, public speaking, change management communication, and the art of inspiring others toward shared goals through compelling narrative."
+        },
+        {
+          "title": "The Seven Rishis - Collective Leadership",
+          "reference": "10.130",
+          "mandala": 10,
+          "sukta": 130,
+          "verses": 7,
+          "deity": "Vishvedevas",
+          "rishi": "Manyu Vaivasvata",
+          "excerpt": "Seven priests, our fathers, bound the sacrifice... They found the path to the hidden truth through their wisdom combined... Together they opened the fortified places... By their united strength they accomplished what one alone could not.",
+          "context": "Celebrates the legendary seven rishis (sages) who worked collectively rather than as sole leaders. Their combined wisdom and coordinated effort achieved what individual brilliance could not.",
+          "significance": "Presents an alternative leadership model—collaborative rather than hierarchical, wisdom-council rather than single strongman. Multiple perspectives, shared decision-making, and collective intelligence.",
+          "modernRelevance": "Relevant to team leadership, collaborative decision-making, diversity in leadership, and understanding that complex challenges often require collective wisdom rather than solo genius."
+        },
+        {
+          "title": "Indra Drinking Soma - The Leader's Need for Renewal",
+          "reference": "10.119",
+          "mandala": 10,
+          "sukta": 119,
+          "verses": 13,
+          "deity": "Indra",
+          "rishi": "Yajnavalkya",
+          "excerpt": "The soma I have drunk has exhilarated me! The draughts have lifted me as wind lifts straw... The five peoples appear to me as nothing... Have I been drinking soma? The mighty drops unite with me... I will smite the earth here and there... So great am I, so vast, reaching to the clouds.",
+          "context": "A remarkably honest hymn where Indra describes his intoxication with soma—the renewal, confidence, and sometimes excessive boldness it brings. Even the king of gods needs revitalization.",
+          "significance": "Acknowledges that leadership is draining and leaders need renewal. Also warns about overconfidence—even great leaders can lose perspective when drunk on power. Honest about leadership's psychological dynamics.",
+          "modernRelevance": "Speaks to leadership sustainability, the importance of renewal practices, and the dangers of hubris. Relevant to discussions of power, ego, and the need for leaders to maintain grounding and perspective."
+        }
+      ],
+      "metaphors": [
+        {
+          "title": "Indra's Vajra (Thunderbolt)",
+          "description": "The weapon that defeats demons represents decisive action. Effective leaders must sometimes strike boldly at obstacles, but only at the right moment with focused force."
+        },
+        {
+          "title": "Varuna's All-Seeing Eyes",
+          "description": "The cosmic sovereign who sees all represents leadership through comprehensive awareness. Leaders must develop the capacity to see the whole system, not just immediate concerns."
+        },
+        {
+          "title": "Mitra's Covenant",
+          "description": "The sacred promise that binds leader and led represents trust-based leadership. Authority rests not on force but on mutually honored commitments."
+        },
+        {
+          "title": "Brihaspati's Sacred Speech",
+          "description": "The power of eloquent, truthful communication. Leaders inspire and guide through the artful wielding of language—vision articulated becomes vision shared."
+        },
+        {
+          "title": "The Seven Rivers Released",
+          "description": "Waters imprisoned by Vritra and liberated by Indra symbolize leadership as the removal of obstacles that block collective flourishing. Leaders enable others' potential."
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Organizational Leadership",
+          "connection": "Vedic leadership principles align with modern research on servant leadership, transformational leadership, and ethical leadership. The emphasis on serving rather than dominating reflects stakeholder theory and purpose-driven business."
+        },
+        {
+          "field": "Political Science",
+          "connection": "The concept of Rita (cosmic order) that leaders must uphold parallels constitutional democracy—leaders bound by law rather than above it. Varuna's accountability mirrors checks and balances in governance."
+        },
+        {
+          "field": "Communication Studies",
+          "connection": "Brihaspati's emphasis on eloquent, truthful speech reflects research on rhetoric, visionary leadership communication, and the power of narrative in inspiring collective action."
+        },
+        {
+          "field": "Psychology of Power",
+          "connection": "Indra's soma intoxication provides ancient insight into how power affects psychology—the confidence boost, the risk of overconfidence. Relevant to understanding ego, hubris, and the corrupting potential of power."
+        },
+        {
+          "field": "Team Dynamics",
+          "connection": "The Seven Rishis model parallels research on collective intelligence, team leadership, and the advantages of diverse perspectives in complex decision-making."
+        }
+      ],
+      "suggestedQuestions": [
+        "What kind of leader are you naturally—Indra's decisive action, Varuna's systematic order, Mitra's relationship-building, or Brihaspati's visionary communication?",
+        "What 'demons' (obstacles) in your sphere of influence need the bold strike of Indra's vajra?",
+        "How might you build 'Mitra covenants'—bonds of mutual trust and kept promises—with those you lead?",
+        "Where is your leadership more about personal ambition than serving the greater dharma (purpose)?",
+        "What practices help you maintain perspective and avoid the 'soma intoxication' of power and success?"
+      ]
+    },
+
+    "resilience": {
+      "introduction": {
+        "opening": "How do we rise from defeat? What inner strength enables us to transform adversity into growth?",
+        "body": [
+          "The Rig Veda celebrates resilience through the stories of Indra conquering formidable demons, Agni rising renewed from every offering, and the dawn (Ushas) eternally returning after the darkest night. These aren't mere myths but profound teachings on the nature of strength, recovery, and unshakeable resolve.",
+          "Vedic resilience (Sahana) is not passive endurance but active transformation. It's the warrior's courage to face overwhelming odds, the fire's ability to regenerate from ashes, and the cosmic order (Rita) that reasserts itself despite chaos. The hymns teach that adversity is not merely to be survived but to be used as fuel for growth.",
+          "These ancient insights reveal that resilience is cultivated through regular practice of dharma, connection to something greater than oneself, and recognition that setbacks are temporary disruptions in an ultimately ordered universe. The greatest strength comes not from never falling, but from the unwavering commitment to rise again."
+        ]
+      },
+      "keyConcepts": [
+        {
+          "term": "Sahana",
+          "sanskrit": "सहन",
+          "definition": "Endurance, forbearance, resilient strength",
+          "explanation": "Sahana represents the capacity to withstand pressure, adversity, and hardship without breaking. It's the oak tree bending in the storm, the mountain enduring eons of erosion, the warrior standing firm despite wounds.",
+          "modernParallel": "Similar to psychological resilience and antifragility—the ability to not just survive stress but to grow stronger through it"
+        },
+        {
+          "term": "Vīrya",
+          "sanskrit": "वीर्य",
+          "definition": "Heroic vigor, courageous energy, warrior spirit",
+          "explanation": "Vīrya is the active, dynamic quality of resilience—not passive endurance but fierce determination. Indra's vīrya enables him to face demons; it's the vital energy that propels action despite fear or exhaustion.",
+          "modernParallel": "Comparable to grit, determination, and the 'fighting spirit' studied in positive psychology"
+        },
+        {
+          "term": "Abhaya",
+          "sanskrit": "अभय",
+          "definition": "Fearlessness, absence of fear, courage",
+          "explanation": "Abhaya is the state of being without fear—not because danger doesn't exist, but because one's foundation is so solid that external circumstances cannot shake inner peace. It's Agni's fearless consumption of all offerings.",
+          "modernParallel": "Related to psychological safety, emotional regulation, and the courage cultivated through mindfulness practices"
+        },
+        {
+          "term": "Punar-utthana",
+          "sanskrit": "पुनरुत्थान",
+          "definition": "Rising again, resurrection, renewal after fall",
+          "explanation": "Punar-utthana embodies the principle of regeneration—the phoenix rising from ashes. Agni is reborn with each sunrise, dawn returns after every night, and the righteous rise after every defeat.",
+          "modernParallel": "Mirrors concepts of post-traumatic growth, recovery, and the growth mindset in modern psychology"
+        }
+      ],
+      "hymns": [
+        {
+          "title": "Indra's Victory Over Vritra",
+          "reference": "1.32",
+          "mandala": 1,
+          "sukta": 32,
+          "verses": 15,
+          "deity": "Indra",
+          "rishi": "Hiranyastupa Angirasa",
+          "excerpt": "I will declare the manly deeds of Indra, the first that he performed, the thunder-wielder. He slew the serpent, then released the waters... With his great weapon he struck the demon's shoulders. Indra is king of all that moves and breathes.",
+          "context": "This hymn celebrates Indra's epic battle against Vritra, the demon of drought and stagnation. Despite Vritra's formidable power, Indra summons his courage, wields his thunderbolt (vajra), and liberates the imprisoned waters.",
+          "significance": "Represents the archetype of facing overwhelming adversity with courage. Vritra symbolizes all forces that obstruct flow—depression, fear, stagnation. Indra's victory teaches that even the most formidable obstacles can be overcome with strength and determination.",
+          "modernRelevance": "Parallels overcoming major life challenges—addiction, trauma, career setbacks. The liberation of waters represents the release of stuck energy, creativity, and vital flow after periods of blockage."
+        },
+        {
+          "title": "Agni's Eternal Renewal",
+          "reference": "3.1",
+          "mandala": 3,
+          "sukta": 1,
+          "verses": 23,
+          "deity": "Agni",
+          "rishi": "Gathina Vishvamitra",
+          "excerpt": "Agni, accept these logs, this offering. Burn bright with ghee. Rise up, O youngest of the gods, ancient yet ever new. You who are born again with each dawn, you who never age though you consume all.",
+          "context": "Celebrates Agni's paradoxical nature—he's consumed completely in each offering yet rises renewed. He's both ancient and perpetually young, both destroyer and creator.",
+          "significance": "Teaches that resilience involves cycles of death and rebirth. True strength lies not in never falling but in the capacity for renewal. Each ending contains the seed of new beginning.",
+          "modernRelevance": "Speaks to recovery from failure, reinvention after loss, and the psychological capacity for renewal. Relevant to career transitions, relationship recovery, and personal transformation."
+        },
+        {
+          "title": "Ushas - Dawn's Unfailing Return",
+          "reference": "1.92",
+          "mandala": 1,
+          "sukta": 92,
+          "verses": 18,
+          "deity": "Ushas",
+          "rishi": "Gotama Rahugana",
+          "excerpt": "This radiant daughter of the sky, the Dawn, has come with light, driving away the darkness. She makes paths easy to traverse. Bright dawn awakens every living being... She returns ever faithful, never forgetting her ancient ways.",
+          "context": "Praises Ushas (dawn) for her reliable return after every night. No matter how dark or long the night, dawn unfailingly breaks. She represents the cosmic promise of renewal.",
+          "significance": "Provides hope during dark times—the promise that difficult periods are temporary. Dawn's reliability teaches that resilience is supported by cosmic rhythms, that renewal is built into the structure of existence itself.",
+          "modernRelevance": "Offers comfort during depression, grief, or difficult life phases. The certainty of dawn returning mirrors the psychological insight that 'this too shall pass' and hope can be trusted."
+        },
+        {
+          "title": "Rudra - Fierce Healing Power",
+          "reference": "1.114",
+          "mandala": 1,
+          "sukta": 114,
+          "verses": 11,
+          "deity": "Rudra",
+          "rishi": "Kutsa Angirasa",
+          "excerpt": "To Rudra bring these songs, the strong, the tawny god... May Rudra's missile be turned aside from us. The most healing remedies are yours, O Rudra... You who possess thousands of healing medicines, do not harm our children, descendants, or our lives.",
+          "context": "Addresses Rudra, the fierce storm god who embodies both destructive power and profound healing. His very ferocity contains medicine; his storms bring renewal.",
+          "significance": "Reveals that resilience sometimes requires fierce energy—anger transmuted into determination, grief transformed into compassion. The healing power often emerges from confronting rather than avoiding difficulty.",
+          "modernRelevance": "Parallels trauma-informed therapy that works with 'fierce energies' rather than suppressing them. Shadow work, integration of difficult emotions, and finding strength in vulnerability."
+        },
+        {
+          "title": "The Gambler's Lament and Redemption",
+          "reference": "10.34",
+          "mandala": 10,
+          "sukta": 34,
+          "verses": 14,
+          "deity": "Dice/Fate",
+          "rishi": "Kavasha Ailusha",
+          "excerpt": "The gambler's wife is left friendless, his mother grieves, he seeks help with debts unpaid... But I counsel you: abandon the dice, cultivate your field. Be content with your possessions... Play no more with dice, but cultivate your crops. Enjoy your wealth and deem it precious.",
+          "context": "A remarkably human hymn about gambling addiction, loss, and the path to recovery. The speaker has lost everything but finds wisdom through suffering and charts a path forward.",
+          "significance": "Shows that resilience includes acknowledging mistakes, accepting consequences, and choosing a different path. Recovery requires both letting go of destructive patterns and actively building new, healthy ones.",
+          "modernRelevance": "Directly addresses addiction recovery, financial loss, and life rebuilding. The 12-step wisdom of 'hitting bottom' and choosing renewal. Applicable to any destructive habit requiring transformation."
+        }
+      ],
+      "metaphors": [
+        {
+          "title": "Fire Rising from Ashes",
+          "description": "Agni consumed in one offering rises renewed in the next. This eternal cycle symbolizes the resilient spirit's capacity for regeneration—no matter how completely consumed, the spark remains."
+        },
+        {
+          "title": "Dawn After Darkness",
+          "description": "Ushas's unfailing return after night represents the cosmic promise that difficult times are temporary. Dark periods end, light returns, hope is justified."
+        },
+        {
+          "title": "Indra's Vajra (Thunderbolt)",
+          "description": "The weapon that defeated Vritra represents focused force applied at the right moment. Resilience requires gathering power and striking decisively at obstacles."
+        },
+        {
+          "title": "Waters Released from Bondage",
+          "description": "The rivers imprisoned by Vritra and liberated by Indra symbolize stuck energy, creativity, and vitality released through courageous action."
+        },
+        {
+          "title": "The Sacrificial Fire's Transformation",
+          "description": "Offerings consumed by Agni aren't destroyed but transformed into ascending smoke—adversity transforms base experience into elevated wisdom."
+        }
+      ],
+      "modernRelevance": [
+        {
+          "field": "Psychology & Mental Health",
+          "connection": "Vedic resilience teachings align with research on post-traumatic growth, grit, and antifragility. The practice of viewing obstacles as transformative rather than merely destructive parallels cognitive reframing in therapy."
+        },
+        {
+          "field": "Business & Entrepreneurship",
+          "connection": "The gambler's hymn offers timeless wisdom on failure, recovery, and pivoting. Indra's battle strategy—gathering strength, choosing the right moment, striking decisively—applies to competitive strategy and crisis management."
+        },
+        {
+          "field": "Addiction Recovery",
+          "connection": "The gambling hymn's arc from addiction to redemption mirrors modern recovery programs. The emphasis on replacing destructive patterns with constructive ones (cultivate your field) reflects evidence-based recovery approaches."
+        },
+        {
+          "field": "Personal Development",
+          "connection": "The concept of Sahana (endurance) combined with Vīrya (active courage) provides a balanced model of resilience—neither passive acceptance nor reckless aggression, but wise, fierce commitment to growth."
+        },
+        {
+          "field": "Trauma Therapy",
+          "connection": "Rudra's dual nature—fierce and healing—parallels trauma-informed approaches that work with 'difficult' emotions rather than suppressing them. Integration rather than avoidance creates genuine resilience."
+        }
+      ],
+      "suggestedQuestions": [
+        "What 'Vritra' (obstacle blocking your flow) do you need to face with Indra's courage?",
+        "How might your current adversity be a 'sacrificial offering' being transformed by Agni's fire into wisdom?",
+        "What destructive pattern needs to be abandoned so you can 'cultivate your field'?",
+        "Where in your life do you need fierce Rudra energy versus gentle Ushas patience?",
+        "What helps you remember that dawn always returns, even after the longest night?"
+      ]
+    },
+  
+  
     "relationships": {
       "introduction": {
         "opening": "How do we connect with others? What makes relationships sacred? How do we build community?",

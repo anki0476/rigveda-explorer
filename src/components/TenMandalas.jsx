@@ -3,6 +3,9 @@ import { createPortal } from 'react-dom';
 import { X, BookOpen, Headphones, Sparkles } from 'lucide-react';
 import BookLoadingAnimation from './BookLoadingAnimation';
 import PodcastPlayer from './PodcastPlayer';
+import RishiWelcome from './RishiWelcome';
+
+
 
 // Mandala data with ALL famous hymns added
 const mandalasData = [
@@ -120,11 +123,13 @@ const mandalasData = [
   }
 ];
 
+
 // Modal Component
 const MandalaModal = ({ mandala, onClose, onListenPodcast }) => {
   if (!mandala) return null;
   
   const [activeTab, setActiveTab] = useState('overview');
+
 
   return createPortal(
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
@@ -143,6 +148,7 @@ const MandalaModal = ({ mandala, onClose, onListenPodcast }) => {
             <span>✨ {mandala.verses} Verses</span>
           </div>
         </div>
+
 
         {/* Tabs */}
         <div className="flex border-b border-orange-200 bg-cream/50">
@@ -170,6 +176,7 @@ const MandalaModal = ({ mandala, onClose, onListenPodcast }) => {
           </button>
         </div>
 
+
         {/* Content */}
         <div className="p-6 overflow-y-auto max-h-96">
           {activeTab === 'overview' && (
@@ -195,6 +202,7 @@ const MandalaModal = ({ mandala, onClose, onListenPodcast }) => {
             </div>
           )}
 
+
           {activeTab === 'hymns' && (
             <div className="space-y-3">
               {mandala.famousHymns && mandala.famousHymns.length > 0 ? (
@@ -219,6 +227,7 @@ const MandalaModal = ({ mandala, onClose, onListenPodcast }) => {
           )}
         </div>
 
+
         {/* Footer - Podcast Button */}
         <div className="border-t border-orange-200 bg-beige/80 p-6">
           <button
@@ -235,96 +244,120 @@ const MandalaModal = ({ mandala, onClose, onListenPodcast }) => {
   );
 };
 
+
 // Main Component
 const TenMandalas = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedMandala, setSelectedMandala] = useState(null);
   const [showPodcast, setShowPodcast] = useState(false);
 
+
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
+
   const handleMandalaClick = (mandala) => {
     setSelectedMandala(mandala);
   };
+
 
   const handleListenPodcast = (mandala) => {
     setSelectedMandala(mandala);
     setShowPodcast(true);
   };
 
+
   const handleClosePodcast = () => {
     setShowPodcast(false);
   };
 
+
   if (isLoading) {
     return <BookLoadingAnimation />;
   }
+
 
   // Show podcast player if activated
   if (showPodcast && selectedMandala) {
     return <PodcastPlayer mandalaNumber={selectedMandala.number} onClose={handleClosePodcast} />;
   }
 
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-12 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600 mb-4">
-            The Ten Mandalas
-          </h1>
-          <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-            Browse all 10 Mandalas with Sanskrit texts, translations, and podcast episodes
-          </p>
-          <p className="text-sm text-gray-600 mt-2">
-            Click any mandala to explore its content
-          </p>
-        </div>
+    <>
+      {/* Rishi Welcome Popup */}
+      <RishiWelcome
+        image="/images/rishi-mascot-mandalas.png"
+        dialogue="Heyy!! Come discover the Mandalas of the RigVeda with podcast conversations! That's what I have been doing lately!"
+        storageKey="tenMandalasWelcome"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-12 px-4">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600 mb-4">
+              The Ten Mandalas
+            </h1>
+            <p className="text-gray-700 text-lg max-w-2xl mx-auto">
+              Browse all 10 Mandalas with Sanskrit texts, translations, and podcast episodes
+            </p>
+            <p className="text-sm text-gray-600 mt-2">
+              Click any mandala to explore its content
+            </p>
+          </div>
+          
 
-        {/* Mandala Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {mandalasData.map((mandala) => (
-            <div
-              key={mandala.number}
-              onClick={() => handleMandalaClick(mandala)}
-              className="bg-beige/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all cursor-pointer border-2 border-orange-200 hover:border-orange-400 hover:scale-105"
-            >
-              {/* Mandala Number Badge */}
-              <div className="flex items-center justify-between mb-4">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
-                  {mandala.number}
+
+
+          {/* Mandala Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {mandalasData.map((mandala) => (
+              <div
+                key={mandala.number}
+                onClick={() => handleMandalaClick(mandala)}
+                className="bg-beige/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all cursor-pointer border-2 border-orange-200 hover:border-orange-400 hover:scale-105"
+              >
+                {/* Mandala Number Badge */}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                    {mandala.number}
+                  </div>
+                  <div className="text-right">
+                    <div className="text-sm text-gray-600">Suktas</div>
+                    <div className="text-xl font-bold text-orange-600">{mandala.suktas}</div>
+                  </div>
                 </div>
-                <div className="text-right">
-                  <div className="text-sm text-gray-600">Suktas</div>
-                  <div className="text-xl font-bold text-orange-600">{mandala.suktas}</div>
+
+
+                {/* Description */}
+                <p className="text-gray-700 text-sm leading-relaxed mb-4 line-clamp-3">
+                  {mandala.description}
+                </p>
+
+
+                {/* Stats */}
+                <div className="flex items-center justify-between text-sm text-gray-600 pt-4 border-t border-orange-100">
+                  <span>📜 {mandala.verses} verses</span>
+                  <span className="text-orange-600 font-semibold">Explore →</span>
                 </div>
               </div>
+            ))}
+          </div>
 
-              {/* Description */}
-              <p className="text-gray-700 text-sm leading-relaxed mb-4 line-clamp-3">
-                {mandala.description}
-              </p>
 
-              {/* Stats */}
-              <div className="flex items-center justify-between text-sm text-gray-600 pt-4 border-t border-orange-100">
-                <span>📜 {mandala.verses} verses</span>
-                <span className="text-orange-600 font-semibold">Explore →</span>
-              </div>
+          {/* Footer Note */}
+          <div className="mt-12 text-center">
+            <div className="inline-block bg-orange-100 rounded-full px-6 py-3 text-sm text-orange-800">
+              <Headphones className="inline mr-2" size={16} />
+              Each Mandala has an exclusive podcast episode!
             </div>
-          ))}
-        </div>
-
-        {/* Footer Note */}
-        <div className="mt-12 text-center">
-          <div className="inline-block bg-orange-100 rounded-full px-6 py-3 text-sm text-orange-800">
-            <Headphones className="inline mr-2" size={16} />
-            Each Mandala has an exclusive podcast episode!
           </div>
         </div>
       </div>
+
 
       {/* Modal */}
       {selectedMandala && !showPodcast && (
@@ -334,8 +367,9 @@ const TenMandalas = () => {
           onListenPodcast={handleListenPodcast}
         />
       )}
-    </div>
+    </>
   );
 };
+
 
 export default TenMandalas;

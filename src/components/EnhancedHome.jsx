@@ -104,6 +104,14 @@ const EnhancedHome = () => {
       link: '/hymns'
     },
     {
+      id: 'deity-network',
+      icon: <Network size={20} />,
+      title: 'DEITY NETWORK',
+      description: 'EXPLORE RELATIONSHIPS BETWEEN VEDIC DEITIES',
+      path: '/deity-network'
+    },
+    
+    {
       id: 9,
       icon: <Star className="w-5 h-5" />,
       title: "Constellations",
@@ -351,34 +359,41 @@ const EnhancedHome = () => {
                      </button>
 
                      {/* Rishi Mascot - Left Side */}
+                     {/* Rishi Mascot - Left Side */}
                      <div className="hidden md:flex md:w-2/5 bg-gradient-to-b from-amber-100 to-orange-100 p-4 flex-col items-center justify-center border-r-2 border-amber-300 overflow-hidden">
-                        <motion.img
-                           src="/images/rishi-mascot.png"
-                           alt="Rishi Guide"
+                        <motion.video
+                           autoPlay
+                           loop
+                           muted
+                           playsInline
                            className="w-full max-w-[180px] h-auto rounded-lg shadow-lg mb-3"
                            initial={{ scale: 0.8, opacity: 0 }}
                            animate={{ scale: 1, opacity: 1 }}
                            transition={{ delay: 0.2, duration: 0.5 }}
                            style={{
-                              imageRendering: 'pixelated',
                               filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.3))'
                            }}
-                        />
+                        >
+                           <source src="/images/rishi-mascot.mp4" type="video/mp4" />
+                           Your browser does not support the video tag.
+                        </motion.video>
+
                         <motion.div
                            initial={{ opacity: 0, y: 20 }}
                            animate={{ opacity: 1, y: 0 }}
                            transition={{ delay: 0.4, duration: 0.5 }}
                            className="text-center px-2"
                         >
-                           <h3 className="text-base font-bold text-amber-900 mb-1.5" style={{ fontFamily: 'Georgia, Garamond, serif' }}>
+                           <h3 className="text-base font-bold text-amber-900 mb-1.5 flex items-center justify-center gap-2" style={{ fontFamily: 'Georgia, Garamond, serif' }}>
                               Greetings, Seeker! <Sparkles className="w-4 h-4 text-amber-600" />
                            </h3>
-                           <p className="text-[11px] text-amber-700 leading-snug min-h-[60px]" style={{ fontFamily: 'Georgia, Garamond, serif', fontStyle: 'italic' }}>
+                           <p className="text-[11px] text-amber-700 leading-snug min-h-[60px]" style={{ fontFamily: "'Press Start 2P', 'Courier New', monospace", fontStyle: 'normal', lineHeight: '1.6' }}>
                               {rishiText}
                               {rishiText.length < fullRishiText.length && <span className="animate-pulse">|</span>}
                            </p>
                         </motion.div>
                      </div>
+
 
 
                      {/* Journey Options - Right Side */}

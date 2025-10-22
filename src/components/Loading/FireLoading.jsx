@@ -37,43 +37,63 @@ const FireLoading = ({ playSound = true }) => {
   }, [playSound]);
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-b from-orange-900 via-red-900 to-black">
-      {/* Fire Animation */}
-      <div className="w-150 h-140 mb-8">
-        <Lottie
-          animationData={fireAnimation}
-          loop={true}
-          autoplay={true}
-        />
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-b from-orange-900 via-red-900 to-black overflow-hidden">
+      {/* Texts stacked above flame */}
+      <div className="flex flex-col items-center gap-1 mb-3">
+        {/* Hindi text - Bold */}
+        <span
+          style={{
+            fontFamily: 'serif',
+            fontWeight: 700,
+            fontSize: '2rem',
+            color: '#FED7AA',
+            textShadow: '0 1px 8px #a75513'
+          }}
+        >
+          अग्नि देव का आह्वान
+        </span>
+        {/* Sanskrit text - Thinner */}
+        <span
+          style={{
+            fontFamily: 'serif',
+            fontWeight: 400,
+            fontSize: '1.6rem',
+            color: '#FED7AA',
+            textShadow: '0 1px 8px #a75513'
+          }}
+        >
+          ॐ अग्नये नमः
+        </span>
       </div>
 
-      {/* Loading Text */}
-      <h2 
-        style={{ 
-          fontSize: '3rem',
-          fontFamily: 'serif',
-          fontWeight: 'bold',
-          color: '#FED7AA',
-          marginTop: '3rem',
-          marginBottom: '1rem',
-          animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
-        }}
-      >
-        Invoking Agni Dev...
-      </h2>
-
-      <p className="text-2xl text-orange-200/80 italic mb-8">
-      ॐ अग्नये नमः 🔥
-      </p>
-
-      {/* Animated Progress Dots */}
-      <div className="flex gap-3">
-        <span className="w-4 h-4 bg-orange-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></span>
-        <span className="w-4 h-4 bg-orange-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></span>
-        <span className="w-4 h-4 bg-orange-400 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></span>
+      {/* Flame Centered - with proper spacing */}
+      <div className="flex items-center justify-center flex-1">
+        <div className="w-[500px] h-[500px]">
+          <Lottie animationData={fireAnimation} loop={true} autoplay={true} />
+        </div>
       </div>
 
-      {/* Audio Element - Import the sound file */}
+      {/* Bottom loading text and dots - more space from flame */}
+      <div className="flex flex-col items-center mt-8 mb-6">
+        <h2
+          style={{
+            fontSize: '1.8rem',
+            fontFamily: 'serif',
+            fontWeight: 'bold',
+            color: '#FED7AA',
+            marginBottom: '0.5rem'
+          }}
+        >
+          Invoking Agni Dev...
+        </h2>
+        <div className="flex gap-3">
+          <span className="w-4 h-4 bg-orange-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></span>
+          <span className="w-4 h-4 bg-orange-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></span>
+          <span className="w-4 h-4 bg-orange-400 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></span>
+        </div>
+      </div>
+
+      {/* Sound */}
       <audio
         ref={audioRef}
         src={fireSound}

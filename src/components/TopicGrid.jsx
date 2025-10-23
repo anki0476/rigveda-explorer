@@ -4,11 +4,10 @@ import topics from '../data/topics.json';
 import BookLoadingAnimation from './BookLoadingAnimation';
 import RishiWelcome from './RishiWelcome';
 
-
 const TopicGrid = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [topicsList, setTopicsList] = useState([]);
-
+  const [visibleCount, setVisibleCount] = useState(9);
 
   // Simulate loading
   useEffect(() => {
@@ -18,7 +17,6 @@ const TopicGrid = () => {
       setIsLoading(false);
     }, 800);
   }, []);
-
 
   const getDifficultyColor = (difficulty) => {
     switch (difficulty) {
@@ -33,6 +31,12 @@ const TopicGrid = () => {
     }
   };
 
+  const visibleTopics = topicsList.slice(0, visibleCount);
+  const hasMore = visibleCount < topicsList.length;
+
+  const loadMore = () => {
+    setVisibleCount(prev => Math.min(prev + 9, topicsList.length));
+  };
 
   // Show book animation while loading
   if (isLoading) {
@@ -50,7 +54,6 @@ const TopicGrid = () => {
       </div>
     );
   }
-
 
   return (
     <>
@@ -73,10 +76,9 @@ const TopicGrid = () => {
           </p>
         </div>
 
-
         {/* Topic Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {topicsList.map((topic) => (
+          {visibleTopics.map((topic) => (
             <Link
               key={topic.id}
               to={`/rigveda-on/${topic.id}`}
@@ -92,12 +94,10 @@ const TopicGrid = () => {
                   </span>
                 </div>
 
-
                 {/* Icon */}
                 <div className="text-6xl mb-4">
                   {topic.icon}
                 </div>
-
 
                 {/* Title */}
                 <div>
@@ -110,7 +110,6 @@ const TopicGrid = () => {
                     {topic.description}
                   </p>
 
-
                   {/* Stats */}
                   <div className="flex items-center gap-4 text-white/80 text-sm">
                     <span className="flex items-center gap-1">
@@ -122,13 +121,39 @@ const TopicGrid = () => {
                   </div>
                 </div>
 
-
                 {/* Hover Effect Overlay */}
                 <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-all duration-300 pointer-events-none" />
               </div>
             </Link>
           ))}
         </div>
+
+        {/* Load More Button */}
+        {hasMore && (
+            <div className="flex flex-col items-center gap-4 mb-12">
+                <button
+                    onClick={loadMore}
+                    className="group relative px-10 py-4 bg-gradient-to-r from-orange-600 via-orange-500 to-amber-600 
+                             text-white text-lg font-[family:--font-family-header] rounded-full shadow-xl 
+                             hover:shadow-2xl hover:from-orange-700 hover:via-orange-600 hover:to-amber-700
+                             transform hover:scale-105 transition-all duration-300
+                             flex items-center gap-3 border-2 border-white/20"
+                >
+                    <span className="font-bold tracking-wide">LOAD MORE TOPICS</span>
+                    <svg 
+                        className="w-5 h-5 transform group-hover:translate-y-1 transition-transform" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                    >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div className="text-center text-[--color-ink] font-[family:--font-family-body] text-base font-semibold">
+                    Showing {visibleTopics.length} of {topicsList.length} topics
+                </div>
+            </div>
+        )}
 
 
         {/* Info Section */}
@@ -166,7 +191,6 @@ const TopicGrid = () => {
           </div>
         </div>
 
-
         {/* Keywords Preview */}
         <div className="mt-8 p-6 bg-[--color-parchment-dark] rounded-lg">
           <h3 className="text-lg font-[family:--font-family-header] text-[--color-ink] mb-4 text-center">
@@ -187,6 +211,5 @@ const TopicGrid = () => {
     </>
   );
 };
-
 
 export default TopicGrid;

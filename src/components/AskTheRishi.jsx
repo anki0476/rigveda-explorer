@@ -573,7 +573,9 @@ Provide a thoughtful, well-cited answer as the Rishi:`;
                           <ReactMarkdown
                             components={{
                               p: ({node, ...props}) => <p className="mb-3" {...props} />,
-                              strong: ({node, ...props}) => <strong className="font-bold text-[--color-saffron]" {...props} />,
+                              strong: ({ node, ...props }) => (
+                                <strong className="font-extrabold text-[--color-saffron]" style={{ fontWeight: '800' }} {...props} />
+                              ),                                                           
                               em: ({node, ...props}) => <em className="italic" {...props} />,
                               ul: ({node, ...props}) => <ul className="list-disc list-inside mb-3 space-y-1" {...props} />,
                               ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-3 space-y-1" {...props} />,
@@ -706,7 +708,7 @@ Provide a thoughtful, well-cited answer as the Rishi:`;
                 <button
                   key={idx}
                   onClick={() => setInput(question)}
-                  className="px-4 py-2 bg-[--color-parchment-dark] text-[--color-ink] rounded-full text-sm hover:bg-[--color-gold]/20 transition-colors font-[family:--font-family-body] border-2 border-[--color-gold]"
+                  className="px-4 py-2 bg-[--color-parchment-dark] text-[--color-ink] rounded-full text-sm hover:bg-[--color-gold] hover:text-white hover:shadow-lg hover:scale-105 hover:border-[--color-saffron] transition-all duration-300 font-[family:--font-family-body] border-2 border-[--color-gold] cursor-pointer"
                   disabled={isLoading || error}
                 >
                   {question}

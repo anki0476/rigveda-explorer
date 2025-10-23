@@ -12,6 +12,7 @@ const HymnBrowser = () => {
   const [selectedHymn, setSelectedHymn] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [hymns, setHymns] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(9); // ⭐ ADD THIS LINE
 
   // Load hymns with delay
   useEffect(() => {
@@ -21,6 +22,11 @@ const HymnBrowser = () => {
       setIsLoading(false);
     }, 800);
   }, []);
+
+  // ⭐ ADD THIS useEffect - Reset visible count when filters change
+  useEffect(() => {
+    setVisibleCount(9);
+  }, [searchQuery, selectedMandala, selectedDeity]);
 
   // Get unique mandalas and deities from loaded hymns
   const mandalas = [...new Set(hymns.map(h => h.mandala))].sort((a, b) => a - b);
@@ -41,6 +47,11 @@ const HymnBrowser = () => {
     
     return matchesSearch && matchesMandala && matchesDeity;
   });
+
+  // ⭐ ADD THESE 3 LINES - After filteredHymns
+  const visibleHymns = filteredHymns.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredHymns.length;
+  const loadMore = () => setVisibleCount(prev => Math.min(prev + 9, filteredHymns.length));
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -439,9 +450,9 @@ const HymnBrowser = () => {
         </div>
       </div>
 
-      {/* Hymn Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredHymns.map((hymn, index) => (
+      {/* Hymn Grid - CHANGE filteredHymns to visibleHymns */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        {visibleHymns.map((hymn, index) => (
           <div
             key={index}
             onClick={() => setSelectedHymn(hymn)}
@@ -483,6 +494,33 @@ const HymnBrowser = () => {
         ))}
       </div>
 
+      {/* ⭐ ADD LOAD MORE BUTTON HERE */}
+      {hasMore && (
+        <div className="flex flex-col items-center gap-4 mb-12">
+          <button
+            onClick={loadMore}
+            className="group relative px-10 py-4 bg-gradient-to-r from-orange-600 via-orange-500 to-amber-600 
+                     text-white text-lg font-[family:--font-family-header] rounded-full shadow-xl 
+                     hover:shadow-2xl hover:from-orange-700 hover:via-orange-600 hover:to-amber-700
+                     transform hover:scale-105 transition-all duration-300
+                     flex items-center gap-3 border-2 border-white/20"
+          >
+            <span className="font-bold tracking-wide">LOAD MORE HYMNS</span>
+            <svg 
+              className="w-5 h-5 transform group-hover:translate-y-1 transition-transform" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div className="text-center text-[--color-ink] font-[family:--font-family-body] text-base font-semibold">
+            Showing {visibleHymns.length} of {filteredHymns.length} hymns
+          </div>
+        </div>
+      )}
+
       {/* No Results */}
       {filteredHymns.length === 0 && (
         <div className="text-center py-12">
@@ -495,6 +533,106 @@ const HymnBrowser = () => {
       {/* Render Modal */}
       <Modal />
     </div>
+      {/* Explore Complete Rigveda Section */}
+      <div className="mt-12 bg-gradient-to-br from-[--color-parchment-light] to-[--color-parchment-dark] rounded-2xl border-4 border-[--color-gold] p-8 shadow-2xl">
+        <div className="text-center mb-6">
+          <h2 className="text-3xl font-[family:--font-family-header] text-[--color-ink] mb-3">
+            🕉️ Explore All 1,028 Rigveda Hymns
+          </h2>
+          <p className="text-[--color-ink-light] font-[family:--font-family-body] max-w-2xl mx-auto">
+            Continue your journey through the complete Rigveda with these verified sacred sources
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Text Resources */}
+          <div className="bg-[--color-parchment-dark] rounded-xl p-6 border-2 border-[--color-gold]/30">
+            <h3 className="text-xl font-[family:--font-family-header] text-[--color-ink] mb-4 flex items-center gap-2">
+              📖 Complete Text Collections
+            </h3>
+            <div className="space-y-3">
+              <a
+                href="https://sacred-texts.com/hin/rigveda/index.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-[--color-ink] text-white px-4 py-3 rounded-lg font-[family:--font-family-body] font-semibold hover:bg-[--color-saffron] hover:shadow-lg hover:scale-105 transition-all duration-300 border-2 border-[--color-gold]"
+              >
+                📜 Sacred-Texts Archive (English Translation)
+              </a>
+              <a
+                href="https://sacred-texts.com/hin/rvsan/index.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-[--color-ink] text-white px-4 py-3 rounded-lg font-[family:--font-family-body] font-semibold hover:bg-[--color-saffron] hover:shadow-lg hover:scale-105 transition-all duration-300 border-2 border-[--color-gold]"
+              >
+                🕉️ Rigveda in Sanskrit (Devanagari)
+              </a>
+              <a
+                href="https://vedicheritage.gov.in/samhitas/rigveda/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-[--color-ink] text-white px-4 py-3 rounded-lg font-[family:--font-family-body] font-semibold hover:bg-[--color-saffron] hover:shadow-lg hover:scale-105 transition-all duration-300 border-2 border-[--color-gold]"
+              >
+                🏛️ Vedic Heritage Portal (Government of India)
+              </a>
+              <a
+                href="https://archive.org/details/rigvedacomplete"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-[--color-ink] text-white px-4 py-3 rounded-lg font-[family:--font-family-body] font-semibold hover:bg-[--color-saffron] hover:shadow-lg hover:scale-105 transition-all duration-300 border-2 border-[--color-gold]"
+              >
+                📚 Internet Archive (Complete English)
+              </a>
+            </div>
+          </div>
+
+          {/* Audio Resources */}
+          <div className="bg-[--color-parchment-dark] rounded-xl p-6 border-2 border-[--color-gold]/30">
+            <h3 className="text-xl font-[family:--font-family-header] text-[--color-ink] mb-4 flex items-center gap-2">
+              🎵 Audio Recitations & Chanting
+            </h3>
+            <div className="space-y-3">
+              <a
+                href="https://archive.org/details/rig-veda_recitation_202009"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-[--color-ink] text-white px-4 py-3 rounded-lg font-[family:--font-family-body] font-semibold hover:bg-[--color-saffron] hover:shadow-lg hover:scale-105 transition-all duration-300 border-2 border-[--color-gold]"
+              >
+                🔊 Complete Rigveda Parayana (Archive.org)
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=lW5WByctPsw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-[--color-ink] text-white px-4 py-3 rounded-lg font-[family:--font-family-body] font-semibold hover:bg-[--color-saffron] hover:shadow-lg hover:scale-105 transition-all duration-300 border-2 border-[--color-gold]"
+              >
+                🎼 Vedic Mantras Chanting (YouTube)
+              </a>
+              <a
+                href="https://www.shaivam.org/audio-gallery/rig-veda/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-[--color-ink] text-white px-4 py-3 rounded-lg font-[family:--font-family-body] font-semibold hover:bg-[--color-saffron] hover:shadow-lg hover:scale-105 transition-all duration-300 border-2 border-[--color-gold]"
+              >
+                🎧 Shaivam.org Audio Gallery (MP3 Downloads)
+              </a>
+              <a
+                href="https://sri-aurobindo.co.in/workings/matherials/rigveda/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-[--color-ink] text-white px-4 py-3 rounded-lg font-[family:--font-family-body] font-semibold hover:bg-[--color-saffron] hover:shadow-lg hover:scale-105 transition-all duration-300 border-2 border-[--color-gold]"
+              >
+                🎶 Sri Aurobindo Foundation (Audio + Text)
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-6 text-center text-sm text-[--color-ink] font-[family:--font-family-body] font-semibold">
+          <p>✨ These sources contain all 1,028 hymns (10,600 verses) across 10 Mandalas ✨</p>
+        </div>
+      </div>
+
     </>
   );
 };

@@ -443,26 +443,344 @@
         "mind"
       ],
       "difficulty": "intermediate"
+    },
+        {
+      "id": "manifestation",
+      "title": "Manifestation & Desire",
+      "shortTitle": "Manifestation",
+      "icon": "✨",
+      "color": "#A855F7",
+      "gradient": "linear-gradient(135deg, #A855F7 0%, #EC4899 100%)",
+      "description": "Ancient Vedic Wisdom on Manifesting Your Reality",
+      "summary": "The Rigveda's concept of Sankalpa (sacred intention) and Kama (divine desire) teach manifestation through alignment with cosmic order (Rita). Channel divine will to bring dreams into reality.",
+      "keywords": [
+        "manifestation",
+        "sankalpa",
+        "kama",
+        "desire",
+        "intention",
+        "reality",
+        "creation"
+      ],
+      "hymnCount": 7,
+      "deities": [
+        "kama",
+        "vishvedevas",
+        "indra"
+      ],
+      "relatedTopics": [
+        "success",
+        "purpose",
+        "mind"
+      ],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "overthinking",
+      "title": "Overcoming Overthinking",
+      "shortTitle": "Overthinking",
+      "icon": "🧠",
+      "color": "#3B82F6",
+      "gradient": "linear-gradient(135deg, #3B82F6 0%, #06B6D4 100%)",
+      "description": "Vedic Mind Control Techniques",
+      "summary": "Rigvedic mantras and meditation techniques that neuroscience confirms can stop mental loops and bring clarity. Master your restless mind (Chitta Vritti) through ancient wisdom.",
+      "keywords": [
+        "overthinking",
+        "meditation",
+        "mind control",
+        "clarity",
+        "peace",
+        "focus",
+        "mental loops"
+      ],
+      "hymnCount": 6,
+      "deities": [
+        "vishvedevas",
+        "soma",
+        "vayu"
+      ],
+      "relatedTopics": [
+        "mind",
+        "wellbeing",
+        "focus"
+      ],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "depression",
+      "title": "Depression & Mental Health",
+      "shortTitle": "Mental Health",
+      "icon": "🌅",
+      "color": "#F59E0B",
+      "gradient": "linear-gradient(135deg, #F59E0B 0%, #F97316 100%)",
+      "description": "Rigvedic Approaches to Healing the Mind",
+      "summary": "Rigveda RV 1.71 addresses mental pain (Vishada) and offers ancient healing through mantras, gratitude, and connection to light. Find hope through Vedic wisdom.",
+      "keywords": [
+        "depression",
+        "mental health",
+        "healing",
+        "hope",
+        "vishada",
+        "recovery",
+        "wellbeing"
+      ],
+      "hymnCount": 8,
+      "deities": [
+        "ashvins",
+        "ushas",
+        "surya",
+        "soma"
+      ],
+      "relatedTopics": [
+        "wellbeing",
+        "mind",
+        "health"
+      ],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "anxiety",
+      "title": "Anxiety & Fear",
+      "shortTitle": "Anxiety",
+      "icon": "🕊️",
+      "color": "#14B8A6",
+      "gradient": "linear-gradient(135deg, #14B8A6 0%, #10B981 100%)",
+      "description": "Finding Peace Through Vedic Wisdom",
+      "summary": "Discover Rigvedic hymns to calm the restless mind and reduce attachment - the root cause of anxiety and fear. Learn Shanti mantras for inner peace.",
+      "keywords": [
+        "anxiety",
+        "fear",
+        "peace",
+        "shanti",
+        "calm",
+        "attachment",
+        "tranquility"
+      ],
+      "hymnCount": 7,
+      "deities": [
+        "varuna",
+        "mitra",
+        "vishvedevas",
+        "apas"
+      ],
+      "relatedTopics": [
+        "wellbeing",
+        "mind",
+        "overthinking"
+      ],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "focus",
+      "title": "Focus & Concentration",
+      "shortTitle": "Focus",
+      "icon": "🎯",
+      "color": "#EF4444",
+      "gradient": "linear-gradient(135deg, #EF4444 0%, #F43F5E 100%)",
+      "description": "Sharpening Your Mind the Vedic Way",
+      "summary": "Learn about Medhya Rasayana herbs and mantras from the Rigveda that enhance mental clarity and sustained focus. Develop laser-sharp concentration.",
+      "keywords": [
+        "focus",
+        "concentration",
+        "clarity",
+        "medhya",
+        "attention",
+        "mindfulness",
+        "dhyana"
+      ],
+      "hymnCount": 6,
+      "deities": [
+        "sarasvati",
+        "brihaspati",
+        "agni"
+      ],
+      "relatedTopics": [
+        "mind",
+        "success",
+        "overthinking"
+      ],
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "self-love",
+      "title": "Self-Love & Inner Worth",
+      "shortTitle": "Self-Love",
+      "icon": "💖",
+      "color": "#EC4899",
+      "gradient": "linear-gradient(135deg, #EC4899 0%, #F43F5E 100%)",
+      "description": "Recognizing Your Divine Nature",
+      "summary": "Explore Rigvedic hymns that celebrate the Atman (true self) and teach self-acceptance as divine presence. You are a spark of the cosmic fire.",
+      "keywords": [
+        "self-love",
+        "atman",
+        "divine",
+        "worth",
+        "acceptance",
+        "self-care",
+        "essence"
+      ],
+      "hymnCount": 5,
+      "deities": [
+        "agni",
+        "ushas",
+        "vishvedevas"
+      ],
+      "relatedTopics": [
+        "wellbeing",
+        "authenticity",
+        "purpose"
+      ],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "stress",
+      "title": "Stress Management",
+      "shortTitle": "Stress",
+      "icon": "🧘",
+      "color": "#8B5CF6",
+      "gradient": "linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%)",
+      "description": "Ancient Techniques for Modern Pressure",
+      "summary": "Discover pranayama, meditation, and Rigvedic mantras scientifically proven to lower cortisol and calm the nervous system. Find peace in chaos.",
+      "keywords": [
+        "stress",
+        "management",
+        "cortisol",
+        "relaxation",
+        "pranayama",
+        "meditation",
+        "calm"
+      ],
+      "hymnCount": 8,
+      "deities": [
+        "vayu",
+        "apas",
+        "soma",
+        "vishvedevas"
+      ],
+      "relatedTopics": [
+        "wellbeing",
+        "anxiety",
+        "health"
+      ],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "abundance",
+      "title": "Wealth & Abundance",
+      "shortTitle": "Abundance",
+      "icon": "💰",
+      "color": "#FBBF24",
+      "gradient": "linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%)",
+      "description": "Vedic Principles of Prosperity",
+      "summary": "Learn about Lakshmi Sukta and Rigvedic hymns invoking Indra for righteous wealth, success, and material prosperity. Align with cosmic abundance.",
+      "keywords": [
+        "wealth",
+        "abundance",
+        "prosperity",
+        "lakshmi",
+        "money",
+        "riches",
+        "success"
+      ],
+      "hymnCount": 9,
+      "deities": [
+        "indra",
+        "lakshmi",
+        "pushan",
+        "vishvedevas"
+      ],
+      "relatedTopics": [
+        "success",
+        "manifestation",
+        "ambition"
+      ],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "vedic-relationships",
+      "title": "Healthy Relationships",
+      "shortTitle": "Love & Connection",
+      "icon": "💑",
+      "color": "#F472B6",
+      "gradient": "linear-gradient(135deg, #F472B6 0%, #EC4899 100%)",
+      "description": "Vedic Wisdom on Connection & Love",
+      "summary": "Explore Rigvedic marriage hymns (RV 10.85) and principles of dharma in relationships, compassion, and sacred partnership. Build divine connections.",
+      "keywords": [
+        "relationships",
+        "love",
+        "marriage",
+        "partnership",
+        "connection",
+        "dharma",
+        "compassion"
+      ],
+      "hymnCount": 6,
+      "deities": [
+        "mitra",
+        "varuna",
+        "agni",
+        "soma"
+      ],
+      "relatedTopics": [
+        "relationships",
+        "ethics",
+        "wellbeing"
+      ],
+      "difficulty": "beginner"
+    },
+    {
+      "id": "life-purpose",
+      "title": "Life Purpose & Dharma",
+      "shortTitle": "Your Calling",
+      "icon": "🌟",
+      "color": "#8B5CF6",
+      "gradient": "linear-gradient(135deg, #8B5CF6 0%, #D946EF 100%)",
+      "description": "Finding Your Sacred Path",
+      "summary": "Discover how the Rigveda defines Dharma (purpose) and Svadharma (unique calling) to live an aligned, fulfilling life. Find your cosmic role.",
+      "keywords": [
+        "purpose",
+        "dharma",
+        "svadharma",
+        "calling",
+        "path",
+        "meaning",
+        "alignment"
+      ],
+      "hymnCount": 10,
+      "deities": [
+        "varuna",
+        "vishvedevas",
+        "agni",
+        "indra"
+      ],
+      "relatedTopics": [
+        "purpose",
+        "authenticity",
+        "success"
+      ],
+      "difficulty": "intermediate"
     }
   ],
   "metadata": {
-    "totalTopics": 15,
-    "totalHymns": 124,
+    "totalTopics": 25,
+    "totalHymns": 196,
     "categories": [
       "Mind & Consciousness",
       "Physical Wellbeing",
       "Purpose & Meaning",
       "Relationships",
       "Success & Achievement",
-      "Leadership & Influence"
+      "Leadership & Influence",
+      "Mental Wellness",
+      "Modern Life"
     ],
     "difficultyLevels": {
-      "beginner": 6,
-      "intermediate": 8,
+      "beginner": 13,
+      "intermediate": 11,
       "advanced": 1
     },
     "note": "Topics span from ancient wisdom to modern concerns, making Vedic insights accessible to Gen Z and high-performers",
-    "version": "2.0",
-    "lastUpdated": "2025-10-17"
+    "version": "3.0",
+    "lastUpdated": "2025-10-23"
   }
 }

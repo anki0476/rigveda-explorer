@@ -1,149 +1,499 @@
 {
-    "constellations": [
-      {
-        "id": "krittika",
-        "name": "Krittika",
-        "englishName": "The Pleiades",
-        "rigvedaReference": "RV 10.85.13",
-        "deity": "Agni (Fire God)",
-        "significance": "Marks the beginning of the Vedic year. This constellation is mentioned in the famous wedding hymn and represents divine fire and purification.",
-        "modernConstellation": "Pleiades (M45)",
-        "meaning": "The Cutters / The Nurses of Kartikeya",
-        "symbolism": "Razor, Flame, Spear",
-        "stars": [
-          { "x": 300, "y": 150, "size": 3, "name": "Alcyone" },
-          { "x": 320, "y": 160, "size": 2.5, "name": "Atlas" },
-          { "x": 310, "y": 140, "size": 2, "name": "Electra" },
-          { "x": 290, "y": 165, "size": 2, "name": "Maia" },
-          { "x": 330, "y": 155, "size": 2, "name": "Merope" },
-          { "x": 315, "y": 170, "size": 2, "name": "Taygeta" },
-          { "x": 295, "y": 145, "size": 2, "name": "Pleione" }
-        ]
-      },
-      {
-        "id": "rohini",
-        "name": "Rohini",
-        "englishName": "Aldebaran",
-        "rigvedaReference": "RV 9.86.36",
-        "deity": "Prajapati (Creator) / Brahma",
-        "significance": "The Moon's favorite wife among the 27 Nakshatras. Associated with creation, growth, and fertility. Mentioned in Soma hymns.",
-        "modernConstellation": "Taurus (Aldebaran)",
-        "meaning": "The Red One / The Growing One",
-        "symbolism": "Chariot, Temple, Banyan Tree",
-        "stars": [
-          { "x": 400, "y": 200, "size": 4, "name": "Aldebaran" },
-          { "x": 385, "y": 190, "size": 2, "name": "Gamma Tauri" },
-          { "x": 415, "y": 195, "size": 2, "name": "Delta Tauri" },
-          { "x": 395, "y": 210, "size": 2, "name": "Epsilon Tauri" },
-          { "x": 420, "y": 205, "size": 1.5, "name": "Theta Tauri" }
-        ]
-      },
-      {
-        "id": "mrigashirsha",
-        "name": "Mrigashirsha",
-        "englishName": "Orion's Head",
-        "rigvedaReference": "RV 10.61.8",
-        "deity": "Soma (Moon God)",
-        "significance": "The deer's head constellation. Associated with seeking, searching, and the hunt for knowledge. Represents curiosity and exploration.",
-        "modernConstellation": "Orion (Lambda Orionis)",
-        "meaning": "The Deer's Head",
-        "symbolism": "Deer's Head, Snake, Honeycomb",
-        "stars": [
-          { "x": 500, "y": 250, "size": 3, "name": "Lambda Orionis" },
-          { "x": 490, "y": 235, "size": 2, "name": "Phi1 Orionis" },
-          { "x": 510, "y": 240, "size": 2, "name": "Phi2 Orionis" },
-          { "x": 495, "y": 260, "size": 2, "name": "Meissa" }
-        ]
-      },
-      {
-        "id": "ardra",
-        "name": "Ardra",
-        "englishName": "Betelgeuse",
-        "rigvedaReference": "RV 1.23.8-10",
-        "deity": "Rudra (Storm God)",
-        "significance": "The fierce constellation associated with storms, destruction, and renewal. Represents transformation through difficulty.",
-        "modernConstellation": "Orion (Betelgeuse)",
-        "meaning": "The Moist One / The Storm",
-        "symbolism": "Teardrop, Diamond, Human Head",
-        "stars": [
-          { "x": 350, "y": 300, "size": 4, "name": "Betelgeuse" },
-          { "x": 340, "y": 285, "size": 2, "name": "Gamma Orionis" },
-          { "x": 360, "y": 290, "size": 2, "name": "Mu Orionis" },
-          { "x": 355, "y": 315, "size": 2, "name": "Nu Orionis" }
-        ]
-      },
-      {
-        "id": "punarvasu",
-        "name": "Punarvasu",
-        "englishName": "Castor & Pollux",
-        "rigvedaReference": "RV 6.66.7",
-        "deity": "Aditi (Mother of Gods)",
-        "significance": "The return of light. Represents renewal, restoration, and the cyclic nature of existence. Associated with abundance.",
-        "modernConstellation": "Gemini (Castor & Pollux)",
-        "meaning": "The Two Restorers of Goods",
-        "symbolism": "Bow and Quiver, House",
-        "stars": [
-          { "x": 250, "y": 200, "size": 3.5, "name": "Castor" },
-          { "x": 270, "y": 195, "size": 3.5, "name": "Pollux" },
-          { "x": 255, "y": 215, "size": 2, "name": "Alhena" },
-          { "x": 265, "y": 180, "size": 2, "name": "Mebsuta" }
-        ]
-      },
-      {
-        "id": "pushya",
-        "name": "Pushya",
-        "englishName": "Cancer Cluster",
-        "rigvedaReference": "RV 10.127.1",
-        "deity": "Brihaspati (Jupiter)",
-        "significance": "The nourisher. Most auspicious Nakshatra. Associated with spiritual nourishment and growth. Mentioned in night hymns.",
-        "modernConstellation": "Cancer (M44 Beehive)",
-        "meaning": "The Nourisher / The Flower",
-        "symbolism": "Cow's Udder, Lotus, Arrow",
-        "stars": [
-          { "x": 450, "y": 350, "size": 2.5, "name": "Delta Cancri" },
-          { "x": 440, "y": 345, "size": 2, "name": "Theta Cancri" },
-          { "x": 460, "y": 355, "size": 2, "name": "Gamma Cancri" },
-          { "x": 455, "y": 340, "size": 2, "name": "Eta Cancri" },
-          { "x": 445, "y": 360, "size": 1.5, "name": "Acubens" }
-        ]
-      },
-      {
-        "id": "ashwini",
-        "name": "Ashwini",
-        "englishName": "Beta Arietis",
-        "rigvedaReference": "RV 1.112.1-25",
-        "deity": "Ashwini Kumaras (Divine Physicians)",
-        "significance": "The horse tamers. First Nakshatra in the cycle. Associated with healing, speed, and new beginnings. Extensively praised in Rigveda.",
-        "modernConstellation": "Aries (Beta & Gamma Arietis)",
-        "meaning": "Born of a Female Horse",
-        "symbolism": "Horse's Head",
-        "stars": [
-          { "x": 200, "y": 250, "size": 3, "name": "Hamal" },
-          { "x": 210, "y": 240, "size": 2.5, "name": "Sheratan" },
-          { "x": 220, "y": 255, "size": 2, "name": "Mesarthim" },
-          { "x": 195, "y": 260, "size": 2, "name": "41 Arietis" }
-        ]
-      },
-      {
-        "id": "saptarishi",
-        "name": "Saptarishi",
-        "englishName": "The Big Dipper",
-        "rigvedaReference": "RV 10.82.2",
-        "deity": "The Seven Sages",
-        "significance": "The Seven Great Sages who preserved Vedic knowledge. Represents wisdom, guidance, and spiritual authority. Central to Vedic cosmology.",
-        "modernConstellation": "Ursa Major",
-        "meaning": "The Seven Sages",
-        "symbolism": "Seven Stars / Celestial Bear",
-        "stars": [
-          { "x": 550, "y": 150, "size": 3, "name": "Dubhe" },
-          { "x": 570, "y": 140, "size": 3, "name": "Merak" },
-          { "x": 590, "y": 155, "size": 2.5, "name": "Phecda" },
-          { "x": 605, "y": 165, "size": 2.5, "name": "Megrez" },
-          { "x": 620, "y": 155, "size": 2.5, "name": "Alioth" },
-          { "x": 635, "y": 145, "size": 2.5, "name": "Mizar" },
-          { "x": 650, "y": 140, "size": 2.5, "name": "Alkaid" }
-        ]
-      }
-    ]
-  }
-  
+  "constellations": [
+    {
+      "id": "ashwini",
+      "name": "Ashwini",
+      "englishName": "The Horse Heads",
+      "rigvedaReference": "RV 1.112.1-24, RV 1.116.1-25, RV 8.8.1-23",
+      "deity": "Ashvini Kumaras (Divine Physicians)",
+      "significance": "The opening nakshatra, representing healing and speed. Extensively praised in 50+ Rigvedic hymns as miracle workers who restore youth, cure blindness, and rescue the drowning.",
+      "modernConstellation": "Aries (β Arietis)",
+      "meaning": "Born of a Horse / The Horsemen",
+      "symbolism": "Horse's head, Honey",
+      "stars": [
+        { "x": 150, "y": 200, "size": 3, "name": "β Arietis (Sheratan)" },
+        { "x": 170, "y": 210, "size": 2.5, "name": "γ Arietis (Mesarthim)" },
+        { "x": 140, "y": 190, "size": 2, "name": "α Arietis (Hamal)" }
+      ],
+      "connections": [[0, 1], [1, 2]]
+    },
+    {
+      "id": "bharani",
+      "name": "Bharani",
+      "englishName": "The Bearer",
+      "rigvedaReference": "RV 10.14.1-16, RV 10.16.1-9",
+      "deity": "Yama (Lord of Death and Dharma)",
+      "significance": "Connected to Yama hymns about death and the passage to the ancestral realm. Represents the cycle of birth and death, transformation, and karmic responsibility.",
+      "modernConstellation": "Aries (41 Arietis)",
+      "meaning": "She Who Bears / The Bearer",
+      "symbolism": "Yoni (womb), Boat, Cave",
+      "stars": [
+        { "x": 250, "y": 180, "size": 3, "name": "41 Arietis" },
+        { "x": 270, "y": 190, "size": 2.5, "name": "39 Arietis" },
+        { "x": 240, "y": 170, "size": 2, "name": "35 Arietis" },
+        { "x": 260, "y": 165, "size": 1.5, "name": "33 Arietis" }
+      ],
+      "connections": [[2, 0], [0, 1], [1, 3]]
+    },
+    {
+      "id": "krittika",
+      "name": "Krittika",
+      "englishName": "The Pleiades",
+      "rigvedaReference": "RV 10.85.13, RV 4.51.1-11",
+      "deity": "Agni (Fire God)",
+      "significance": "Marks the beginning of the Vedic year in ancient times. The seven stars represent the seven flames of Agni and the seven rishis.",
+      "modernConstellation": "Pleiades (M45) in Taurus",
+      "meaning": "The Cutters / The Nurses",
+      "symbolism": "Razor, Flame, Spear",
+      "stars": [
+        { "x": 300, "y": 150, "size": 3.5, "name": "Alcyone" },
+        { "x": 320, "y": 160, "size": 2.5, "name": "Atlas" },
+        { "x": 310, "y": 140, "size": 2.5, "name": "Electra" },
+        { "x": 290, "y": 165, "size": 2.5, "name": "Maia" },
+        { "x": 330, "y": 155, "size": 2, "name": "Merope" },
+        { "x": 315, "y": 170, "size": 2, "name": "Taygeta" },
+        { "x": 295, "y": 145, "size": 2, "name": "Pleione" }
+      ],
+      "connections": [[1, 0], [1, 4], [0, 2], [0, 3], [3, 6], [0, 5]]
+    },
+    {
+      "id": "rohini",
+      "name": "Rohini",
+      "englishName": "The Red One / Aldebaran",
+      "rigvedaReference": "RV 10.61.5-8, RV 5.54.13",
+      "deity": "Prajapati / Brahma (Creator)",
+      "significance": "Most auspicious nakshatra. The bright red star Aldebaran represents the 'ruddy' cow. Associated with fertility and prosperity.",
+      "modernConstellation": "Taurus (α Tauri / Hyades cluster)",
+      "meaning": "The Red One / The Growing One",
+      "symbolism": "Ox-cart, Chariot, Temple",
+      "stars": [
+        { "x": 400, "y": 200, "size": 4, "name": "Aldebaran" },
+        { "x": 385, "y": 190, "size": 2.5, "name": "θ¹ Tauri" },
+        { "x": 415, "y": 190, "size": 2.5, "name": "γ Tauri" },
+        { "x": 390, "y": 215, "size": 2, "name": "δ Tauri" },
+        { "x": 410, "y": 215, "size": 2, "name": "ε Tauri" }
+      ],
+      "connections": [[1, 0], [0, 2], [0, 3], [0, 4], [3, 4]]
+    },
+    {
+      "id": "mrigashira",
+      "name": "Mrigashira",
+      "englishName": "The Deer's Head",
+      "rigvedaReference": "RV 1.25.8, RV 5.40.7, RV 10.94.5",
+      "deity": "Soma / Chandra (Moon)",
+      "significance": "Represents Prajapati as deer being pursued. Connected to spiritual quest and seeking truth.",
+      "modernConstellation": "Orion (λ Orionis / Head region)",
+      "meaning": "The Deer's Head / Searching",
+      "symbolism": "Deer's head, Quest",
+      "stars": [
+        { "x": 500, "y": 300, "size": 3, "name": "λ Orionis (Meissa)" },
+        { "x": 520, "y": 310, "size": 2.5, "name": "φ¹ Orionis" },
+        { "x": 490, "y": 290, "size": 2, "name": "φ² Orionis" },
+        { "x": 485, "y": 315, "size": 2, "name": "ψ Orionis" }
+      ],
+      "connections": [[2, 0], [0, 1], [0, 3], [2, 3]]
+    },
+    {
+      "id": "ardra",
+      "name": "Ardra",
+      "englishName": "The Moist One / Teardrop",
+      "rigvedaReference": "RV 1.114.1-11, RV 2.33.1-15",
+      "deity": "Rudra (Storm God)",
+      "significance": "Associated with Rudra's fierce storms. Represents destruction that leads to renewal and the cleansing power of tears.",
+      "modernConstellation": "Orion (α Orionis / Betelgeuse)",
+      "meaning": "The Moist / Fresh",
+      "symbolism": "Teardrop, Diamond",
+      "stars": [
+        { "x": 550, "y": 350, "size": 4.5, "name": "Betelgeuse" },
+        { "x": 570, "y": 360, "size": 2.5, "name": "ξ Orionis" },
+        { "x": 530, "y": 360, "size": 2, "name": "ν Orionis" },
+        { "x": 550, "y": 370, "size": 2, "name": "μ Orionis" }
+      ],
+      "connections": [[0, 1], [0, 2], [2, 3], [3, 1]]
+    },
+    {
+      "id": "punarvasu",
+      "name": "Punarvasu",
+      "englishName": "Return of the Light",
+      "rigvedaReference": "RV 8.8.8, RV 1.112.1-24",
+      "deity": "Aditi (Mother of Gods)",
+      "significance": "Represents eternal return of prosperity and renewal of cosmic order. Associated with the Ashvins who restore what was lost.",
+      "modernConstellation": "Gemini (Castor & Pollux)",
+      "meaning": "Return of the Good",
+      "symbolism": "Bow, Quiver, House",
+      "stars": [
+        { "x": 600, "y": 250, "size": 3.5, "name": "Pollux" },
+        { "x": 620, "y": 260, "size": 3.2, "name": "Castor" },
+        { "x": 590, "y": 265, "size": 2, "name": "γ Geminorum" },
+        { "x": 610, "y": 235, "size": 2.5, "name": "μ Geminorum" },
+        { "x": 625, "y": 245, "size": 2, "name": "η Geminorum" }
+      ],
+      "connections": [[3, 0], [0, 1], [1, 4], [0, 2]]
+    },
+    {
+      "id": "pushya",
+      "name": "Pushya",
+      "englishName": "The Nourisher",
+      "rigvedaReference": "RV 1.35.1-11, RV 7.86.1",
+      "deity": "Brihaspati (Jupiter)",
+      "significance": "Most auspicious nakshatra for rituals. Represents nourishment on all levels - physical, spiritual, intellectual.",
+      "modernConstellation": "Cancer (δ Cancri / Beehive cluster area)",
+      "meaning": "The Nourisher / Flower",
+      "symbolism": "Cow's udder, Lotus",
+      "stars": [
+        { "x": 700, "y": 300, "size": 3, "name": "δ Cancri" },
+        { "x": 720, "y": 310, "size": 2.5, "name": "θ Cancri" },
+        { "x": 690, "y": 290, "size": 2, "name": "γ Cancri" },
+        { "x": 710, "y": 285, "size": 1.5, "name": "η Cancri" }
+      ],
+      "connections": [[2, 0], [0, 1], [2, 3], [3, 0]]
+    },
+    {
+      "id": "ashlesha",
+      "name": "Ashlesha",
+      "englishName": "The Entwiner / Serpent",
+      "rigvedaReference": "RV 1.32.1-15, RV 10.94.1-16",
+      "deity": "Nagas (Serpent Deities)",
+      "significance": "Connected to serpent imagery, particularly Vritra. Represents coiled energy, kundalini power, and intertwining cosmic forces.",
+      "modernConstellation": "Cancer (ε Cancri / Hydra head)",
+      "meaning": "The Embracer / Entwiner",
+      "symbolism": "Coiled serpent, Wheel",
+      "stars": [
+        { "x": 750, "y": 320, "size": 3, "name": "ε Cancri" },
+        { "x": 770, "y": 330, "size": 2.5, "name": "δ Cancri" },
+        { "x": 740, "y": 310, "size": 2, "name": "σ Cancri" },
+        { "x": 760, "y": 340, "size": 2, "name": "α Cancri" },
+        { "x": 730, "y": 320, "size": 1.5, "name": "ζ Cancri" }
+      ],
+      "connections": [[4, 2], [2, 0], [0, 1], [1, 3], [0, 3]]
+    },
+    {
+      "id": "magha",
+      "name": "Magha",
+      "englishName": "The Mighty / The Great",
+      "rigvedaReference": "RV 10.15.1-14, RV 10.154.5",
+      "deity": "Pitris (Ancestors)",
+      "significance": "Dedicated to honoring ancestors. Regulus ('little king') embodies regal authority passed through generations.",
+      "modernConstellation": "Leo (α Leonis / Regulus / Sickle)",
+      "meaning": "The Mighty / Bountiful",
+      "symbolism": "Royal throne, Palanquin",
+      "stars": [
+        { "x": 800, "y": 280, "size": 4, "name": "Regulus" },
+        { "x": 820, "y": 290, "size": 2, "name": "η Leonis" },
+        { "x": 790, "y": 270, "size": 2, "name": "γ Leonis" },
+        { "x": 810, "y": 300, "size": 2, "name": "ζ Leonis" },
+        { "x": 785, "y": 260, "size": 1.5, "name": "ε Leonis" }
+      ],
+      "connections": [[4, 2], [2, 0], [0, 1], [0, 3]]
+    },
+    {
+      "id": "purva-phalguni",
+      "name": "Purva Phalguni",
+      "englishName": "Former Reddish One",
+      "rigvedaReference": "RV 7.41.1-7, RV 3.62.1-18",
+      "deity": "Bhaga (God of Fortune)",
+      "significance": "Represents good fortune and marital happiness. Connected to prosperity and auspicious beginnings.",
+      "modernConstellation": "Leo (δ Leonis / Lion's hindquarters)",
+      "meaning": "Former Reddish One",
+      "symbolism": "Front legs of bed, Hammock",
+      "stars": [
+        { "x": 100, "y": 320, "size": 3, "name": "δ Leonis" },
+        { "x": 120, "y": 330, "size": 2.5, "name": "θ Leonis" },
+        { "x": 90, "y": 310, "size": 2, "name": "β Leonis" },
+        { "x": 110, "y": 305, "size": 2, "name": "σ Leonis" }
+      ],
+      "connections": [[2, 3], [3, 0], [0, 1]]
+    },
+    {
+      "id": "uttara-phalguni",
+      "name": "Uttara Phalguni",
+      "englishName": "Latter Reddish One",
+      "rigvedaReference": "RV 7.60.1-12, RV 5.72.1-4",
+      "deity": "Aryaman (God of Hospitality)",
+      "significance": "Represents friendship, contracts, and social bonds. Connected to marriage ceremonies and mutual respect.",
+      "modernConstellation": "Leo/Virgo (β Leonis / Denebola)",
+      "meaning": "Latter Reddish One",
+      "symbolism": "Back legs of bed",
+      "stars": [
+        { "x": 150, "y": 370, "size": 3.5, "name": "Denebola" },
+        { "x": 170, "y": 380, "size": 2, "name": "93 Leonis" },
+        { "x": 140, "y": 360, "size": 2, "name": "94 Leonis" },
+        { "x": 160, "y": 355, "size": 1.5, "name": "τ Leonis" }
+      ],
+      "connections": [[2, 0], [0, 3], [3, 1]]
+    },
+    {
+      "id": "hasta",
+      "name": "Hasta",
+      "englishName": "The Hand",
+      "rigvedaReference": "RV 1.35.1-11, RV 4.53.1-6",
+      "deity": "Savitar (The Stimulator)",
+      "significance": "Savitar's golden hands set all things in motion. Represents divine skill, craftsmanship, and creative power.",
+      "modernConstellation": "Corvus (δ Corvi / The Crow)",
+      "meaning": "The Hand / Skill",
+      "symbolism": "Hand, Fist, Palm",
+      "stars": [
+        { "x": 250, "y": 420, "size": 3, "name": "δ Corvi" },
+        { "x": 270, "y": 430, "size": 2.5, "name": "γ Corvi" },
+        { "x": 240, "y": 410, "size": 2, "name": "β Corvi" },
+        { "x": 260, "y": 440, "size": 2, "name": "ε Corvi" }
+      ],
+      "connections": [[2, 0], [0, 1], [1, 3], [3, 2]]
+    },
+    {
+      "id": "chitra",
+      "name": "Chitra",
+      "englishName": "The Bright / Brilliant",
+      "rigvedaReference": "RV 3.54.1-23, RV 10.64.1-18",
+      "deity": "Tvashtar (Divine Architect)",
+      "significance": "Represents divine artistry and architecture. Spica, one of the brightest stars, embodies brilliant creation.",
+      "modernConstellation": "Virgo (α Virginis / Spica)",
+      "meaning": "Brilliant / The Pearl",
+      "symbolism": "Jewel, Pearl, Bright object",
+      "stars": [
+        { "x": 350, "y": 470, "size": 4, "name": "Spica" },
+        { "x": 370, "y": 480, "size": 2, "name": "γ Virginis" },
+        { "x": 340, "y": 460, "size": 2, "name": "ζ Virginis" },
+        { "x": 360, "y": 455, "size": 1.5, "name": "η Virginis" }
+      ],
+      "connections": [[2, 3], [3, 0], [0, 1]]
+    },
+    {
+      "id": "swati",
+      "name": "Swati",
+      "englishName": "The Independent / Sword",
+      "rigvedaReference": "RV 7.87.1-7, RV 7.90.1-4",
+      "deity": "Vayu (Wind God)",
+      "significance": "Arcturus is a fast-moving star embodying independence. Represents freedom, self-determination, and life breath.",
+      "modernConstellation": "Boötes (α Boötis / Arcturus)",
+      "meaning": "Independent / Self-Going",
+      "symbolism": "Young shoot, Coral, Sapphire",
+      "stars": [
+        { "x": 450, "y": 180, "size": 4, "name": "Arcturus" },
+        { "x": 470, "y": 190, "size": 2.5, "name": "η Boötis" },
+        { "x": 440, "y": 170, "size": 2, "name": "γ Boötis" },
+        { "x": 460, "y": 165, "size": 2, "name": "ε Boötis" }
+      ],
+      "connections": [[2, 3], [3, 0], [0, 1]]
+    },
+    {
+      "id": "vishakha",
+      "name": "Vishakha",
+      "englishName": "The Forked / Two-Branched",
+      "rigvedaReference": "RV 1.1.1-9, RV 1.22.1-21",
+      "deity": "Indra-Agni (Thunder and Fire)",
+      "significance": "Most frequently invoked deity pair. The forked symbolism represents lightning (Indra) and dual flames (Agni).",
+      "modernConstellation": "Libra (α & β Librae / The Scales)",
+      "meaning": "The Forked Branch",
+      "symbolism": "Decorated archway, Potter's wheel",
+      "stars": [
+        { "x": 550, "y": 420, "size": 3.5, "name": "α Librae" },
+        { "x": 570, "y": 430, "size": 3, "name": "β Librae" },
+        { "x": 540, "y": 410, "size": 2, "name": "γ Librae" },
+        { "x": 560, "y": 440, "size": 2, "name": "σ Librae" }
+      ],
+      "connections": [[2, 0], [0, 1], [1, 3]]
+    },
+    {
+      "id": "anuradha",
+      "name": "Anuradha",
+      "englishName": "Following Radha / Success",
+      "rigvedaReference": "RV 7.61.1-7, RV 3.59.1-9",
+      "deity": "Mitra (God of Friendship)",
+      "significance": "Represents loyalty, devotion, and success through cooperation. Symbolizes achieving goals through alliance.",
+      "modernConstellation": "Scorpius (δ Scorpii / Body of Scorpion)",
+      "meaning": "Following Radha / Success",
+      "symbolism": "Lotus flower, Offering",
+      "stars": [
+        { "x": 650, "y": 470, "size": 3, "name": "δ Scorpii" },
+        { "x": 670, "y": 480, "size": 2.5, "name": "β¹ Scorpii" },
+        { "x": 640, "y": 460, "size": 2, "name": "π Scorpii" },
+        { "x": 660, "y": 490, "size": 2, "name": "ρ Scorpii" }
+      ],
+      "connections": [[2, 0], [0, 1], [1, 3], [3, 2]]
+    },
+    {
+      "id": "jyeshtha",
+      "name": "Jyeshtha",
+      "englishName": "The Eldest / The Chief",
+      "rigvedaReference": "RV 1.32.1-15, RV 2.12.1-15",
+      "deity": "Indra (King of Gods)",
+      "significance": "Indra, most praised deity in Rigveda. Antares, the heart of Scorpius, symbolizes Indra's courage and leadership.",
+      "modernConstellation": "Scorpius (α Scorpii / Antares / Heart)",
+      "meaning": "The Eldest / Chief",
+      "symbolism": "Circular amulet, Umbrella",
+      "stars": [
+        { "x": 750, "y": 500, "size": 4.5, "name": "Antares" },
+        { "x": 770, "y": 510, "size": 2.5, "name": "τ Scorpii" },
+        { "x": 740, "y": 490, "size": 2, "name": "σ Scorpii" },
+        { "x": 760, "y": 520, "size": 2, "name": "δ Scorpii" },
+        { "x": 735, "y": 505, "size": 1.5, "name": "ε Scorpii" }
+      ],
+      "connections": [[4, 2], [2, 0], [0, 1], [1, 3]]
+    },
+    {
+      "id": "mula",
+      "name": "Mula",
+      "englishName": "The Root",
+      "rigvedaReference": "RV 10.59.1-10, RV 7.104.1-25",
+      "deity": "Nirriti (Goddess of Dissolution)",
+      "significance": "Represents getting to the root of things and the power to destroy what must end. Symbolizes transformation through elimination.",
+      "modernConstellation": "Scorpius (λ Scorpii / Shaula / Stinger)",
+      "meaning": "The Root / Foundation",
+      "symbolism": "Bunch of roots, Lion's tail",
+      "stars": [
+        { "x": 150, "y": 520, "size": 3, "name": "λ Scorpii (Shaula)" },
+        { "x": 170, "y": 530, "size": 2.5, "name": "υ Scorpii (Lesath)" },
+        { "x": 140, "y": 510, "size": 2, "name": "κ Scorpii" },
+        { "x": 160, "y": 540, "size": 2, "name": "ι¹ Scorpii" }
+      ],
+      "connections": [[2, 0], [0, 1], [1, 3]]
+    },
+    {
+      "id": "purva-ashadha",
+      "name": "Purva Ashadha",
+      "englishName": "The Former Invincible",
+      "rigvedaReference": "RV 7.49.1-4, RV 10.9.1-9",
+      "deity": "Apas (Waters)",
+      "significance": "Represents invincibility through fluidity and the unconquerable nature of water. Symbolizes early victory.",
+      "modernConstellation": "Sagittarius (δ & ε Sagittarii / Bow)",
+      "meaning": "Former Invincible",
+      "symbolism": "Elephant tusk, Fan",
+      "stars": [
+        { "x": 250, "y": 530, "size": 3, "name": "δ Sagittarii" },
+        { "x": 270, "y": 540, "size": 2.5, "name": "ε Sagittarii" },
+        { "x": 240, "y": 520, "size": 2, "name": "η Sagittarii" },
+        { "x": 260, "y": 515, "size": 2, "name": "γ Sagittarii" }
+      ],
+      "connections": [[2, 3], [3, 0], [0, 1]]
+    },
+    {
+      "id": "uttara-ashadha",
+      "name": "Uttara Ashadha",
+      "englishName": "The Latter Invincible",
+      "rigvedaReference": "RV 1.164.1-52, RV 10.125.1-8",
+      "deity": "Vishvadevas (All Gods)",
+      "significance": "Represents universal victory and permanent success. Symbolizes final, unassailable achievement.",
+      "modernConstellation": "Sagittarius (σ Sagittarii / Archer)",
+      "meaning": "Latter Invincible",
+      "symbolism": "Elephant tusk, Small bed",
+      "stars": [
+        { "x": 350, "y": 510, "size": 3, "name": "σ Sagittarii" },
+        { "x": 370, "y": 520, "size": 2.5, "name": "φ Sagittarii" },
+        { "x": 340, "y": 500, "size": 2, "name": "τ Sagittarii" },
+        { "x": 360, "y": 495, "size": 1.5, "name": "ζ Sagittarii" }
+      ],
+      "connections": [[2, 3], [3, 0], [0, 1], [3, 1]]
+    },
+    {
+      "id": "shravana",
+      "name": "Shravana",
+      "englishName": "The Hearing / The Listener",
+      "rigvedaReference": "RV 1.22.1-21, RV 1.154.1-6",
+      "deity": "Vishnu (The All-Pervader)",
+      "significance": "Represents listening to divine wisdom and receptivity to spiritual knowledge. Symbolizes learning through attentive listening.",
+      "modernConstellation": "Aquila (α Aquilae / Altair / Flying Eagle)",
+      "meaning": "The Hearing / To Hear",
+      "symbolism": "Ear, Three footprints",
+      "stars": [
+        { "x": 450, "y": 140, "size": 4, "name": "Altair" },
+        { "x": 470, "y": 150, "size": 2.5, "name": "γ Aquilae" },
+        { "x": 440, "y": 130, "size": 2, "name": "β Aquilae" },
+        { "x": 460, "y": 125, "size": 2, "name": "δ Aquilae" }
+      ],
+      "connections": [[2, 0], [0, 3], [3, 1]]
+    },
+    {
+      "id": "dhanishta",
+      "name": "Dhanishta",
+      "englishName": "The Wealthy / The Most Famous",
+      "rigvedaReference": "RV 1.23.1-24, RV 8.47.1-18",
+      "deity": "Ashta Vasus (Eight Nature Gods)",
+      "significance": "Represents prosperity through harmony with natural law. Symbolizes wealth on all levels - material, spiritual, and richness of life.",
+      "modernConstellation": "Delphinus (β Delphini / The Dolphin)",
+      "meaning": "The Wealthy / Most Famous",
+      "symbolism": "Drum, Flute, Musical instruments",
+      "stars": [
+        { "x": 550, "y": 120, "size": 3, "name": "β Delphini" },
+        { "x": 570, "y": 130, "size": 2.5, "name": "α Delphini" },
+        { "x": 540, "y": 110, "size": 2, "name": "γ Delphini" },
+        { "x": 560, "y": 140, "size": 2, "name": "δ Delphini" }
+      ],
+      "connections": [[2, 0], [0, 1], [1, 3], [3, 2]]
+    },
+    {
+      "id": "shatabhisha",
+      "name": "Shatabhisha",
+      "englishName": "The Hundred Physicians",
+      "rigvedaReference": "RV 7.86.1-7, RV 7.87.1-7",
+      "deity": "Varuna (Lord of Waters and Law)",
+      "significance": "The 'hundred physicians' refers to Varuna's hundred healing streams. Represents purification through truth and healing through water.",
+      "modernConstellation": "Aquarius (λ Aquarii / Water Bearer)",
+      "meaning": "Hundred Healers",
+      "symbolism": "Empty circle, Thousand flowers",
+      "stars": [
+        { "x": 150, "y": 350, "size": 3, "name": "λ Aquarii" },
+        { "x": 170, "y": 360, "size": 2.5, "name": "φ Aquarii" },
+        { "x": 140, "y": 340, "size": 2, "name": "τ² Aquarii" },
+        { "x": 160, "y": 370, "size": 2, "name": "δ Aquarii" },
+        { "x": 145, "y": 365, "size": 1.5, "name": "ψ¹ Aquarii" }
+      ],
+      "connections": [[2, 4], [4, 0], [0, 1], [1, 3]]
+    },
+    {
+      "id": "purva-bhadrapada",
+      "name": "Purva Bhadrapada",
+      "englishName": "The Former Lucky Feet",
+      "rigvedaReference": "RV 2.31.1-6, RV 10.136.1-7",
+      "deity": "Aja Ekapada (One-Footed Goat)",
+      "significance": "Represents transformation through fire and one-pointed focus for spiritual attainment. Symbolizes burning away duality.",
+      "modernConstellation": "Pegasus (α & β Pegasi / Flying Horse)",
+      "meaning": "Former Lucky Feet",
+      "symbolism": "Front legs of funeral cot, Sword",
+      "stars": [
+        { "x": 250, "y": 150, "size": 3.5, "name": "Markab" },
+        { "x": 270, "y": 160, "size": 3, "name": "Scheat" },
+        { "x": 240, "y": 140, "size": 2, "name": "γ Pegasi" },
+        { "x": 260, "y": 135, "size": 2, "name": "η Pegasi" }
+      ],
+      "connections": [[2, 3], [3, 0], [0, 1]]
+    },
+    {
+      "id": "uttara-bhadrapada",
+      "name": "Uttara Bhadrapada",
+      "englishName": "The Latter Lucky Feet",
+      "rigvedaReference": "RV 10.72.1-9, RV 10.190.1-3",
+      "deity": "Ahir Budhnya (Serpent of the Deep)",
+      "significance": "Represents the depths of existence and deep wisdom accessible through meditation. Symbolizes kundalini energy and cosmic ocean of consciousness.",
+      "modernConstellation": "Andromeda/Pegasus (γ Pegasi / Alpheratz)",
+      "meaning": "Latter Lucky Feet",
+      "symbolism": "Back legs of funeral cot, Twins",
+      "stars": [
+        { "x": 350, "y": 130, "size": 3, "name": "γ Pegasi" },
+        { "x": 370, "y": 140, "size": 2.5, "name": "α Andromedae" },
+        { "x": 340, "y": 120, "size": 2, "name": "β Pegasi" },
+        { "x": 360, "y": 115, "size": 2, "name": "δ Andromedae" }
+      ],
+      "connections": [[2, 0], [0, 3], [3, 1]]
+    },
+    {
+      "id": "revati",
+      "name": "Revati",
+      "englishName": "The Wealthy / The Nourishing",
+      "rigvedaReference": "RV 6.48.1-22, RV 6.49.1-15",
+      "deity": "Pushan (Nourisher / Path-Keeper)",
+      "significance": "Represents safe journey, abundance, and divine guidance. Symbolizes completion, fulfillment, and safe arrival at journey's end.",
+      "modernConstellation": "Pisces (ζ Piscium / The Fish)",
+      "meaning": "The Wealthy / Prosperous",
+      "symbolism": "Fish, Drum, Pair of fish",
+      "stars": [
+        { "x": 100, "y": 250, "size": 3, "name": "ζ Piscium" },
+        { "x": 120, "y": 260, "size": 2.5, "name": "ε Piscium" },
+        { "x": 90, "y": 240, "size": 2, "name": "δ Piscium" },
+        { "x": 110, "y": 270, "size": 2, "name": "μ Piscium" },
+        { "x": 95, "y": 255, "size": 1.5, "name": "ω Piscium" }
+      ],
+      "connections": [[2, 4], [4, 0], [0, 1], [1, 3]]
+    }
+  ]
+}

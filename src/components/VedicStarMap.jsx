@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import constellationsData from '../data/constellations.json';
 import RishiWelcome from './RishiWelcome';
 
+
 const VedicStarMap = () => {
   const [randomStars, setRandomStars] = useState([]);
   const [selectedConstellation, setSelectedConstellation] = useState(null);
@@ -11,11 +12,13 @@ const VedicStarMap = () => {
   const canvasRef = useRef(null);
   const shootingStarIdRef = useRef(0);
 
+
   // Generate random stars with depth
   useEffect(() => {
     generateRandomStars();
     startShootingStars();
   }, []);
+
 
   const generateRandomStars = () => {
     const stars = [];
@@ -31,6 +34,7 @@ const VedicStarMap = () => {
     }
     setRandomStars(stars);
   };
+
 
   // Shooting star system - EVERY 9 SECONDS
   const startShootingStars = () => {
@@ -63,13 +67,16 @@ const VedicStarMap = () => {
         distance: 800
       };
 
+
       setShootingStars(prev => [...prev, newStar]);
+
 
       // Remove after animation
       setTimeout(() => {
         setShootingStars(prev => prev.filter(star => star.id !== id));
       }, newStar.duration * 1000);
     };
+
 
     // Create shooting stars EVERY 9 SECONDS
     const scheduleNext = () => {
@@ -79,8 +86,10 @@ const VedicStarMap = () => {
       }, 9000); // EXACTLY 9 seconds
     };
 
+
     scheduleNext();
   };
+
 
   // Handle mouse move for 3D effect
   const handleMouseMove = (e) => {
@@ -93,9 +102,11 @@ const VedicStarMap = () => {
     setMousePosition({ x, y });
   };
 
+
   const handleMouseLeave = () => {
     setMousePosition({ x: 0, y: 0 });
   };
+
 
   // Scale and center constellation
   const scaleAndCenterConstellation = (constellation) => {
@@ -129,6 +140,7 @@ const VedicStarMap = () => {
     }));
   };
 
+
   const morphToConstellation = (constellation) => {
     setShowLines(false);
     
@@ -143,11 +155,13 @@ const VedicStarMap = () => {
     }, 1000);
   };
 
+
   const resetStars = () => {
     setSelectedConstellation(null);
     setShowLines(false);
     generateRandomStars();
   };
+
 
   const getCurrentStars = () => {
     if (selectedConstellation) {
@@ -155,6 +169,7 @@ const VedicStarMap = () => {
     }
     return randomStars;
   };
+
 
   const getParallaxOffset = (depth) => {
     const parallaxStrength = 5;
@@ -164,6 +179,7 @@ const VedicStarMap = () => {
     };
   };
 
+
   return (
     <>
       {/* Rishi Welcome Popup */}
@@ -172,6 +188,7 @@ const VedicStarMap = () => {
         dialogue="Welcome to the RigVeda Observatory! Gaze upon the celestial map and discover the Vedic constellations mentioned in ancient hymns. Click on constellations to unveil their cosmic stories!!"
         storageKey="vedicStarMapWelcome"
       />
+
 
 
     <div className="max-w-7xl mx-auto p-8">
@@ -184,6 +201,7 @@ const VedicStarMap = () => {
           Explore constellations mentioned in the Rigveda • Move your mouse to explore in 3D
         </p>
       </div>
+
 
       {/* Star Gazing Window - 3D INTERACTIVE WITH SHOOTING STARS */}
       <div 
@@ -258,6 +276,7 @@ const VedicStarMap = () => {
           );
         })}
 
+
         {/* Regular Stars - 3D WITH PARALLAX */}
         {getCurrentStars().map((star, idx) => {
           const parallax = getParallaxOffset(star.depth);
@@ -327,43 +346,9 @@ const VedicStarMap = () => {
           );
         })}
 
-        {/* Constellation Lines */}
-        {selectedConstellation && showLines && (
-          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 15 }}>
-            {selectedConstellation.stars.map((star, idx) => {
-              if (idx < selectedConstellation.stars.length - 1) {
-                const nextStar = selectedConstellation.stars[idx + 1];
-                const parallax1 = getParallaxOffset(star.depth);
-                const parallax2 = getParallaxOffset(nextStar.depth);
-                return (
-                  <line
-                    key={idx}
-                    x1={`calc(${star.x}% + ${parallax1.x}px)`}
-                    y1={`calc(${star.y}% + ${parallax1.y}px)`}
-                    x2={`calc(${nextStar.x}% + ${parallax2.x}px)`}
-                    y2={`calc(${nextStar.y}% + ${parallax2.y}px)`}
-                    stroke="rgba(255, 215, 0, 0.35)"
-                    strokeWidth="1.5"
-                    className="animate-fade-in transition-all duration-200"
-                    style={{
-                      filter: 'drop-shadow(0 0 2px rgba(255, 215, 0, 0.3))'
-                    }}
-                  />
-                );
-              }
-              return null;
-            })}
-          </svg>
-        )}
 
-        {/* Constellation Name Overlay */}
-        {selectedConstellation && (
-          <div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-black/70 backdrop-blur-md px-6 py-3 rounded-full border-2 border-[--color-gold] pointer-events-none" style={{ zIndex: 20 }}>
-            <h3 className="text-2xl font-[family:--font-family-header] text-white">
-              {selectedConstellation.name} ({selectedConstellation.englishName})
-            </h3>
-          </div>
-        )}
+        {/* REMOVED: Constellation Lines section - No more connecting lines! */}
+
 
         {/* 3D Hint Indicator */}
         <div className="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm px-4 py-2 rounded-lg border border-[--color-gold]/30 pointer-events-none" style={{ zIndex: 20 }}>
@@ -372,6 +357,7 @@ const VedicStarMap = () => {
           </p>
         </div>
       </div>
+
 
       {/* Constellation Selector */}
       <div className="mb-8">
@@ -401,7 +387,8 @@ const VedicStarMap = () => {
         </div>
       </div>
 
-      {/* Details Panel */}
+
+      {/* Details Panel - ADDED LEARN MORE BUTTONS */}
       {selectedConstellation && (
         <div className="bg-[--color-parchment-light] rounded-xl border-4 border-[--color-gold] p-8 shadow-xl">
           <div className="grid md:grid-cols-2 gap-6">
@@ -426,6 +413,7 @@ const VedicStarMap = () => {
               </div>
             </div>
 
+
             <div>
               <h4 className="text-xl font-[family:--font-family-header] text-[--color-ink] mb-3">
                 Significance in Rigveda
@@ -434,6 +422,7 @@ const VedicStarMap = () => {
                 {selectedConstellation.significance}
               </p>
 
+
               <div className="mt-4 p-4 bg-[--color-parchment-dark] rounded-lg border-2 border-[--color-gold]/20">
                 <p className="text-sm text-[--color-ink-light] font-[family:--font-family-body]">
                   <span className="font-semibold text-[--color-ink]">Modern Equivalent:</span> {selectedConstellation.modernConstellation}
@@ -441,8 +430,32 @@ const VedicStarMap = () => {
               </div>
             </div>
           </div>
+
+          {/* NEW: Learn More Buttons - IMPROVED VISIBILITY */}
+          <div className="mt-6 flex gap-4">
+            <a
+              href="https://en.wikipedia.org/wiki/Nakshatra"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 bg-[--color-ink] text-white px-6 py-3 rounded-lg font-[family:--font-family-body] font-semibold hover:bg-[--color-ink]/80 hover:shadow-lg transition-all duration-300 text-center border-2 border-[--color-gold]"
+            >
+              📖 Learn More on Wikipedia
+            </a>
+            <a
+              href="https://www.rudraksha-ratna.com/articles/27-nakshatras-constellations"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 bg-[--color-saffron] text-white px-6 py-3 rounded-lg font-[family:--font-family-body] font-semibold hover:bg-[--color-saffron]/80 hover:shadow-lg transition-all duration-300 text-center border-2 border-[--color-gold]"
+            >
+              🕉️ Vedic Astrology Source
+            </a>
+          </div>
+          <p className="text-xs text-[--color-ink-light] mt-3 text-center font-[family:--font-family-body]">
+            Click these buttons to explore verified sources about this nakshatra
+          </p>
         </div>
       )}
+
 
       {/* CSS for animations */}
       <style jsx>{`
@@ -489,5 +502,6 @@ const VedicStarMap = () => {
     </>
   );
 };
+
 
 export default VedicStarMap;

@@ -4,6 +4,7 @@ import hymnsData from '../data/hymns.json';
 import BookLoadingAnimation from './BookLoadingAnimation';
 import AudioPlayer from './AudioPlayer';
 import RishiWelcome from './RishiWelcome';
+import { getHymnUrl } from '../config/audioConfig';
 
 const HymnBrowser = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -206,7 +207,7 @@ const HymnBrowser = () => {
             <AudioPlayer 
               hymnId={selectedHymn.id}
               hymnTitle={selectedHymn.translation?.title || `Hymn ${selectedHymn.id}`}
-              audioUrl={selectedHymn.audioUrl}
+              audioUrl={getHymnUrl(selectedHymn.id)}
             />
 
             {/* Summary */}
@@ -484,7 +485,7 @@ const HymnBrowser = () => {
             <div className="flex items-center gap-4 text-xs text-[--color-ink-light] flex-wrap">
               <span>📜 {hymn.verses} verses</span>
               {hymn.rishi && <span className="line-clamp-1">✍️ {hymn.rishi}</span>}
-              {hymn.audioUrl && (
+              {getHymnUrl(hymn.id) && (
                 <span className="bg-[--color-saffron]/20 px-2 py-1 rounded text-[--color-saffron] font-semibold">
                   🎵 Audio
                 </span>

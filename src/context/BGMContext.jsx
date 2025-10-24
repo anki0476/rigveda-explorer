@@ -1,6 +1,5 @@
 // src/contexts/BGMContext.jsx
 import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
-import { getBGMUrl } from '../config/audioConfig';
 
 const BGMContext = createContext();
 
@@ -31,12 +30,18 @@ export const BGMProvider = ({ children }) => {
   const audioRef = useRef(null);
   const [hasUserInteracted, setHasUserInteracted] = useState(false);
   const [currentBGMType, setCurrentBGMType] = useState('main'); // Track which BGM is playing
+    // BGM URLs - hardcoded for reliability
+    const BGM_URLS = {
+      main: 'https://res.cloudinary.com/dn35jzjjc/video/upload/v1761317273/bgm-main_k2stul.mp3',
+      games: 'https://res.cloudinary.com/dn35jzjjc/video/upload/v1761317000/bgm-games_azhn3z.mp3'
+    };
+  
 
   // Initialize main BGM on load
   useEffect(() => {
     if (!audioRef.current) {
       console.log('🎵 Initializing Main BGM audio');
-      audioRef.current = new Audio(getBGMUrl('main'));
+      audioRef.current = new Audio(BGM_URLS.main);
       audioRef.current.loop = true;
       audioRef.current.volume = 0.3;
     }
@@ -116,7 +121,8 @@ export const BGMProvider = ({ children }) => {
     audioRef.current.pause();
     
     // Change source
-    const newUrl = getBGMUrl(type);
+    const newUrl = BGM_URLS[type];
+    console.log(`🎵 New BGM URL: ${newUrl}`); // Debug log
     if (newUrl) {
       audioRef.current.src = newUrl;
       audioRef.current.load();

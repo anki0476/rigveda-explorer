@@ -1,6 +1,6 @@
 // src/contexts/BGMContext.jsx
 import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
-import { getBGMUrl } from '../config/audioConfig'; // ⭐ NEW IMPORT
+import { getBGMUrl } from '../config/audioConfig';
 
 const BGMContext = createContext();
 
@@ -18,7 +18,6 @@ export const BGMProvider = ({ children }) => {
     return saved !== null ? JSON.parse(saved) : true;
   });
 
-  // ⭐ Games BGM state
   const [gamesBGMEnabled, setGamesBGMEnabled] = useState(() => {
     const saved = localStorage.getItem('gamesBGMEnabled');
     return saved !== null ? JSON.parse(saved) : true;
@@ -31,11 +30,13 @@ export const BGMProvider = ({ children }) => {
 
   const audioRef = useRef(null);
   const [hasUserInteracted, setHasUserInteracted] = useState(false);
+  const [currentBGMType, setCurrentBGMType] = useState('main'); // Track which BGM is playing
 
+  // Initialize main BGM on load
   useEffect(() => {
     if (!audioRef.current) {
-      console.log('🎵 Initializing BGM audio');
-      audioRef.current = new Audio(getBGMUrl('main')); // ⭐ CHANGED: Use Cloudinary URL
+      console.log('🎵 Initializing Main BGM audio');
+      audioRef.current = new Audio(getBGMUrl('main'));
       audioRef.current.loop = true;
       audioRef.current.volume = 0.3;
     }
@@ -48,12 +49,12 @@ export const BGMProvider = ({ children }) => {
     };
   }, []);
 
+  // Save preferences
   useEffect(() => {
     localStorage.setItem('bgmEnabled', JSON.stringify(bgmEnabled));
     console.log('🎵 BGM State:', { bgmEnabled, hasUserInteracted });
   }, [bgmEnabled, hasUserInteracted]);
 
-  // ⭐ Save games BGM preference
   useEffect(() => {
     localStorage.setItem('gamesBGMEnabled', JSON.stringify(gamesBGMEnabled));
     console.log('🎮 Games BGM State:', { gamesBGMEnabled });
@@ -94,7 +95,6 @@ export const BGMProvider = ({ children }) => {
     }
   };
 
-  // ⭐ Toggle games BGM
   const toggleGamesBGM = () => {
     console.log('🔄 toggleGamesBGM called');
     setGamesBGMEnabled(!gamesBGMEnabled);
@@ -104,16 +104,44 @@ export const BGMProvider = ({ children }) => {
     setSoundEffectsEnabled(!soundEffectsEnabled);
   };
 
+  // ⭐ NEW FUNCTION: Switch BGM Type (main vs games)
+  const switchBGM = (type) => {
+    if (!audioRef.current || currentBGMType === type) return;
+
+    console.log(`🔄 Switching BGM from ${currentBGMType} to ${type}`);
+    
+    const wasPlaying = !audioRef.current.paused;
+    const currentTime = audioRef.current.currentTime;
+
+    // Pause current
+    audioRef.current.pause();
+    
+    // Change source
+    const newUrl = getBGMUrl(type);
+    if (newUrl) {
+      audioRef.current.src = newUrl;
+      audioRef.current.load();
+      setCurrentBGMType(type);
+
+      // Resume if was playing and enabled
+      if (wasPlaying && bgmEnabled && (type === 'main' || (type === 'games' && gamesBGMEnabled))) {
+        audioRef.current.play().catch(err => console.log('BGM switch play failed:', err));
+      }
+    }
+  };
+
   return (
     <BGMContext.Provider value={{ 
       bgmEnabled, 
       toggleBGM,
-      gamesBGMEnabled, // ⭐ Export games BGM state
-      toggleGamesBGM, // ⭐ Export games BGM toggle
+      gamesBGMEnabled,
+      toggleGamesBGM,
       soundEffectsEnabled, 
       toggleSoundEffects,
       playBGM,
-      audioRef
+      switchBGM, // ⭐ NEW: Export BGM switcher
+      audioRef,
+      currentBGMType // ⭐ NEW: Export current BGM type
     }}>
       {children}
     </BGMContext.Provider>

@@ -1187,3 +1187,27 @@ main {
   }
 }
 
+/* Disable browser image search/action icons on hover */
+img {
+  pointer-events: auto;
+}
+
+img::-webkit-image-controls {
+  display: none !important;
+}
+
+img::-webkit-image-controls-panel {
+  display: none !important;
+}
+
+/* Disable Chrome/Edge "Search this image" feature */
+img::before {
+  content: '' !important;
+}
+
+/* Additional fix for modern browsers */
+@supports (content-visibility: auto) {
+  img {
+    content-visibility: auto;
+  }
+}

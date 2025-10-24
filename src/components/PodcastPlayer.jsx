@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { Play, Pause, SkipBack, SkipForward, Volume2, VolumeX, BookOpen, ArrowLeft, Loader, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getPodcastUrl } from '../config/audioConfig';
 
 // Episode metadata
 const EPISODE_DATA = {
@@ -37,7 +38,7 @@ const PodcastPlayer = ({ mandalaNumber, onClose }) => {
     const availablePodcasts = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     if (availablePodcasts.includes(mandalaNumber)) {
-      return `/audio/podcasts/Mandala-${mandalaNumber}-${language === 'en' ? 'English' : 'Hindi'}-Podcast.m4a`;
+      return getPodcastUrl(mandalaNumber, language);
     }
     return null;
   }, [mandalaNumber, language]);

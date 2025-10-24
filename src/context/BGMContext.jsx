@@ -104,14 +104,13 @@ export const BGMProvider = ({ children }) => {
     setSoundEffectsEnabled(!soundEffectsEnabled);
   };
 
-  // ⭐ NEW FUNCTION: Switch BGM Type (main vs games)
+  // ⭐ FIXED FUNCTION: Switch BGM Type (main vs games)
   const switchBGM = (type) => {
     if (!audioRef.current || currentBGMType === type) return;
 
     console.log(`🔄 Switching BGM from ${currentBGMType} to ${type}`);
     
     const wasPlaying = !audioRef.current.paused;
-    const currentTime = audioRef.current.currentTime;
 
     // Pause current
     audioRef.current.pause();
@@ -123,9 +122,18 @@ export const BGMProvider = ({ children }) => {
       audioRef.current.load();
       setCurrentBGMType(type);
 
-      // Resume if was playing and enabled
-      if (wasPlaying && bgmEnabled && (type === 'main' || (type === 'games' && gamesBGMEnabled))) {
+      // ⭐ FIXED: Check correct conditions for each type
+      const shouldPlayMain = type === 'main' && bgmEnabled && hasUserInteracted;
+      const shouldPlayGames = type === 'games' && bgmEnabled && gamesBGMEnabled && hasUserInteracted;
+
+      console.log(`🎮 Should play? Main: ${shouldPlayMain}, Games: ${shouldPlayGames}`);
+
+      // Resume if was playing and conditions are met
+      if (wasPlaying && (shouldPlayMain || shouldPlayGames)) {
+        console.log(`▶️ Playing ${type} BGM...`);
         audioRef.current.play().catch(err => console.log('BGM switch play failed:', err));
+      } else {
+        console.log(`⏸️ Not playing ${type} BGM. Conditions not met.`);
       }
     }
   };

@@ -480,10 +480,12 @@ const EnhancedHome = () => {
             <img 
               src="/images/logo-hero.png" 
               alt="RigVeda Odyssey" 
+              onContextMenu={(e) => e.preventDefault()}
               className="w-[300px] md:w-[400px] h-auto mx-auto"
               style={{
                 filter: 'drop-shadow(0 4px 20px rgba(0, 0, 0, 0.5))',
-                animation: 'fadeInScale 1.2s ease-out'
+                animation: 'fadeInScale 1.2s ease-out',
+                pointerEvents: 'none'
               }}
             />
           </div>

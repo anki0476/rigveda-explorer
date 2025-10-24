@@ -87,9 +87,11 @@ const AudioUnlock = ({ onUnlock }) => {
             src="/images/logo.png" 
             alt="RigVeda Odyssey" 
             className="logo-shine w-[750px] h-auto mx-auto"
+            onContextMenu={(e) => e.preventDefault()}
             style={{
               animation: 'fade-in 1s ease-out 0.3s forwards',
-              opacity: 0
+              opacity: 0,
+              pointerEvents: 'none'
             }}
           />
         </div>

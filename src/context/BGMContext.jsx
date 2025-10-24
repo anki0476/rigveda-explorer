@@ -30,6 +30,7 @@ export const BGMProvider = ({ children }) => {
   const audioRef = useRef(null);
   const [hasUserInteracted, setHasUserInteracted] = useState(false);
   const [currentBGMType, setCurrentBGMType] = useState('main'); // Track which BGM is playing
+  const mainBGMTimeRef = useRef(0); // ⭐ Use ref instead of state for immediate updates
     // BGM URLs - hardcoded for reliability
     const BGM_URLS = {
       main: 'https://res.cloudinary.com/dn35jzjjc/video/upload/v1761317273/bgm-main_k2stul.mp3',
@@ -109,7 +110,6 @@ export const BGMProvider = ({ children }) => {
     setSoundEffectsEnabled(!soundEffectsEnabled);
   };
 
-  // ⭐ FIXED FUNCTION: Switch BGM Type (main vs games)
   const switchBGM = (type) => {
     if (!audioRef.current || currentBGMType === type) return;
 
@@ -117,27 +117,46 @@ export const BGMProvider = ({ children }) => {
     
     const wasPlaying = !audioRef.current.paused;
 
+    // ⭐ SAVE main BGM time to ref BEFORE switching
+    if (currentBGMType === 'main') {
+      mainBGMTimeRef.current = audioRef.current.currentTime;
+      console.log(`💾 Saved main BGM time: ${mainBGMTimeRef.current.toFixed(2)}s`);
+    }
+
     // Pause current
     audioRef.current.pause();
     
     // Change source
     const newUrl = BGM_URLS[type];
-    console.log(`🎵 New BGM URL: ${newUrl}`); // Debug log
+    console.log(`🎵 New BGM URL: ${newUrl}`);
+    
     if (newUrl) {
       audioRef.current.src = newUrl;
       audioRef.current.load();
+      
       setCurrentBGMType(type);
 
-      // ⭐ FIXED: Check correct conditions for each type
+      // ⭐ Restore time after a tiny delay to ensure audio is ready
+      if (type === 'main' && mainBGMTimeRef.current > 0) {
+        setTimeout(() => {
+          if (audioRef.current) {
+            audioRef.current.currentTime = mainBGMTimeRef.current;
+            console.log(`⏱️ Restored main BGM to ${mainBGMTimeRef.current.toFixed(2)}s`);
+          }
+        }, 100); // Small delay to let audio load
+      }
+
       const shouldPlayMain = type === 'main' && bgmEnabled && hasUserInteracted;
       const shouldPlayGames = type === 'games' && bgmEnabled && gamesBGMEnabled && hasUserInteracted;
 
       console.log(`🎮 Should play? Main: ${shouldPlayMain}, Games: ${shouldPlayGames}`);
 
-      // Resume if was playing and conditions are met
       if (wasPlaying && (shouldPlayMain || shouldPlayGames)) {
         console.log(`▶️ Playing ${type} BGM...`);
-        audioRef.current.play().catch(err => console.log('BGM switch play failed:', err));
+        // Delay play slightly to ensure currentTime is set first
+        setTimeout(() => {
+          audioRef.current.play().catch(err => console.log('BGM switch play failed:', err));
+        }, 150);
       } else {
         console.log(`⏸️ Not playing ${type} BGM. Conditions not met.`);
       }

@@ -63,38 +63,39 @@ const PodcastPlayer = ({ mandalaNumber, onClose }) => {
     const fetchEpisodeData = async () => {
       try {
         setLoading(true);
-        const indexRes = await fetch('/data/podcastIndex.json');
-        const indexData = await indexRes.json();
-
-        const foundEpisode = indexData.episodes.find(
-          ep => ep.mandalaNumbers.includes(mandalaNumber)
-        );
-
-        if (!foundEpisode) {
-          throw new Error(`Episode not found for Mandala ${mandalaNumber}`);
+        
+        // ⭐ ALWAYS load the English transcript (same for both audio languages)
+        const transcriptFile = `/data/transcripts/mandala_${mandalaNumber}_en.json`;
+        console.log(`Loading transcript: ${transcriptFile}`);
+        
+        const transcriptRes = await fetch(transcriptFile);
+        if (!transcriptRes.ok) {
+          throw new Error(`Transcript not found for Mandala ${mandalaNumber}`);
         }
-
-        setEpisode(foundEpisode);
-
-        const scriptRes = await fetch(foundEpisode.scriptFile);
-        const scriptData = await scriptRes.json();
-        const scriptForMandala = scriptData[mandalaNumber];
-
-        if (!scriptForMandala) {
-          throw new Error(`Script not found for Mandala ${mandalaNumber}`);
-        }
-
-        setScript(scriptForMandala);
+        
+        const transcriptData = await transcriptRes.json();
+        
+        // Set the episode data from EPISODE_DATA constant
+        setEpisode({
+          title: EPISODE_DATA[mandalaNumber]?.title || `Mandala ${mandalaNumber}`,
+          description: transcriptData.description || `Explore the profound wisdom of Mandala ${mandalaNumber}`
+        });
+        
+        // Set the script/transcript (NOW JUST TEXT)
+        setScript({
+          transcript: transcriptData.transcript || ''
+        });
+        
         setLoading(false);
       } catch (err) {
-        console.error('Error loading episode:', err);
+        console.error('Error loading transcript:', err);
         setError(err.message);
         setLoading(false);
       }
     };
 
     fetchEpisodeData();
-  }, [mandalaNumber]);
+  }, [mandalaNumber]); // ⭐ Only re-fetch when mandala changes, NOT language
 
   const togglePlay = () => {
     if (!audioRef.current || !audioUrl) return;
@@ -388,7 +389,7 @@ const PodcastPlayer = ({ mandalaNumber, onClose }) => {
             </div>
           </motion.div>
 
-          {/* Script Viewer - STRONG Glassmorphism */}
+          {/* Script Viewer - PARAGRAPH FORMAT */}
           <AnimatePresence>
             {showScript && script && (
               <motion.div
@@ -399,24 +400,12 @@ const PodcastPlayer = ({ mandalaNumber, onClose }) => {
               >
                 <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
                   <BookOpen className="w-6 h-6 text-orange-600" />
-                  Podcast Script
+                  Podcast Transcript
                 </h3>
-                <div className="space-y-4 max-h-96 overflow-y-auto pr-4 custom-scrollbar">
-                  {script.dialogue?.map((line, index) => (
-                    <div
-                      key={index}
-                      className={`p-4 rounded-lg border-l-4 backdrop-blur-xl ${
-                        line.speaker === 'rishi'
-                          ? 'bg-orange-100/60 border-orange-500'
-                          : 'bg-blue-100/60 border-blue-500'
-                      }`}
-                    >
-                      <div className="text-xs font-bold uppercase text-gray-500 mb-1">
-                        {line.speaker}
-                      </div>
-                      <p className="text-gray-800 leading-relaxed">{line.text}</p>
-                    </div>
-                  ))}
+                <div className="max-h-96 overflow-y-auto pr-4 custom-scrollbar">
+                  <p className="text-gray-800 leading-relaxed text-justify whitespace-pre-wrap">
+                    {script.transcript || 'Transcript not available.'}
+                  </p>
                 </div>
               </motion.div>
             )}

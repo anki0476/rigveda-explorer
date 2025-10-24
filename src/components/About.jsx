@@ -607,6 +607,34 @@ const About = () => {
             </ul>
           </div>
 
+          <div className="mb-6">
+            <h3 className="text-lg font-[family:--font-family-header] text-[--color-saffron] mb-3">
+              Audio & Music Credits
+            </h3>
+            <ul className="space-y-3 text-[--color-ink-light] font-[family:--font-family-body]">
+              <li className="flex items-start gap-2">
+                <span className="text-[--color-gold]">•</span>
+                <span>
+                  <strong>Hymns Audio:</strong> Shree Aurobindo Foundation 
+                  (<a href="https://sri-aurobindo.co.in/workings/matherials/rigveda/" target="_blank" rel="noopener noreferrer" 
+                  className="text-[--color-saffron] hover:underline">sri-aurobindo.co.in</a>)
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[--color-gold]">•</span>
+                <span>
+                  <strong>Main Background Music:</strong> "Valley of Olympus | Ethereal Ancient Ambient Music" by Athena IV
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[--color-gold]">•</span>
+                <span>
+                  <strong>Games Background Music:</strong> "Medieval Music for Focus & Study | The Wanderer's Quiet Quest" by Forest of Light
+                </span>
+              </li>
+            </ul>
+          </div>
+
           <div>
             <h3 className="text-lg font-[family:--font-family-header] text-[--color-saffron] mb-3">
               Design & Development

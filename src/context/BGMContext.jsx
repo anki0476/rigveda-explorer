@@ -1,5 +1,6 @@
-// src/context/BGMContext.jsx
+// src/contexts/BGMContext.jsx
 import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
+import { getBGMUrl } from '../config/audioConfig'; // ⭐ NEW IMPORT
 
 const BGMContext = createContext();
 
@@ -17,7 +18,7 @@ export const BGMProvider = ({ children }) => {
     return saved !== null ? JSON.parse(saved) : true;
   });
 
-  // ⭐ NEW: Games BGM state
+  // ⭐ Games BGM state
   const [gamesBGMEnabled, setGamesBGMEnabled] = useState(() => {
     const saved = localStorage.getItem('gamesBGMEnabled');
     return saved !== null ? JSON.parse(saved) : true;
@@ -34,7 +35,7 @@ export const BGMProvider = ({ children }) => {
   useEffect(() => {
     if (!audioRef.current) {
       console.log('🎵 Initializing BGM audio');
-      audioRef.current = new Audio('/audio/bgm-main.mp3');
+      audioRef.current = new Audio(getBGMUrl('main')); // ⭐ CHANGED: Use Cloudinary URL
       audioRef.current.loop = true;
       audioRef.current.volume = 0.3;
     }
@@ -52,7 +53,7 @@ export const BGMProvider = ({ children }) => {
     console.log('🎵 BGM State:', { bgmEnabled, hasUserInteracted });
   }, [bgmEnabled, hasUserInteracted]);
 
-  // ⭐ NEW: Save games BGM preference
+  // ⭐ Save games BGM preference
   useEffect(() => {
     localStorage.setItem('gamesBGMEnabled', JSON.stringify(gamesBGMEnabled));
     console.log('🎮 Games BGM State:', { gamesBGMEnabled });
@@ -93,7 +94,7 @@ export const BGMProvider = ({ children }) => {
     }
   };
 
-  // ⭐ NEW: Toggle games BGM
+  // ⭐ Toggle games BGM
   const toggleGamesBGM = () => {
     console.log('🔄 toggleGamesBGM called');
     setGamesBGMEnabled(!gamesBGMEnabled);
@@ -107,8 +108,8 @@ export const BGMProvider = ({ children }) => {
     <BGMContext.Provider value={{ 
       bgmEnabled, 
       toggleBGM,
-      gamesBGMEnabled, // ⭐ NEW
-      toggleGamesBGM, // ⭐ NEW
+      gamesBGMEnabled, // ⭐ Export games BGM state
+      toggleGamesBGM, // ⭐ Export games BGM toggle
       soundEffectsEnabled, 
       toggleSoundEffects,
       playBGM,

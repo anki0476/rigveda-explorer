@@ -567,36 +567,60 @@ Provide a thoughtful, well-cited answer as the Rishi:`;
                         {new Date(message.timestamp).toLocaleString()}
                       </div>
                     )}
-                    <div className="font-[family:--font-family-body] leading-relaxed prose prose-sm max-w-none">
-                      {message.role === 'assistant' ? (
-                        shouldAnimate ? (
-                          <FastDecrypt 
-                            text={message.content} 
-                            duration={1200}
-                            className="whitespace-pre-wrap"
-                          />
-                        ) : (
-                          <ReactMarkdown
-                            components={{
-                              p: ({node, ...props}) => <p className="mb-3" {...props} />,
-                              strong: ({ node, ...props }) => (
-                                <strong className="font-extrabold text-[--color-saffron]" style={{ fontWeight: '800' }} {...props} />
-                              ),                                                           
-                              em: ({node, ...props}) => <em className="italic" {...props} />,
-                              ul: ({node, ...props}) => <ul className="list-disc list-inside mb-3 space-y-1" {...props} />,
-                              ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-3 space-y-1" {...props} />,
-                              h1: ({node, ...props}) => <h1 className="text-2xl font-bold mb-2 text-[--color-gold]" {...props} />,
-                              h2: ({node, ...props}) => <h2 className="text-xl font-bold mb-2 text-[--color-gold]" {...props} />,
-                              h3: ({node, ...props}) => <h3 className="text-lg font-bold mb-2 text-[--color-gold]" {...props} />,
-                            }}
-                          >
-                            {message.content}
-                          </ReactMarkdown>
-                        )
-                      ) : (
-                        <div className="whitespace-pre-wrap font-bold text-black">{message.content}</div>
-                      )}
-                    </div>
+          <div className="font-[family:--font-family-body] leading-relaxed prose prose-sm max-w-none">
+            {message.role === 'assistant' ? (
+              shouldAnimate ? (
+                // For the latest message, show decrypt animation then markdown
+                <div className="whitespace-pre-wrap">
+                  <ReactMarkdown
+                    components={{
+                      p: ({node, ...props}) => <p className="mb-3" {...props} />,
+                      strong: ({node, ...props}) => (
+                        <strong 
+                          className="font-extrabold text-[--color-saffron]" 
+                          style={{fontWeight: 800}} 
+                          {...props} 
+                        />
+                      ),
+                      em: ({node, ...props}) => <em className="italic" {...props} />,
+                      ul: ({node, ...props}) => <ul className="list-disc list-inside mb-3 space-y-1" {...props} />,
+                      ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-3 space-y-1" {...props} />,
+                      h1: ({node, ...props}) => <h1 className="text-2xl font-bold mb-2 text-[--color-gold]" {...props} />,
+                      h2: ({node, ...props}) => <h2 className="text-xl font-bold mb-2 text-[--color-gold]" {...props} />,
+                      h3: ({node, ...props}) => <h3 className="text-lg font-bold mb-2 text-[--color-gold]" {...props} />,
+                    }}
+                  >
+                    {message.content}
+                  </ReactMarkdown>
+                </div>
+              ) : (
+                // For older messages, just show markdown normally
+                <ReactMarkdown
+                  components={{
+                    p: ({node, ...props}) => <p className="mb-3" {...props} />,
+                    strong: ({node, ...props}) => (
+                      <strong 
+                        className="font-extrabold text-[--color-saffron]" 
+                        style={{fontWeight: 800}} 
+                        {...props} 
+                      />
+                    ),
+                    em: ({node, ...props}) => <em className="italic" {...props} />,
+                    ul: ({node, ...props}) => <ul className="list-disc list-inside mb-3 space-y-1" {...props} />,
+                    ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-3 space-y-1" {...props} />,
+                    h1: ({node, ...props}) => <h1 className="text-2xl font-bold mb-2 text-[--color-gold]" {...props} />,
+                    h2: ({node, ...props}) => <h2 className="text-xl font-bold mb-2 text-[--color-gold]" {...props} />,
+                    h3: ({node, ...props}) => <h3 className="text-lg font-bold mb-2 text-[--color-gold]" {...props} />,
+                  }}
+                >
+                  {message.content}
+                </ReactMarkdown>
+              )
+            ) : (
+              <div className="whitespace-pre-wrap font-bold text-black">{message.content}</div>
+            )}
+          </div>
+
                   </div>
                 </div>
               );

@@ -112,57 +112,63 @@ export const BGMProvider = ({ children }) => {
   };
 
   const switchBGM = (type) => {
-    if (!audioRef.current || currentBGMType === type) return;
+    if (currentBGMType === type) return;
 
     console.log(`🔄 Switching BGM from ${currentBGMType} to ${type}`);
-    
-    const wasPlaying = !audioRef.current.paused;
 
-    // ⭐ SAVE main BGM time to ref BEFORE switching
-    if (currentBGMType === 'main') {
+    // ⭐ SAVE main BGM time BEFORE switching
+    if (currentBGMType === 'main' && audioRef.current) {
       mainBGMTimeRef.current = audioRef.current.currentTime;
       console.log(`💾 Saved main BGM time: ${mainBGMTimeRef.current.toFixed(2)}s`);
     }
 
-    // Pause current
-    audioRef.current.pause();
-    
-    // Change source
+    // ⭐ STOP and DESTROY old audio element
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.src = ''; // Clear source
+      audioRef.current.load();    // Reset element
+    }
+
+    // ⭐ CREATE NEW audio element with new URL
     const newUrl = BGM_URLS[type];
-    console.log(`🎵 New BGM URL: ${newUrl}`);
-    
+    console.log(`🎵 Creating new audio element with URL: ${newUrl}`);
+
     if (newUrl) {
-      audioRef.current.src = newUrl;
-      audioRef.current.load();
-      
+      // Create fresh audio element
+      audioRef.current = new Audio(newUrl);
+      audioRef.current.loop = true;
+      audioRef.current.volume = 0.3;
+      audioRef.current.crossOrigin = 'anonymous';
+
       setCurrentBGMType(type);
 
-      // ⭐ Restore time after a tiny delay to ensure audio is ready
+      // ⭐ Restore time for main BGM
       if (type === 'main' && mainBGMTimeRef.current > 0) {
-        setTimeout(() => {
+        audioRef.current.addEventListener('loadedmetadata', () => {
           if (audioRef.current) {
             audioRef.current.currentTime = mainBGMTimeRef.current;
             console.log(`⏱️ Restored main BGM to ${mainBGMTimeRef.current.toFixed(2)}s`);
           }
-        }, 100); // Small delay to let audio load
+        }, { once: true });
       }
 
+      // ⭐ Determine if we should play
       const shouldPlayMain = type === 'main' && bgmEnabled && hasUserInteracted;
       const shouldPlayGames = type === 'games' && bgmEnabled && gamesBGMEnabled && hasUserInteracted;
 
       console.log(`🎮 Should play? Main: ${shouldPlayMain}, Games: ${shouldPlayGames}`);
 
-      if (wasPlaying && (shouldPlayMain || shouldPlayGames)) {
+      if (shouldPlayMain || shouldPlayGames) {
         console.log(`▶️ Playing ${type} BGM...`);
-        // Delay play slightly to ensure currentTime is set first
-        setTimeout(() => {
-          audioRef.current.play().catch(err => console.log('BGM switch play failed:', err));
-        }, 150);
+        audioRef.current.play()
+          .then(() => console.log(`✅ ${type} BGM playing successfully!`))
+          .catch(err => console.error(`❌ ${type} play error:`, err));
       } else {
         console.log(`⏸️ Not playing ${type} BGM. Conditions not met.`);
       }
     }
   };
+
 
   return (
     <BGMContext.Provider value={{ 

@@ -3,6 +3,7 @@ import TextType from './TextType';
 import { useSoundEffect } from '../hooks/useSoundEffect'; 
 import { useBGM } from '../context/BGMContext';
 import './AudioUnlock.css'; // ← ADD THIS IMPORT
+import { Volume2 } from 'lucide-react';
 
 
 
@@ -138,14 +139,11 @@ const AudioUnlock = ({ onUnlock }) => {
 
 
         {/* Info Text */}
-        <p 
-          className="mt-8 text-base text-amber-600 italic opacity-0"
-          style={{ 
-            animation: 'fade-in 1s ease-out 4s forwards'
-          }}
-        >
-          🔊 Enable audio for the complete immersive experience
+        <p className="mt-8 text-base text-amber-600 italic opacity-0 flex items-center justify-center gap-2" style={{ animation: 'fade-in 1s ease-out 4s forwards' }}>
+          <Volume2 size={20} className="text-amber-600" />
+          Enable audio for the complete immersive experience
         </p>
+
 
 
 

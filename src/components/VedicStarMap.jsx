@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import constellationsData from '../data/constellations.json';
 import RishiWelcome from './RishiWelcome';
+import { Sparkles } from 'lucide-react';
 
 
 const VedicStarMap = () => {
@@ -194,8 +195,9 @@ const VedicStarMap = () => {
     <div className="max-w-7xl mx-auto p-8">
       {/* Header */}
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-[family:--font-family-header] text-[--color-ink] mb-3">
-          ✨ RigVeda Observatory
+      <h1 className="text-4xl font-[family:--font-family-header] text-[--color-ink] mb-3 flex items-center justify-center gap-3">
+          <Sparkles size={32} className="text-[--color-gold]" />
+          RigVeda Observatory
         </h1>
         <p className="text-lg text-[--color-ink-light] font-[family:--font-family-body]">
           Explore constellations mentioned in the Rigveda • Move your mouse to explore in 3D

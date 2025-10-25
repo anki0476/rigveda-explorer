@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import topics from '../data/topics.json';
 import BookLoadingAnimation from './BookLoadingAnimation';
 import RishiWelcome from './RishiWelcome';
+import { BookText, Globe, Lightbulb, BookOpen, Sparkles, Brain, Search, Library } from 'lucide-react';
 
 const TopicGrid = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,6 +18,51 @@ const TopicGrid = () => {
       setIsLoading(false);
     }, 800);
   }, []);
+
+  // Add this state and effect after the existing useState declarations (around line 13)
+
+// Typewriter effect for cycling topic names
+const [currentTopicIndex, setCurrentTopicIndex] = useState(0);
+const [displayedText, setDisplayedText] = useState("");
+const [isTyping, setIsTyping] = useState(true);
+const [typingSpeed, setTypingSpeed] = useState(100);
+
+// Get all topic short titles for cycling
+const topicNames = topics.topics.map(topic => topic.shortTitle || topic.title);
+
+useEffect(() => {
+  if (topicNames.length === 0) return;
+
+  const currentTopic = topicNames[currentTopicIndex];
+
+  const handleTyping = () => {
+    if (isTyping) {
+      // Typing forward
+      if (displayedText.length < currentTopic.length) {
+        setDisplayedText(currentTopic.substring(0, displayedText.length + 1));
+        setTypingSpeed(100);
+      } else {
+        // Finished typing, pause before deleting
+        setTimeout(() => setIsTyping(false), 2000);
+      }
+    } else {
+      // Deleting backward
+      if (displayedText.length > 0) {
+        setDisplayedText(displayedText.substring(0, displayedText.length - 1));
+        setTypingSpeed(50);
+      } else {
+        // Finished deleting, move to next topic
+        setIsTyping(true);
+        setCurrentTopicIndex((prevIndex) => (prevIndex + 1) % topicNames.length);
+        setTypingSpeed(500);
+      }
+    }
+  };
+
+  const timer = setTimeout(handleTyping, typingSpeed);
+  return () => clearTimeout(timer);
+}, [displayedText, isTyping, currentTopicIndex, typingSpeed, topicNames]);
+
 
   const getDifficultyColor = (difficulty) => {
     switch (difficulty) {
@@ -42,14 +88,17 @@ const TopicGrid = () => {
   if (isLoading) {
     return (
       <div className="max-w-6xl mx-auto p-8">
+        {/* Loading state header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-[family:--font-family-header] text-[--color-ink] mb-4">
-            📚 Rig Veda On...
+          <h1 className="text-5xl font-[family:--font-family-header] text-[--color-ink] mb-4 flex items-center justify-center gap-3">
+            <BookOpen size={48} className="text-[--color-primary]" />
+            Rig Veda On...
           </h1>
           <p className="text-xl text-[--color-ink-light] font-[family:--font-family-body] max-w-3xl mx-auto">
             Explore profound Vedic wisdom on life's essential topics
           </p>
         </div>
+
         <BookLoadingAnimation size="medium" text="Opening the ancient texts..." />
       </div>
     );
@@ -65,10 +114,15 @@ const TopicGrid = () => {
       />
 
       <div className="max-w-6xl mx-auto p-8">
-        {/* Header */}
+        {/* Header - Main section */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-[family:--font-family-header] text-[--color-ink] mb-4">
-            📚 Rig Veda On...
+        <h1 className="text-5xl font-[family:--font-family-header] text-[--color-ink] mb-4 flex items-center justify-center gap-3">
+            <BookOpen size={48} className="text-[--color-primary]" />
+            Rig Veda On
+            <span className="text-[--color-primary]">
+              {displayedText}
+              <span className="animate-blink">|</span>
+            </span>
           </h1>
           <p className="text-xl text-[--color-ink-light] font-[family:--font-family-body] max-w-3xl mx-auto">
             Explore profound Vedic wisdom on life's essential topics. Each section reveals ancient insights 
@@ -159,8 +213,11 @@ const TopicGrid = () => {
         {/* Info Section */}
         <div className="bg-[--color-parchment-light] p-8 rounded-lg border-2 border-[--color-gold]/40">
           <div className="grid md:grid-cols-3 gap-6 text-center">
+            {/* Original Texts */}
             <div>
-              <div className="text-4xl mb-2">📖</div>
+              <div className="flex justify-center mb-2">
+                <BookOpen size={40} className="text-[--color-primary]" />
+              </div>
               <h4 className="text-xl font-[family:--font-family-header] text-[--color-ink] mb-2">
                 Original Texts
               </h4>
@@ -168,9 +225,12 @@ const TopicGrid = () => {
                 Sanskrit verses with transliterations and English translations
               </p>
             </div>
-            
+
+            {/* Modern Connections */}
             <div>
-              <div className="text-4xl mb-2">🔬</div>
+              <div className="flex justify-center mb-2">
+                <Sparkles size={40} className="text-[--color-primary]" />
+              </div>
               <h4 className="text-xl font-[family:--font-family-header] text-[--color-ink] mb-2">
                 Modern Connections
               </h4>
@@ -178,9 +238,12 @@ const TopicGrid = () => {
                 Links to contemporary fields like psychology, ecology, and ethics
               </p>
             </div>
-            
+
+            {/* Deep Exploration */}
             <div>
-              <div className="text-4xl mb-2">💭</div>
+              <div className="flex justify-center mb-2">
+                <Brain size={40} className="text-[--color-primary]" />
+              </div>
               <h4 className="text-xl font-[family:--font-family-header] text-[--color-ink] mb-2">
                 Deep Exploration
               </h4>
@@ -193,8 +256,9 @@ const TopicGrid = () => {
 
         {/* Keywords Preview */}
         <div className="mt-8 p-6 bg-[--color-parchment-dark] rounded-lg">
-          <h3 className="text-lg font-[family:--font-family-header] text-[--color-ink] mb-4 text-center">
-            🔍 Explore Concepts Like:
+          <h3 className="text-lg font-[family:--font-family-header] text-[--color-ink] mb-4 text-center flex items-center justify-center gap-2">
+            <Search size={20} className="text-[--color-primary]" />
+            Explore Concepts Like:
           </h3>
           <div className="flex flex-wrap justify-center gap-2">
             {topicsList.flatMap(topic => topic.keywords.slice(0, 2)).map((keyword, index) => (
@@ -211,5 +275,6 @@ const TopicGrid = () => {
     </>
   );
 };
+
 
 export default TopicGrid;

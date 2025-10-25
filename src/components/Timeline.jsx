@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Scroll, GraduationCap, Library, Heart, PenTool, BookOpen, Globe, Microscope, Sparkles, Building2 } from 'lucide-react';
 
 const Timeline = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const Timeline = () => {
         "Oral transmission begins with strict memorization techniques"
       ],
       color: "#8B4513",
-      icon: "📜",
+      icon: <Scroll size={40} className="text-white" />,
       worldContext: "Bronze Age - Contemporary with Mycenaean Greece, New Kingdom Egypt, Shang Dynasty China"
     },
     {
@@ -33,7 +34,7 @@ const Timeline = () => {
         "Migration and settlement patterns in Gangetic plains"
       ],
       color: "#CD853F",
-      icon: "🎓",
+      icon: <GraduationCap size={40} className="text-white" />,
       worldContext: "Late Bronze Age collapse in Mediterranean, Iron Age begins"
     },
     {
@@ -48,7 +49,7 @@ const Timeline = () => {
         "Society becomes more stratified and ritualistic"
       ],
       color: "#DEB887",
-      icon: "📚",
+      icon: <Library size={40} className="text-white" />,
       worldContext: "Classical Antiquity begins, Buddha and Mahavira born (~563 BCE)"
     },
     {
@@ -63,7 +64,7 @@ const Timeline = () => {
         "Buddhism and Jainism emerge as reform movements"
       ],
       color: "#D2691E",
-      icon: "🧘",
+      icon: <Heart size={40} className="text-white" />,
       worldContext: "Persian Empire, Greek Classical Period, Confucius in China"
     },
     {
@@ -78,7 +79,7 @@ const Timeline = () => {
         "Rigveda still transmitted orally with 100% accuracy"
       ],
       color: "#F4A460",
-      icon: "✍️",
+      icon: <PenTool size={40} className="text-white" />,
       worldContext: "Roman Empire, Han Dynasty China, Gupta Golden Age"
     },
     {
@@ -93,7 +94,7 @@ const Timeline = () => {
         "Rigveda remains central to Hindu ritual and identity"
       ],
       color: "#8B7355",
-      icon: "📖",
+      icon: <BookOpen size={40} className="text-white" />,
       worldContext: "Islamic Golden Age, Medieval Europe, Song Dynasty China"
     },
     {
@@ -108,7 +109,7 @@ const Timeline = () => {
         "Rigveda recognized as one of world's oldest religious texts"
       ],
       color: "#C19A6B",
-      icon: "🌍",
+      icon: <Globe size={40} className="text-white" />,
       worldContext: "Age of Enlightenment, Industrial Revolution, British colonial period"
     },
     {
@@ -124,7 +125,7 @@ const Timeline = () => {
         "UNESCO recognition of oral Vedic tradition (2003)"
       ],
       color: "#B8860B",
-      icon: "🔬",
+      icon: <Microscope size={40} className="text-white" />,
       worldContext: "Modern science, space age, digital revolution, globalization"
     }
   ];
@@ -271,15 +272,19 @@ const Timeline = () => {
           <div className="manuscript-corner manuscript-corner-bl"></div>
           <div className="manuscript-corner manuscript-corner-br"></div>
 
-          <h2 className="text-3xl font-[family:--font-family-header] font-bold text-[--color-ink] mb-2 text-center">
-            📚 Chronological Layers of Rigveda
+          <h2 className="text-3xl font-[family:--font-family-header] font-bold text-[--color-ink] mb-2 text-center flex items-center justify-center gap-3">
+            <Library size={32} className="text-[--color-gold]" />
+            Chronological Layers of Rigveda
           </h2>
           <div className="ornate-divider mb-6"></div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {/* Oldest Layer */}
             <div className="double-golden-border card-glare-container bg-gradient-to-br from-[--color-parchment-light] to-[--color-parchment] p-6 rounded-xl hover:scale-105 transition-transform">
-              <div className="text-4xl mb-3 text-center">🏛️</div>
+            <div className="flex justify-center mb-3">
+  <Building2 size={48} className="text-[--color-gold]" />
+</div>
+
               <h3 className="text-xl font-[family:--font-family-header] font-bold text-[--color-ink] mb-2 text-center">
                 Oldest Layer
               </h3>
@@ -294,7 +299,10 @@ const Timeline = () => {
 
             {/* Middle Layer */}
             <div className="double-golden-border card-glare-container bg-gradient-to-br from-[--color-parchment] to-[--color-parchment-light] p-6 rounded-xl hover:scale-105 transition-transform">
-              <div className="text-4xl mb-3 text-center">📖</div>
+            <div className="flex justify-center mb-3">
+  <BookOpen size={48} className="text-[--color-saffron]" />
+</div>
+
               <h3 className="text-xl font-[family:--font-family-header] font-bold text-[--color-ink] mb-2 text-center">
                 Middle Layer
               </h3>
@@ -309,7 +317,10 @@ const Timeline = () => {
 
             {/* Youngest Layer */}
             <div className="double-golden-border card-glare-container bg-gradient-to-br from-[--color-parchment-light] to-[--color-parchment] p-6 rounded-xl hover:scale-105 transition-transform">
-              <div className="text-4xl mb-3 text-center">🌟</div>
+            <div className="flex justify-center mb-3">
+  <Sparkles size={48} className="text-[--color-gold]" />
+</div>
+
               <h3 className="text-xl font-[family:--font-family-header] font-bold text-[--color-ink] mb-2 text-center">
                 Youngest Layer
               </h3>

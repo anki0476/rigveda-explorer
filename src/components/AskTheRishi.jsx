@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import jsPDF from 'jspdf';
 import FastDecrypt from './FastDecrypt';
-import { MessageCircleQuestion } from 'lucide-react'
+import { MessageCircle, Trash2, FileText, Download, Star, Search } from 'lucide-react';
 import RishiWelcome from './RishiWelcome';
 
 const AskTheRishi = () => {
@@ -432,8 +432,9 @@ Provide a thoughtful, well-cited answer as the Rishi:`;
       />
     <div className="min-h-screen p-4 flex flex-col">
       <div className="text-center mb-6">
-        <h1 className="text-4xl font-[family:--font-family-header] text-[--color-ink] mb-2">
-          💬 Ask the Rishi
+      <h1 className="text-4xl font-[family:--font-family-header] text-[--color-ink] mb-2 flex items-center justify-center gap-2">
+          <MessageCircle size={32} className="text-[--color-primary]" />
+          Ask the Rishi
         </h1>
         <p className="text-lg text-[--color-ink-light] font-[family:--font-family-body]">
           AI-powered chatbot to answer your questions about the Rigveda with specific verse citations
@@ -449,51 +450,56 @@ Provide a thoughtful, well-cited answer as the Rishi:`;
             <>
               <button
                 onClick={clearHistory}
-                className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors text-sm font-[family:--font-family-body] border-2 border-red-700"
+                className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors text-sm font-[family:--font-family-body] border-2 border-red-700 flex items-center gap-2"
               >
-                🗑️ Clear History
+                <Trash2 size={16} />
+                CLEAR HISTORY
               </button>
               <button
                 onClick={exportChatAsPDF}
-                className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors text-sm font-[family:--font-family-body] border-2 border-blue-700"
+                className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors text-sm font-[family:--font-family-body] border-2 border-blue-700 flex items-center gap-2"
               >
-                📄 Export as PDF
+                <FileText size={16} />
+                EXPORT AS PDF
               </button>
               <button
                 onClick={exportChatAsJSON}
-                className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm font-[family:--font-family-body] border-2 border-green-700"
+                className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm font-[family:--font-family-body] border-2 border-green-700 flex items-center gap-2"
               >
-                📥 Export as JSON
+                <Download size={16} />
+                EXPORT AS JSON
               </button>
               <button
                 onClick={() => setShowFavorites(!showFavorites)}
-                className={`px-4 py-2 rounded-lg transition-colors text-sm font-[family:--font-family-body] font-semibold border-2 ${
+                className={`px-4 py-2 rounded-lg transition-colors text-sm font-[family:--font-family-body] font-semibold border-2 flex items-center gap-2 ${
                   showFavorites
                     ? 'bg-yellow-500 text-[--color-ink] hover:bg-yellow-600 border-yellow-700'
                     : 'bg-[--color-gold] text-[--color-ink] hover:bg-[--color-saffron] border-[--color-ink]'
                 }`}
               >
-                {showFavorites ? '💬 All Messages' : `⭐ Favorites (${favorites.length})`}
+                <Star size={16} className={showFavorites ? "fill-current" : ""} />
+                {showFavorites ? 'All Messages' : `Favorites (${favorites.length})`}
               </button>
             </>
           )}
         </div>
 
         {!showFavorites && messages.length > 1 && (
-          <div className="mt-4 max-w-md mx-auto">
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="🔍 Search conversations..."
-              className="w-full px-4 py-2 rounded-lg border-2 border-[--color-gold] bg-[--color-parchment-light] text-[--color-ink] font-[family:--font-family-body] focus:outline-none focus:border-[--color-saffron]"
-            />
-            {searchQuery && (
-              <p className="text-sm text-[--color-ink-light] mt-2">
-                Found {filteredMessages.length} result(s)
-              </p>
-            )}
-          </div>
+          <div className="mt-4 max-w-md mx-auto relative">
+          <Search size={20} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[--color-ink-light]" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search conversations..."
+            className="w-full pl-10 pr-4 py-2 rounded-lg border-2 border-[--color-gold] bg-[--color-parchment-light] text-[--color-ink] font-[family:--font-family-body] focus:outline-none focus:border-[--color-saffron]"
+          />
+          {searchQuery && (
+            <p className="text-sm text-[--color-ink-light] mt-2">
+              Found {filteredMessages.length} result(s)
+            </p>
+          )}
+        </div>
         )}
       </div>
 

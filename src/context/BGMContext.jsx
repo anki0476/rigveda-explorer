@@ -125,8 +125,8 @@ export const BGMProvider = ({ children }) => {
     // ⭐ STOP and DESTROY old audio element
     if (audioRef.current) {
       audioRef.current.pause();
-      audioRef.current.src = ''; // Clear source
-      audioRef.current.load();    // Reset element
+      audioRef.current.src = '';
+      audioRef.current.load();
     }
 
     // ⭐ CREATE NEW audio element with new URL
@@ -135,37 +135,51 @@ export const BGMProvider = ({ children }) => {
 
     if (newUrl) {
       // Create fresh audio element
-      audioRef.current = new Audio(newUrl);
-      audioRef.current.loop = true;
-      audioRef.current.volume = 0.3;
-      audioRef.current.crossOrigin = 'anonymous';
+      const newAudio = new Audio();
+      newAudio.loop = true;
+      newAudio.volume = 0.3;
+      newAudio.crossOrigin = 'anonymous';
+      newAudio.preload = 'auto'; // ⭐ Force preload
 
       setCurrentBGMType(type);
 
-      // ⭐ Restore time for main BGM
-      if (type === 'main' && mainBGMTimeRef.current > 0) {
-        audioRef.current.addEventListener('loadedmetadata', () => {
-          if (audioRef.current) {
-            audioRef.current.currentTime = mainBGMTimeRef.current;
-            console.log(`⏱️ Restored main BGM to ${mainBGMTimeRef.current.toFixed(2)}s`);
-          }
-        }, { once: true });
-      }
+      // ⭐ WAIT for audio to be ready before playing
+      newAudio.addEventListener('canplaythrough', () => {
+        console.log(`✅ ${type} BGM ready to play`);
+        
+        // Restore time for main BGM
+        if (type === 'main' && mainBGMTimeRef.current > 0) {
+          newAudio.currentTime = mainBGMTimeRef.current;
+          console.log(`⏱️ Restored main BGM to ${mainBGMTimeRef.current.toFixed(2)}s`);
+        }
 
-      // ⭐ Determine if we should play
-      const shouldPlayMain = type === 'main' && bgmEnabled && hasUserInteracted;
-      const shouldPlayGames = type === 'games' && bgmEnabled && gamesBGMEnabled && hasUserInteracted;
+        // Determine if we should play
+        const shouldPlayMain = type === 'main' && bgmEnabled && hasUserInteracted;
+        const shouldPlayGames = type === 'games' && bgmEnabled && gamesBGMEnabled && hasUserInteracted;
 
-      console.log(`🎮 Should play? Main: ${shouldPlayMain}, Games: ${shouldPlayGames}`);
+        console.log(`🎮 Should play? Main: ${shouldPlayMain}, Games: ${shouldPlayGames}`);
 
-      if (shouldPlayMain || shouldPlayGames) {
-        console.log(`▶️ Playing ${type} BGM...`);
-        audioRef.current.play()
-          .then(() => console.log(`✅ ${type} BGM playing successfully!`))
-          .catch(err => console.error(`❌ ${type} play error:`, err));
-      } else {
-        console.log(`⏸️ Not playing ${type} BGM. Conditions not met.`);
-      }
+        if (shouldPlayMain || shouldPlayGames) {
+          console.log(`▶️ Playing ${type} BGM...`);
+          newAudio.play()
+            .then(() => console.log(`✅ ${type} BGM playing successfully!`))
+            .catch(err => console.error(`❌ ${type} play error:`, err));
+        }
+      }, { once: true });
+
+      // ⭐ Handle load errors
+      newAudio.addEventListener('error', (e) => {
+        console.error(`❌ ${type} BGM load error:`, e);
+        console.error('Error code:', newAudio.error?.code);
+        console.error('Error message:', newAudio.error?.message);
+      });
+
+      // ⭐ Set source AFTER adding event listeners
+      newAudio.src = newUrl;
+      newAudio.load(); // Explicitly trigger load
+
+      // Update ref
+      audioRef.current = newAudio;
     }
   };
 

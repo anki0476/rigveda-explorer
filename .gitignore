@@ -15,6 +15,7 @@ public/audio/*
 
 # Keep button sounds in Git (they're tiny ~25KB total)
 !public/audio/button-*.mp3
+!public/audio/bgm-games.mp3
 
 # Logs
 logs

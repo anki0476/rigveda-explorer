@@ -138,8 +138,16 @@ export const BGMProvider = ({ children }) => {
       const newAudio = new Audio();
       newAudio.loop = true;
       newAudio.volume = 0.3;
-      newAudio.crossOrigin = 'anonymous';
-      newAudio.preload = 'auto'; // ⭐ Force preload
+      
+      // ⭐ Only set crossOrigin for external URLs (Cloudinary)
+      if (newUrl.startsWith('http')) {
+        newAudio.crossOrigin = 'anonymous';
+        console.log('🌐 External URL - setting crossOrigin');
+      } else {
+        console.log('📁 Local file - no crossOrigin needed');
+      }
+      
+      newAudio.preload = 'auto';
 
       setCurrentBGMType(type);
 

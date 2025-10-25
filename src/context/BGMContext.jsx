@@ -45,6 +45,7 @@ export const BGMProvider = ({ children }) => {
       audioRef.current = new Audio(BGM_URLS.main);
       audioRef.current.loop = true;
       audioRef.current.volume = 0.3;
+      audioRef.current.crossOrigin = 'anonymous';
     }
 
     return () => {

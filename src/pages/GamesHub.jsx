@@ -1,26 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useGameProgress } from '../hooks/useGameProgress';
 import RishiWelcome from '../components/RishiWelcome';
-import { useBGM } from '../context/BGMContext';
 
 
 const GamesHub = () => {
   const navigate = useNavigate();
   const { progress, resetProgress } = useGameProgress();
-  const { switchBGM, gamesBGMEnabled } = useBGM();
 
-  useEffect(() => {
-    // Switch to games BGM when entering games
-    if (gamesBGMEnabled) {
-      switchBGM('games');
-    }
-
-    // Switch back to main BGM when leaving games
-    return () => {
-      switchBGM('main');
-    };
-  }, [switchBGM, gamesBGMEnabled]);
 
 
   const games = [

@@ -237,13 +237,13 @@ const About = () => {
         </h2>
         <div className="bg-[--color-parchment-light] p-8 rounded-lg space-y-6">
           <p className="text-[--color-ink-light] font-[family:--font-family-body] leading-relaxed">
-            Rigveda Odyssey is an award-contending, gamified web experience that transforms ancient Vedic wisdom 
+            Rigveda Odyssey is a web experience that transforms ancient Vedic wisdom 
             into an interactive journey. This project combines scholarly research, AI-powered features, immersive 
             visualizations, and game mechanics to create an unprecedented digital exploration of the world's 
             oldest sacred texts.
           </p>
           <p className="text-[--color-ink-light] font-[family:--font-family-body] leading-relaxed">
-            Built with React 19, D3.js, Tailwind CSS v4, and powered by Google Gemini AI, the platform offers 
+            Built by ANKIT SHRIVASTAVA with React 19, D3.js, Tailwind CSS v4, and powered by Google Gemini AI, the platform offers 
             20 bilingual AI-generated podcasts, interactive story modes, deity collection games, achievement 
             systems, 3D book viewers, celestial star maps, and comprehensive explorations of Vedic philosophy—all 
             wrapped in an authentic ancient manuscript aesthetic with custom sound design and fluid animations.
@@ -526,7 +526,7 @@ const About = () => {
           <div className="bg-[--color-parchment-dark] p-4 rounded-lg text-center">
             <div className="text-2xl font-[family:--font-family-header] text-[--color-gold] mb-1">
               <CountUp 
-                to={17}
+                to={29}
                 duration={1.5}
                 delay={0.5}
               />
@@ -549,7 +549,7 @@ const About = () => {
           <div className="bg-[--color-parchment-dark] p-4 rounded-lg text-center">
             <div className="text-2xl font-[family:--font-family-header] text-[--color-gold] mb-1">
               <CountUp 
-                to={8}
+                to={27}
                 duration={1.5}
                 delay={0.7}
               />

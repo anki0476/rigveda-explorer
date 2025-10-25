@@ -4,6 +4,7 @@ import Navigation from './components/Layout/Navigation';
 import EnhancedHome from './components/EnhancedHome';
 import NotificationContainer from './components/Games/NotificationContainer';
 import TourOrchestrator from './components/Tour/TourOrchestrator';
+import { BGMController } from './components/BGMController'; 
 
 import VideoIntro from './components/VideoIntro';
 import AudioUnlock from './components/AudioUnlock';
@@ -54,6 +55,8 @@ function App() {
 
       {introComplete && (
         <Router>
+          <BGMController /> {/* ← ADD THIS LINE HERE (inside Router, before div) */}
+          
           <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100">
             <Navigation />
             <NotificationContainer />

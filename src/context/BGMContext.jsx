@@ -34,7 +34,7 @@ export const BGMProvider = ({ children }) => {
     // BGM URLs - hardcoded for reliability
     const BGM_URLS = {
       main: 'https://res.cloudinary.com/dn35jzjjc/video/upload/v1761317273/bgm-main_k2stul.mp3',
-      games: 'https://res.cloudinary.com/dn35jzjjc/video/upload/v1761317000/bgm-games_azhn3z.mp3'
+      games: 'https://res.cloudinary.com/dn35jzjjc/video/upload/v1761317000/bgm-games_sv3zt9.mp3'
     };
   
 

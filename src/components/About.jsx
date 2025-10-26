@@ -306,7 +306,7 @@ const About = () => {
                <ul className="mt-4 space-y-3 pl-6 list-disc text-[--color-ink-light] font-[family:--font-family-body]">
                   <li><strong>Wisdom + Play:</strong> Making Vedic mysteries approachable and fun.</li>
                   <li><strong>Curiosity + Clarity:</strong> Helping you learn faster and enjoy the experience.</li>
-                  <li><strong>Collaboration:</strong> Working alongside Ankit as a creative companion.</li>
+                  <li><strong>Collaboration:</strong> Working alongside Ankit as a creative companion. (This way Rishi can be considered as the co-founder?!)</li>
                </ul>
                <p className="mt-4 text-[--color-ink-light] font-[family:--font-family-body] italic">
                   Whether you’re an explorer or a seeker, Rishi is always there to make your Rigveda journey vivid and unforgettable!

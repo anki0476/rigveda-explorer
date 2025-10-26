@@ -243,7 +243,7 @@ const About = () => {
             oldest sacred texts.
           </p>
           <p className="text-[--color-ink-light] font-[family:--font-family-body] leading-relaxed">
-            Built by ANKIT SHRIVASTAVA with React 19, D3.js, Tailwind CSS v4, and powered by Google Gemini AI, the platform offers 
+            Built by <strong>ANKIT SHRIVASTAVA</strong> with React 19, D3.js, Tailwind CSS v4, and powered by Google Gemini AI, the platform offers 
             20 bilingual AI-generated podcasts, interactive story modes, deity collection games, achievement 
             systems, 3D book viewers, celestial star maps, and comprehensive explorations of Vedic philosophy—all 
             wrapped in an authentic ancient manuscript aesthetic with custom sound design and fluid animations.
@@ -269,6 +269,53 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* About Rishi, the Mascot */}
+      <section className="mb-12">
+         <h2 className="text-3xl font-[family:--font-family-header] text-[--color-ink] mb-6 pb-2 border-b-2 border-[--color-gold]/30">
+            About Rishi, the Mascot
+         </h2>
+         <div className="bg-[--color-parchment-light] p-8 rounded-lg space-y-6 flex flex-col md:flex-row gap-8 items-center">
+            <video 
+               src="/videos/RishiAbout.mp4"
+               width={180}
+               height={180}
+               className="rounded-full shadow-lg border-2 border-[--color-gold]/30 object-cover mb-6 md:mb-0"
+               style={{ background: 'var(--color-parchment-dark)' }}
+               controls
+               autoPlay
+               loop
+               muted
+               playsInline
+               aria-label="About Rishi mascot video"
+            />
+            <div>
+               <p className="text-[--color-ink-light] font-[family:--font-family-body] leading-relaxed text-lg mb-2">
+                  <strong>Meet Rishi—your digital guide to the Rigveda Odyssey.</strong>
+               </p>
+               <p className="text-[--color-ink-light] font-[family:--font-family-body] leading-relaxed">
+                  Rishi is inspired by the visionary seers of ancient Vedic India. Known for his insatiable curiosity and wisdom,
+                  Rishi was regarded among his peers as both a teacher and a playful explorer—composing hymns, debating philosophy,
+                  and discovering the secrets of existence along sacred rivers and forests.
+               </p>
+               <p className="text-[--color-ink-light] font-[family:--font-family-body] leading-relaxed">
+                  As the project mascot, Rishi guides you through every corner of Rigveda Odyssey: explaining concepts, revealing facts,
+                  encouraging discovery, and celebrating your achievements. He helped shape the look, feel, and joyful spirit of this
+                  digital journey—offering ideas and a sprinkle of ancient magic at every step.
+               </p>
+               <ul className="mt-4 space-y-3 pl-6 list-disc text-[--color-ink-light] font-[family:--font-family-body]">
+                  <li><strong>Wisdom + Play:</strong> Making Vedic mysteries approachable and fun.</li>
+                  <li><strong>Curiosity + Clarity:</strong> Helping you learn faster and enjoy the experience.</li>
+                  <li><strong>Collaboration:</strong> Working alongside Ankit as a creative companion.</li>
+               </ul>
+               <p className="mt-4 text-[--color-ink-light] font-[family:--font-family-body] italic">
+                  Whether you’re an explorer or a seeker, Rishi is always there to make your Rigveda journey vivid and unforgettable!
+               </p>
+            </div>
+         </div>
+      </section>
+
+
 
       {/* Features Grid */}
       <section className="mb-12">
@@ -666,11 +713,11 @@ const About = () => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[--color-gold]">•</span>
-                <span>Sound design: Custom audio effects, Sanskrit hymn recordings, ambient soundscapes</span>
+                <span>Sound design: Custom non copyright audio effects, Sanskrit hymn recordings, ambient soundscapes</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[--color-gold]">•</span>
-                <span>Project built, Content research and curation by development team of one person with Nescafe and ideas xD</span>
+                <span>Project built, Content research and curation by development team of one person with Nescafe and ideas xD (and Rishi ofcourse how can we forget him!)</span>
               </li>
             </ul>
           </div>

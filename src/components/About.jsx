@@ -294,7 +294,7 @@ const About = () => {
                   <strong>Meet Rishi—your digital guide to the Rigveda Odyssey.</strong>
                </p>
                <p className="text-[--color-ink-light] font-[family:--font-family-body] leading-relaxed">
-                  Rishi is inspired by the visionary seers of ancient Vedic India. Known for his insatiable curiosity and wisdom,
+                  Rishi is inspired by the visionary seers of ancient Vedic India. He can eat 5 stanford graduates and 5 harvard graduates in breakfast and lunch respectively. Known for his insatiable curiosity and wisdom,
                   Rishi was regarded among his peers as both a teacher and a playful explorer—composing hymns, debating philosophy,
                   and discovering the secrets of existence along sacred rivers and forests.
                </p>

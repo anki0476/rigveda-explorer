@@ -407,7 +407,7 @@ const About = () => {
               Audio Experience
             </h3>
             <p className="text-[--color-ink-light] font-[family:--font-family-body] text-sm">
-              17 professionally narrated hymn audio files with Sanskrit recitation, ambient Vedic soundscapes with fire crackling and chanting, custom sound effects for interactions (page flips, unlocks), and toggleable background audio throughout the app.
+              29 professionally narrated hymn audio files with Sanskrit recitation, ambient Vedic soundscapes with fire crackling and chanting, custom sound effects for interactions (page flips, unlocks), and toggleable background audio throughout the app.
             </p>
           </div>
 

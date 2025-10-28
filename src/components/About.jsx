@@ -7,6 +7,8 @@ import topics from '../data/topics.json';
 import hymns from '../data/hymns.json';
 import facts from '../data/surpriseFacts.json';
 import connections from '../data/connections.json';
+import FeedbackInput from './FeedbackInput';
+
 import { 
   Podcast, 
   Trophy, 
@@ -267,6 +269,8 @@ const About = () => {
               ariaLabel="Technologies used in this project"
             />
           </div>
+
+          <FeedbackInput />
         </div>
       </section>
 
@@ -294,7 +298,7 @@ const About = () => {
                   <strong>Meet Rishi—your digital guide to the Rigveda Odyssey.</strong>
                </p>
                <p className="text-[--color-ink-light] font-[family:--font-family-body] leading-relaxed">
-                  Rishi is inspired by the visionary seers of ancient Vedic India. He can eat 5 stanford graduates and 5 harvard graduates in breakfast and lunch respectively. Known for his insatiable curiosity and wisdom,
+                  Rishi is inspired by the visionary seers of ancient Vedic India. He can obliterate 5 stanford graduates and 5 harvard graduates solo. Known for his insatiable curiosity and wisdom,
                   Rishi was regarded among his peers as both a teacher and a playful explorer—composing hymns, debating philosophy,
                   and discovering the secrets of existence along sacred rivers and forests.
                </p>
@@ -352,7 +356,7 @@ const About = () => {
               Ask The Rishi AI Assistant
             </h3>
             <p className="text-[--color-ink-light] font-[family:--font-family-body] text-sm">
-              Powered by Google Gemini AI, this conversational assistant answers questions about Vedic philosophy, provides verse interpretations, explains Sanskrit terms, and offers personalized wisdom with context-aware responses and markdown formatting.
+              Powered by Google Gemini AI & fine-tuned for RigVeda, this conversational assistant answers questions about Vedic philosophy, provides verse interpretations, explains Sanskrit terms, and offers personalized wisdom with context-aware responses and markdown formatting.
             </p>
           </div>
 
@@ -657,7 +661,7 @@ const About = () => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[--color-gold]">•</span>
-                <span>AI assistant powered by Google Gemini API for contextual responses</span>
+                <span>AI assistant powered by Google Gemini API & fine-tuned for RigVeda for contextual responses</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[--color-gold]">•</span>

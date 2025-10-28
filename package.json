@@ -32,6 +32,7 @@
     "react-share": "^5.2.2",
     "react-type-animation": "^3.2.0",
     "source-map-explorer": "^2.5.3",
+    "styled-components": "^6.1.19",
     "use-sound": "^5.0.0"
   },
   "devDependencies": {

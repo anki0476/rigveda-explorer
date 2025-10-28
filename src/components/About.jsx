@@ -239,7 +239,7 @@ const About = () => {
         </h2>
         <div className="bg-[--color-parchment-light] p-8 rounded-lg space-y-6">
           <p className="text-[--color-ink-light] font-[family:--font-family-body] leading-relaxed">
-            Rigveda Odyssey is a web experience that transforms ancient Vedic wisdom 
+            Rigveda Odyssey (Formerly Project-RV) is a web experience that transforms ancient Vedic wisdom 
             into an interactive journey. This project combines scholarly research, AI-powered features, immersive 
             visualizations, and game mechanics to create an unprecedented digital exploration of the world's 
             oldest sacred texts.

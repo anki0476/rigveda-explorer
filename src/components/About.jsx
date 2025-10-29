@@ -245,11 +245,23 @@ const About = () => {
             oldest sacred texts.
           </p>
           <p className="text-[--color-ink-light] font-[family:--font-family-body] leading-relaxed">
-            Built by <strong>ANKIT SHRIVASTAVA</strong> with React 19, D3.js, Tailwind CSS v4, and powered by Google Gemini AI, the platform offers 
-            20 bilingual AI-generated podcasts, interactive story modes, deity collection games, achievement 
-            systems, 3D book viewers, celestial star maps, and comprehensive explorations of Vedic philosophy—all 
-            wrapped in an authentic ancient manuscript aesthetic with custom sound design and fluid animations.
+            Built by <a 
+              href="https://x.com/ankitt476" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 font-bold transition-colors duration-200 hover:underline decoration-2 underline-offset-2"
+              style={{ color: 'var(--color-ink)' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-gold)'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-ink)'}
+            >
+              ANKIT SHRIVASTAVA
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a> with React 19, D3.js, Tailwind CSS v4, and powered by Google Gemini AI, the platform offers 20+ bilingual AI-generated podcasts, interactive story modes, deity collection games, achievement systems, 3D book viewers, celestial star maps, and comprehensive explorations of Vedic philosophy—all wrapped in an authentic ancient manuscript aesthetic with custom sound design and fluid animations.
           </p>
+
+
 
           {/* Technology Logos Loop */}
           <div className="mt-8">
@@ -650,29 +662,7 @@ const About = () => {
             </ul>
           </div>
 
-          <div className="mb-6">
-            <h3 className="text-lg font-[family:--font-family-header] text-[--color-saffron] mb-3">
-              AI & Technology Credits
-            </h3>
-            <ul className="space-y-3 text-[--color-ink-light] font-[family:--font-family-body]">
-              <li className="flex items-start gap-2">
-                <span className="text-[--color-gold]">•</span>
-                <span>AI podcasts generated for each mandala with custom-written scripts</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-[--color-gold]">•</span>
-                <span>AI assistant powered by Google Gemini API & fine-tuned for RigVeda for contextual responses</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-[--color-gold]">•</span>
-                <span>Deity artwork generated using DALL-E 3 and Claude AI</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-[--color-gold]">•</span>
-                <span>Content curation assistance from Claude and Perplexity AI</span>
-              </li>
-            </ul>
-          </div>
+
 
           <div className="mb-6">
             <h3 className="text-lg font-[family:--font-family-header] text-[--color-saffron] mb-3">
@@ -707,10 +697,6 @@ const About = () => {
               Design & Development
             </h3>
             <ul className="space-y-3 text-[--color-ink-light] font-[family:--font-family-body]">
-              <li className="flex items-start gap-2">
-                <span className="text-[--color-gold]">•</span>
-                <span>Built for #RigVedaHack 2025 hackathon competition</span>
-              </li>
               <li className="flex items-start gap-2">
                 <span className="text-[--color-gold]">•</span>
                 <span>Typography: Cinzel (headers), Lora (body), Noto Sans Devanagari (Sanskrit)</span>

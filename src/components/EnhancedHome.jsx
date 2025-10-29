@@ -9,6 +9,7 @@ import metadata from '../data/metadata.json';
 import deities from '../data/deities.json';
 import topics from '../data/topics.json';
 import hymns from '../data/hymns.json';
+import TextSelectionPopup from './TextSelectionPopup';
 
 // Animated Journey Item Component
 const AnimatedJourneyItem = ({ children, delay = 0, index }) => {
@@ -325,6 +326,7 @@ const EnhancedHome = () => {
 
   return (
     <>
+    <TextSelectionPopup />
       <Navigation />
 
          {/* Journey Selection Modal with Single Column Layout */}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { MessageCircle, Sparkles, BookOpen, Globe, Copy, Check } from 'lucide-react';
+import { MessageCircle, Sparkles, BookOpen, Globe, Copy, Check, ChevronDown } from 'lucide-react';
 
 const TextSelectionPopup = () => {
   const navigate = useNavigate();
@@ -8,6 +8,19 @@ const TextSelectionPopup = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [showLanguageMenu, setShowLanguageMenu] = useState(false);
+  
+  // Language options with emojis
+  const languages = [
+    { code: 'hi', name: 'Hindi', emoji: '🇮🇳', script: 'Devanagari' },
+    { code: 'mr', name: 'Marathi', emoji: '🇮🇳', script: 'Devanagari' },
+    { code: 'gu', name: 'Gujarati', emoji: '🇮🇳', script: 'Gujarati' },
+    { code: 'ta', name: 'Tamil', emoji: '🇮🇳', script: 'Tamil' },
+    { code: 'kn', name: 'Kannada', emoji: '🇮🇳', script: 'Kannada' },
+    { code: 'te', name: 'Telugu', emoji: '🇮🇳', script: 'Telugu' },
+    { code: 'en', name: 'English', emoji: '🇬🇧', script: 'Latin' },
+    { code: 'sa', name: 'Sanskrit', emoji: '🕉️', script: 'Devanagari' },
+  ];
   
   const handleAskRishi = () => {
     sessionStorage.setItem('rishiPrefilledMessage', selectedText);
@@ -21,17 +34,21 @@ const TextSelectionPopup = () => {
     setIsVisible(false);
   };
 
-  const handleTranslate = () => {
+  const handleTranslate = (targetLanguage) => {
     // Check if it looks like Sanskrit/Devanagari
     const isSanskrit = /[\u0900-\u097F]/.test(selectedText);
     
+    let message = '';
     if (isSanskrit) {
-      sessionStorage.setItem('rishiPrefilledMessage', `Translate this Sanskrit text to English: "${selectedText}"`);
+      message = `Translate this Sanskrit/Devanagari text to ${targetLanguage.name}: "${selectedText}"`;
     } else {
-      sessionStorage.setItem('rishiPrefilledMessage', `Provide the Sanskrit translation and meaning: "${selectedText}"`);
+      message = `Translate "${selectedText}" to ${targetLanguage.name} (${targetLanguage.script} script) and also provide the meaning`;
     }
+    
+    sessionStorage.setItem('rishiPrefilledMessage', message);
     navigate('/ask-rishi');
     setIsVisible(false);
+    setShowLanguageMenu(false);
   };
 
   const handleCopy = async () => {
@@ -64,11 +81,13 @@ const TextSelectionPopup = () => {
           });
           setIsVisible(true);
           setCopied(false);
+          setShowLanguageMenu(false);
         } catch (e) {
           setIsVisible(false);
         }
       } else {
         setIsVisible(false);
+        setShowLanguageMenu(false);
       }
     };
 
@@ -83,6 +102,7 @@ const TextSelectionPopup = () => {
     const handleClickOutside = (e) => {
       if (isVisible && !e.target.closest('.text-selection-popup')) {
         setIsVisible(false);
+        setShowLanguageMenu(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -146,17 +166,65 @@ const TextSelectionPopup = () => {
             <BookOpen size={16} />
           </button>
 
-          {/* Translate */}
-          <button
-            onClick={handleTranslate}
-            className="p-2 rounded-full transition-all duration-200 hover:scale-110"
-            style={{
-              color: '#D4AF37',
-            }}
-            title="Translate"
-          >
-            <Globe size={16} />
-          </button>
+          {/* Translate with Dropdown */}
+          <div style={{ position: 'relative' }}>
+            <button
+              onClick={() => setShowLanguageMenu(!showLanguageMenu)}
+              className="flex items-center gap-1 p-2 rounded-full transition-all duration-200 hover:scale-110"
+              style={{
+                color: '#D4AF37',
+              }}
+              title="Translate"
+            >
+              <Globe size={16} />
+              <ChevronDown size={12} />
+            </button>
+
+            {/* Language Dropdown Menu */}
+            {showLanguageMenu && (
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '100%',
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  marginTop: '8px',
+                  backgroundColor: 'rgba(245, 230, 211, 0.98)',
+                  border: '2px solid #D4AF37',
+                  borderRadius: '12px',
+                  padding: '8px',
+                  minWidth: '180px',
+                  maxHeight: '300px',
+                  overflowY: 'auto',
+                  boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
+                  backdropFilter: 'blur(10px)',
+                  zIndex: 100000,
+                  animation: 'slideDown 0.2s ease-out',
+                }}
+              >
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => handleTranslate(lang)}
+                    className="flex items-center gap-2 w-full px-3 py-2 rounded-lg text-left text-sm transition-all duration-150"
+                    style={{
+                      color: '#2C1810',
+                      backgroundColor: 'transparent',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = 'rgba(212, 175, 55, 0.2)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                    }}
+                  >
+                    <span style={{ fontSize: '18px' }}>{lang.emoji}</span>
+                    <span style={{ fontWeight: '500' }}>{lang.name}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
 
           {/* Copy */}
           <button
@@ -181,6 +249,17 @@ const TextSelectionPopup = () => {
           to {
             opacity: 1;
             transform: translateX(-50%) translateY(0) scale(1);
+          }
+        }
+        
+        @keyframes slideDown {
+          from {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
           }
         }
       `}</style>

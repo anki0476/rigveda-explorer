@@ -315,9 +315,9 @@ const About = () => {
                   and discovering the secrets of existence along sacred rivers and forests.
                </p>
                <p className="text-[--color-ink-light] font-[family:--font-family-body] leading-relaxed">
-                  As the project mascot, Rishi guides you through every corner of Rigveda Odyssey: explaining concepts, revealing facts,
+                  As the project mascot, Rishi guides you through every corner of Rigveda Odyssey : explaining concepts, revealing facts,
                   encouraging discovery, and celebrating your achievements. He helped shape the look, feel, and joyful spirit of this
-                  digital journey—offering ideas and a sprinkle of ancient magic at every step.
+                  digital journey—offering ideas and a sprinkle of ancient magic at every step. Apart from the Ask the Rishi page, you can ask him questions from anywhere throughout the website by selecting the relevant text and clicking on "✨ASK RISHI". He is literally everywhere just to help you understand everything better!!
                </p>
                <ul className="mt-4 space-y-3 pl-6 list-disc text-[--color-ink-light] font-[family:--font-family-body]">
                   <li><strong>Wisdom + Play:</strong> Making Vedic mysteries approachable and fun.</li>
@@ -368,7 +368,7 @@ const About = () => {
               Ask The Rishi AI Assistant
             </h3>
             <p className="text-[--color-ink-light] font-[family:--font-family-body] text-sm">
-              Powered by Google Gemini AI & fine-tuned for RigVeda, this conversational assistant answers questions about Vedic philosophy, provides verse interpretations, explains Sanskrit terms, and offers personalized wisdom with context-aware responses and markdown formatting.
+              Powered by Google Gemini AI & fine-tuned for RigVeda, this conversational assistant answers questions about Vedic philosophy, provides verse interpretations, explains Sanskrit terms, and offers personalized wisdom. He is integrated throughout the website.  
             </p>
           </div>
 

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Sparkles, Share2, Download, RefreshCw, Home, ChevronLeft } from 'lucide-react';
 import RishiWelcome from '../components/RishiWelcome';
+import html2canvas from 'html2canvas';
+
 
 
 const VedicIdentityQuiz = () => {
@@ -10,6 +12,7 @@ const VedicIdentityQuiz = () => {
   const [answers, setAnswers] = useState({});
   const [identity, setIdentity] = useState(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const resultCardRef = React.useRef(null);
 
 
   // Load saved results from localStorage
@@ -404,9 +407,45 @@ const VedicIdentityQuiz = () => {
   };
 
 
-  const handleDownload = () => {
-    alert('Download feature coming in Phase 2! 📸');
+  const handleDownload = async () => {
+    if (!resultCardRef.current || !identity) return;
+    
+    try {
+      // Small delay to ensure card is rendered
+      await new Promise(resolve => setTimeout(resolve, 100));
+      
+      const canvas = await html2canvas(resultCardRef.current, {
+        backgroundColor: '#F5E6D3',
+        scale: 2,
+        logging: false,
+        useCORS: true,
+        allowTaint: true,
+        width: 800,
+        height: resultCardRef.current.scrollHeight,
+      });
+      
+      canvas.toBlob((blob) => {
+        if (!blob) {
+          alert('Failed to generate image. Please screenshot instead.');
+          return;
+        }
+        
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `vedic-identity-${identity.primary.name.toLowerCase()}.png`;
+        link.click();
+        URL.revokeObjectURL(url);
+        
+        alert('✅ Your Vedic Identity card has been downloaded!');
+      }, 'image/png');
+      
+    } catch (error) {
+      console.error('Download error:', error);
+      alert('❌ Failed to download. Please take a screenshot instead.');
+    }
   };
+
 
 
   const handleRetake = () => {
@@ -650,6 +689,170 @@ const VedicIdentityQuiz = () => {
               </p>
             </div>
           </div>
+
+                    {/* HIDDEN DOWNLOAD CARD - For html2canvas */}
+                    <div 
+            ref={resultCardRef}
+            style={{
+              position: 'absolute',
+              left: '-9999px',
+              width: '800px',
+              backgroundColor: '#F5E6D3',
+              padding: '60px',
+              fontFamily: 'Georgia, serif',
+              borderRadius: '20px',
+              border: '8px solid #D4AF37',
+              boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+            }}
+          >
+            {/* Header */}
+            <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+              <div style={{ fontSize: '80px', marginBottom: '20px' }}>{identity.primary.emoji}</div>
+              <h2 style={{ 
+                fontSize: '48px', 
+                color: '#2C1810', 
+                margin: '0 0 10px 0',
+                fontWeight: 'bold'
+              }}>
+                {identity.primary.name}
+              </h2>
+              <div style={{
+                backgroundColor: identity.primary.color,
+                color: 'white',
+                padding: '12px 30px',
+                borderRadius: '25px',
+                fontSize: '20px',
+                fontWeight: 'bold',
+                display: 'inline-block',
+                marginBottom: '15px'
+              }}>
+                {identity.primary.title}
+              </div>
+              <p style={{ 
+                color: '#D4AF37', 
+                fontSize: '24px', 
+                fontWeight: 'bold',
+                margin: '15px 0'
+              }}>
+                Primary Deity • {identity.primary.percentage}% Match
+              </p>
+            </div>
+
+            {/* Sanskrit Name */}
+            <div style={{
+              textAlign: 'center',
+              padding: '20px',
+              backgroundColor: 'rgba(212, 175, 55, 0.15)',
+              borderRadius: '15px',
+              marginBottom: '30px'
+            }}>
+              <p style={{ fontSize: '14px', color: '#5C4A3C', margin: '0 0 8px 0' }}>
+                Your Sanskrit Name
+              </p>
+              <p style={{ 
+                fontSize: '28px', 
+                color: '#D4AF37',
+                margin: '0',
+                fontWeight: 'bold'
+              }}>
+                {identity.primary.sanskritName}
+              </p>
+            </div>
+
+            {/* Description */}
+            <p style={{
+              textAlign: 'center',
+              fontSize: '20px',
+              color: '#5C4A3C',
+              lineHeight: '1.6',
+              marginBottom: '30px'
+            }}>
+              {identity.primary.description}
+            </p>
+
+            {/* Power Attributes */}
+            <div style={{ marginBottom: '30px' }}>
+              <h3 style={{ 
+                fontSize: '20px', 
+                color: '#2C1810', 
+                marginBottom: '15px',
+                textAlign: 'center'
+              }}>
+                Power Attributes
+              </h3>
+              {Object.entries(identity.primary.attributes).map(([attr, value]) => (
+                <div key={attr} style={{ marginBottom: '15px' }}>
+                  <div style={{ 
+                    display: 'flex', 
+                    justifyContent: 'space-between',
+                    marginBottom: '5px'
+                  }}>
+                    <span style={{ 
+                      color: '#2C1810', 
+                      fontWeight: 'bold',
+                      textTransform: 'capitalize',
+                      fontSize: '16px'
+                    }}>
+                      {attr}
+                    </span>
+                    <span style={{ color: '#D4AF37', fontWeight: 'bold', fontSize: '16px' }}>
+                      {value}%
+                    </span>
+                  </div>
+                  <div style={{
+                    height: '10px',
+                    backgroundColor: 'rgba(212, 175, 55, 0.2)',
+                    borderRadius: '5px',
+                    overflow: 'hidden'
+                  }}>
+                    <div style={{
+                      height: '100%',
+                      width: `${value}%`,
+                      backgroundColor: '#D4AF37'
+                    }} />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Mantra */}
+            <div style={{
+              textAlign: 'center',
+              padding: '20px',
+              backgroundColor: 'rgba(212, 175, 55, 0.1)',
+              borderRadius: '15px',
+              border: '3px solid #D4AF37',
+              marginBottom: '30px'
+            }}>
+              <p style={{ fontSize: '14px', color: '#5C4A3C', margin: '0 0 10px 0' }}>
+                Your Sacred Mantra
+              </p>
+              <p style={{ 
+                fontSize: '24px', 
+                color: '#2C1810',
+                margin: '0',
+                fontStyle: 'italic'
+              }}>
+                {identity.primary.mantra}
+              </p>
+            </div>
+
+            {/* Footer */}
+            <div style={{ 
+              textAlign: 'center', 
+              paddingTop: '20px',
+              borderTop: '2px solid #D4AF37'
+            }}>
+              <p style={{ 
+                fontSize: '14px', 
+                color: '#5C4A3C',
+                margin: '0'
+              }}>
+                🕉️ Rigveda Odyssey • {new Date().toLocaleDateString()}
+              </p>
+            </div>
+          </div>
+
 
 
           {(identity.secondary || identity.tertiary) && (

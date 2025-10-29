@@ -63,10 +63,22 @@ const AskTheRishi = () => {
 useEffect(() => {
   // Check sessionStorage for prefilled message
   const prefilledMessage = sessionStorage.getItem('rishiPrefilledMessage');
+  const shouldAutoSubmit = sessionStorage.getItem('rishiAutoSubmit');
+  
   if (prefilledMessage) {
-    setInput(`Explain this: "${prefilledMessage}"`);
-    // Clear it so it doesn't persist
+    setInput(prefilledMessage);
+    
+    // Auto-submit if flag is set (for Define & Translate)
+    if (shouldAutoSubmit === 'true') {
+      // Small delay to ensure input is set
+      setTimeout(() => {
+        handleSubmit(prefilledMessage);
+      }, 100);
+    }
+    
+    // Clear flags
     sessionStorage.removeItem('rishiPrefilledMessage');
+    sessionStorage.removeItem('rishiAutoSubmit');
   }
   
   // Also check location.state as fallback
@@ -75,6 +87,7 @@ useEffect(() => {
     window.history.replaceState({}, document.title);
   }
 }, [location]);
+
 
 
   const scrollToBottom = () => {
@@ -336,9 +349,20 @@ Format: Return ONLY the 4 questions, one per line, without numbering or bullets.
 
   const displayMessages = showFavorites ? favorites : filteredMessages;
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!input.trim()) return;
+  const handleSubmit = async (messageOrEvent) => {
+    // Handle both event object and direct string calls
+    let messageText;
+    
+    if (typeof messageOrEvent === 'string') {
+      // Direct string call (from auto-submit)
+      messageText = messageOrEvent;
+    } else {
+      // Event object (from form submission)
+      messageOrEvent.preventDefault();
+      messageText = input.trim();
+    }
+    
+    if (!messageText) return;
 
     const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
     if (!apiKey) {
@@ -346,8 +370,8 @@ Format: Return ONLY the 4 questions, one per line, without numbering or bullets.
       return;
     }
 
-    const userMessage = input.trim();
-    setInput('');
+    const userMessage = messageText;
+    setInput(''); // Clear input
     setMessages(prev => [...prev, { 
       role: 'user', 
       content: userMessage,
@@ -440,6 +464,7 @@ Provide a thoughtful, well-cited answer as the Rishi:`;
 
     setIsLoading(false);
   };
+
 
   return (
     <>

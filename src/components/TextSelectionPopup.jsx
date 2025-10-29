@@ -34,47 +34,53 @@ const languages = [
 ];
 
   
-  const handleAskRishi = () => {
-    sessionStorage.setItem('rishiPrefilledMessage', selectedText);
-    navigate('/ask-rishi');
-    setIsVisible(false);
-  };
+const handleAskRishi = () => {
+  // Just prefill - let user modify before sending
+  sessionStorage.setItem('rishiPrefilledMessage', selectedText);
+  sessionStorage.removeItem('rishiAutoSubmit'); // Don't auto-submit
+  navigate('/ask-rishi');
+  setIsVisible(false);
+};
 
-  const handleDefine = () => {
-    sessionStorage.setItem('rishiPrefilledMessage', `Define and explain: "${selectedText}"`);
-    navigate('/ask-rishi');
-    setIsVisible(false);
-  };
+const handleDefine = () => {
+  // Auto-submit immediately
+  const message = `Define and explain: "${selectedText}"`;
+  sessionStorage.setItem('rishiPrefilledMessage', message);
+  sessionStorage.setItem('rishiAutoSubmit', 'true'); // Flag for auto-submit
+  navigate('/ask-rishi');
+  setIsVisible(false);
+};
 
-  const handleTranslate = (targetLanguage) => {
-    // Check if it looks like Sanskrit/Devanagari
-    const isSanskrit = /[\u0900-\u097F]/.test(selectedText);
-    
-    let message = '';
-    if (isSanskrit) {
-      message = `Translate this Sanskrit/Devanagari text to ${targetLanguage.name}: "${selectedText}"`;
-    } else {
-      message = `Translate "${selectedText}" to ${targetLanguage.name} (${targetLanguage.script} script) and also provide the meaning`;
-    }
-    
-    sessionStorage.setItem('rishiPrefilledMessage', message);
-    navigate('/ask-rishi');
-    setIsVisible(false);
-    setShowLanguageMenu(false);
-  };
+const handleTranslate = (targetLanguage) => {
+  // Auto-submit immediately
+  const isSanskrit = /[\u0900-\u097F]/.test(selectedText);
+  
+  let message = '';
+  if (isSanskrit) {
+    message = `Translate this Sanskrit/Devanagari text to ${targetLanguage.name}: "${selectedText}"`;
+  } else {
+    message = `Translate "${selectedText}" to ${targetLanguage.name} (${targetLanguage.script} script) and also provide the meaning`;
+  }
+  
+  sessionStorage.setItem('rishiPrefilledMessage', message);
+  sessionStorage.setItem('rishiAutoSubmit', 'true'); // Flag for auto-submit
+  navigate('/ask-rishi');
+  setIsVisible(false);
+  setShowLanguageMenu(false);
+};
 
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(selectedText);
-      setCopied(true);
-      setTimeout(() => {
-        setCopied(false);
-        setIsVisible(false);
-      }, 1000);
-    } catch (err) {
-      console.error('Failed to copy:', err);
-    }
-  };
+const handleCopy = async () => {
+  try {
+    await navigator.clipboard.writeText(selectedText);
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+      setIsVisible(false);
+    }, 1000);
+  } catch (err) {
+    console.error('Failed to copy:', err);
+  }
+};
 
   useEffect(() => {
     const handleSelection = () => {

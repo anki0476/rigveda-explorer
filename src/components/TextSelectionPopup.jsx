@@ -10,17 +10,29 @@ const TextSelectionPopup = () => {
   const [copied, setCopied] = useState(false);
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
   
-  // Language options with emojis
-  const languages = [
-    { code: 'hi', name: 'Hindi', emoji: '🇮🇳', script: 'Devanagari' },
-    { code: 'mr', name: 'Marathi', emoji: '🇮🇳', script: 'Devanagari' },
-    { code: 'gu', name: 'Gujarati', emoji: '🇮🇳', script: 'Gujarati' },
-    { code: 'ta', name: 'Tamil', emoji: '🇮🇳', script: 'Tamil' },
-    { code: 'kn', name: 'Kannada', emoji: '🇮🇳', script: 'Kannada' },
-    { code: 'te', name: 'Telugu', emoji: '🇮🇳', script: 'Telugu' },
-    { code: 'en', name: 'English', emoji: '🇬🇧', script: 'Latin' },
-    { code: 'sa', name: 'Sanskrit', emoji: '🕉️', script: 'Devanagari' },
-  ];
+// Language options organized by region
+const languages = [
+  // Indian Languages
+  { code: 'hi', name: 'Hindi', emoji: '🇮🇳', script: 'Devanagari', region: 'Indian' },
+  { code: 'mr', name: 'Marathi', emoji: '🇮🇳', script: 'Devanagari', region: 'Indian' },
+  { code: 'gu', name: 'Gujarati', emoji: '🇮🇳', script: 'Gujarati', region: 'Indian' },
+  { code: 'ta', name: 'Tamil', emoji: '🇮🇳', script: 'Tamil', region: 'Indian' },
+  { code: 'kn', name: 'Kannada', emoji: '🇮🇳', script: 'Kannada', region: 'Indian' },
+  { code: 'te', name: 'Telugu', emoji: '🇮🇳', script: 'Telugu', region: 'Indian' },
+  { code: 'ur', name: 'Urdu', emoji: '🇵🇰', script: 'Perso-Arabic', region: 'Indian' },
+  { code: 'sa', name: 'Sanskrit', emoji: '🕉️', script: 'Devanagari', region: 'Indian' },
+  
+  // European Languages
+  { code: 'en', name: 'English', emoji: '🇬🇧', script: 'Latin', region: 'European' },
+  { code: 'fr', name: 'French', emoji: '🇫🇷', script: 'Latin', region: 'European' },
+  { code: 'es', name: 'Spanish', emoji: '🇪🇸', script: 'Latin', region: 'European' },
+  { code: 'it', name: 'Italian', emoji: '🇮🇹', script: 'Latin', region: 'European' },
+  { code: 'ru', name: 'Russian', emoji: '🇷🇺', script: 'Cyrillic', region: 'European' },
+  
+  // Asian Languages
+  { code: 'zh', name: 'Chinese', emoji: '🇨🇳', script: 'Hanzi', region: 'Asian' },
+];
+
   
   const handleAskRishi = () => {
     sessionStorage.setItem('rishiPrefilledMessage', selectedText);

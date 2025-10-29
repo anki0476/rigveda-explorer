@@ -3,10 +3,13 @@ import "../../styles/textures.css";
 import Navigation from './Navigation';
 import GlobalSearch from '../GlobalSearch';
 import { AmbientAudioProvider } from '../../context/AmbientAudioContext';
+import TextSelectionPopup from '../TextSelectionPopup'
 
 const BookLayout = ({ children, pageNumber }) => {
   return (
     <AmbientAudioProvider>
+              {/* ⭐ ADD TEXT SELECTION POPUP */}
+              <TextSelectionPopup />
       <>
         <Navigation />
         

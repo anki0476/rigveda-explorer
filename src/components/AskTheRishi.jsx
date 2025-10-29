@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useLocation } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import jsPDF from 'jspdf';
 import FastDecrypt from './FastDecrypt';
@@ -8,6 +8,7 @@ import RishiWelcome from './RishiWelcome';
 
 const AskTheRishi = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
   
   const [messages, setMessages] = useState(() => {
     const saved = localStorage.getItem('rigveda-chat-history');
@@ -57,6 +58,24 @@ const AskTheRishi = () => {
       setSearchParams({});
     }
   }, [searchParams, setSearchParams]);
+
+// ⭐ Handle pre-filled messages from text selection
+useEffect(() => {
+  // Check sessionStorage for prefilled message
+  const prefilledMessage = sessionStorage.getItem('rishiPrefilledMessage');
+  if (prefilledMessage) {
+    setInput(`Explain this: "${prefilledMessage}"`);
+    // Clear it so it doesn't persist
+    sessionStorage.removeItem('rishiPrefilledMessage');
+  }
+  
+  // Also check location.state as fallback
+  if (location.state?.prefilledMessage) {
+    setInput(location.state.prefilledMessage);
+    window.history.replaceState({}, document.title);
+  }
+}, [location]);
+
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });

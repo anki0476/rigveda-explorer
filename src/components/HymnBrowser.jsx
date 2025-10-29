@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { createPortal } from 'react-dom';
-import hymnsData from '../data/hymns.json';
+import hymnsData from '../data/hymns_expanded.json';
+// ⚡ DON'T import complete data upfront - load on demand
 import BookLoadingAnimation from './BookLoadingAnimation';
 import AudioPlayer from './AudioPlayer';
 import RishiWelcome from './RishiWelcome';
@@ -13,23 +14,54 @@ const HymnBrowser = () => {
   const [selectedHymn, setSelectedHymn] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [hymns, setHymns] = useState([]);
-  const [visibleCount, setVisibleCount] = useState(9); // ⭐ ADD THIS LINE
+  const [visibleCount, setVisibleCount] = useState(9);
+  const [completeVersesData, setCompleteVersesData] = useState(null); // ⚡ Store complete verses
+  const [isLoadingVerses, setIsLoadingVerses] = useState(false);
+  const [showOnlyWithAudio, setShowOnlyWithAudio] = useState(false);
 
-  // Load hymns with delay
+  // ⚡ Load complete verses data only when needed
+  const loadCompleteVerses = async (hymnId) => {
+    // If already loaded, use cached data (instant)
+    if (completeVersesData) {
+      const completeHymn = completeVersesData.hymns.find(h => h.id === hymnId);
+      return completeHymn?.content || null;
+    }
+    
+    // First time - show loading and load the complete data
+    setIsLoadingVerses(true);
+    
+    try {
+      const module = await import('../data/hymns_complete.json');
+      const data = module.default;
+      setCompleteVersesData(data); // Cache it
+      
+      const completeHymn = data.hymns.find(h => h.id === hymnId);
+      return completeHymn?.content || null;
+    } catch (error) {
+      console.error('Error loading complete verses:', error);
+      return null;
+    } finally {
+      setIsLoadingVerses(false);
+    }
+  };
+
+
+  // ⚡ Load hymns WITHOUT artificial delay
   useEffect(() => {
     setIsLoading(true);
-    setTimeout(() => {
+    // Use requestAnimationFrame for smooth loading
+    requestAnimationFrame(() => {
       setHymns(hymnsData.hymns);
       setIsLoading(false);
-    }, 800);
+    });
   }, []);
 
-  // ⭐ ADD THIS useEffect - Reset visible count when filters change
+  // Reset visible count when filters change
   useEffect(() => {
     setVisibleCount(9);
-  }, [searchQuery, selectedMandala, selectedDeity]);
+  }, [searchQuery, selectedMandala, selectedDeity, showOnlyWithAudio]);
 
-  // Get unique mandalas and deities from loaded hymns
+  // Get unique mandalas and deities
   const mandalas = [...new Set(hymns.map(h => h.mandala))].sort((a, b) => a - b);
   const deities = [...new Set(hymns.map(h => h.deity).filter(d => d))].sort();
 
@@ -45,14 +77,33 @@ const HymnBrowser = () => {
     
     const matchesMandala = selectedMandala === 'all' || hymn.mandala === parseInt(selectedMandala);
     const matchesDeity = selectedDeity === 'all' || hymn.deity === selectedDeity;
+    const matchesAudio = !showOnlyWithAudio || getHymnUrl(hymn.id);
     
-    return matchesSearch && matchesMandala && matchesDeity;
+    return matchesSearch && matchesMandala && matchesDeity && matchesAudio;
   });
 
-  // ⭐ ADD THESE 3 LINES - After filteredHymns
   const visibleHymns = filteredHymns.slice(0, visibleCount);
   const hasMore = visibleCount < filteredHymns.length;
   const loadMore = () => setVisibleCount(prev => Math.min(prev + 9, filteredHymns.length));
+
+// ⚡ Optimized hymn click handler - opens modal immediately
+const handleHymnClick = (hymn) => {
+  // Open modal IMMEDIATELY without waiting
+  setSelectedHymn({
+    ...hymn,
+    completeContent: null  // Will load after modal opens
+  });
+  
+  // Load verses in background
+  loadCompleteVerses(hymn.id).then(completeContent => {
+    setSelectedHymn(prev => ({
+      ...prev,
+      completeContent: completeContent
+    }));
+  });
+};
+
+
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -66,7 +117,7 @@ const HymnBrowser = () => {
     };
   }, [selectedHymn]);
 
-  // Modal Component using Portal
+  // Modal Component
   const Modal = () => {
     if (!selectedHymn) return null;
 
@@ -102,6 +153,40 @@ const HymnBrowser = () => {
           }}
           onClick={(e) => e.stopPropagation()}
         >
+
+                  {/* ⚡ ADD LOADING OVERLAY */}
+        {(isLoadingVerses || !selectedHymn.completeContent) &&  (
+          <div style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(250, 245, 230, 0.95)',
+            zIndex: 9999,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderRadius: '1rem',
+            gap: '1rem'
+          }}>
+            <BookLoadingAnimation size="small" text="Loading Sanskrit verses..." />
+            <p style={{ 
+              color: 'var(--color-ink-light)', 
+              fontSize: '0.875rem',
+              textAlign: 'center',
+              maxWidth: '300px'
+            }}>
+              Loading complete verses for the first time...
+              <br />
+              <span style={{ fontSize: '0.75rem' }}>
+                (This will be instant next time!)
+              </span>
+            </p>
+          </div>
+        )}
+
           <div style={{ padding: '2rem' }}>
             {/* Close Button */}
             <button
@@ -203,12 +288,14 @@ const HymnBrowser = () => {
               )}
             </div>
 
-            {/* AUDIO PLAYER */}
-            <AudioPlayer 
-              hymnId={selectedHymn.id}
-              hymnTitle={selectedHymn.translation?.title || `Hymn ${selectedHymn.id}`}
-              audioUrl={getHymnUrl(selectedHymn.id)}
-            />
+            {/* AUDIO PLAYER - Only show if audio exists */}
+            {getHymnUrl(selectedHymn.id) && (
+              <AudioPlayer 
+                hymnId={selectedHymn.id}
+                hymnTitle={selectedHymn.translation?.title || `Hymn ${selectedHymn.id}`}
+                audioUrl={getHymnUrl(selectedHymn.id)}
+              />
+            )}
 
             {/* Summary */}
             {selectedHymn.translation?.summary && (
@@ -231,8 +318,135 @@ const HymnBrowser = () => {
               </div>
             )}
 
-            {/* Verses */}
-            {selectedHymn.translation?.verses && selectedHymn.translation.verses.length > 0 && (
+            {/* ✨ HYMN VERSES: Sanskrit + Transliteration + Translation ✨ */}
+            {selectedHymn.completeContent && selectedHymn.completeContent.translation && selectedHymn.completeContent.translation.length > 0 ? (
+              <div style={{ marginBottom: '1.5rem' }}>
+                <h3 style={{ 
+                  fontSize: '1.125rem', 
+                  fontFamily: 'var(--font-family-header)', 
+                  color: 'var(--color-ink)', 
+                  marginBottom: '0.75rem' 
+                }}>
+                  📜 Complete Hymn Verses
+                </h3>
+                
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  {selectedHymn.completeContent.translation.map((translation, index) => (
+                    <div 
+                      key={index} 
+                      style={{ 
+                        padding: '1rem', 
+                        backgroundColor: 'var(--color-parchment-dark)', 
+                        borderRadius: '0.5rem', 
+                        border: '2px solid var(--color-gold)',
+                        borderLeft: '4px solid var(--color-saffron)'
+                      }}
+                    >
+                      {/* Verse Number Badge */}
+                      <div style={{ marginBottom: '0.75rem' }}>
+                        <span style={{ 
+                          backgroundColor: 'var(--color-saffron)', 
+                          color: 'white',
+                          padding: '0.25rem 0.75rem', 
+                          borderRadius: '0.375rem', 
+                          fontSize: '0.75rem',
+                          fontWeight: 'bold',
+                          fontFamily: 'var(--font-family-header)'
+                        }}>
+                          Verse {index + 1}
+                        </span>
+                      </div>
+                      
+                      {/* Sanskrit (Devanagari) */}
+                      {selectedHymn.completeContent.sanskrit && selectedHymn.completeContent.sanskrit[index] && (
+                        <div style={{ marginBottom: '0.75rem' }}>
+                          <p style={{ 
+                            fontSize: '0.75rem', 
+                            fontWeight: 'bold', 
+                            color: 'var(--color-saffron)', 
+                            marginBottom: '0.25rem',
+                            fontFamily: 'var(--font-family-header)'
+                          }}>
+                            Sanskrit (Devanagari):
+                          </p>
+                          <p style={{ 
+                            fontSize: '1.125rem', 
+                            lineHeight: 1.75, 
+                            color: 'var(--color-ink)', 
+                            fontFamily: 'serif'
+                          }}>
+                            {selectedHymn.completeContent.sanskrit[index]}
+                          </p>
+                        </div>
+                      )}
+                      
+                      {/* Transliteration (IAST) */}
+                      {selectedHymn.completeContent.transliteration && selectedHymn.completeContent.transliteration[index] && (
+                        <div style={{ marginBottom: '0.75rem' }}>
+                          <p style={{ 
+                            fontSize: '0.75rem', 
+                            fontWeight: 'bold', 
+                            color: 'var(--color-saffron)', 
+                            marginBottom: '0.25rem',
+                            fontFamily: 'var(--font-family-header)'
+                          }}>
+                            Transliteration (IAST):
+                          </p>
+                          <p style={{ 
+                            lineHeight: 1.75, 
+                            fontStyle: 'italic', 
+                            color: 'var(--color-ink)',
+                            fontFamily: 'var(--font-family-body)'
+                          }}>
+                            {selectedHymn.completeContent.transliteration[index]}
+                          </p>
+                        </div>
+                      )}
+                      
+                      {/* English Translation */}
+                      <div>
+                        <p style={{ 
+                          fontSize: '0.75rem', 
+                          fontWeight: 'bold', 
+                          color: 'var(--color-saffron)', 
+                          marginBottom: '0.25rem',
+                          fontFamily: 'var(--font-family-header)'
+                        }}>
+                          Translation (Griffith):
+                        </p>
+                        <p style={{ 
+                          lineHeight: 1.75, 
+                          color: 'var(--color-ink)',
+                          fontFamily: 'var(--font-family-body)'
+                        }}>
+                          "{translation}"
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Attribution Footer */}
+                <div style={{ 
+                  marginTop: '1rem', 
+                  padding: '0.75rem', 
+                  backgroundColor: 'rgba(212, 175, 55, 0.1)', 
+                  borderRadius: '0.375rem',
+                  border: '1px solid var(--color-gold)'
+                }}>
+                  <p style={{ 
+                    fontSize: '0.75rem', 
+                    color: 'var(--color-ink)', 
+                    fontFamily: 'var(--font-family-body)'
+                  }}>
+                    <strong>Source:</strong> VedaWeb Project (University of Cologne) • 
+                    <strong> Sanskrit:</strong> Eichler • 
+                    <strong> Transliteration:</strong> Van Nooten & Holland • 
+                    <strong> Translation:</strong> R.T.H. Griffith
+                  </p>
+                </div>
+              </div>
+            ) : selectedHymn.translation?.verses && selectedHymn.translation.verses.length > 0 && (
               <div style={{ 
                 marginBottom: '1.5rem', 
                 padding: '1rem', 
@@ -249,7 +463,7 @@ const HymnBrowser = () => {
                   Selected Verses
                 </h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                  {selectedHymn.translation.verses.slice(0, 5).map((verse, idx) => (
+                  {selectedHymn.translation.verses.map((verse, idx) => (
                     <p key={idx} style={{ 
                       color: 'var(--color-ink)', 
                       fontFamily: 'var(--font-family-body)', 
@@ -386,7 +600,6 @@ const HymnBrowser = () => {
 
   return (
     <>
-      {/* Rishi Welcome Popup */}
       <RishiWelcome
         image="/images/rishi-mascot-hymns.png"
         dialogue="Welcome to the Hymn Browser! Dive deep into the sacred verses of the RigVeda. Listen, read, and explore the ancient wisdom through interactive hymns!"
@@ -405,7 +618,6 @@ const HymnBrowser = () => {
 
       {/* Search & Filters */}
       <div className="mb-8 space-y-4">
-        {/* Search Bar */}
         <div>
           <input
             type="text"
@@ -416,9 +628,7 @@ const HymnBrowser = () => {
           />
         </div>
 
-        {/* Filters */}
         <div className="flex flex-wrap gap-4">
-          {/* Mandala Filter */}
           <select
             value={selectedMandala}
             onChange={(e) => setSelectedMandala(e.target.value)}
@@ -430,7 +640,6 @@ const HymnBrowser = () => {
             ))}
           </select>
 
-          {/* Deity Filter */}
           <select
             value={selectedDeity}
             onChange={(e) => setSelectedDeity(e.target.value)}
@@ -442,7 +651,22 @@ const HymnBrowser = () => {
             ))}
           </select>
 
-          {/* Results Count */}
+          {/* ⭐ Audio Filter - Glowing Toggle Button */}
+          <button
+            onClick={() => setShowOnlyWithAudio(!showOnlyWithAudio)}
+            className={`
+              flex items-center gap-2 px-4 py-2 rounded-lg border-2 transition-all duration-300
+              font-[family:--font-family-body] text-sm font-semibold cursor-pointer
+              ${showOnlyWithAudio 
+                ? 'bg-[--color-saffron] border-[--color-gold] text-white shadow-lg scale-105' 
+                : 'bg-[--color-parchment-light] border-[--color-gold]/30 text-[--color-ink] hover:border-[--color-gold]'
+              }
+            `}
+          >
+            <span className="text-lg">🎵</span>
+            <span>Audio Only</span>
+          </button>
+
           <div className="flex items-center px-4 py-2 bg-[--color-parchment-dark] rounded-lg">
             <span className="text-[--color-ink-light] font-[family:--font-family-body] text-sm">
               {filteredHymns.length} hymn{filteredHymns.length !== 1 ? 's' : ''} found
@@ -451,15 +675,14 @@ const HymnBrowser = () => {
         </div>
       </div>
 
-      {/* Hymn Grid - CHANGE filteredHymns to visibleHymns */}
+      {/* Hymn Grid - ⚡ Using optimized click handler */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {visibleHymns.map((hymn, index) => (
           <div
             key={index}
-            onClick={() => setSelectedHymn(hymn)}
+            onClick={() => handleHymnClick(hymn)}
             className="bg-[--color-parchment-light] p-6 rounded-lg border-2 border-[--color-gold]/30 hover:border-[--color-gold] transition-all cursor-pointer hover:shadow-lg"
           >
-            {/* Hymn Header */}
             <div className="mb-4">
               <h3 className="text-xl font-[family:--font-family-header] text-[--color-ink] mb-2">
                 {hymn.translation?.title || `Hymn ${hymn.id}`}
@@ -476,12 +699,10 @@ const HymnBrowser = () => {
               </div>
             </div>
 
-            {/* Summary */}
             <p className="text-sm text-[--color-ink-light] font-[family:--font-family-body] mb-3 line-clamp-3">
               {hymn.translation?.summary || hymn.significance}
             </p>
 
-            {/* Stats - WITH AUDIO BADGE ADDED ✨ */}
             <div className="flex items-center gap-4 text-xs text-[--color-ink-light] flex-wrap">
               <span>📜 {hymn.verses} verses</span>
               {hymn.rishi && <span className="line-clamp-1">✍️ {hymn.rishi}</span>}
@@ -495,7 +716,7 @@ const HymnBrowser = () => {
         ))}
       </div>
 
-      {/* ⭐ ADD LOAD MORE BUTTON HERE */}
+      {/* Load More Button */}
       {hasMore && (
         <div className="flex flex-col items-center gap-4 mb-12">
           <button
@@ -531,9 +752,9 @@ const HymnBrowser = () => {
         </div>
       )}
 
-      {/* Render Modal */}
       <Modal />
     </div>
+
       {/* Explore Complete Rigveda Section */}
       <div className="mt-12 bg-gradient-to-br from-[--color-parchment-light] to-[--color-parchment-dark] rounded-2xl border-4 border-[--color-gold] p-8 shadow-2xl">
         <div className="text-center mb-6">
@@ -633,7 +854,6 @@ const HymnBrowser = () => {
           <p>✨ These sources contain all 1,028 hymns (10,600 verses) across 10 Mandalas ✨</p>
         </div>
       </div>
-
     </>
   );
 };

@@ -16,6 +16,7 @@ const languages = [
   { code: 'hi', name: 'Hindi', emoji: '🇮🇳', script: 'Devanagari', region: 'Indian' },
   { code: 'mr', name: 'Marathi', emoji: '🇮🇳', script: 'Devanagari', region: 'Indian' },
   { code: 'gu', name: 'Gujarati', emoji: '🇮🇳', script: 'Gujarati', region: 'Indian' },
+  { code: 'pa', name: 'Punjabi', emoji: '🇮🇳', script: 'Gurmukhi', region: 'Indian' },
   { code: 'ta', name: 'Tamil', emoji: '🇮🇳', script: 'Tamil', region: 'Indian' },
   { code: 'kn', name: 'Kannada', emoji: '🇮🇳', script: 'Kannada', region: 'Indian' },
   { code: 'te', name: 'Telugu', emoji: '🇮🇳', script: 'Telugu', region: 'Indian' },

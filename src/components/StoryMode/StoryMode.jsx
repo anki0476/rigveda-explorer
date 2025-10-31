@@ -17,18 +17,51 @@ const StoryMode = () => {
   }, [progress.currentChapter]);
 
   const handleChoice = (choice) => {
-    // Show rewards
     if (choice.reward) {
-      setLastReward(choice.reward);
-      
-      // Track newly unlocked deity
+      // === UPDATED: Smart deity unlock logic based on storyRequired flag ===
+      let deityCanUnlock = false;
+      let xpShortfall = 0;
       let unlockedDeity = null;
+
       if (choice.reward.deity) {
-        const deityWasLocked = !progress.collectedDeities.includes(choice.reward.deity);
-        if (deityWasLocked) {
-          unlockedDeity = deityCards[choice.reward.deity];
-          setNewUnlockedDeity(unlockedDeity);
+        const deity = deityCards[choice.reward.deity];
+        
+        if (deity) {
+          const alreadyCollected = progress.collectedDeities.includes(choice.reward.deity);
+
+          if (!alreadyCollected) {
+            // === CASE 1: Story-Required Deity ===
+            if (deity.storyRequired) {
+              // Both conditions must be met: story path + XP threshold
+              const meetsXPRequirement = progress.xp >= deity.xpRequired;
+              
+              if (meetsXPRequirement) {
+                deityCanUnlock = true;
+                unlockedDeity = deity;
+                console.log(`✅ Story + XP met! ${deity.name} will unlock`);
+              } else {
+                xpShortfall = deity.xpRequired - progress.xp;
+                console.log(`⚠️ Story path unlocked but need ${xpShortfall} more XP for ${deity.name}`);
+              }
+            } 
+            // === CASE 2: XP-Only Deity ===
+            else {
+              // This shouldn't happen often (auto-unlocked), but handle it
+              console.log(`ℹ️ ${deity.name} is XP-only. It will auto-unlock when XP threshold is reached.`);
+            }
+          }
         }
+      }
+
+      setLastReward({
+        ...choice.reward,
+        deityCanUnlock,
+        xpShortfall,
+        deityInfo: choice.reward.deity ? deityCards[choice.reward.deity] : null
+      });
+
+      if (deityCanUnlock) {
+        setNewUnlockedDeity(unlockedDeity);
       }
 
       setShowReward(true);
@@ -38,9 +71,10 @@ const StoryMode = () => {
         addXP(choice.reward.xp);
       }
 
-      // Unlock deity
-      if (choice.reward.deity) {
+      // === FIX: Unlock deity ONLY if both conditions met (for story-required) ===
+      if (deityCanUnlock) {
         unlockDeity(choice.reward.deity);
+        console.log(`🎉 Deity Unlocked: ${choice.reward.deity}`);
       }
 
       // Unlock achievement
@@ -171,7 +205,7 @@ const StoryMode = () => {
                       {choice.label}
                     </div>
                     
-                    {/* === UPDATED: Only show reward type icons, NO XP VALUE ===*/}
+                    {/* Reward type icons */}
                     {choice.reward && (
                       <div className="mt-2 flex gap-2 text-xs">
                         {choice.reward.deity && (
@@ -202,7 +236,7 @@ const StoryMode = () => {
         </div>
       </div>
 
-      {/* Reward Popup - STILL SHOWS ALL REWARDS */}
+      {/* === ENHANCED Reward Popup with Smart Deity Logic === */}
       {showReward && lastReward && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 animate-fade-in-smooth p-4">
           <div className="ornate-golden-border bg-[--color-parchment-light] p-8 rounded-2xl shadow-2xl max-w-md animate-scale-in">
@@ -213,7 +247,7 @@ const StoryMode = () => {
               </h3>
               
               <div className="space-y-4">
-                {/* XP Reward - NOW REVEALED ONLY AFTER CHOICE */}
+                {/* XP Reward */}
                 {lastReward.xp && (
                   <div className="p-4 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-lg border border-[--color-gold]">
                     <div className="text-3xl font-bold text-[--color-gold]">+{lastReward.xp}</div>
@@ -223,18 +257,60 @@ const StoryMode = () => {
                   </div>
                 )}
                 
-                {/* Deity Unlock */}
+                {/* === CASE 1: Deity Unlock SUCCESS (both conditions met) ===*/}
                 {lastReward.deity && newUnlockedDeity && (
                   <div className="p-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg border border-blue-400 animate-pulse">
                     <div className="text-3xl mb-2">{newUnlockedDeity.icon}</div>
                     <div className="text-lg font-[family:--font-family-header] font-bold text-blue-400">
-                      New Deity Unlocked!
+                      ✅ Deity Unlocked!
                     </div>
                     <div className="text-sm font-[family:--font-family-body] text-[--color-ink] mt-1">
                       {newUnlockedDeity.name}
                     </div>
                     <div className="text-xs font-[family:--font-family-body] text-[--color-ink-light] mt-1">
-                      {newUnlockedDeity.title}
+                      {newUnlockedDeity.title} • {newUnlockedDeity.rarity}
+                    </div>
+                    {newUnlockedDeity.storyRequired && (
+                      <div className="text-xs font-[family:--font-family-body] text-blue-300 mt-2 italic">
+                        📖 Story path unlocked!
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* === CASE 2: Story Unlocked But XP Shortfall === */}
+                {lastReward.deity && !newUnlockedDeity && lastReward.xpShortfall > 0 && lastReward.deityInfo && (
+                  <div className="p-4 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg border-2 border-orange-400">
+                    <div className="text-3xl mb-2">🔒</div>
+                    <div className="text-lg font-[family:--font-family-header] font-bold text-orange-500">
+                      Almost There!
+                    </div>
+                    <div className="text-sm font-[family:--font-family-body] text-[--color-ink] mt-2">
+                      You unlocked the story path for <span className="font-bold">{lastReward.deityInfo.name}</span>, but need more XP!
+                    </div>
+                    <div className="mt-3 p-3 bg-orange-500/20 rounded">
+                      <div className="text-xs font-[family:--font-family-body] text-[--color-ink-light]">
+                        📚 Story Available Now!
+                      </div>
+                      <div className="text-xs font-[family:--font-family-body] text-[--color-ink-light] mt-1">
+                        🔑 Need <span className="font-bold text-orange-500">{lastReward.xpShortfall}</span> more XP to unlock
+                      </div>
+                      <div className="text-xs font-[family:--font-family-body] text-[--color-ink-light] mt-1">
+                        Current: {progress.xp} / {lastReward.deityInfo.xpRequired}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* === CASE 3: XP-Only Deity (informational) === */}
+                {lastReward.deity && !newUnlockedDeity && !lastReward.xpShortfall && lastReward.deityInfo && (
+                  <div className="p-4 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg border-2 border-green-400">
+                    <div className="text-3xl mb-2">💡</div>
+                    <div className="text-lg font-[family:--font-family-header] font-bold text-green-400">
+                      XP-Only Unlock
+                    </div>
+                    <div className="text-sm font-[family:--font-family-body] text-[--color-ink] mt-2">
+                      <span className="font-bold">{lastReward.deityInfo.name}</span> will auto-unlock based on XP progression!
                     </div>
                   </div>
                 )}

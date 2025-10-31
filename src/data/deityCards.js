@@ -11,7 +11,8 @@ export const deityCards = {
     wisdom: 85,
     influence: 90,
     hymns: 218,
-    xpRequired: 0, // ⭐ STARTER
+    xpRequired: 0,
+    storyRequired: true,  // ✅ Story path needed
     description: 'God of fire and sacrifice. Mediator between humans and gods, consumer of offerings.',
     quote: 'I praise Agni, the chosen priest, god, minister of sacrifice...',
     abilities: ['Divine Messenger', 'Sacred Fire', 'Purification'],
@@ -32,7 +33,8 @@ export const deityCards = {
     wisdom: 80,
     influence: 75,
     hymns: 20,
-    xpRequired: 0, // ⭐ STARTER
+    xpRequired: 0,
+    storyRequired: true,  // ✅ Story path needed
     description: 'Goddess of dawn, bringer of light and consciousness. Most prominent female deity.',
     quote: 'Dawn on us with prosperity, O Ushas, daughter of the sky...',
     abilities: ['New Beginnings', 'Beauty', 'Awakening'],
@@ -53,7 +55,8 @@ export const deityCards = {
     wisdom: 78,
     influence: 72,
     hymns: 11,
-    xpRequired: 0, // ⭐ STARTER
+    xpRequired: 0,
+    storyRequired: true,  // ✅ Story path needed
     description: 'Protector of travelers and cattle. Guardian of roads and pathways.',
     quote: 'Pushan, bring us to the man who knows...',
     abilities: ['Safe Passage', 'Pathfinding', 'Herd Protection'],
@@ -75,7 +78,8 @@ export const deityCards = {
     wisdom: 85,
     influence: 80,
     hymns: 143,
-    xpRequired: 600, // 🟦 RARE 1 (~5 story paths)
+    xpRequired: 600,
+    storyRequired: false,  // ✅ XP-ONLY: Auto-unlock at 600 XP
     description: 'Personification of sacred soma drink and lunar deity. Source of divine inspiration.',
     quote: 'Flow onward, Soma, for Indra, for our prosperity...',
     abilities: ['Immortality', 'Inspiration', 'Divine Ecstasy'],
@@ -96,7 +100,8 @@ export const deityCards = {
     wisdom: 82,
     influence: 78,
     hymns: 12,
-    xpRequired: 700, // 🟦 RARE 2 (~6 story paths)
+    xpRequired: 700,
+    storyRequired: true,  // ✅ Story path + XP needed
     description: 'God of friendship, contracts, and oaths. Often paired with Varuna.',
     quote: 'To Mitra and to Varuna sing forth your song...',
     abilities: ['Sacred Oaths', 'Divine Friendship', 'Day Protector'],
@@ -117,7 +122,8 @@ export const deityCards = {
     wisdom: 80,
     influence: 85,
     hymns: 8,
-    xpRequired: 800, // 🟦 RARE 3 (~6 story paths)
+    xpRequired: 800,
+    storyRequired: false,  // ✅ XP-ONLY: Auto-unlock at 800 XP
     description: 'Earth goddess, mother of all. Often paired with Dyaus (sky).',
     quote: 'Great are the Heaven and Earth, liberal, sublime...',
     abilities: ['Earth Nurture', 'Fertility', 'Stability'],
@@ -138,7 +144,8 @@ export const deityCards = {
     wisdom: 75,
     influence: 70,
     hymns: 1,
-    xpRequired: 900, // 🟦 RARE 4 (~7 story paths)
+    xpRequired: 900,
+    storyRequired: false,  // ✅ XP-ONLY: Auto-unlock at 900 XP
     description: 'Goddess of night, sister of dawn. Protective and peaceful.',
     quote: 'Night has come, looking around with her eyes...',
     abilities: ['Night Protection', 'Peaceful Rest', 'Star Guidance'],
@@ -159,7 +166,8 @@ export const deityCards = {
     wisdom: 85,
     influence: 75,
     hymns: 4,
-    xpRequired: 940, // 🟦 RARE 5 (~7 story paths)
+    xpRequired: 940,
+    storyRequired: true,  // ✅ Story path + XP needed
     description: 'Divine architect and craftsman. Creator of forms and beings.',
     quote: 'May Tvashtar fashion for you miraculous forms...',
     abilities: ['Divine Crafting', 'Form Creation', 'Weapon Forging'],
@@ -180,7 +188,8 @@ export const deityCards = {
     wisdom: 72,
     influence: 78,
     hymns: 3,
-    xpRequired: 1000, // 🟦 RARE 6 (~8 story paths)
+    xpRequired: 1000,
+    storyRequired: false,  // ✅ XP-ONLY: Auto-unlock at 1000 XP
     description: 'Rain god and fertility deity. Waters the earth with life-giving rains.',
     quote: 'Speak out with thunder, pour down the rain-flood...',
     abilities: ['Rain Summoning', 'Fertility', 'Thunder Roar'],
@@ -201,7 +210,8 @@ export const deityCards = {
     wisdom: 80,
     influence: 72,
     hymns: 11,
-    xpRequired: 960, // 🟦 RARE 7 (~8 story paths)
+    xpRequired: 960,
+    storyRequired: true,  // ✅ Story path + XP needed
     description: 'Divine craftsmen who became gods through their skill. Created miraculous objects.',
     quote: 'The Ribhus, with skill and art...',
     abilities: ['Miraculous Crafting', 'Youth Restoration', 'Divine Innovation'],
@@ -222,7 +232,8 @@ export const deityCards = {
     wisdom: 78,
     influence: 75,
     hymns: 10,
-    xpRequired: 1020, // 🟦 RARE 8 (~8 story paths)
+    xpRequired: 1020,
+    storyRequired: false,  // ✅ XP-ONLY: Auto-unlock at 1020 XP
     description: 'Personification of waters. Purifying and life-giving goddesses.',
     quote: 'Waters, you are healing; bring us strength and health...',
     abilities: ['Purification', 'Healing Waters', 'Life Essence'],
@@ -244,7 +255,8 @@ export const deityCards = {
     wisdom: 75,
     influence: 80,
     hymns: 7,
-    xpRequired: 1200, // 🟪 EPIC 1 (~10 paths from rare)
+    xpRequired: 1200,
+    storyRequired: true,  // ✅ Story path + XP needed
     description: 'God of wind and breath. Life force that moves through all beings.',
     quote: 'To Vayu now the Sama hymns are sung...',
     abilities: ['Swiftness', 'Life Breath', 'Messenger'],
@@ -265,7 +277,8 @@ export const deityCards = {
     wisdom: 85,
     influence: 80,
     hymns: 56,
-    xpRequired: 1400, // 🟪 EPIC 2 (~11 paths)
+    xpRequired: 1400,
+    storyRequired: true,  // ✅ Story path + XP needed
     description: 'Twin gods of dawn, divine physicians and rescuers. Always invoked together.',
     quote: 'Nasatyas, you who glide in your chariot among the waters...',
     abilities: ['Divine Healing', 'Swift Rescue', 'Twin Power'],
@@ -286,7 +299,8 @@ export const deityCards = {
     wisdom: 95,
     influence: 90,
     hymns: 46,
-    xpRequired: 1600, // 🟪 EPIC 3 (~13 paths)
+    xpRequired: 1600,
+    storyRequired: true,  // ✅ Story path + XP needed
     description: 'Guardian of cosmic order (rita), lord of waters and night sky. Punisher of oath-breakers.',
     quote: 'Varuna knows the flight of birds in heaven...',
     abilities: ['Cosmic Law', 'Omniscience', 'Water Control'],
@@ -307,7 +321,8 @@ export const deityCards = {
     wisdom: 90,
     influence: 85,
     hymns: 33,
-    xpRequired: 1800, // 🟪 EPIC 4 (~14 paths)
+    xpRequired: 1800,
+    storyRequired: true,  // ✅ Story path + XP needed
     description: 'Sun god, source of light and life. Eye of Mitra and Varuna.',
     quote: 'May we attain that excellent glory of Savitar the god...',
     abilities: ['Illumination', 'All-Seeing', 'Life Force'],
@@ -328,7 +343,8 @@ export const deityCards = {
     wisdom: 98,
     influence: 85,
     hymns: 14,
-    xpRequired: 1900, // 🟪 EPIC 5 (~15 paths)
+    xpRequired: 1900,
+    storyRequired: false,  // ✅ XP-ONLY: Auto-unlock at 1900 XP
     description: 'God of prayer and devotion. Divine priest and teacher.',
     quote: 'Brihaspati, the Rishi, the leader of singers...',
     abilities: ['Divine Wisdom', 'Sacred Prayer', 'Teaching'],
@@ -349,7 +365,8 @@ export const deityCards = {
     wisdom: 92,
     influence: 88,
     hymns: 3,
-    xpRequired: 2000, // 🟪 EPIC 6 (~16 paths)
+    xpRequired: 2000,
+    storyRequired: true,  // ✅ Story path + XP needed
     description: 'First mortal, king of the dead. Judge of souls and maintainer of cosmic order.',
     quote: 'Honor the King with thine oblations, Yama...',
     abilities: ['Divine Justice', 'Soul Judgment', 'Dharma Guardian'],
@@ -370,7 +387,8 @@ export const deityCards = {
     wisdom: 70,
     influence: 82,
     hymns: 33,
-    xpRequired: 2100, // 🟪 EPIC 7 (~17 paths)
+    xpRequired: 2100,
+    storyRequired: true,  // ✅ Story path + XP needed
     description: 'Group of storm deities, companions of Indra. Fierce warriors with golden armor.',
     quote: 'Like brilliant heroes, active in their valor...',
     abilities: ['Storm Army', 'War Companions', 'Rain Bringers'],
@@ -391,7 +409,8 @@ export const deityCards = {
     wisdom: 88,
     influence: 85,
     hymns: 11,
-    xpRequired: 2200, // 🟪 EPIC 8 (~18 paths)
+    xpRequired: 2200,
+    storyRequired: false,  // ✅ XP-ONLY: Auto-unlock at 2200 XP
     description: 'Solar deity who stimulates and impels all beings. Associated with the Gayatri mantra.',
     quote: 'We meditate on that excellent glory of divine Savitar...',
     abilities: ['Divine Stimulation', 'Golden Hands', 'Inspiration'],
@@ -412,7 +431,8 @@ export const deityCards = {
     wisdom: 88,
     influence: 90,
     hymns: 6,
-    xpRequired: 2300, // 🟪 EPIC 9 (~18 paths)
+    xpRequired: 2300,
+    storyRequired: false,  // ✅ XP-ONLY: Auto-unlock at 2300 XP
     description: 'Sky god, father of gods. Consort of Prithivi (Earth). Ancient celestial patriarch.',
     quote: 'Heaven and Earth, bestow prosperity on all...',
     abilities: ['Sky Dominion', 'Celestial Father', 'Cosmic Unity'],
@@ -434,7 +454,8 @@ export const deityCards = {
     wisdom: 75,
     influence: 95,
     hymns: 289,
-    xpRequired: 2400, // 🟨 LEGENDARY 1 - MAJOR MILESTONE! (~19 paths)
+    xpRequired: 2400,
+    storyRequired: true,  // ✅ Story path + XP needed
     description: 'King of gods, wielder of vajra (thunderbolt), slayer of demon Vritra. Most prominent deity in Rig Veda.',
     quote: 'I will declare the manly deeds of Indra...',
     abilities: ['Thunderbolt', 'Dragon Slayer', 'Rain Bringer'],
@@ -455,7 +476,8 @@ export const deityCards = {
     wisdom: 88,
     influence: 87,
     hymns: 5,
-    xpRequired: 2600, // 🟨 LEGENDARY 2 (~21 paths)
+    xpRequired: 2600,
+    storyRequired: true,  // ✅ Story path + XP needed
     description: 'Storm god with healing powers. Father of the Maruts. Precursor to Shiva.',
     quote: 'Father of Maruts, let thy bliss approach us...',
     abilities: ['Storm Control', 'Divine Healing', 'Sacred Arrows'],
@@ -465,9 +487,9 @@ export const deityCards = {
     unlockRequirement: 'Master Storm Path'
   },
 
-  sarasvati: {
-    id: 'sarasvati',
-    name: 'Sarasvati',
+  saraswati: {
+    id: 'saraswati',
+    name: 'Saraswati',
     title: 'Goddess of Knowledge',
     sanskrit: 'सरस्वती',
     rarity: 'legendary',
@@ -476,9 +498,10 @@ export const deityCards = {
     wisdom: 100,
     influence: 95,
     hymns: 3,
-    xpRequired: 2800, // 🟨 LEGENDARY 3 (~22 paths)
+    xpRequired: 2800,
+    storyRequired: true,  // ✅ Story path + XP needed
     description: 'Goddess of knowledge, arts, and sacred river. Inspirer of eloquent speech.',
-    quote: 'Sarasvati, who perfectest our thoughts...',
+    quote: 'Saraswati, who perfectest our thoughts...',
     abilities: ['Divine Knowledge', 'Sacred Arts', 'Eloquence'],
     color: '#FF69B4',
     icon: '🎵',
@@ -497,7 +520,8 @@ export const deityCards = {
     wisdom: 90,
     influence: 92,
     hymns: 6,
-    xpRequired: 3000, // 🟨 LEGENDARY 4 (~24 paths)
+    xpRequired: 3000,
+    storyRequired: true,  // ✅ Story path + XP needed
     description: 'The wide-striding one who measured the universe in three steps. Preserver deity.',
     quote: 'I will declare the mighty deeds of Vishnu...',
     abilities: ['Three Strides', 'Cosmic Preservation', 'Divine Protection'],
@@ -518,7 +542,8 @@ export const deityCards = {
     wisdom: 95,
     influence: 98,
     hymns: 4,
-    xpRequired: 3400, // 🟨 LEGENDARY 5 - ULTIMATE LEGENDARY (~27 paths)
+    xpRequired: 3400,
+    storyRequired: false,  // ✅ XP-ONLY: Auto-unlock at 3400 XP
     description: 'Mother of the Adityas (solar deities). Personification of infinity and boundlessness.',
     quote: 'May Aditi make us safe, with all her succors...',
     abilities: ['Infinite Protection', 'Mother Blessing', 'Boundless Grace'],
@@ -540,7 +565,8 @@ export const deityCards = {
     wisdom: 100,
     influence: 100,
     hymns: 0,
-    xpRequired: 4000, // 🔴 MYTHIC - ULTIMATE (~32 paths from aditi)
+    xpRequired: 4000,
+    storyRequired: true,  // ✅ Story path + XP needed (Ultimate requirement!)
     description: 'The supreme, ultimate reality. Beyond all gods, beyond creation itself. The source and essence of all existence.',
     quote: 'That ONE breathed, windless, by its own impulse...',
     abilities: ['Omnipotence', 'Transcendence', 'Unity'],
@@ -581,13 +607,13 @@ export const getXPToUnlock = (deityId, userXP) => {
 
 export const getUnlockProgress = (deityId, userXP) => {
   const required = getXPRequiredForDeity(deityId);
-  if (required === 0) return 100; // Already unlocked
+  if (required === 0) return 100;
   return Math.min(100, (userXP / required) * 100);
 };
 
 export const getNextDeityToUnlock = (userXP) => {
   return getAllDeities()
-    .filter(d => d.xpRequired > 0) // Exclude starters
+    .filter(d => d.xpRequired > 0)
     .filter(d => isDeityLocked(d.id, userXP))
     .sort((a, b) => a.xpRequired - b.xpRequired)[0];
 };

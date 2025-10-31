@@ -19,11 +19,11 @@ const DeityCard = ({ deity, isUnlocked, onFlip }) => {
   const cardRef = useRef(null);
   const innerCardRef = useRef(null);
 
-  // === NEW: Use game progress hook ===
-  const { progress, isDeityUnlocked, getXPToUnlockDeity, getUnlockProgressPercent } = useGameProgress();
+  // === FIXED: Use the correct hook names ===
+  const { progress, canUnlockDeity, getXPToUnlockDeity, getUnlockProgressPercent } = useGameProgress();
   
   // Determine if deity is unlocked (from hook, not prop)
-  const deityIsUnlocked = isDeityUnlocked(deity.id);
+  const deityIsUnlocked = progress.collectedDeities.includes(deity.id);
   const xpNeeded = getXPToUnlockDeity(deity.id);
   const progressPercent = getUnlockProgressPercent(deity.id);
 

@@ -1,18 +1,18 @@
 import { useState, useEffect, useCallback } from 'react';
-import { deityCards, getXPRequiredForDeity, isDeityLocked } from '../data/deityCards'; // ✅ FIXED
+import { deityCards } from '../data/deityCards';
 
 const STORAGE_KEY = 'rigveda_game_progress';
 
 const initialProgress = {
   level: 1,
   xp: 0,
-  xpToNextLevel: 100,
+  xpToNextLevel: 500,  // ✅ CHANGED: First level requires 500 XP (not 100)
   completedPaths: [],
   currentPath: null,
   currentChapter: 'start',
   storyPath: [],
   unlockedBadges: [],
-  collectedDeities: ['agni', 'ushas', 'pushan'], // ⭐ Starters (0 XP)
+  collectedDeities: ['agni', 'ushas', 'pushan'],
   totalPlayTime: 0,
   achievements: []
 };
@@ -27,51 +27,44 @@ export const useGameProgress = () => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
   }, [progress]);
 
-  const checkLevelUp = useCallback((currentXP, currentLevel) => {
-    const xpNeeded = currentLevel * 100;
-    if (currentXP >= xpNeeded) {
-      const newLevel = currentLevel + 1;
-      const remainingXP = currentXP - xpNeeded;
-      console.log(`Level Up! Reached Level ${newLevel}`);
-      return {
-        level: newLevel,
-        xp: remainingXP,
-        xpToNextLevel: newLevel * 100,
-        leveled: true
-      };
+  // === FIXED: Exponential level progression (15% increase per level) ===
+  const calculateLevelFromXP = useCallback((totalXP) => {
+    let level = 1;
+    let currentThreshold = 500;  // ✅ First level: 500 XP
+
+    // Exponential: each level costs 15% more XP than previous
+    while (totalXP >= currentThreshold) {
+      level += 1;
+      currentThreshold = Math.floor(currentThreshold * 1.15);
     }
+
     return {
-      level: currentLevel,
-      xp: currentXP,
-      xpToNextLevel: currentLevel * 100,
-      leveled: false
+      level,
+      currentThreshold,  // XP needed for NEXT level
+      totalXP
     };
   }, []);
 
-  // === NEW: Check Deity Unlocks by XP Threshold ===
-  const checkDeityUnlocks = useCallback((totalXP, currentDeities) => {
-    const unlockedDeities = [...currentDeities];
-    let newUnlocks = [];
+  const checkLevelUp = useCallback((currentXP, currentLevel) => {
+    const result = calculateLevelFromXP(currentXP);
+    
+    if (result.level > currentLevel) {
+      console.log(`⬆️ Level Up! Reached Level ${result.level}`);
+      return {
+        level: result.level,
+        xp: result.totalXP,
+        xpToNextLevel: result.currentThreshold,
+        leveled: true
+      };
+    }
 
-    Object.values(deityCards).forEach((deity) => {
-      // Skip starters (0 XP requirement)
-      if (deity.xpRequired === 0) return;
-
-      // Check if this deity should be unlocked
-      if (
-        totalXP >= deity.xpRequired &&
-        !unlockedDeities.includes(deity.id)
-      ) {
-        unlockedDeities.push(deity.id);
-        newUnlocks.push(deity.id);
-        console.log(
-          `🎉 Deity Unlocked: ${deity.name} (${deity.rarity}) - ${deity.xpRequired} XP`
-        );
-      }
-    });
-
-    return { unlockedDeities, newUnlocks };
-  }, []);
+    return {
+      level: currentLevel,
+      xp: result.totalXP,
+      xpToNextLevel: result.currentThreshold,
+      leveled: false
+    };
+  }, [calculateLevelFromXP]);
 
   const checkAchievements = useCallback((updatedProgress) => {
     const achievements = [
@@ -140,7 +133,7 @@ export const useGameProgress = () => {
         condition: () =>
           updatedProgress.collectedDeities.length === Object.keys(deityCards).length,
         title: '🏆 Master Collector',
-        message: 'Collected ALL 26 deities!'
+        message: 'Collected ALL deities!'
       },
       {
         id: 'level_5',
@@ -176,14 +169,39 @@ export const useGameProgress = () => {
     });
   }, []);
 
+  // === NEW: Auto-unlock XP-only deities ===
+  const autoUnlockXPDeities = useCallback((totalXP, currentDeities) => {
+    let unlockedDeities = [...currentDeities];
+    let newUnlocks = [];
+
+    Object.entries(deityCards).forEach(([deityId, deity]) => {
+      // Skip if already collected
+      if (unlockedDeities.includes(deityId)) return;
+
+      // Skip if story is required (only auto-unlock XP-only cards)
+      if (deity.storyRequired) return;
+
+      // Auto-unlock if XP threshold met
+      if (totalXP >= deity.xpRequired) {
+        unlockedDeities.push(deityId);
+        newUnlocks.push(deityId);
+        console.log(`🔓 Auto-unlocked by XP: ${deity.name} (${deity.xpRequired} XP)`);
+      }
+    });
+
+    return { unlockedDeities, newUnlocks };
+  }, []);
+
   const addXP = useCallback(
     (amount) => {
       setProgress((prev) => {
         const newTotalXP = prev.xp + amount;
+        console.log(`➕ Adding ${amount} XP. Total: ${prev.xp} → ${newTotalXP}`);
+
         const levelResult = checkLevelUp(newTotalXP, prev.level);
 
-        // === NEW: Check for deity unlocks ===
-        const { unlockedDeities, newUnlocks } = checkDeityUnlocks(
+        // === NEW: Check for auto-unlock of XP-only deities ===
+        const { unlockedDeities, newUnlocks } = autoUnlockXPDeities(
           newTotalXP,
           prev.collectedDeities
         );
@@ -196,11 +214,11 @@ export const useGameProgress = () => {
           collectedDeities: unlockedDeities
         };
 
-        // Trigger notifications for new unlocks
+        // Log auto-unlocks
         newUnlocks.forEach((deityId) => {
           const deity = deityCards[deityId];
           console.log(
-            `🎊 New Deity: ${deity.name} (${deity.rarity.toUpperCase()})`
+            `✨ Deity auto-unlocked: ${deity?.name} (${deity?.rarity?.toUpperCase()})`
           );
         });
 
@@ -208,7 +226,7 @@ export const useGameProgress = () => {
         return updatedProgress;
       });
     },
-    [checkLevelUp, checkDeityUnlocks, checkAchievements]
+    [checkLevelUp, autoUnlockXPDeities, checkAchievements]
   );
 
   const unlockBadge = useCallback(
@@ -277,13 +295,19 @@ export const useGameProgress = () => {
       if (prev.collectedDeities.includes(deityId)) {
         return prev;
       }
-      console.log(`🎴 Deity Unlocked: ${deityId}`);
-      return {
+      const deity = deityCards[deityId];
+      console.log(`🎴 Deity Unlocked: ${deity?.name || deityId}`);
+      
+      const updatedProgress = {
         ...prev,
         collectedDeities: [...prev.collectedDeities, deityId]
       };
+      
+      setTimeout(() => checkAchievements(updatedProgress), 500);
+      
+      return updatedProgress;
     });
-  }, []);
+  }, [checkAchievements]);
 
   const unlockAchievement = useCallback((achievementId) => {
     setProgress((prev) => {
@@ -304,17 +328,27 @@ export const useGameProgress = () => {
     console.log('🔄 Progress reset to initial state');
   }, []);
 
-  // === NEW: Helper functions for UI ===
-  const isDeityUnlocked = useCallback(
+  const canUnlockDeity = useCallback(
     (deityId) => {
-      return !isDeityLocked(deityId, progress.xp);
+      const deity = deityCards[deityId];
+      if (!deity) return false;
+      
+      if (progress.collectedDeities.includes(deityId)) return true;
+      
+      if (!deity.storyRequired) {
+        return progress.xp >= deity.xpRequired;
+      }
+      
+      return false;
     },
-    [progress.xp]
+    [progress.xp, progress.collectedDeities]
   );
 
   const getXPToUnlockDeity = useCallback(
     (deityId) => {
-      const required = getXPRequiredForDeity(deityId);
+      const deity = deityCards[deityId];
+      if (!deity) return 0;
+      const required = deity.xpRequired;
       const remaining = required - progress.xp;
       return Math.max(0, remaining);
     },
@@ -323,46 +357,43 @@ export const useGameProgress = () => {
 
   const getUnlockProgressPercent = useCallback(
     (deityId) => {
-      const required = getXPRequiredForDeity(deityId);
-      if (required === 0) return 100; // Starter card
+      const deity = deityCards[deityId];
+      if (!deity) return 0;
+      const required = deity.xpRequired;
+      if (required === 0) return 100;
       return Math.min(100, (progress.xp / required) * 100);
     },
     [progress.xp]
   );
 
   const getNextDeityToUnlock = useCallback(() => {
-    return Object.values(deityCards)
-      .filter((d) => d.xpRequired > 0) // Exclude starters
-      .filter((d) => isDeityLocked(d.id, progress.xp))
-      .sort((a, b) => a.xpRequired - b.xpRequired)[0];
-  }, [progress.xp]);
+    return Object.entries(deityCards)
+      .filter(([id, d]) => d.xpRequired > 0)
+      .filter(([id]) => !progress.collectedDeities.includes(id))
+      .sort(([, a], [, b]) => a.xpRequired - b.xpRequired)[0]?.[1];
+  }, [progress.collectedDeities]);
 
   const getUnlockedDeities = useCallback(() => {
-    return progress.collectedDeities.map((id) => deityCards[id]).filter(Boolean);
+    return progress.collectedDeities
+      .map((id) => ({ id, ...deityCards[id] }))
+      .filter((d) => d.id && d.name);
   }, [progress.collectedDeities]);
 
   const getLockedDeities = useCallback(() => {
-    return Object.values(deityCards).filter(
-      (d) => !progress.collectedDeities.includes(d.id)
-    );
+    return Object.entries(deityCards)
+      .filter(([id]) => !progress.collectedDeities.includes(id))
+      .map(([id, deity]) => ({ id, ...deity }));
   }, [progress.collectedDeities]);
 
   return {
-    // State
     progress,
-
-    // XP & Level Management
     addXP,
-
-    // Deity Unlock System (NEW)
-    isDeityUnlocked,
+    canUnlockDeity,
     getXPToUnlockDeity,
     getUnlockProgressPercent,
     getNextDeityToUnlock,
     getUnlockedDeities,
     getLockedDeities,
-
-    // Legacy Functions
     unlockBadge,
     collectDeity,
     completePath,

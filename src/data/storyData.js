@@ -1,9 +1,9 @@
-import { 
+import {
   Sunrise, Flame, Sun, Sparkles, Waves, Scale, Zap, Droplet,
-  Cloud, Scroll, GraduationCap, School, Mountain, Wind, 
-  Eye, Globe, Infinity, Telescope, BookOpen, Feather, 
+  Cloud, Scroll, GraduationCap, School, Mountain, Wind,
+  Eye, Globe, Infinity, Telescope, BookOpen, Feather,
   Trees, Footprints, Home, User, Target, Star, Trophy,
-  Brain, Heart, Lightbulb, Medal, BookText,Shield,Sprout, Moon, CloudRain, Compass, Crown
+  Brain, Heart, Lightbulb, Medal, BookText, Shield, Sprout, Moon, CloudRain, Compass, Crown, Rainbow
 } from 'lucide-react';
 
 export const storyChapters = {
@@ -14,34 +14,323 @@ export const storyChapters = {
     description: "1500 BCE. The sacred Saraswati river flows beside your village. As dawn breaks, you hear the ancient chants of Rishis performing Agnihotra. A burning question stirs within you: What is the truth behind these sacred hymns? Your journey into the depths of RigVeda begins now.",
     icon: Sunrise,
     choices: [
-      { id: 'vasishtha_path', text: "Approach Rishi Vasishtha at the sacred fire", label: "Path of Sacred Fire & Ritual Mastery", nextChapter: 'vasishtha_teachings', reward: { xp: 50 } },
-      { id: 'vishwamitra_path', text: "Seek Rishi Vishwamitra in meditation", label: "Path of Divine Light & Mantras", nextChapter: 'vishwamitra_teachings', reward: { xp: 50 } },
-      { id: 'river_meditation', text: "Sit alone by the Saraswati for self-reflection", label: "Path of Inner Waters & Cosmic Sound", nextChapter: 'saraswati_meditation', reward: { xp: 50 } },
-      { id: 'observe_ritual', text: "Quietly observe the morning ritual", label: "Path of Observation & Hidden Knowledge", nextChapter: 'observer_path', reward: { xp: 50 } },
+      { id: 'vasishtha_path', text: "Approach Rishi Vasishtha at the sacred fire", label: "Path of Sacred Fire & Ritual Mastery", nextChapter: 'vasishtha_first_meeting', reward: { xp: 50 } },
+      { id: 'vishwamitra_path', text: "Seek Rishi Vishwamitra in meditation", label: "Path of Divine Light & Mantras", nextChapter: 'vishwamitra_first_meeting', reward: { xp: 50 } },
+      { id: 'river_meditation', text: "Sit alone by the Saraswati for self-reflection", label: "Path of Inner Waters & Cosmic Sound", nextChapter: 'saraswati_first_encounter', reward: { xp: 50 } },
+      { id: 'observe_ritual', text: "Quietly observe the morning ritual", label: "Path of Observation & Hidden Knowledge", nextChapter: 'observer_ritual_beginning', reward: { xp: 50 } },
       { id: 'seek_healing_path', text: "Witness the village healer treating the sick", label: "Path of Medicine & Compassion", nextChapter: 'healing_path', reward: { xp: 50 } },
       { id: 'warrior_calling_early', text: "Notice warriors training at the edge of the village", label: "Path of Protection & Strength", nextChapter: 'warrior_initiation', reward: { xp: 50 } },
       { id: 'seek_protection', text: "Ask about defending sacred traditions", label: "Path of Protection & Guardianship", nextChapter: 'protection_path', reward: { xp: 50 } },
-      { id: 'earth_observation', text: "Observe farmers performing earth rituals", label: "Path of Sacred Agriculture", nextChapter: 'agricultural_path', reward: { xp: 50 } }
+      { id: 'earth_observation', text: "Observe farmers performing earth rituals", label: "Path of Sacred Agriculture", nextChapter: 'agricultural_path', reward: { xp: 50 } },
+      { id: 'protection_path', text: "Ask about defending sacred traditions", label: "Path of Protection & Guardianship", nextChapter: 'protection_first_encounter', reward: { xp: 50 } },
+      { id: 'agricultural_path', text: "Observe farmers performing earth rituals", label: "Path of Sacred Agriculture", nextChapter: 'agricultural_first_encounter', reward: { xp: 50 } }
     ]
   },
 
-  vasishtha_teachings: {
-    id: 'vasishtha_teachings',
-    title: "The Sacred Fire Teachings",
+  vasishtha_first_meeting: {
+    id: 'vasishtha_first_meeting',
+    title: "Meeting Rishi Vasishtha",
     chapter: 2,
-    description: "Rishi Vasishtha welcomes you to the fire altar. 'Agni is not merely flame,' he says, 'but the cosmic messenger between mortals and gods. Through fire, we speak to the heavens.' The sacred smoke rises, carrying prayers skyward.",
+    description: "You approach the sacred fire where Rishi Vasishtha performs the morning Agnihotra. His weathered face shows decades of devotion to the flame. As you arrive, he speaks without turning: 'I felt your presence before I saw you. Fire reveals truth. What brings you here, seeker?'",
     icon: Flame,
-    unlocks: ['agni'],
+    dialogue: {
+      npc: "Rishi Vasishtha",
+      lines: [
+        "The morning fire never lies. It shows us what we are.",
+        "Do you come seeking knowledge, or seeking to escape something?",
+        "Most who approach fire do so with hidden agendas. The flame burns away pretense."
+      ]
+    },
     choices: [
-      { id: 'learn_mantras', text: "Learn the fire mantras and their meanings", label: "Study the hymns of Agni (Mandala 1)", nextChapter: 'agni_hymns', reward: { xp: 75, deity: 'agni' } },
-      { id: 'question_nature', text: "Ask about the true nature of Agni", label: "Seek deeper wisdom about fire's essence", nextChapter: 'fire_mysteries', reward: { xp: 60 } },
-      { id: 'practical_ritual', text: "Request to assist in the morning ritual", label: "Learn through practice and service", nextChapter: 'ritual_training', reward: { xp: 50 } },
-      { id: 'protect_fire', text: "Ask about protecting sacred traditions through strength", label: "Path of the warrior-protector", nextChapter: 'warrior_initiation', reward: { xp: 65 } },
-      { id: 'build_unity', text: "Inquire about uniting different traditions peacefully", label: "Path of alliance and peace", nextChapter: 'alliance_builder', reward: { xp: 60 } },
-      { id: 'protect_traditions', text: "Learn about protecting sacred knowledge", label: "Guardian duties", nextChapter: 'protection_path', reward: { xp: 60 } },
-      { id: 'night_practices', text: "Ask about night-time spiritual practices", label: "Night vigil path", nextChapter: 'night_vigil_path', reward: { xp: 55 } }
+      {
+        id: 'honest_answer',
+        text: "I seek truth, though I do not know what truth means",
+        label: "Answer truthfully",
+        nextChapter: 'vasishtha_approves',
+        reward: { xp: 75, trust: 'vasishtha' }
+      },
+      {
+        id: 'ambiguous_answer',
+        text: "I wish to serve the divine",
+        label: "Give a partial answer",
+        nextChapter: 'vasishtha_probes',
+        reward: { xp: 60, trust: 'vasishtha_low' }
+      },
+      {
+        id: 'question_back',
+        text: "What is fire, truly?",
+        label: "Ask a counter-question",
+        nextChapter: 'vasishtha_tests',
+        reward: { xp: 80 }
+      }
     ]
   },
+
+  vasishtha_approves: {
+    id: 'vasishtha_approves',
+    title: "The Teacher Accepts",
+    chapter: 3,
+    description: "Vasishtha smiles slightly. 'Good. You are honest about your ignorance. That is rarer than you think.' He gestures you to sit. 'Most seekers come with fixed ideas about what truth should be. Fire taught me that truth is not fixed - it flows like flame, changes like smoke, persists like heat. Let me teach you.'",
+    icon: Flame,
+    dialogue: {
+      npc: "Rishi Vasishtha",
+      lines: [
+        "First, you must understand that Agni is alive.",
+        "The Rishis did not worship fire as dead matter.",
+        "We honor it as a conscious being, a messenger between worlds."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'feed_fire_week',
+        title: "Feed the Fire for Seven Days",
+        description: "Vasishtha asks you to prepare and offer ghee to the fire each morning for a week. Simple task, but it teaches discipline and gratitude.",
+        reward: { xp: 50, understanding: 'ritual_basics' }
+      },
+      {
+        id: 'observe_smoke',
+        title: "Study the Smoke Patterns",
+        description: "Spend hours watching how smoke rises, disperses, returns. Learn to read messages in the smoke.",
+        reward: { xp: 45, understanding: 'fire_language' }
+      }
+    ],
+    choices: [
+      {
+        id: 'accept_teaching',
+        text: "I am ready to learn",
+        label: "Begin formal training",
+        nextChapter: 'fire_principles',
+        reward: { xp: 90 }
+      }
+    ]
+  },
+
+  vasishtha_probes: {
+    id: 'vasishtha_probes',
+    title: "The Teacher Questions",
+    chapter: 3,
+    description: "Vasishtha raises an eyebrow. 'Service to the divine is vague. What does it mean to serve? What is this divine you wish to serve?' He pauses, studying you. 'Your answer shows intention but lacks clarity.'",
+    icon: Eye,
+    dialogue: {
+      npc: "Rishi Vasishtha",
+      lines: [
+        "Service without understanding is blind obedience.",
+        "I accept your dedication, but you must deepen your clarity.",
+        "Come - we will work together to refine your purpose."
+      ]
+    },
+    choices: [
+      {
+        id: 'clarify_path',
+        text: "I will pursue deeper understanding",
+        label: "Commit to growth",
+        nextChapter: 'fire_principles',
+        reward: { xp: 85 }
+      }
+    ]
+  },
+  
+  vasishtha_tests: {
+    id: 'vasishtha_tests',
+    title: "Fire Tests the Seeker",
+    chapter: 3,
+    description: "Vasishtha smiles broadly. 'Excellent question! Fire is consciousness, transformation, the bridge between worlds. By asking this, you show genuine curiosity. Such seekers I love to teach.'",
+    icon: Flame,
+    dialogue: {
+      npc: "Rishi Vasishtha",
+      lines: [
+        "Your question reveals a seeking mind.",
+        "Yes - let us explore fire together.",
+        "This is how true teaching begins - with your genuine inquiry."
+      ]
+    },
+    choices: [
+      {
+        id: 'begin_teaching',
+        text: "Begin teaching me about fire",
+        label: "Start the fire teachings",
+        nextChapter: 'fire_principles',
+        reward: { xp: 95 }
+      }
+    ]
+  },
+
+  fire_principles: {
+    id: 'fire_principles',
+    title: "The Five Principles of Agni",
+    chapter: 4,
+    description: "Vasishtha teaches: 'Fire has five essential qualities. First, purification - it burns away impurities. Second, transformation - it converts matter into energy. Third, communication - it carries offerings to the gods. Fourth, protection - it guards against darkness and demons. Fifth, sustenance - it cooks food, warms bodies. Master these, and you understand not just fire but life itself.'",
+    icon: BookOpen,
+    dialogue: {
+      npc: "Rishi Vasishtha",
+      lines: [
+        "A fire that only burns is mere destruction.",
+        "But fire guided by intention becomes sacrament.",
+        "The same flame that destroys also creates. This is the paradox you must understand."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'observe_purification',
+        title: "Witness Fire's Purification Power",
+        description: "Collect items of different materials and observe how fire purifies them differently. Leaves become ash, metal becomes refined.",
+        reward: { xp: 60, understanding: 'purification_science' }
+      },
+      {
+        id: 'study_cooking',
+        title: "Study Fire in Cooking",
+        description: "Help prepare meals using fire. Notice how raw food becomes digestible, nutrition becomes available.",
+        reward: { xp: 55, understanding: 'fire_sustenance' }
+      },
+      {
+        id: 'night_watch',
+        title: "Guard the Sacred Fire Through the Night",
+        description: "Spend the night ensuring the sacred fire never goes out. Learn patience and vigilance.",
+        reward: { xp: 70, understanding: 'fire_protection' }
+      }
+    ],
+    choices: [
+      {
+        id: 'master_principles',
+        text: "I wish to internalize these principles",
+        label: "Deepen your understanding",
+        nextChapter: 'agni_meditation_practice',
+        reward: { xp: 100 }
+      }
+    ]
+  },
+
+  agni_meditation_practice: {
+    id: 'agni_meditation_practice',
+    title: "Gazing Into the Flame",
+    chapter: 5,
+    description: "Vasishtha teaches you Agni-meditation - focusing your entire consciousness into the heart of the flame. 'When you truly see fire, you see into the heart of existence. Fire is not separate from you - it burns in your cells, in your blood, in your consciousness. Become the flame.'",
+    icon: Flame,
+    dialogue: {
+      npc: "Rishi Vasishtha",
+      lines: [
+        "Most people fear fire because they see it as other.",
+        "When you understand that the same Agni exists in your heart, fear becomes impossible.",
+        "At the core of every consciousness burns sacred fire. Find it within yourself."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'forty_day_meditation',
+        title: "40-Day Flame Meditation",
+        description: "Meditate on the fire flame for 40 consecutive days. Watch as your inner vision opens.",
+        reward: { xp: 150, achievement: 'flame_seer' }
+      },
+      {
+        id: 'inner_fire_discovery',
+        title: "Discover Your Inner Fire",
+        description: "Through meditation, find the fire that burns in your own body and consciousness.",
+        reward: { xp: 120, understanding: 'inner_flame' }
+      }
+    ],
+    choices: [
+      {
+        id: 'experience_unity',
+        text: "I am beginning to feel the fire within",
+        label: "Recognize internal Agni",
+        nextChapter: 'vasishtha_advanced_teaching',
+        reward: { xp: 130 }
+      },
+      {
+        id: 'study_mantras_alt',
+        text: "I want to learn the sacred hymns",
+        label: "Study the hymns of Agni",
+        nextChapter: 'agni_hymns',
+        reward: { xp: 100 }
+      }
+    ]
+  },
+
+  vasishtha_advanced_teaching: {
+    id: 'vasishtha_advanced_teaching',
+    title: "The Secret of Sacrifice",
+    chapter: 6,
+    description: "Vasishtha reveals deeper wisdom: 'All existence is sacrifice - [translate:yajna]. Stars sacrifice themselves as light. Trees sacrifice themselves as oxygen and wood. Water sacrifices itself as rain. You are not asked to give something you don't have - you are asked to participate consciously in existence's eternal dance of giving.'",
+    icon: Target,
+    dialogue: {
+      npc: "Rishi Vasishtha",
+      lines: [
+        "Most misunderstand yajna as barter with gods.",
+        "But yajna is the cosmic law itself.",
+        "To live is to give. To give is to receive. This cycle is sacred."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'hundred_offerings',
+        title: "Make 100 Conscious Offerings",
+        description: "For 100 days, make daily offerings to the sacred fire with complete awareness. Each offering is an act of conscious sacrifice.",
+        reward: { xp: 180, achievement: 'hundred_offerings' }
+      },
+      {
+        id: 'teach_disciple',
+        title: "Begin Teaching a New Disciple",
+        description: "A younger seeker asks to learn. Teach them what you've learned about fire and sacrifice.",
+        reward: { xp: 140, achievement: 'first_teacher' }
+      },
+      {
+        id: 'special_ritual',
+        title: "Perform a Special Ritual for the Village",
+        description: "Vasishtha asks you to lead a complete Agnihotra for the benefit of the entire community.",
+        reward: { xp: 160, achievement: 'ritual_master' }
+      }
+    ],
+    choices: [
+      {
+        id: 'become_vasishtha_heir',
+        text: "I wish to become your spiritual successor",
+        label: "Accept deep discipleship",
+        nextChapter: 'vasishtha_final_teaching',
+        reward: { xp: 180, deity: 'agni', unlocks: ['agni'] }
+      },
+      {
+        id: 'seek_other_teachers',
+        text: "I am ready to seek other Rishis",
+        label: "Move to the next stage of learning",
+        nextChapter: 'fire_mysteries',
+        reward: { xp: 150 }
+      }
+    ]
+  },
+
+  vasishtha_final_teaching: {
+    id: 'vasishtha_final_teaching',
+    title: "The Ultimate Sacrifice",
+    chapter: 7,
+    description: "On his deathbed (after many years of teaching together), Vasishtha whispers: 'The final sacrifice is the sacrifice of ego itself. I offered my life to fire. Now fire consumes what remains of my separate identity. I return to Agni from which I came. This is not death but transformation. Continue the work.'",
+    icon: Crown,
+    dialogue: {
+      npc: "Rishi Vasishtha (aged)",
+      lines: [
+        "I have fed the fire for sixty years.",
+        "Now the fire has consumed me completely.",
+        "This is the goal - to become fire, to be one with it."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'maintain_eternal_flame',
+        title: "Maintain Vasishtha's Eternal Flame",
+        description: "For the rest of your life, keep the fire that Vasishtha tended burning. It becomes your primary duty and meditation.",
+        reward: { xp: 300, achievement: 'eternal_flame_keeper' }
+      }
+    ],
+    choices: [
+      {
+        id: 'carry_legacy',
+        text: "I will carry your legacy forward",
+        label: "Accept the sacred responsibility",
+        nextChapter: 'convergence_point',
+        reward: { xp: 250, achievement: 'vasishtha_heir' }
+      }
+    ]
+  },
+
 
   agni_hymns: {
     id: 'agni_hymns',
@@ -92,23 +381,301 @@ export const storyChapters = {
     ]
   },
 
-  vishwamitra_teachings: {
-    id: 'vishwamitra_teachings',
-    title: "The Gayatri Revelation",
+  vishwamitra_first_meeting: {
+    id: 'vishwamitra_first_meeting',
+    title: "Encountering Rishi Vishwamitra",
     chapter: 2,
-    description: "Vishwamitra sits in deep meditation, radiating an aura of profound peace. As you approach, he opens his eyes and speaks: 'I will teach you the most sacred of all mantras - the Gayatri. It is the essence of the Vedas, a prayer to Savitar, the divine illuminator.'",
+    description: "You find Rishi Vishwamitra in deep meditation beneath an ancient banyan tree. His aura radiates golden light. When he opens his eyes, he speaks: 'Welcome, seeker. I sensed your arrival through the cosmic vibrations. The sound of truth calls to those with ears to hear.'",
     icon: Sun,
-    unlocks: ['surya'],
+    dialogue: {
+      npc: "Rishi Vishwamitra",
+      lines: [
+        "There are many paths to the divine - through fire, water, earth, wind.",
+        "But the most direct path is through sound, through the sacred word.",
+        "The Gayatri mantra is the heart of all Vedic knowledge - a bridge between human and divine."
+      ]
+    },
     choices: [
-      { id: 'learn_gayatri', text: "Receive the Gayatri initiation", label: "Learn the supreme mantra", nextChapter: 'gayatri_practice', reward: { xp: 100, deity: 'surya' } },
-      { id: 'ask_power', text: "Ask about the source of mantra power", label: "Understand the science of sound", nextChapter: 'shabda_brahman', reward: { xp: 80 } },
-      { id: 'meditation_training', text: "Request meditation training first", label: "Prepare the mind for the mantra", nextChapter: 'meditation_mastery', reward: { xp: 70 } },
-      { id: 'witness_healing', text: "Hear about sacred healing practices", label: "Path of medicine and Ashvins", nextChapter: 'healing_path', reward: { xp: 70 } },
-      { id: 'observe_storm', text: "Be drawn to distant thunder during meditation", label: "Path of storms and Indra", nextChapter: 'storm_calling', reward: { xp: 75 } },
-      { id: 'cosmic_unity_quest', text: "Ask about uniting heaven and earth", label: "Cosmic unity path", nextChapter: 'cosmic_unity_path', reward: { xp: 65 } },
-      { id: 'purification_interest', text: "Learn about spiritual purification", label: "Purification path", nextChapter: 'purification_path', reward: { xp: 60 } }
+      {
+        id: 'eager_student',
+        text: "Teach me the Gayatri mantra immediately",
+        label: "Show eager devotion",
+        nextChapter: 'vishwamitra_gayatri_initiation',
+        reward: { xp: 80, trust: 'vishwamitra' }
+      },
+      {
+        id: 'humble_seeker',
+        text: "First, let me understand my readiness",
+        label: "Demonstrate humility",
+        nextChapter: 'vishwamitra_preparation',
+        reward: { xp: 70 }
+      },
+      {
+        id: 'philosophical_question',
+        text: "What is the relationship between sound and reality?",
+        label: "Ask a deep question",
+        nextChapter: 'vishwamitra_sound_philosophy',
+        reward: { xp: 90 }
+      }
     ]
   },
+
+  vishwamitra_preparation: {
+    id: 'vishwamitra_preparation',
+    title: "Preparing the Mind",
+    chapter: 3,
+    description: "Vishwamitra guides you through purification practices. 'Before the mantra enters your being, the vessel must be clean. A muddy river cannot reflect the sun. First, we purify your consciousness.'",
+    icon: Waves,
+    dialogue: {
+      npc: "Rishi Vishwamitra",
+      lines: [
+        "Sit by the river at dawn and sunset for 21 days.",
+        "Observe your breath - how it rises and falls like tides.",
+        "Let thoughts pass like clouds. Don't grasp them, don't push them away."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'river_breathing',
+        title: "Practice Pranayama by the Saraswati",
+        description: "Learn controlled breathing techniques (pranayama) by the river for 21 days.",
+        reward: { xp: 100, understanding: 'breath_control' }
+      },
+      {
+        id: 'ritual_bathing',
+        title: "Ritual Purification Bathing",
+        description: "Perform ritual bathing each morning, setting intentions for the day.",
+        reward: { xp: 80, understanding: 'ritual_purity' }
+      },
+      {
+        id: 'diet_discipline',
+        title: "Follow a Sattvic Diet",
+        description: "Consume only pure foods (milk, fruits, vegetables) to elevate consciousness.",
+        reward: { xp: 90, understanding: 'sattvic_living' }
+      }
+    ],
+    choices: [
+      {
+        id: 'complete_preparation',
+        text: "Complete the 21-day preparation",
+        label: "Achieve mental clarity",
+        nextChapter: 'vishwamitra_gayatri_initiation',
+        reward: { xp: 140 }
+      }
+    ]
+  },
+
+  vishwamitra_sound_philosophy: {
+    id: 'vishwamitra_sound_philosophy',
+    title: "[translate:Shabda Brahman] - The Word is Brahman",
+    chapter: 3,
+    description: "Vishwamitra teaches: 'All creation arose from primordial sound - [translate:Nada Brahman]. Before anything existed, there was vibration. OM is the source-sound from which all others emerged. When you chant OM, you're not just making sound - you're touching the fabric of existence itself.'",
+    icon: Sparkles,
+    dialogue: {
+      npc: "Rishi Vishwamitra",
+      lines: [
+        "The Rigveda is not mere poetry - it is encoded truth in sound.",
+        "Each syllable carries power. Each word resonates with cosmic meaning.",
+        "To understand the mantra is to understand the structure of reality."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'om_chanting',
+        title: "Chant OM 1000 Times",
+        description: "Chant the sacred syllable OM with full awareness, feeling its vibration in your body.",
+        reward: { xp: 120, understanding: 'om_power' }
+      },
+      {
+        id: 'sound_meditation',
+        title: "Meditate on Inner Sound",
+        description: "In meditation, listen to the natural sounds within your body and consciousness.",
+        reward: { xp: 110, understanding: 'inner_sound' }
+      },
+      {
+        id: 'mantra_resonance',
+        title: "Feel Sound Resonance in Different Chakras",
+        description: "Chant different sounds and feel where they resonate in your energy centers.",
+        reward: { xp: 100, understanding: 'chakra_sound' }
+      }
+    ],
+    choices: [
+      {
+        id: 'ready_for_gayatri',
+        text: "I am ready to receive the Gayatri",
+        label: "Request the supreme mantra",
+        nextChapter: 'vishwamitra_gayatri_initiation',
+        reward: { xp: 130 }
+      }
+    ]
+  },
+
+  vishwamitra_gayatri_initiation: {
+    id: 'vishwamitra_gayatri_initiation',
+    title: "The Gayatri Initiation",
+    chapter: 4,
+    description: "Vishwamitra leads you to the river at sunrise. He intones solemnly: 'Om Bhur Bhuvah Svah, Tat Savitur Varenyam, Bhargo Devasya Dhimahi, Dhiyo Yo Nah Prachodayat.' The words penetrate your being. 'This is the most sacred mantra. Treat it as you would treat a precious gem. Guard it. Nurture it. Let it transform you.'",
+    icon: Sparkles,
+    dialogue: {
+      npc: "Rishi Vishwamitra",
+      lines: [
+        "OM - the primordial sound of creation.",
+        "Bhur Bhuvah Svah - the three worlds: physical, subtle, causal.",
+        "Tat Savitur - that radiant divine source.",
+        "Varenyam - the most worthy of worship.",
+        "Bhargo Devasya Dhimahi - I meditate on that divine light.",
+        "Dhiyo Yo Nah Prachodayat - may it illuminate my intellect."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'gayatri_40days',
+        title: "Chant Gayatri for 40 Days at Sunrise",
+        description: "Recite the Gayatri mantra 108 times each morning at sunrise for 40 consecutive days.",
+        reward: { xp: 180, achievement: 'gayatri_practitioner' }
+      },
+      {
+        id: 'gayatri_meaning',
+        title: "Meditate on Each Line's Meaning",
+        description: "Spend days contemplating the deeper meaning of each phrase in the Gayatri.",
+        reward: { xp: 160, understanding: 'gayatri_wisdom' }
+      }
+    ],
+    choices: [
+      {
+        id: 'daily_practice',
+        text: "Commit to daily Gayatri practice",
+        label: "Embrace lifelong chanting",
+        nextChapter: 'vishwamitra_mantra_mastery',
+        reward: { xp: 150 }
+      }
+    ]
+  },
+
+  vishwamitra_mantra_mastery: {
+    id: 'vishwamitra_mantra_mastery',
+    title: "The Power of Repeated Chanting",
+    chapter: 5,
+    description: "After weeks of daily practice, you begin to experience transformation. Your mind becomes clearer. Colors seem brighter. You feel connected to something vast and eternal. Vishwamitra smiles: 'The mantra is working through you. You are becoming a vessel for divine light.'",
+    icon: Sun,
+    dialogue: {
+      npc: "Rishi Vishwamitra",
+      lines: [
+        "You have chanted 4000 times. The mantra is now flowing through your very cells.",
+        "Your consciousness is rising. You are beginning to perceive the unity behind all forms.",
+        "Continue the practice. The more you chant, the more the veil lifts."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'mantra_integration',
+        title: "Live the Gayatri Principle Daily",
+        description: "Apply the Gayatri's wisdom to all your actions - seeing divine light in everything.",
+        reward: { xp: 170, understanding: 'mantra_living' }
+      },
+      {
+        id: 'teach_others',
+        title: "Teach Others the Gayatri",
+        description: "Share the mantra and its benefits with sincere seekers in your community.",
+        reward: { xp: 150, achievement: 'mantra_teacher' }
+      },
+      {
+        id: 'surya_worship',
+        title: "Develop Sun Worship (Surya Namaskar) Practice",
+        description: "Practice 12 sun salutations daily, coordinating movements with Gayatri chanting.",
+        reward: { xp: 160, understanding: 'surya_connection' }
+      }
+    ],
+    choices: [
+      {
+        id: 'advanced_mantras',
+        text: "Ask to learn other sacred mantras",
+        label: "Deepen your mantra knowledge",
+        nextChapter: 'vishwamitra_vedic_chanting',
+        reward: { xp: 170 }
+      },
+      {
+        id: 'merge_practice',
+        text: "Seek to merge all teachings into one practice",
+        label: "Move toward integration",
+        nextChapter: 'convergence_point',
+        reward: { xp: 160 }
+      }
+    ]
+  },
+
+  vishwamitra_vedic_chanting: {
+    id: 'vishwamitra_vedic_chanting',
+    title: "The Ancient Recitation Arts",
+    chapter: 6,
+    description: "Vishwamitra reveals: 'The Rigveda was preserved through precise oral recitation for thousands of years. The Rishis developed techniques to memorize vast amounts of sacred text without error. I will teach you these methods - they are keys to understanding and retaining divine knowledge.'",
+    icon: BookOpen,
+    dialogue: {
+      npc: "Rishi Vishwamitra",
+      lines: [
+        "There are 11 ways of reciting the Vedas - each revealing different layers of meaning.",
+        "The Samaveda is the Rigveda sung in melodic form - the musical manifestation of truth.",
+        "When properly chanted, the verses create harmonic frequencies that elevate consciousness."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'memorize_hymn',
+        title: "Memorize a Complete Rigvedic Hymn",
+        description: "Master one of the 1028 Rigvedic hymns using ancient mnemonic techniques.",
+        reward: { xp: 200, achievement: 'hymn_keeper' }
+      },
+      {
+        id: 'vedic_chanting',
+        title: "Learn Vedic Recitation Techniques",
+        description: "Study the precise pronunciation (Samhita) and melodic patterns (Samaveda) of sacred texts.",
+        reward: { xp: 180, understanding: 'vedic_chanting' }
+      }
+    ],
+    choices: [
+      {
+        id: 'become_vedic_master',
+        text: "Dedicate yourself to preserving the Vedas",
+        label: "Become a guardian of sacred knowledge",
+        nextChapter: 'vishwamitra_final_wisdom',
+        reward: { xp: 200, deity: 'surya', achievement: 'vedic_master' }
+      }
+    ]
+  },
+
+  vishwamitra_final_wisdom: {
+    id: 'vishwamitra_final_wisdom',
+    title: "The Ultimate Truth",
+    chapter: 7,
+    description: "After years of study with Vishwamitra, he reveals his deepest teaching: 'All the mantras, all the hymns, all the practices point to one truth - that the divine consciousness pervades everything. You are not separate from it. The Gayatri teaches this: the light you worship outwardly is the light that burns within your own heart. Become that light.'",
+    icon: Crown,
+    dialogue: {
+      npc: "Rishi Vishwamitra (elder)",
+      lines: [
+        "I have devoted my life to understanding sound and vibration.",
+        "I have taught thousands of students the sacred mantras.",
+        "But the greatest teaching is this: the universe itself is the Guru. Listen to its every whisper."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'eternal_service',
+        title: "Commit to Eternal Teaching",
+        description: "Make it your life's work to teach the Gayatri and Vedic wisdom to future generations.",
+        reward: { xp: 300, achievement: 'eternal_teacher' }
+      }
+    ],
+    choices: [
+      {
+        id: 'continue_legacy',
+        text: "I will continue your legacy",
+        label: "Become a Vedic teacher",
+        nextChapter: 'convergence_point',
+        reward: { xp: 280, achievement: 'vishwamitra_successor' }
+      }
+    ]
+  },
+
 
   gayatri_practice: {
     id: 'gayatri_practice',
@@ -116,9 +683,45 @@ export const storyChapters = {
     chapter: 3,
     description: "Vishwamitra intones: 'Om Bhur Bhuvah Svah, Tat Savitur Varenyam, Bhargo Devasya Dhimahi, Dhiyo Yo Nah Prachodayat.' The words resonate through your being. 'Meditate on this daily at sunrise,' he instructs.",
     icon: Sparkles,
+    dialogue: {
+      npc: "Rishi Vishwamitra",
+      lines: [
+        "Each syllable of the Gayatri carries cosmic power.",
+        "Om connects you to primordial sound.",
+        "Bhur Bhuvah Svah takes you through the three worlds.",
+        "Tat Savitur reveals the divine light.",
+        "Practice this mantra with full presence at sunrise."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'sunrise_40days',
+        title: "Practice Gayatri for 40 Sunrises",
+        description: "Recite the Gayatri mantra each dawn for 40 consecutive days.",
+        reward: { xp: 130, understanding: 'gayatri_practice' }
+      },
+      {
+        id: 'mantra_integration',
+        title: "Integrate Mantra Into Daily Life",
+        description: "Let the Gayatri's wisdom guide all your actions.",
+        reward: { xp: 120, understanding: 'mantra_daily' }
+      }
+    ],
     choices: [
-      { id: 'sunrise_practice', text: "Practice at sunrise for 40 days", label: "Commit to disciplined practice", nextChapter: 'solar_wisdom', reward: { xp: 120 } },
-      { id: 'explore_sound', text: "Study the vibrational science of the mantra", label: "Understand mantra mechanics", nextChapter: 'shabda_brahman', reward: { xp: 100 } }
+      { 
+        id: 'sunrise_practice', 
+        text: "Practice at sunrise for 40 days", 
+        label: "Commit to disciplined practice", 
+        nextChapter: 'solar_wisdom', 
+        reward: { xp: 120 } 
+      },
+      { 
+        id: 'explore_sound', 
+        text: "Study the vibrational science of the mantra", 
+        label: "Understand mantra mechanics", 
+        nextChapter: 'shabda_brahman', 
+        reward: { xp: 100 } 
+      }
     ]
   },
 
@@ -128,9 +731,44 @@ export const storyChapters = {
     chapter: 4,
     description: "Vishwamitra explains the profound truth: 'All creation arose from primordial sound. The syllable OM contains all reality. When you chant, you align with the fundamental vibration of existence itself.'",
     icon: Waves,
+    dialogue: {
+      npc: "Rishi Vishwamitra",
+      lines: [
+        "In the beginning was Shabda - sound, vibration.",
+        "From [translate:Nada Brahman]] - cosmic sound - all universes emerged.",
+        "Every atom vibrates with the frequency of creation.",
+        "When you understand this, you understand everything."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'study_creation_hymns',
+        title: "Study the Nasadiya Sukta (Creation Hymn)",
+        description: "Meditate on the hymn that begins 'Then there was neither being nor non-being.'",
+        reward: { xp: 140, understanding: 'creation_mystery' }
+      },
+      {
+        id: 'sound_observation',
+        title: "Observe Sound in Nature",
+        description: "Listen deeply to natural sounds - rivers, wind, animals - recognizing the cosmic vibration.",
+        reward: { xp: 135, understanding: 'natural_sound' }
+      }
+    ],
     choices: [
-      { id: 'creation_study', text: "Study the hymns of creation", label: "Explore the cosmic origins", nextChapter: 'convergence_point', reward: { xp: 150 } },
-      { id: 'sound_meditation', text: "Practice sound meditation", label: "Become one with the cosmic vibration", nextChapter: 'meditation_mastery', reward: { xp: 130 } }
+      { 
+        id: 'creation_study', 
+        text: "Study the hymns of creation", 
+        label: "Explore the cosmic origins", 
+        nextChapter: 'convergence_point', 
+        reward: { xp: 150 } 
+      },
+      { 
+        id: 'sound_meditation', 
+        text: "Practice sound meditation", 
+        label: "Become one with the cosmic vibration", 
+        nextChapter: 'meditation_mastery', 
+        reward: { xp: 130 } 
+      }
     ]
   },
 
@@ -140,24 +778,768 @@ export const storyChapters = {
     chapter: 4,
     description: "Through weeks of practice, your mind becomes still as a windless lake. In this clarity, you begin to perceive truths hidden beneath the surface of reality.",
     icon: Brain,
+    dialogue: {
+      npc: "Inner Guide",
+      lines: [
+        "The surface of the mind is like rippled water.",
+        "Through meditation, these ripples cease.",
+        "When the water is still, it reflects the infinite sky perfectly.",
+        "This is the mind without disturbance - Samadhi."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'deepen_meditation',
+        title: "Sit in Meditation for 100 Days",
+        description: "Maintain a consistent daily meditation practice for 100 consecutive days.",
+        reward: { xp: 160, achievement: 'meditation_century' }
+      },
+      {
+        id: 'witness_mind',
+        title: "Become Witness to Your Own Mind",
+        description: "Develop the capacity to observe your thoughts without identification or reaction.",
+        reward: { xp: 150, understanding: 'mind_witnessing' }
+      },
+      {
+        id: 'flow_experience',
+        title: "Experience Flow States",
+        description: "Achieve states of meditation where there is no sense of time or separation.",
+        reward: { xp: 170, achievement: 'flow_master' }
+      }
+    ],
     choices: [
-      { id: 'continue_meditation', text: "Deepen your meditative practice", label: "Path of inner exploration", nextChapter: 'convergence_point', reward: { xp: 140 } },
-      { id: 'combine_action', text: "Balance meditation with ritual action", label: "Unite contemplation and practice", nextChapter: 'convergence_point', reward: { xp: 130 } }
+      { 
+        id: 'continue_meditation', 
+        text: "Deepen your meditative practice further", 
+        label: "Path of deeper inner exploration", 
+        nextChapter: 'convergence_point', 
+        reward: { xp: 140 } 
+      },
+      { 
+        id: 'combine_action', 
+        text: "Balance meditation with ritual action and service", 
+        label: "Unite contemplation and practice", 
+        nextChapter: 'convergence_point', 
+        reward: { xp: 130 } 
+      }
     ]
   },
 
-  saraswati_meditation: {
-    id: 'saraswati_meditation',
-    title: "By the Sacred River",
+  saraswati_first_encounter: {
+    id: 'saraswati_first_encounter',
+    title: "The Call of the Sacred River",
     chapter: 2,
-    description: "The Saraswati flows eternally, ancient and pure. Sitting on its banks, you contemplate the mystery of water - flowing yet unchanging, soft yet carving mountains, humble yet sustaining all life.",
+    description: "You sit alone by the banks of the Saraswati at dawn. The river flows eternally, indifferent yet nurturing. An ancient sage appears beside you: 'The river has called you. She whispers secrets to those who listen with the heart. Will you learn her language?'",
     icon: Waves,
-    unlocks: ['varuna'],
+    dialogue: {
+      npc: "Old Sage by the River",
+      lines: [
+        "The Saraswati is not just water - she is the flow of knowledge, consciousness itself.",
+        "She carries the wisdom of all things to the cosmic ocean.",
+        "Those who follow her teachings learn the art of adaptation and persistence."
+      ]
+    },
     choices: [
-      { id: 'observe_flow', text: "Watch the river's eternal flow", label: "Learn from water's wisdom", nextChapter: 'water_wisdom', reward: { xp: 70 } },
-      { id: 'ritual_bath', text: "Perform ritual ablutions", label: "Purify body and spirit", nextChapter: 'purification_path', reward: { xp: 60, deity: 'varuna' } },
-      { id: 'deep_meditation', text: "Meditate on cosmic order", label: "Contemplate Rta (cosmic law)", nextChapter: 'rta_meditation', reward: { xp: 80 } },
-      { id: 'rain_prayers', text: "Pray for rain beside the sacred river", label: "Rain ceremony path", nextChapter: 'rain_ceremony_path', reward: { xp: 65 } }
+      {
+        id: 'listen_to_river',
+        text: "Teach me to listen to the river's wisdom",
+        label: "Begin water meditation",
+        nextChapter: 'saraswati_listening_practice',
+        reward: { xp: 75 }
+      },
+      {
+        id: 'study_varuna',
+        text: "Tell me about Varuna, lord of waters",
+        label: "Learn cosmic law",
+        nextChapter: 'varuna_cosmic_wisdom',
+        reward: { xp: 85 }
+      },
+      {
+        id: 'ritual_immersion',
+        text: "Guide me in ritual bathing",
+        label: "Seek purification",
+        nextChapter: 'saraswati_purification',
+        reward: { xp: 70 }
+      }
+    ]
+  },
+
+  saraswati_listening_practice: {
+    id: 'saraswati_listening_practice',
+    title: "The Language of Water",
+    chapter: 3,
+    description: "The sage teaches: 'Water has no form of its own, yet it takes every form. Listen to how it flows around rocks, cascades down waterfalls, pools in still places. Each movement teaches a different lesson. Become water and understand all paths.'",
+    icon: Waves,
+    dialogue: {
+      npc: "Old Sage",
+      lines: [
+        "Water is adaptable yet persistent - it wears away mountains over time.",
+        "Water seeks the lowest places yet rises highest when called.",
+        "Water cleanses, nourishes, connects all things."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'observe_water_flow',
+        title: "Observe Water Flow for 21 Days",
+        description: "Sit by the river daily and study how water moves, adapts, persists.",
+        reward: { xp: 100, understanding: 'water_wisdom' }
+      },
+      {
+        id: 'ritual_ablution',
+        title: "Perform Daily Ritual Ablutions",
+        description: "Bathe in the river each morning with awareness of water's purifying properties.",
+        reward: { xp: 90, understanding: 'water_purity' }
+      },
+      {
+        id: 'water_meditation',
+        title: "Meditate on Water Elements",
+        description: "Contemplate water in all its forms: rivers, clouds, dew, rain.",
+        reward: { xp: 95, understanding: 'water_forms' }
+      }
+    ],
+    choices: [
+      {
+        id: 'deepen_practice',
+        text: "I wish to go deeper into water's mysteries",
+        label: "Advance to cosmic understanding",
+        nextChapter: 'varuna_cosmic_wisdom',
+        reward: { xp: 130 }
+      }
+    ]
+  },
+
+  varuna_cosmic_wisdom: {
+    id: 'varuna_cosmic_wisdom',
+    title: "Varuna - The All-Seeing Guardian",
+    chapter: 4,
+    description: "The sage reveals profound teachings: 'Varuna is the cosmic ocean and the law that sustains it. He is the witness who sees all deeds, judges all truth and falsehood. The waters reflect his all-seeing eye. To understand Varuna is to understand justice, order, and cosmic responsibility.'",
+    icon: Eye,
+    dialogue: {
+      npc: "Old Sage",
+      lines: [
+        "Varuna's gaze penetrates all deception - no lie can hide from him.",
+        "He binds all beings through [translate:Rta] - cosmic law and order.",
+        "To worship Varuna is to commit to truth in all your dealings."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'truth_practice',
+        title: "Practice Complete Truthfulness for 40 Days",
+        description: "Never speak an untruth, never deceive, always maintain integrity.",
+        reward: { xp: 150, achievement: 'truth_keeper' }
+      },
+      {
+        id: 'night_vigil',
+        title: "Night Vigil Under Stars",
+        description: "Spend nights by the river contemplating the cosmic order and your place in it.",
+        reward: { xp: 120, understanding: 'cosmic_order' }
+      },
+      {
+        id: 'dharma_study',
+        title: "Study the Laws of Dharma",
+        description: "Learn how to live righteously in alignment with cosmic law.",
+        reward: { xp: 140, understanding: 'dharma_living' }
+      }
+    ],
+    choices: [
+      {
+        id: 'embrace_dharma',
+        text: "I commit to living by Dharma",
+        label: "Accept cosmic responsibility",
+        nextChapter: 'saraswati_dharma_integration',
+        reward: { xp: 160 }
+      }
+    ]
+  },
+
+  saraswati_purification: {
+    id: 'saraswati_purification',
+    title: "Ritual Purification and Rebirth",
+    chapter: 3,
+    description: "The sage leads you through sacred ritual ablutions. 'Each bath is a death and rebirth. You emerge cleansed not just of physical impurities but of karmic burden. Let the Saraswati wash away your past and prepare you for transformation.'",
+    icon: Droplet,
+    dialogue: {
+      npc: "Old Sage",
+      lines: [
+        "The river cleanses the body; meditation cleanses the mind; devotion cleanses the soul.",
+        "Each immersion in sacred waters is a covenant with the divine.",
+        "Emerge from the water reborn, transformed, ready to serve a higher purpose."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'hundred_baths',
+        title: "Take 100 Sacred Baths",
+        description: "Immerse yourself in the Saraswati 100 times with complete mindfulness.",
+        reward: { xp: 160, achievement: 'purified_seeker' }
+      },
+      {
+        id: 'mantra_bathing',
+        title: "Chant Mantras While Bathing",
+        description: "Combine Gayatri or water-related mantras with your ritual bathing.",
+        reward: { xp: 130, understanding: 'mantra_water_connection' }
+      }
+    ],
+    choices: [
+      {
+        id: 'transformed_continue',
+        text: "I feel reborn and ready to continue",
+        label: "Move forward with renewed spirit",
+        nextChapter: 'saraswati_dharma_integration',
+        reward: { xp: 140 }
+      }
+    ]
+  },
+
+  saraswati_dharma_integration: {
+    id: 'saraswati_dharma_integration',
+    title: "Living Dharma - Cosmic Order in Daily Life",
+    chapter: 5,
+    description: "You've learned water's lessons and Varuna's principles. Now the sage teaches: 'Dharma is not abstract philosophy - it is how you live each moment. The cosmic order manifests through righteous action, truthful speech, and compassionate service.'",
+    icon: Scale,
+    dialogue: {
+      npc: "Old Sage",
+      lines: [
+        "Your [translate:Svadharma]] - your unique duty - is to be discovered and fulfilled.",
+        "The river teaches that each being has a role in the cosmic ecology.",
+        "Find your role. Fulfill it with devotion. This is the path to liberation."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'discover_svadharma',
+        title: "Discover Your Unique Dharma",
+        description: "Through meditation and contemplation, identify your unique purpose and duties.",
+        reward: { xp: 170, understanding: 'svadharma' }
+      },
+      {
+        id: 'serve_community',
+        title: "Serve the Community Selflessly",
+        description: "Perform service without expectation of reward for one full season.",
+        reward: { xp: 160, achievement: 'selfless_servant' }
+      },
+      {
+        id: 'teach_dharma',
+        title: "Teach Others the Way of Dharma",
+        description: "Share your understanding of cosmic order and righteous living with others.",
+        reward: { xp: 150, achievement: 'dharma_teacher' }
+      }
+    ],
+    choices: [
+      {
+        id: 'river_guardian',
+        text: "I wish to become a guardian of these teachings",
+        label: "Dedicate yourself fully",
+        nextChapter: 'saraswati_final_wisdom',
+        reward: { xp: 180 }
+      }
+    ]
+  },
+
+  saraswati_final_wisdom: {
+    id: 'saraswati_final_wisdom',
+    title: "The Ocean of Consciousness",
+    chapter: 6,
+    description: "After years of practice, the sage reveals the ultimate truth: 'All rivers flow to the ocean. All individual consciousness flows to universal consciousness. The Saraswati is both a physical river and the cosmic current of knowledge flowing through all existence. You are both the river and the ocean.'",
+    icon: Infinity,
+    dialogue: {
+      npc: "Old Sage (wise elder)",
+      lines: [
+        "I have taught you the ways of water, of Varuna, of Dharma.",
+        "But the greatest teaching cannot be spoken - it must be lived.",
+        "Go now. Become the river. Flow with the cosmic current."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'eternal_guardian',
+        title: "Become an Eternal Guardian",
+        description: "Commit to protecting the Saraswati and its wisdom for future generations.",
+        reward: { xp: 300, achievement: 'river_guardian_eternal' }
+      }
+    ],
+    choices: [
+      {
+        id: 'complete_integration',
+        text: "I have become the river and the cosmic current",
+        label: "Achieve ultimate unity",
+        nextChapter: 'convergence_point',
+        reward: { xp: 280, deity: 'varuna', achievement: 'saraswati_master' }
+      }
+    ]
+  },
+
+  // === PATH 4: INDRA STORM PATH (Warrior, Strength, Victory) ===
+
+  indra_first_call: {
+    id: 'indra_first_call',
+    chapter: 2,
+    title: "The Thunder Awakens Within",
+    description: "You hear a distant thunder. The sky darkens. A warrior with eyes like lightning appears: 'I am sent by Indra, king of the gods, lord of storms. He has noticed your spirit. Do you have the courage to walk the path of the warrior? Or will you cower like prey?'",
+    icon: Zap,
+    dialogue: {
+      npc: "Indra's Warrior Herald",
+      lines: [
+        "Indra is not a god of destruction - he is a god of overcoming obstacles.",
+        "He defeated Vritra, the serpent of chaos, and brought forth the waters.",
+        "To follow Indra is to embrace challenge, to face fear, to conquer limitations."
+      ]
+    },
+    choices: [
+      {
+        id: 'accept_warrior_call',
+        text: "Yes! I accept the warrior's path",
+        label: "Embrace the challenge",
+        nextChapter: 'indra_warrior_training',
+        reward: { xp: 90, trust: 'indra' }
+      },
+      {
+        id: 'seek_understanding_first',
+        text: "Tell me more about what this path entails",
+        label: "Ask for wisdom",
+        nextChapter: 'indra_warrior_philosophy',
+        reward: { xp: 80 }
+      },
+      {
+        id: 'test_warrior',
+        text: "Prove your claims - show me your power",
+        label: "Challenge the herald",
+        nextChapter: 'indra_power_display',
+        reward: { xp: 95 }
+      }
+    ]
+  },
+
+  indra_warrior_training: {
+    id: 'indra_warrior_training',
+    title: "Physical Mastery",
+    chapter: 3,
+    description: "The herald takes you to training grounds where warriors drill daily. 'The body is a temple and a weapon. You must strengthen it, master it, make it an instrument of your will. But physical strength is only the beginning. True warrior power flows from unwavering spirit.'",
+    icon: Shield,
+    dialogue: {
+      npc: "Indra's Warrior Herald",
+      lines: [
+        "A warrior's strength is not just in muscles, but in discipline, courage, and dharma.",
+        "Train your body to obey your mind. Train your mind to serve higher truth.",
+        "The greatest victory is the victory over your own limitations."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'physical_training',
+        title: "Complete Rigorous Physical Training",
+        description: "Master martial techniques - sword, staff, hand-to-hand combat.",
+        reward: { xp: 150, achievement: 'warrior_trained' }
+      },
+      {
+        id: 'stamina_building',
+        title: "Build Stamina and Endurance",
+        description: "Run, swim, climb - develop the body of a true warrior.",
+        reward: { xp: 130, understanding: 'physical_mastery' }
+      },
+      {
+        id: 'weapon_mastery',
+        title: "Master the Sacred Weapons",
+        description: "Learn to wield weapons not for violence but for protection and truth.",
+        reward: { xp: 140, understanding: 'righteous_combat' }
+      }
+    ],
+    choices: [
+      {
+        id: 'complete_physical',
+        text: "My body is now a warrior's instrument",
+        label: "Move to mental training",
+        nextChapter: 'indra_warrior_philosophy',
+        reward: { xp: 150 }
+      }
+    ]
+  },
+
+  indra_warrior_philosophy: {
+    id: 'indra_warrior_philosophy',
+    title: "The Warrior's Code",
+    chapter: 4,
+    description: "The herald teaches deeper philosophy: 'A true warrior fights not for personal gain but to uphold Dharma. Indra fought Vritra to liberate the waters - an act of cosmic service. Your strength must serve truth, justice, and the protection of the vulnerable.'",
+    icon: Crown,
+    dialogue: {
+      npc: "Indra's Warrior Herald",
+      lines: [
+        "A warrior without dharma is just a brute using force.",
+        "But a warrior with dharma is a protector, a guardian of cosmic order.",
+        "Know when to fight, when to show mercy, when to step aside. This is wisdom."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'study_warrior_dharma',
+        title: "Study Warrior Ethics and Dharma",
+        description: "Learn the principles governing righteous combat and protection.",
+        reward: { xp: 160, understanding: 'warrior_dharma' }
+      },
+      {
+        id: 'protect_village',
+        title: "Protect the Village",
+        description: "Use your newfound strength to defend your community from harm.",
+        reward: { xp: 170, achievement: 'protector' }
+      },
+      {
+        id: 'indra_worship',
+        title: "Study the Indra Hymns",
+        description: "Learn the Rigvedic hymns dedicated to Indra's victories and virtues.",
+        reward: { xp: 150, understanding: 'indra_wisdom' }
+      }
+    ],
+    choices: [
+      {
+        id: 'warrior_victory',
+        text: "I am ready to face great challenges",
+        label: "Move to advanced training",
+        nextChapter: 'indra_victory_quest',
+        reward: { xp: 170 }
+      }
+    ]
+  },
+
+  indra_power_display: {
+    id: 'indra_power_display',
+    title: "The Storm's Wrath",
+    chapter: 3,
+    description: "The sky erupts. Lightning splits the heavens. Thunder shakes the earth. The herald's form becomes radiant with divine energy: 'This is the power of Indra - the force that overcomes all obstacles. This power can now flow through you if you prove yourself worthy.'",
+    icon: Zap,
+    dialogue: {
+      npc: "Indra's Herald (transformed)",
+      lines: [
+        "Feel the raw power of the storm.",
+        "This is the energy you must learn to channel without being consumed by it.",
+        "Accept Indra's gift with humility."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'survive_storm',
+        title: "Endure the Sacred Storm",
+        description: "Stand in the storm without fear as it rages around you.",
+        reward: { xp: 180, achievement: 'storm_survivor' }
+      }
+    ],
+    choices: [
+      {
+        id: 'embrace_power',
+        text: "I accept Indra's power and will use it wisely",
+        label: "Commit to the warrior path",
+        nextChapter: 'indra_warrior_training',
+        reward: { xp: 160, deity: 'indra' }
+      }
+    ]
+  },
+
+  indra_victory_quest: {
+    id: 'indra_victory_quest',
+    title: "The Great Challenge",
+    chapter: 5,
+    description: "Indra himself appears in a vision: 'Vritra still dwells in the hearts of all beings - fear, doubt, ego. Go forth and conquer these inner demons. Win your first great victory over yourself. Then you will be ready for whatever challenges the world presents.'",
+    icon: Trophy,
+    dialogue: {
+      npc: "Indra (cosmic voice)",
+      lines: [
+        "The greatest enemy you will ever face lives within your own heart.",
+        "Conquer it, and all external enemies will fall before you.",
+        "This is the path to true victory and liberation."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'face_fear',
+        title: "Face Your Deepest Fear",
+        description: "Identify and directly confront your greatest internal obstacle.",
+        reward: { xp: 200, achievement: 'fearless_warrior' }
+      },
+      {
+        id: 'overcome_ego',
+        title: "Transcend Ego Through Service",
+        description: "Perform humble service without any desire for recognition or reward.",
+        reward: { xp: 190, achievement: 'ego_transcender' }
+      },
+      {
+        id: 'lead_others',
+        title: "Lead Others to Victory",
+        description: "Help others overcome their own obstacles and fears.",
+        reward: { xp: 180, achievement: 'guide_of_warriors' }
+      }
+    ],
+    choices: [
+      {
+        id: 'eternal_warrior',
+        text: "I have conquered myself and am ready to serve",
+        label: "Become Indra's champion",
+        nextChapter: 'indra_final_wisdom',
+        reward: { xp: 220 }
+      }
+    ]
+  },
+
+  indra_final_wisdom: {
+    id: 'indra_final_wisdom',
+    title: "Indra's Final Teaching",
+    chapter: 6,
+    description: "Indra appears in full glory: 'You have walked the warrior's path with honor. You have learned that true strength serves truth, that courage stands against corruption, that victory means liberation for all. Become my instrument in the world - not for glory but for justice.'",
+    icon: Crown,
+    dialogue: {
+      npc: "Indra (divine lord)",
+      lines: [
+        "I have watched you transform from seeker to warrior.",
+        "Now go forth as my champion of dharma.",
+        "Protect the weak, stand for truth, overcome all obstacles - this is your destiny."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'eternal_duty',
+        title: "Take the Warrior's Sacred Oath",
+        description: "Commit eternally to the protection of dharma and the vulnerable.",
+        reward: { xp: 300, achievement: 'indra_champion' }
+      }
+    ],
+    choices: [
+      {
+        id: 'warrior_complete',
+        text: "I accept my destiny as a warrior of dharma",
+        label: "Become a eternal champion",
+        nextChapter: 'convergence_point',
+        reward: { xp: 280, deity: 'indra', achievement: 'indra_warrior_complete' }
+      }
+    ]
+  },
+
+  // === PATH 5: HEALING PATH (Ashvins, Medicine, Compassion) ===
+
+  ashvin_healing_call: {
+    id: 'ashvin_healing_call',
+    chapter: 2,
+    title: "The Healers' Summons",
+    description: "You witness the village healer performing miracles - curing illnesses, easing pain, bringing hope. That night, two divine figures appear in your dreams: 'We are the Ashvins, physicians of the gods. We have seen compassion in your heart. Will you learn the art of healing?'",
+    icon: Heart,
+    dialogue: {
+      npc: "The Ashvins (divine twins)",
+      lines: [
+        "We are the gods of healing, of restoration, of bringing the broken back to wholeness.",
+        "Healing is not just medicine - it is compassion made manifest.",
+        "Those who follow us learn to see the divine spark even in the most broken beings."
+      ]
+    },
+    choices: [
+      {
+        id: 'accept_healer_path',
+        text: "Teach me to heal",
+        label: "Begin the healing path",
+        nextChapter: 'ashvin_apprenticeship',
+        reward: { xp: 85 }
+      },
+      {
+        id: 'understand_healing',
+        text: "What is the deeper meaning of healing?",
+        label: "Seek understanding first",
+        nextChapter: 'ashvin_healing_philosophy',
+        reward: { xp: 80 }
+      },
+      {
+        id: 'prove_worthiness',
+        text: "What must I do to prove my worthiness?",
+        label: "Ask for a test",
+        nextChapter: 'ashvin_compassion_test',
+        reward: { xp: 90 }
+      }
+    ]
+  },
+
+  ashvin_apprenticeship: {
+    id: 'ashvin_apprenticeship',
+    title: "Learning the Healing Arts",
+    chapter: 3,
+    description: "The village healer welcomes you as apprentice. 'Healing involves knowledge of herbs and their properties, understanding of the body's rhythms, but most importantly, it requires genuine compassion. Each patient is a universe unto themselves. Learn to treat them as such.'",
+    icon: Heart,
+    dialogue: {
+      npc: "Village Healer",
+      lines: [
+        "There are 7000 herbs with healing properties. Learn them.",
+        "There are countless ailments. Understand their roots.",
+        "But above all, heal with love. Healing without love is just mechanics."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'herb_study',
+        title: "Master 100 Healing Herbs",
+        description: "Study the properties, applications, and preparation of 100 medicinal plants.",
+        reward: { xp: 150, achievement: 'herbalist' }
+      },
+      {
+        id: 'treat_patients',
+        title: "Treat 100 Patients with Complete Success",
+        description: "Personally tend to patients and bring about their healing.",
+        reward: { xp: 170, achievement: 'compassionate_healer' }
+      },
+      {
+        id: 'massage_therapy',
+        title: "Master Therapeutic Touch",
+        description: "Learn to heal through touch, massage, and energy work.",
+        reward: { xp: 140, understanding: 'healing_touch' }
+      }
+    ],
+    choices: [
+      {
+        id: 'advanced_healing',
+        text: "I am ready for deeper healing knowledge",
+        label: "Progress to spiritual healing",
+        nextChapter: 'ashvin_spiritual_healing',
+        reward: { xp: 160 }
+      }
+    ]
+  },
+
+  ashvin_healing_philosophy: {
+    id: 'ashvin_healing_philosophy',
+    title: "The Philosophy of Wholeness",
+    chapter: 4,
+    description: "The Ashvins teach: 'Disease is not merely physical - it arises from imbalance in body, mind, and spirit. True healing restores balance to all three. You must learn to see the whole being, not just the broken part.'",
+    icon: Lightbulb,
+    dialogue: {
+      npc: "The Ashvins",
+      lines: [
+        "Physical ailments often reflect spiritual wounds.",
+        "Mental disturbance manifests as bodily disease.",
+        "To heal truly, address the root - be it physical, mental, or spiritual."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'holistic_study',
+        title: "Study the Three Doshas",
+        description: "Learn [translate:Ayurveda]] - the ancient system of balancing body, mind, spirit.",
+        reward: { xp: 160, understanding: 'ayurvedic_medicine' }
+      },
+      {
+        id: 'meditation_healing',
+        title: "Learn to Heal Through Meditation",
+        description: "Develop the ability to channel healing energy through focused consciousness.",
+        reward: { xp: 150, understanding: 'energy_healing' }
+      }
+    ],
+    choices: [
+      {
+        id: 'spiritual_healer',
+        text: "I will become a healer of body, mind, and spirit",
+        label: "Integrate all healing knowledge",
+        nextChapter: 'ashvin_spiritual_healing',
+        reward: { xp: 170 }
+      }
+    ]
+  },
+
+  ashvin_compassion_test: {
+    id: 'ashvin_compassion_test',
+    title: "The Test of the Heart",
+    chapter: 3,
+    description: "The Ashvins place you before a suffering being: 'This person committed terrible crimes. Yet they suffer now. Will you heal them? Can your compassion extend even to the fallen and broken?'",
+    icon: Heart,
+    dialogue: {
+      npc: "The Ashvins",
+      lines: [
+        "True compassion does not judge.",
+        "A healer treats all equally - the virtuous and the fallen.",
+        "Can you love unconditionally? This is the real test."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'heal_criminal',
+        title: "Heal the Broken and Fallen",
+        description: "Extend compassion and healing to those society has rejected.",
+        reward: { xp: 180, achievement: 'universal_healer' }
+      }
+    ],
+    choices: [
+      {
+        id: 'universal_compassion',
+        text: "Yes, I will heal them",
+        label: "Accept universal compassion",
+        nextChapter: 'ashvin_apprenticeship',
+        reward: { xp: 160, deity: 'ashvin' }
+      }
+    ]
+  },
+
+  ashvin_spiritual_healing: {
+    id: 'ashvin_spiritual_healing',
+    title: "Healing the Spirit",
+    chapter: 5,
+    description: "The Ashvins reveal: 'The deepest healing comes when a being remembers their divine nature. Help them see the infinite consciousness within themselves. This knowledge alone can heal any disease.'",
+    icon: Star,
+    dialogue: {
+      npc: "The Ashvins",
+      lines: [
+        "You have learned to heal the body and calm the mind.",
+        "Now learn to awaken the spirit within each being.",
+        "This is the ultimate healing - remembering that all disease is illusion of separation."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'spiritual_guide',
+        title: "Guide Others to Spiritual Awakening",
+        description: "Help patients remember their divine nature and infinite consciousness.",
+        reward: { xp: 200, achievement: 'spiritual_healer' }
+      },
+      {
+        id: 'train_healers',
+        title: "Train a New Generation of Healers",
+        description: "Pass on your knowledge and compassion to committed students.",
+        reward: { xp: 190, achievement: 'healer_of_healers' }
+      }
+    ],
+    choices: [
+      {
+        id: 'eternal_healer',
+        text: "I dedicate myself to universal healing",
+        label: "Become an eternal healer",
+        nextChapter: 'ashvin_final_wisdom',
+        reward: { xp: 210 }
+      }
+    ]
+  },
+
+  ashvin_final_wisdom: {
+    id: 'ashvin_final_wisdom',
+    title: "The Ashvins' Greatest Secret",
+    chapter: 6,
+    description: "The divine twins appear in blazing light: 'You have learned our teachings well. Now know this: the greatest healing is not of individual bodies but of humanity's collective consciousness. Help humanity remember its divine nature. This is the ultimate service.'",
+    icon: Star,
+    dialogue: {
+      npc: "The Ashvins (divine presence)",
+      lines: [
+        "We are satisfied with your commitment to healing.",
+        "Go now and be our presence in the world.",
+        "Heal not just individuals, but help restore the divine connection in all beings."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'eternal_healing_mission',
+        title: "Commit to Eternal Healing",
+        description: "Make healing your eternal mission across lifetimes.",
+        reward: { xp: 300, achievement: 'eternal_healer_ashvin' }
+      }
+    ],
+    choices: [
+      {
+        id: 'healing_complete',
+        text: "I accept this sacred mission",
+        label: "Become eternal healer",
+        nextChapter: 'convergence_point',
+        reward: { xp: 280, deity: 'ashvin', achievement: 'ashvin_healer_master' }
+      }
     ]
   },
 
@@ -167,9 +1549,44 @@ export const storyChapters = {
     chapter: 3,
     description: "An old sage joins you by the river. 'Water teaches us,' he says. 'It adapts to every vessel, seeks the lowest place, yet nothing can resist it. This is the way of wisdom - gentle persistence, humble power.'",
     icon: Droplet,
+    dialogue: {
+      npc: "Old Sage",
+      lines: [
+        "Water is the softest element, yet it wears away the hardest stone.",
+        "It never fights - it always finds the way around obstacles.",
+        "Yet water nourishes all life. This is the paradox of true power.",
+        "Learn to be like water, and you will master life's challenges."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'water_observation',
+        title: "Observe Water for 21 Days",
+        description: "Sit by the river daily and study how water moves, adapts, and persists.",
+        reward: { xp: 100, understanding: 'water_nature' }
+      },
+      {
+        id: 'water_philosophy',
+        title: "Contemplate Water's Teachings",
+        description: "Reflect on the lessons water teaches about flexibility, gentleness, and persistence.",
+        reward: { xp: 95, understanding: 'water_philosophy' }
+      }
+    ],
     choices: [
-      { id: 'learn_more', text: "Ask about Varuna, lord of waters", label: "Study the cosmic ocean", nextChapter: 'varuna_mysteries', reward: { xp: 90 } },
-      { id: 'practical_wisdom', text: "Apply water's teaching to life", label: "Embody the teaching", nextChapter: 'convergence_point', reward: { xp: 100 } }
+      { 
+        id: 'learn_more', 
+        text: "Ask about Varuna, lord of waters and cosmic ocean", 
+        label: "Study the cosmic ocean", 
+        nextChapter: 'varuna_mysteries', 
+        reward: { xp: 90 } 
+      },
+      { 
+        id: 'practical_wisdom', 
+        text: "Apply water's teaching to your daily life", 
+        label: "Embody the teaching", 
+        nextChapter: 'convergence_point', 
+        reward: { xp: 100 } 
+      }
     ]
   },
 
@@ -179,9 +1596,44 @@ export const storyChapters = {
     chapter: 4,
     description: "The sage speaks of Varuna: 'He who sees all, from whom no deed is hidden. The cosmic ocean is his domain, and all laws of right and wrong flow from him. His gaze pierces through every deception.'",
     icon: Eye,
+    dialogue: {
+      npc: "Old Sage",
+      lines: [
+        "Varuna's thousand eyes see everything in creation.",
+        "He is the keeper of cosmic order - [translate:Rta]].",
+        "No lie escapes his vision; no oath broken passes unnoticed.",
+        "To understand Varuna is to understand that truth is the foundation of reality."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'study_rta',
+        title: "Study the Laws of Rta (Cosmic Order)",
+        description: "Learn how universal order manifests through natural laws and moral principles.",
+        reward: { xp: 115, understanding: 'rta_nature' }
+      },
+      {
+        id: 'varuna_meditation',
+        title: "Meditate on Varuna's All-Seeing Gaze",
+        description: "Contemplate how cosmic consciousness witnesses all action without judgment yet perfectly understands.",
+        reward: { xp: 120, understanding: 'varuna_consciousness' }
+      }
+    ],
     choices: [
-      { id: 'moral_law', text: "Study the nature of truth and falsehood", label: "Understand cosmic justice", nextChapter: 'rta_meditation', reward: { xp: 110 } },
-      { id: 'ocean_meditation', text: "Meditate on the infinite ocean", label: "Contemplate boundlessness", nextChapter: 'convergence_point', reward: { xp: 120 } }
+      { 
+        id: 'moral_law', 
+        text: "Study the nature of truth and falsehood", 
+        label: "Understand cosmic justice", 
+        nextChapter: 'rta_meditation', 
+        reward: { xp: 110 } 
+      },
+      { 
+        id: 'ocean_meditation', 
+        text: "Meditate on the infinite cosmic ocean and its depths", 
+        label: "Contemplate boundlessness", 
+        nextChapter: 'convergence_point', 
+        reward: { xp: 120 } 
+      }
     ]
   },
 
@@ -189,38 +1641,1238 @@ export const storyChapters = {
     id: 'rta_meditation',
     title: "The Cosmic Order",
     chapter: 4,
-    description: "You come to understand Rta - the fundamental order underlying all existence. The sun rises and sets in perfect rhythm, seasons turn, rivers flow to the sea. This is not mere repetition but divine law, the very structure of reality.",
+    description: "You come to understand [translate:Rta]] - the fundamental order underlying all existence. The sun rises and sets in perfect rhythm, seasons turn, rivers flow to the sea. This is not mere repetition but divine law, the very structure of reality.",
     icon: Scale,
+    dialogue: {
+      npc: "Old Sage",
+      lines: [
+        "[translate:Rta]] is the eternal principle of right order.",
+        "Every atom follows it. Every star obeys it.",
+        "When humans align with [translate:Rta]], they live in harmony with cosmic truth.",
+        "This is the foundation of all dharma - righteous living."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'observe_patterns',
+        title: "Observe Cosmic Patterns",
+        description: "Study how natural cycles - day/night, seasons, celestial movements - reflect perfect order.",
+        reward: { xp: 125, understanding: 'cosmic_patterns' }
+      },
+      {
+        id: 'align_with_order',
+        title: "Align Your Life With Cosmic Order",
+        description: "Structure your daily practices in harmony with natural and cosmic rhythms.",
+        reward: { xp: 135, understanding: 'rta_alignment' }
+      }
+    ],
     choices: [
-      { id: 'dharma_study', text: "Study how humans align with this order", label: "Learn about Dharma", nextChapter: 'convergence_point', reward: { xp: 140 } },
-      { id: 'cosmic_meditation', text: "Meditate on the universal patterns", label: "Perceive the hidden connections", nextChapter: 'convergence_point', reward: { xp: 130 } }
+      { 
+        id: 'dharma_study', 
+        text: "Study how humans align with this universal order", 
+        label: "Learn about Dharma", 
+        nextChapter: 'convergence_point', 
+        reward: { xp: 140 } 
+      },
+      { 
+        id: 'cosmic_meditation', 
+        text: "Meditate deeply on the universal patterns", 
+        label: "Perceive the hidden connections", 
+        nextChapter: 'convergence_point', 
+        reward: { xp: 130 } 
+      }
     ]
   },
 
-  observer_path: {
-    id: 'observer_path',
-    title: "The Silent Witness",
+  observer_ritual_beginning: {
+    id: 'observer_ritual_beginning',
+    title: "The Silent Watcher",
     chapter: 2,
-    description: "You watch from a respectful distance as the ritual unfolds. The precise movements, the sacred words, the rising smoke - each element has meaning. Your keen observation reveals patterns and connections others might miss.",
+    description: "You sit in the temple's corner, unnoticed. The rituals unfold around you - each gesture precise, each word sacred. An old scholar notices your keen observation: 'You see what others miss. The path of the observer requires patience, humility, and the ability to find profound meaning in small details. Will you walk this path?'",
     icon: Eye,
+    dialogue: {
+      npc: "Elder Scholar",
+      lines: [
+        "Most people rush through life, missing the sacred patterns everywhere.",
+        "The observer learns through patient watching - how things connect, why rituals matter.",
+        "In stillness and attention, all knowledge reveals itself."
+      ]
+    },
     choices: [
-      { id: 'continue_observing', text: "Observe multiple different rituals", label: "Become a scholar of traditions", nextChapter: 'ritual_scholar', reward: { xp: 70 } },
-      { id: 'ask_questions', text: "Approach the Rishis with thoughtful questions", label: "Seek direct instruction", nextChapter: 'multiple_teachers', reward: { xp: 80 } },
-      { id: 'independent_practice', text: "Begin your own contemplative practice", label: "Forge your own path", nextChapter: 'independent_seeker', reward: { xp: 65 } }
+      {
+        id: 'commit_observation',
+        text: "I will observe everything with complete attention",
+        label: "Begin the observer's practice",
+        nextChapter: 'observer_ritual_study',
+        reward: { xp: 80 }
+      },
+      {
+        id: 'ask_philosophy',
+        text: "What wisdom comes from observation alone?",
+        label: "Understand the deeper purpose",
+        nextChapter: 'observer_philosophy',
+        reward: { xp: 85 }
+      },
+      {
+        id: 'learn_patterns',
+        text: "Teach me to see the hidden patterns",
+        label: "Learn pattern recognition",
+        nextChapter: 'observer_pattern_mastery',
+        reward: { xp: 90 }
+      }
     ]
   },
 
-  ritual_scholar: {
-    id: 'ritual_scholar',
-    title: "Master of Ceremonies",
+  observer_ritual_study: {
+    id: 'observer_ritual_study',
+    title: "The Language of Ritual",
     chapter: 3,
-    description: "Over months and years, you observe and study every ritual, every tradition. You become a living repository of sacred knowledge, understanding not just the 'how' but the profound 'why' behind each practice.",
-    icon: BookText,
+    description: "The scholar teaches: 'Every ritual has layers - outer form, inner meaning, and deepest truth. Watch the Agnihotra. See how fire transforms offerings. This transformation mirrors how consciousness transforms raw experience into wisdom.'",
+    icon: BookOpen,
+    dialogue: {
+      npc: "Elder Scholar",
+      lines: [
+        "Ritual is not superstition - it is the crystallized wisdom of ages.",
+        "Each gesture symbolizes cosmic truths. Each word carries power.",
+        "The observer who truly sees understands that reality itself is the ultimate ritual."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'observe_hundred_rituals',
+        title: "Observe 100 Different Rituals",
+        description: "Attend and carefully observe 100 different ceremonies across seasons and temples.",
+        reward: { xp: 170, achievement: 'ritual_master_observer' }
+      },
+      {
+        id: 'document_patterns',
+        title: "Document Ritual Patterns",
+        description: "Write detailed notes on the patterns, repetitions, and meanings you discover.",
+        reward: { xp: 150, understanding: 'ritual_patterns' }
+      },
+      {
+        id: 'teach_observations',
+        title: "Teach Others Your Observations",
+        description: "Share your insights with sincere students interested in understanding ritual.",
+        reward: { xp: 140, achievement: 'teacher_of_ritual' }
+      }
+    ],
     choices: [
-      { id: 'teach_rituals', text: "Share your comprehensive knowledge", label: "Become a teacher of traditions", nextChapter: 'convergence_point', reward: { xp: 120 } },
-      { id: 'deeper_meaning', text: "Seek the ultimate meaning behind all rituals", label: "Quest for the source", nextChapter: 'convergence_point', reward: { xp: 130 } }
+      {
+        id: 'deepen_observation',
+        text: "I have discovered profound patterns",
+        label: "Move to deeper understanding",
+        nextChapter: 'observer_philosophy',
+        reward: { xp: 150 }
+      }
     ]
   },
+
+  observer_philosophy: {
+    id: 'observer_philosophy',
+    title: "The Philosophy of Attention",
+    chapter: 4,
+    description: "The scholar reveals: 'Attention is the highest form of prayer. When you truly observe something, you give it your consciousness. This act of witnessing is itself a sacred participation in creation. The observer becomes co-creator with the divine.'",
+    icon: Brain,
+    dialogue: {
+      npc: "Elder Scholar",
+      lines: [
+        "What you observe shapes reality. Your attention literally participates in creation.",
+        "The Rishis understood this - they observed the world and their observations became the hymns.",
+        "You are not separate from what you observe - you are intimately connected."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'meditate_observation',
+        title: "Meditate on the Power of Observation",
+        description: "Spend weeks contemplating how your attention shapes reality.",
+        reward: { xp: 160, understanding: 'observer_consciousness' }
+      },
+      {
+        id: 'study_consciousness',
+        title: "Study the Nature of Consciousness",
+        description: "Explore how awareness itself participates in creation.",
+        reward: { xp: 150, understanding: 'consciousness_creation' }
+      }
+    ],
+    choices: [
+      {
+        id: 'master_observation',
+        text: "I will become a perfect observer",
+        label: "Achieve mastery",
+        nextChapter: 'observer_pattern_mastery',
+        reward: { xp: 170 }
+      }
+    ]
+  },
+
+  observer_pattern_mastery: {
+    id: 'observer_pattern_mastery',
+    title: "The Master of Patterns",
+    chapter: 5,
+    description: "Years of observation have granted you profound sight. You see the cosmic patterns underlying all existence - how the Rigveda hymns follow the same patterns as rituals, seasons, human life cycles, and stellar movements. Everything resonates with everything else.",
+    icon: Target,
+    dialogue: {
+      npc: "Elder Scholar",
+      lines: [
+        "You have learned what took the Rishis lifetimes to discover.",
+        "The entire universe operates through recurring patterns and cycles.",
+        "This knowledge is the foundation of all wisdom traditions."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'document_patterns',
+        title: "Create the Pattern Encyclopedia",
+        description: "Systematically document all the patterns you've discovered.",
+        reward: { xp: 200, achievement: 'pattern_encyclopedia_creator' }
+      },
+      {
+        id: 'predict_future',
+        title: "Learn to Predict Through Pattern Recognition",
+        description: "Apply your pattern knowledge to anticipate future events.",
+        reward: { xp: 190, understanding: 'predictive_wisdom' }
+      }
+    ],
+    choices: [
+      {
+        id: 'become_sage_observer',
+        text: "I will become a sage of patterns",
+        label: "Achieve ultimate observation",
+        nextChapter: 'observer_final_wisdom',
+        reward: { xp: 200 }
+      }
+    ]
+  },
+
+  observer_final_wisdom: {
+    id: 'observer_final_wisdom',
+    title: "The Observer Becomes the Observed",
+    chapter: 6,
+    description: "The scholar, now ancient, reveals the final truth: 'You have observed everything - except yourself. Now understand: the observer is the ultimate mystery. You are the consciousness observing itself through infinite forms. You are both the watcher and the watched.'",
+    icon: Infinity,
+    dialogue: {
+      npc: "Elder Scholar (ancient sage)",
+      lines: [
+        "I have shared all the knowledge of observation I possess.",
+        "But the deepest truth cannot be taught - only discovered.",
+        "Go now and continue observing. The universe is infinitely deep."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'eternal_observation',
+        title: "Commit to Eternal Observation",
+        description: "Make observation your eternal practice, seeing the divine in all forms.",
+        reward: { xp: 300, achievement: 'eternal_observer' }
+      }
+    ],
+    choices: [
+      {
+        id: 'observer_complete',
+        text: "I have become the observer and the observed",
+        label: "Achieve enlightened observation",
+        nextChapter: 'convergence_point',
+        reward: { xp: 280, achievement: 'observer_master' }
+      }
+    ]
+  },
+
+  // === PATH 7: INNER SEEKER PATH (Independent Meditation - Self-Discovery) ===
+
+  inner_seeker_solitude: {
+    id: 'inner_seeker_solitude',
+    title: "The Call to Solitude",
+    chapter: 2,
+    description: "You feel drawn away from all teaching, all rituals, all external guidance. A mysterious voice whispers: 'The greatest teacher is within. Your own consciousness is the Guru. Will you venture into the depths of your own being and discover truth there?'",
+    icon: Compass,
+    dialogue: {
+      npc: "Inner Guide (your own intuition)",
+      lines: [
+        "All external teachers can only point the way.",
+        "But truth can only be discovered within yourself.",
+        "Meditate. Go inward. Your true nature awaits discovery."
+      ]
+    },
+    choices: [
+      {
+        id: 'embrace_solitude',
+        text: "Yes, I will retreat and meditate",
+        label: "Begin inner exploration",
+        nextChapter: 'inner_seeker_retreat',
+        reward: { xp: 85 }
+      },
+      {
+        id: 'question_path',
+        text: "How do I know this inner path is valid?",
+        label: "Seek validation first",
+        nextChapter: 'inner_seeker_validation',
+        reward: { xp: 80 }
+      },
+      {
+        id: 'balance_approach',
+        text: "Can I balance solitude with some external guidance?",
+        label: "Seek balanced approach",
+        nextChapter: 'inner_seeker_balance',
+        reward: { xp: 90 }
+      }
+    ]
+  },
+
+  inner_seeker_retreat: {
+    id: 'inner_seeker_retreat',
+    title: "Retreat Into Silence",
+    chapter: 3,
+    description: "You find a cave or secluded space and begin the great work of introspection. Days merge into weeks. External silence reveals internal vastness. Thoughts, emotions, and sensations arise and dissolve. You begin to touch something deeper than mind - pure consciousness itself.",
+    icon: Brain,
+    dialogue: {
+      npc: "Inner Guide",
+      lines: [
+        "Silence is not emptiness - it is fullness beyond words.",
+        "In the depths, you will find your true nature.",
+        "Continue. You are approaching the truth."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'hundred_day_meditation',
+        title: "100-Day Continuous Meditation Retreat",
+        description: "Sit in unbroken meditation for 100 days, watching the mind's transformations.",
+        reward: { xp: 200, achievement: 'meditation_master' }
+      },
+      {
+        id: 'witness_arising',
+        title: "Witness All Mental Phenomena",
+        description: "Observe thoughts, emotions, and sensations without judgment or identification.",
+        reward: { xp: 180, understanding: 'mental_witness' }
+      },
+      {
+        id: 'touch_void',
+        title: "Touch the Void of Pure Being",
+        description: "Experience states where even the meditator dissolves into pure consciousness.",
+        reward: { xp: 200, achievement: 'void_explorer' }
+      }
+    ],
+    choices: [
+      {
+        id: 'emerge_transformed',
+        text: "I have touched the infinite",
+        label: "Move to integration",
+        nextChapter: 'inner_seeker_integration',
+        reward: { xp: 180 }
+      }
+    ]
+  },
+
+  inner_seeker_validation: {
+    id: 'inner_seeker_validation',
+    title: "Testing the Inner Path",
+    chapter: 3,
+    description: "You meditate selectively, testing your inner experiences against external reality. Slowly, synchronicities appear. Insights prove accurate. Your intuition begins to manifest as tangible results. The inner path validates itself through direct experience.",
+    icon: Lightbulb,
+    dialogue: {
+      npc: "Inner Guide",
+      lines: [
+        "Truth always validates itself through experience.",
+        "Watch how your inner knowing manifests in outer reality.",
+        "This is the only proof that matters."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'apply_insights',
+        title: "Apply Inner Insights Practically",
+        description: "Test your meditative insights in real-world situations and document results.",
+        reward: { xp: 170, understanding: 'practical_realization' }
+      },
+      {
+        id: 'trust_intuition',
+        title: "Develop Perfect Intuitive Trust",
+        description: "Learn to act on intuitive knowing without rational justification.",
+        reward: { xp: 160, achievement: 'intuition_master' }
+      }
+    ],
+    choices: [
+      {
+        id: 'deepen_practice',
+        text: "My inner path is validated - I will go deeper",
+        label: "Commit fully to inner work",
+        nextChapter: 'inner_seeker_integration',
+        reward: { xp: 170 }
+      }
+    ]
+  },
+
+  inner_seeker_balance: {
+    id: 'inner_seeker_balance',
+    title: "The Middle Way",
+    chapter: 3,
+    description: "You discover the paradox: complete solitude can become spiritual escapism, yet constant external teaching can prevent true inner discovery. The balanced path honors both - daily meditation at your own pace, occasional consultation with wise elders, but ultimately trusting your inner compass.",
+    icon: Scale,
+    dialogue: {
+      npc: "Inner Guide",
+      lines: [
+        "The greatest wisdom balances silence and seeking.",
+        "Listen within, but remain open to outside wisdom.",
+        "Trust yourself, but stay humble to mystery."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'balanced_practice',
+        title: "Establish Balanced Daily Practice",
+        description: "Create a sustainable routine balancing meditation, learning, and service.",
+        reward: { xp: 165, understanding: 'balanced_living' }
+      }
+    ],
+    choices: [
+      {
+        id: 'continue_integration',
+        text: "Balance brings me clarity",
+        label: "Move to integration",
+        nextChapter: 'inner_seeker_integration',
+        reward: { xp: 170 }
+      }
+    ]
+  },
+
+  inner_seeker_integration: {
+    id: 'inner_seeker_integration',
+    title: "Bringing Inner Truth Outward",
+    chapter: 5,
+    description: "Your inner realizations demand expression. How do you embody what you've discovered? The challenge is: live the truth you've found, let it naturally radiate through your being without needing to proselytize or teach. Become your realization.",
+    icon: Star,
+    dialogue: {
+      npc: "Inner Guide",
+      lines: [
+        "The deepest teaching is your own transformed life.",
+        "Others will see your peace and ask what you've found.",
+        "Then, if it serves, you can share."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'embody_truth',
+        title: "Embody Your Realization",
+        description: "Live with complete integrity and consistency from your inner truth.",
+        reward: { xp: 210, achievement: 'truth_embodied' }
+      },
+      {
+        id: 'inspire_naturally',
+        title: "Inspire Others Through Presence",
+        description: "Let your presence and example naturally attract and transform others.",
+        reward: { xp: 200, achievement: 'living_teacher' }
+      }
+    ],
+    choices: [
+      {
+        id: 'become_inner_sage',
+        text: "My life is my teaching",
+        label: "Become inner wisdom embodied",
+        nextChapter: 'inner_seeker_final_wisdom',
+        reward: { xp: 220 }
+      }
+    ]
+  },
+
+  inner_seeker_final_wisdom: {
+    id: 'inner_seeker_final_wisdom',
+    title: "The Self Recognizes Itself",
+    chapter: 6,
+    description: "In the depths of meditation, you finally realize: there is no separate 'you' observing truth. You ARE the truth observing itself. The seeker and the sought are one. All your searching led you back to what you always were - infinite, eternal, divine consciousness.",
+    icon: Infinity,
+    dialogue: {
+      npc: "Inner Guide (no longer separate)",
+      lines: [
+        "There is no guide except yourself.",
+        "There is no path except the path of being.",
+        "You are home."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'eternal_inner_work',
+        title: "Commit to Eternal Inner Exploration",
+        description: "Continue deepening your realization throughout eternity.",
+        reward: { xp: 300, achievement: 'eternal_inner_seeker' }
+      }
+    ],
+    choices: [
+      {
+        id: 'inner_seeker_complete',
+        text: "I have found myself",
+        label: "Complete inner journey",
+        nextChapter: 'convergence_point',
+        reward: { xp: 280, deity: 'brahman', achievement: 'inner_seeker_master' }
+      }
+    ]
+  },
+
+  // === PATH 8: WANDERING SCHOLAR PATH (Multi-Teacher Journey) ===
+
+  wandering_scholar_call: {
+    id: 'wandering_scholar_call',
+    title: "The Call to Wander",
+    chapter: 2,
+    description: "A traveling philosopher passes through your village. 'There is one truth,' he says, 'but infinite paths to it. I have studied with 100 teachers and each taught me something essential. Come - wander with me. Learn from everyone. The world itself is the greatest Guru.'",
+    icon: Footprints,
+    dialogue: {
+      npc: "Wandering Philosopher",
+      lines: [
+        "No single teacher holds all wisdom - each sees one facet of the infinite.",
+        "I have walked for decades, learning from Rishis, yogis, healers, warriors, farmers.",
+        "Each revealed something the others could not. Join this endless quest."
+      ]
+    },
+    choices: [
+      {
+        id: 'accept_wandering',
+        text: "Yes! I will wander and learn from all",
+        label: "Begin the wandering journey",
+        nextChapter: 'wandering_scholar_first_teacher',
+        reward: { xp: 90 }
+      },
+      {
+        id: 'question_completeness',
+        text: "Can one truly learn from so many without confusion?",
+        label: "Seek understanding of the method",
+        nextChapter: 'wandering_scholar_philosophy',
+        reward: { xp: 85 }
+      },
+      {
+        id: 'test_scholar',
+        text: "Prove your wisdom - what have you learned?",
+        label: "Test the philosopher",
+        nextChapter: 'wandering_scholar_teaching',
+        reward: { xp: 95 }
+      }
+    ]
+  },
+
+  wandering_scholar_first_teacher: {
+    id: 'wandering_scholar_first_teacher',
+    title: "The First Lesson",
+    chapter: 3,
+    description: "You travel to the first teacher - a master of fire rituals in a distant mountain temple. He teaches: 'Agni is transformation. Watch how I have transformed through the flame. This is the first lesson all wanderers must learn - you will be constantly transformed by what you encounter.'",
+    icon: Flame,
+    dialogue: {
+      npc: "Fire Master",
+      lines: [
+        "Welcome, wanderer. You come seeking wisdom.",
+        "I will teach you one thing - the rest you must discover yourself.",
+        "Agni burns away the false. Let this teaching burn in your heart."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'complete_fire_teaching',
+        title: "Complete the Fire Teaching",
+        description: "Fully absorb and embody the fire master's lessons before moving on.",
+        reward: { xp: 150, understanding: 'fire_wisdom_first' }
+      },
+      {
+        id: 'receive_blessing',
+        title: "Receive the Teacher's Blessing",
+        description: "Earn the master's blessing to continue on the wandering path.",
+        reward: { xp: 140, achievement: 'blessed_wanderer' }
+      }
+    ],
+    choices: [
+      {
+        id: 'continue_wandering',
+        text: "I am transformed by this teaching - onward to the next teacher",
+        label: "Move to the second teacher",
+        nextChapter: 'wandering_scholar_second_teacher',
+        reward: { xp: 170 }
+      }
+    ]
+  },
+
+  wandering_scholar_philosophy: {
+    id: 'wandering_scholar_philosophy',
+    title: "The Philosophy of Synthesis",
+    chapter: 3,
+    description: "The philosopher teaches: 'You fear confusion - but confusion is the beginning of wisdom. When many teachings collide within you, something new emerges. You don't learn from any single teacher - you learn from the dynamic interplay between them. You become a living synthesis of all wisdom.'",
+    icon: Brain,
+    dialogue: {
+      npc: "Wandering Philosopher",
+      lines: [
+        "Fire and Water seem contradictory, yet both are essential.",
+        "The warrior and the healer have opposite methods, yet both serve dharma.",
+        "In you, these contradictions resolve into a higher unity."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'embrace_paradox',
+        title: "Learn to Hold Paradox",
+        description: "Develop the capacity to hold contradictory truths simultaneously.",
+        reward: { xp: 170, understanding: 'paradox_wisdom' }
+      }
+    ],
+    choices: [
+      {
+        id: 'ready_to_wander',
+        text: "I understand - I'm ready to become a synthesis",
+        label: "Begin the multi-teacher journey",
+        nextChapter: 'wandering_scholar_second_teacher',
+        reward: { xp: 180 }
+      }
+    ]
+  },
+
+  wandering_scholar_teaching: {
+    id: 'wandering_scholar_teaching',
+    title: "The Philosopher Teaches",
+    chapter: 3,
+    description: "The wandering philosopher shares his wisdom: 'From fire masters I learned transformation. From water teachers I learned adaptation. From warriors I learned courage. From healers I learned compassion. From scholars I learned discernment. Each teacher added a color to my palette. Now I paint the world with all of them together.'",
+    icon: Rainbow,
+    dialogue: {
+      npc: "Wandering Philosopher",
+      lines: [
+        "I have synthesized contradictions into wisdom.",
+        "I am fire and water, warrior and healer, scholar and mystic.",
+        "This is what becomes possible when you study with many teachers."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'witness_synthesis',
+        title: "Witness the Philosopher's Synthesis",
+        description: "Observe how the philosopher seamlessly integrates different teachings.",
+        reward: { xp: 160, understanding: 'wisdom_synthesis' }
+      }
+    ],
+    choices: [
+      {
+        id: 'join_philosopher',
+        text: "I want to become like you - a living synthesis",
+        label: "Become a wandering scholar",
+        nextChapter: 'wandering_scholar_second_teacher',
+        reward: { xp: 180, deity: 'saraswati' }
+      }
+    ]
+  },
+
+  wandering_scholar_second_teacher: {
+    id: 'wandering_scholar_second_teacher',
+    title: "The Second Lesson",
+    chapter: 4,
+    description: "You meet the second teacher - a water sage by a river. 'Fire teaches transformation, but water teaches persistence. Watch how I flow around obstacles rather than burning through them. This wisdom balances what you learned before. The path of the wanderer is learning how different wisdom traditions complement each other.'",
+    icon: Waves,
+    dialogue: {
+      npc: "Water Sage",
+      lines: [
+        "The fire master teaches absolute truth.",
+        "I teach relative truth - how to navigate the world with wisdom and compassion.",
+        "Both are necessary. You came at the right time."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'integrate_teachings',
+        title: "Integrate Fire and Water Teachings",
+        description: "Find the synthesis point between transformation and persistence.",
+        reward: { xp: 180, achievement: 'two_elements_master' }
+      }
+    ],
+    choices: [
+      {
+        id: 'continue_quest',
+        text: "I see how teachings balance each other",
+        label: "Continue to more teachers",
+        nextChapter: 'wandering_scholar_multiple_teachers',
+        reward: { xp: 190 }
+      }
+    ]
+  },
+
+  wandering_scholar_multiple_teachers: {
+    id: 'wandering_scholar_multiple_teachers',
+    title: "The Endless Quest",
+    chapter: 5,
+    description: "Years pass. You've studied with 50 teachers - warriors, healers, scholars, artists, farmers, mystics. Each added layers to your understanding. You realize the true wisdom lies not in any single teaching but in your ability to weave them into a coherent whole. You become a master of synthesis.",
+    icon: Infinity,
+    dialogue: {
+      npc: "Wandering Philosopher (now your companion)",
+      lines: [
+        "You are approaching mastery of the wandering path.",
+        "You have learned to see the same truth expressed through infinite forms.",
+        "Now comes the final step - to teach others this art of synthesis."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'study_fifty_teachers',
+        title: "Study With 50+ Different Teachers",
+        description: "Collect wisdom from as many sources as possible.",
+        reward: { xp: 250, achievement: 'universal_student_fifty' }
+      },
+      {
+        id: 'create_synthesis_teaching',
+        title: "Create Your Own Synthesis Teaching",
+        description: "Develop a unique teaching that integrates all you've learned.",
+        reward: { xp: 240, achievement: 'synthesis_creator' }
+      },
+      {
+        id: 'find_new_teachers',
+        title: "Discover Hidden Teachers",
+        description: "Find and learn from teachers nobody else knows about.",
+        reward: { xp: 230, understanding: 'hidden_wisdom' }
+      }
+    ],
+    choices: [
+      {
+        id: 'become_master_scholar',
+        text: "I have become a master of all teachings",
+        label: "Reach mastery",
+        nextChapter: 'wandering_scholar_final_wisdom',
+        reward: { xp: 250 }
+      }
+    ]
+  },
+
+  wandering_scholar_final_wisdom: {
+    id: 'wandering_scholar_final_wisdom',
+    title: "The Ultimate Realization",
+    chapter: 6,
+    description: "After decades of wandering, you finally understand: there is one truth expressing itself through infinite teachers. Each tradition is incomplete, yet each is perfect. The wandering path teaches that wisdom requires humility - to recognize that every being, every perspective, every experience is a teacher offering some facet of the infinite.",
+    icon: Star,
+    dialogue: {
+      npc: "The Wandering Path itself (speaking through all teachers)",
+      lines: [
+        "You have learned from fire, water, earth, wind, space.",
+        "You have learned from gods, sages, warriors, healers, farmers, children.",
+        "Now understand: the path itself has been your true teacher all along."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'eternal_wandering',
+        title: "Commit to Eternal Wandering",
+        description: "Make wandering your eternal practice, always learning, always discovering.",
+        reward: { xp: 300, achievement: 'eternal_wanderer_master' }
+      }
+    ],
+    choices: [
+      {
+        id: 'wandering_complete',
+        text: "I have learned from all teachers and all teachings",
+        label: "Achieve complete wisdom synthesis",
+        nextChapter: 'convergence_point',
+        reward: { xp: 280, deity: 'saraswati', achievement: 'wandering_scholar_master' }
+      }
+    ]
+  },
+
+    // === PATH 11: PROTECTION PATH (Guardianship & Sacred Defense) ===
+
+    protection_first_encounter: {
+      id: 'protection_first_encounter',
+      title: "The Guardian's Call",
+      chapter: 2,
+      description: "An elder guardian approaches you: 'Sacred traditions are under threat from those who would forget them. Will you take on the sacred responsibility of protecting our knowledge, our rituals, our way of life? A guardian must be vigilant, wise, and compassionate.'",
+      icon: Shield,
+      dialogue: {
+        npc: "Elder Guardian",
+        lines: [
+          "Protection is not about violence - it is about preservation.",
+          "A true guardian defends truth without aggression.",
+          "We protect traditions so they can flow to future generations."
+        ]
+      },
+      choices: [
+        {
+          id: 'accept_guardian_role',
+          text: "I will become a guardian of sacred knowledge",
+          label: "Accept the guardian role",
+          nextChapter: 'protection_training',
+          reward: { xp: 85 }
+        },
+        {
+          id: 'understand_guardianship',
+          text: "What does guardianship truly mean?",
+          label: "Seek understanding first",
+          nextChapter: 'protection_philosophy',
+          reward: { xp: 80 }
+        },
+        {
+          id: 'test_guardian',
+          text: "Show me what guardianship looks like",
+          label: "Witness guardian practice",
+          nextChapter: 'protection_demonstration',
+          reward: { xp: 90 }
+        }
+      ]
+    },
+  
+    protection_training: {
+      id: 'protection_training',
+      title: "The Guardian's Training",
+      chapter: 3,
+      description: "You begin training to protect the sacred traditions. The guardian teaches: 'You must learn to recognize threats - not just external attacks but internal decay, forgotten rituals, lost knowledge. Your role is to preserve and transmit.'",
+      icon: Shield,
+      dialogue: {
+        npc: "Elder Guardian",
+        lines: [
+          "A guardian must know every ritual, every hymn, every teaching.",
+          "You become a living library - a protector of living knowledge.",
+          "Through you, the traditions survive and flourish."
+        ]
+      },
+      sideQuests: [
+        {
+          id: 'memorize_traditions',
+          title: "Memorize All Sacred Traditions",
+          description: "Learn and memorize the core teachings, rituals, and hymns.",
+          reward: { xp: 160, achievement: 'tradition_keeper' }
+        },
+        {
+          id: 'train_younger_guardians',
+          title: "Train the Next Generation",
+          description: "Begin teaching younger members to become guardians.",
+          reward: { xp: 150, achievement: 'mentor_guardian' }
+        },
+        {
+          id: 'document_knowledge',
+          title: "Document Sacred Knowledge",
+          description: "Create written records to ensure knowledge survives.",
+          reward: { xp: 140, understanding: 'documented_wisdom' }
+        }
+      ],
+      choices: [
+        {
+          id: 'deepen_protection',
+          text: "I am ready for deeper guardian knowledge",
+          label: "Advance training",
+          nextChapter: 'protection_philosophy',
+          reward: { xp: 150 }
+        }
+      ]
+    },
+  
+    protection_philosophy: {
+      id: 'protection_philosophy',
+      title: "The Philosophy of Sacred Defense",
+      chapter: 4,
+      description: "The guardian reveals: 'True protection requires understanding the threats. There are those who would commercialize the sacred, distort the teachings, or forget them entirely. A guardian must counter these threats through wisdom, not force.'",
+      icon: BookOpen,
+      dialogue: {
+        npc: "Elder Guardian",
+        lines: [
+          "The greatest threat to sacred traditions is apathy and forgetfulness.",
+          "Your role is to keep the flame alive - literally and metaphorically.",
+          "Protect through preservation, education, and living example."
+        ]
+      },
+      sideQuests: [
+        {
+          id: 'identify_threats',
+          title: "Identify and Document Threats",
+          description: "Study modern threats to traditional knowledge and document them.",
+          reward: { xp: 155, understanding: 'threat_awareness' }
+        },
+        {
+          id: 'preserve_rituals',
+          title: "Establish Preservation Protocols",
+          description: "Create systems to ensure rituals are preserved and transmitted correctly.",
+          reward: { xp: 165, achievement: 'preservation_master' }
+        }
+      ],
+      choices: [
+        {
+          id: 'become_protector',
+          text: "I will become a true protector",
+          label: "Embrace full responsibility",
+          nextChapter: 'protection_mastery',
+          reward: { xp: 170 }
+        }
+      ]
+    },
+  
+    protection_demonstration: {
+      id: 'protection_demonstration',
+      title: "The Guardian in Action",
+      chapter: 3,
+      description: "You witness the guardian responding to a crisis - a younger member has forgotten a crucial ritual. Rather than punishing them, the guardian patiently teaches, corrects, and encourages. 'This is guardianship - firm but compassionate protection.'",
+      icon: Heart,
+      dialogue: {
+        npc: "Elder Guardian",
+        lines: [
+          "See how I handle this situation with patience?",
+          "A guardian protects the tradition, not through harshness but through love.",
+          "Everyone deserves a second chance to learn and remember."
+        ]
+      },
+      sideQuests: [
+        {
+          id: 'practice_compassion',
+          title: "Practice Compassionate Correction",
+          description: "Learn to correct mistakes with kindness and patience.",
+          reward: { xp: 150, understanding: 'compassionate_teaching' }
+        }
+      ],
+      choices: [
+        {
+          id: 'understand_guardianship_deep',
+          text: "I understand - protection through love",
+          label: "Commit to compassionate guardianship",
+          nextChapter: 'protection_training',
+          reward: { xp: 160, deity: 'brahman' }
+        }
+      ]
+    },
+  
+    protection_mastery: {
+      id: 'protection_mastery',
+      title: "The Master Guardian",
+      chapter: 5,
+      description: "Years pass. You have become a master guardian - known throughout the region as a keeper of traditions. People come to you to learn, to remember, to reconnect with their heritage. Your role transcends individual teaching - you are a living bridge between past and future.",
+      icon: Crown,
+      dialogue: {
+        npc: "Elder Guardian",
+        lines: [
+          "You have mastered the art of protection.",
+          "Now your task is to ensure this knowledge flows endlessly forward.",
+          "Become a beacon - a light showing the way back to truth."
+        ]
+      },
+      sideQuests: [
+        {
+          id: 'establish_school',
+          title: "Establish a School of Guardianship",
+          description: "Create an institution dedicated to training future guardians.",
+          reward: { xp: 210, achievement: 'school_founder' }
+        },
+        {
+          id: 'write_teachings',
+          title: "Write Comprehensive Teachings",
+          description: "Document everything you've learned about guardianship and tradition.",
+          reward: { xp: 200, achievement: 'knowledge_scribe' }
+        }
+      ],
+      choices: [
+        {
+          id: 'eternal_guardian',
+          text: "I am now a guardian eternal",
+          label: "Achieve ultimate guardianship",
+          nextChapter: 'protection_final_wisdom',
+          reward: { xp: 210 }
+        }
+      ]
+    },
+  
+    protection_final_wisdom: {
+      id: 'protection_final_wisdom',
+      title: "The Guardian's Final Teaching",
+      chapter: 6,
+      description: "The elder guardian, now very old, passes the final teaching: 'You have become what I hoped you would be - not a warrior defending against enemies, but a guardian nurturing living wisdom. Continue this work. Protect not through force but through love, through example, through dedication.'",
+      icon: Star,
+      dialogue: {
+        npc: "Elder Guardian (elder sage)",
+        lines: [
+          "My time grows short, but the tradition continues through you.",
+          "You are now the guardian. Guard well.",
+          "May all who come after walk in the light of truth you preserve."
+        ]
+      },
+      sideQuests: [
+        {
+          id: 'eternal_protection_mission',
+          title: "Accept Eternal Guardianship",
+          description: "Commit to protecting and preserving sacred knowledge forever.",
+          reward: { xp: 300, achievement: 'eternal_guardian_master' }
+        }
+      ],
+      choices: [
+        {
+          id: 'protection_complete',
+          text: "I accept eternal guardianship",
+          label: "Become eternal guardian",
+          nextChapter: 'convergence_point',
+          reward: { xp: 280, achievement: 'protection_guardian_master' }
+        }
+      ]
+    },
+  
+    // === PATH 12: SACRED AGRICULTURE PATH (Earth Rituals & Fertility) ===
+  
+    agricultural_first_encounter: {
+      id: 'agricultural_first_encounter',
+      title: "The Farmer's Blessing",
+      chapter: 2,
+      description: "You observe farmers performing sacred rituals to the earth. An experienced farmer notices you: 'The earth is alive, sacred, alive with divine consciousness. Agriculture is not just survival - it is a sacred partnership with the divine feminine, with Prithvi, the earth goddess. Will you learn this sacred dance?'",
+      icon: Trees,
+      dialogue: {
+        npc: "Elder Farmer",
+        lines: [
+          "The earth provides everything. We are her children.",
+          "But we do not take from her - we work with her in sacred partnership.",
+          "Every seed planted is a prayer. Every harvest is grace."
+        ]
+      },
+      choices: [
+        {
+          id: 'learn_agriculture',
+          text: "Teach me the sacred ways of agriculture",
+          label: "Begin agricultural wisdom",
+          nextChapter: 'agricultural_training',
+          reward: { xp: 85 }
+        },
+        {
+          id: 'understand_earth',
+          text: "Tell me about your relationship with the earth",
+          label: "Understand earth consciousness",
+          nextChapter: 'agricultural_philosophy',
+          reward: { xp: 80 }
+        },
+        {
+          id: 'participate_ritual',
+          text: "Let me participate in the earth rituals",
+          label: "Join sacred rituals",
+          nextChapter: 'agricultural_ritual_practice',
+          reward: { xp: 90 }
+        }
+      ]
+    },
+  
+    agricultural_training: {
+      id: 'agricultural_training',
+      title: "Learning Earth's Rhythms",
+      chapter: 3,
+      description: "The farmer teaches: 'Agriculture is not about controlling the earth but learning her rhythms. The seasons, the moon cycles, the weather patterns - all are divine timing. When you align with these rhythms, the earth provides abundantly.'",
+      icon: Sprout,
+      dialogue: {
+        npc: "Elder Farmer",
+        lines: [
+          "Plant by the lunar calendar. Harvest under certain stars.",
+          "Speak to the seeds. Thank the earth. Honor the water.",
+          "Work with her, never against her. This is the way."
+        ]
+      },
+      sideQuests: [
+        {
+          id: 'cultivate_garden',
+          title: "Cultivate a Sacred Garden",
+          description: "Plant and tend a garden using sacred agricultural practices.",
+          reward: { xp: 160, achievement: 'garden_cultivator' }
+        },
+        {
+          id: 'learn_seasons',
+          title: "Master the Agricultural Seasons",
+          description: "Learn and implement the complete agricultural cycle for one full year.",
+          reward: { xp: 170, understanding: 'seasonal_wisdom' }
+        },
+        {
+          id: 'seed_preservation',
+          title: "Preserve Sacred Seeds",
+          description: "Learn to save and preserve seeds in the traditional sacred way.",
+          reward: { xp: 150, achievement: 'seed_keeper' }
+        }
+      ],
+      choices: [
+        {
+          id: 'deepen_practice',
+          text: "I understand the earth's rhythms",
+          label: "Advance to deeper work",
+          nextChapter: 'agricultural_philosophy',
+          reward: { xp: 160 }
+        }
+      ]
+    },
+  
+    agricultural_philosophy: {
+      id: 'agricultural_philosophy',
+      title: "[translate:Prithvi] - The Earth Goddess",
+      chapter: 4,
+      description: "The farmer reveals: 'The earth is not mere matter - she is Prithvi, a divine goddess. In the Rigveda, she is honored as the foundation of all creation. When you work the soil, you commune with the divine. Every harvest is her gift to you.'",
+      icon: Waves,
+      dialogue: {
+        npc: "Elder Farmer",
+        lines: [
+          "Prithvi is the giver of all abundance.",
+          "She asks only that we treat her with respect and gratitude.",
+          "To farm sacredly is to honor the earth goddess in every action."
+        ]
+      },
+      sideQuests: [
+        {
+          id: 'study_earth_hymns',
+          title: "Study the Earth Hymns",
+          description: "Learn and meditate on the Rigvedic hymns dedicated to Prithvi.",
+          reward: { xp: 165, understanding: 'prithvi_wisdom' }
+        },
+        {
+          id: 'earth_gratitude_practice',
+          title: "Daily Gratitude to the Earth",
+          description: "Establish a daily practice of thanking the earth for her gifts.",
+          reward: { xp: 155, achievement: 'grateful_steward' }
+        }
+      ],
+      choices: [
+        {
+          id: 'become_earth_keeper',
+          text: "I will become a keeper of Prithvi's sacred trust",
+          label: "Dedicate to earth stewardship",
+          nextChapter: 'agricultural_mastery',
+          reward: { xp: 170 }
+        }
+      ]
+    },
+  
+    agricultural_ritual_practice: {
+      id: 'agricultural_ritual_practice',
+      title: "The Sacred Agricultural Rituals",
+      chapter: 3,
+      description: "You participate in sacred planting rituals - prayers sung to the seeds, offerings made to the earth, sacred mantras chanted as you sow. 'Every action is a prayer,' the farmer explains. 'When done with awareness, agriculture becomes worship.'",
+      icon: Sparkles,
+      dialogue: {
+        npc: "Elder Farmer",
+        lines: [
+          "We sing to the seeds before planting.",
+          "We offer water as an offering to Prithvi.",
+          "We harvest with gratitude, never with greed."
+        ]
+      },
+      sideQuests: [
+        {
+          id: 'master_rituals',
+          title: "Master All Agricultural Rituals",
+          description: "Learn and perform all sacred rituals associated with farming.",
+          reward: { xp: 175, achievement: 'ritual_farmer' }
+        }
+      ],
+      choices: [
+        {
+          id: 'ritual_complete',
+          text: "These rituals connect me to the divine",
+          label: "Commit to sacred agriculture",
+          nextChapter: 'agricultural_training',
+          reward: { xp: 165, deity: 'prithvi' }
+        }
+      ]
+    },
+  
+    agricultural_mastery: {
+      id: 'agricultural_mastery',
+      title: "The Master Farmer",
+      chapter: 5,
+      description: "Years pass. Your fields flourish. The land around you becomes incredibly fertile. Other farmers come to learn your secrets. 'There is no secret,' you teach them, 'except love, respect, and alignment with the earth's natural rhythms.'",
+      icon: Sprout,
+      dialogue: {
+        npc: "Elder Farmer",
+        lines: [
+          "You have become a true master of sacred agriculture.",
+          "Your fields are a testament to your sacred partnership with the earth.",
+          "Now teach others this ancient way before it is forgotten."
+        ]
+      },
+      sideQuests: [
+        {
+          id: 'share_knowledge',
+          title: "Share Agricultural Wisdom",
+          description: "Teach other farmers the sacred methods you've mastered.",
+          reward: { xp: 210, achievement: 'agricultural_teacher' }
+        },
+        {
+          id: 'establish_farm_community',
+          title: "Establish Sacred Farm Community",
+          description: "Create a community dedicated to sacred agriculture.",
+          reward: { xp: 220, achievement: 'community_founder' }
+        }
+      ],
+      choices: [
+        {
+          id: 'eternal_steward',
+          text: "I am a steward of the earth forever",
+          label: "Become eternal earth keeper",
+          nextChapter: 'agricultural_final_wisdom',
+          reward: { xp: 220 }
+        }
+      ]
+    },
+  
+    agricultural_final_wisdom: {
+      id: 'agricultural_final_wisdom',
+      title: "Prithvi's Final Blessing",
+      chapter: 6,
+      description: "The elder farmer, now very old, performs a final blessing in your field: 'The earth has spoken through you. Your work honors Prithvi. Continue this sacred work. Teach others. Let the sacred way of agriculture never fade from this world.'",
+      icon: Star,
+      dialogue: {
+        npc: "Elder Farmer (ancient wisdom keeper)",
+        lines: [
+          "I have farmed this land for 50 years.",
+          "I leave it to you now, in perfect condition.",
+          "May you and all who come after honor the earth as she deserves."
+        ]
+      },
+      sideQuests: [
+        {
+          id: 'eternal_stewardship',
+          title: "Accept Eternal Earth Stewardship",
+          description: "Commit to protecting and honoring the earth forever.",
+          reward: { xp: 300, achievement: 'eternal_earth_steward' }
+        }
+      ],
+      choices: [
+        {
+          id: 'agricultural_complete',
+          text: "I am one with the earth and her rhythms",
+          label: "Achieve earth unity",
+          nextChapter: 'convergence_point',
+          reward: { xp: 280, deity: 'prithvi', achievement: 'agricultural_master' }
+        }
+      ]
+    },
+  
+
+    ritual_scholar: {
+      id: 'ritual_scholar',
+      title: "Master of Ceremonies",
+      chapter: 3,
+      description: "Over months and years, you observe and study every ritual, every tradition. You become a living repository of sacred knowledge, understanding not just the 'how' but the profound 'why' behind each practice.",
+      icon: BookText,
+      dialogue: {
+        npc: "Ritual Master",
+        lines: [
+          "Each gesture in a ritual carries cosmic significance.",
+          "Each word spoken is a mantra channeling divine energy.",
+          "You have learned the outer forms - now seek the inner meaning.",
+          "The rituals are the universe expressing itself through form."
+        ]
+      },
+      sideQuests: [
+        {
+          id: 'master_hundred_rituals',
+          title: "Master 100 Different Rituals",
+          description: "Achieve complete mastery of a hundred distinct sacred ceremonies.",
+          reward: { xp: 145, achievement: 'ritual_master_hundred' }
+        },
+        {
+          id: 'understand_symbolism',
+          title: "Understand Ritual Symbolism",
+          description: "Study the deep symbolic meaning behind all ritual elements and movements.",
+          reward: { xp: 140, understanding: 'ritual_symbolism' }
+        }
+      ],
+      choices: [
+        { 
+          id: 'teach_rituals', 
+          text: "Share your comprehensive knowledge with others", 
+          label: "Become a teacher of traditions", 
+          nextChapter: 'convergence_point', 
+          reward: { xp: 120 } 
+        },
+        { 
+          id: 'deeper_meaning', 
+          text: "Seek the ultimate transcendent meaning behind all rituals", 
+          label: "Quest for the source", 
+          nextChapter: 'convergence_point', 
+          reward: { xp: 130 } 
+        }
+      ]
+    },  
 
   multiple_teachers: {
     id: 'multiple_teachers',
@@ -784,8 +3436,44 @@ export const storyChapters = {
     chapter: 6,
     description: "You learn that Surya rides a chariot pulled by seven horses representing the seven days, or seven chakras, or seven rays of light. The sun's journey mirrors the soul's journey - rising from darkness, reaching zenith, then descending, only to rise again eternally.",
     icon: Sparkles,
+    dialogue: {
+      npc: "Surya's Messenger",
+      lines: [
+        "The sun never rests - it is eternal motion.",
+        "Seven horses pull the solar chariot - seven cosmic principles.",
+        "Each dawn is a rebirth. Each sunset is release.",
+        "In the sun's cycle lies the secret of all transformation."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'solar_salutation',
+        title: "Perform 365 Solar Salutations",
+        description: "Greet the rising sun with sacred movements for an entire year.",
+        reward: { xp: 160, achievement: 'sun_worshipper' }
+      },
+      {
+        id: 'solar_meditation',
+        title: "Meditate on the Seven Rays",
+        description: "Contemplate each of the seven rays of the sun and their cosmic qualities.",
+        reward: { xp: 155, understanding: 'solar_rays' }
+      }
+    ],
     choices: [
-      { id: 'embody_light', text: "Embody the qualities of light in your life", label: "Become a solar being", nextChapter: 'convergence_point', reward: { xp: 150 } }
+      { 
+        id: 'embody_light', 
+        text: "Embody the qualities of light and eternal renewal in your life", 
+        label: "Become a solar being", 
+        nextChapter: 'convergence_point', 
+        reward: { xp: 150 } 
+      },
+      {
+        id: 'teach_solar',
+        text: "Share the solar mysteries with others",
+        label: "Become a sun teacher",
+        nextChapter: 'convergence_point',
+        reward: { xp: 145 }
+      }
     ]
   },
 
@@ -998,6 +3686,40 @@ export const storyChapters = {
     ]
   },
 
+  earth_ceremony_master: {
+    id: 'earth_ceremony_master',
+    title: "Master of Earth Ceremonies",
+    chapter: 7,
+    description: "Through years of sacred rituals honoring Prithvi, you have mastered the complete ceremonial tradition. You understand the precise times, the correct offerings, the proper invocations. You have become a living bridge between human and earth goddess. Your ceremonies bring abundance, healing, and blessing to the land.",
+    icon: Crown,
+    dialogue: {
+      npc: "Earth Mother (through your understanding)",
+      lines: [
+        "You have learned to speak my language - the language of seasons and soil.",
+        "Your ceremonies are heard. Your intentions are received.",
+        "Through you, I bless the land and nourish all creatures.",
+        "Continue this sacred work. Teach others the way of earth honor."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'teach_earth_ceremonies',
+        title: "Teach Earth Ceremonies to Community",
+        description: "Pass on your knowledge to those who will carry the tradition forward.",
+        reward: { xp: 155, achievement: 'earth_ceremony_teacher' }
+      }
+    ],
+    choices: [
+      {
+        id: 'earth_mastery_complete',
+        text: "Share earth wisdom with all who seek it",
+        label: "Complete the earth ceremony path",
+        nextChapter: 'ending_reflection',
+        reward: { xp: 200, achievement: 'earth_ceremony_master' }
+      }
+    ]
+  },
+
   ritual_agriculture: {
     id: 'ritual_agriculture',
     title: "Sacred Science of Growing",
@@ -1058,6 +3780,32 @@ export const storyChapters = {
     ]
   },
 
+  night_mysteries: {
+    id: 'night_mysteries',
+    title: "The Secrets Revealed in Darkness",
+    chapter: 7,
+    description: "In the depths of night, truths hidden by daylight emerge. You contemplate: What mysteries does darkness hold? What does the night reveal that day obscures? The answer comes as a profound realization - night is not absence of light but presence of subtlety.",
+    icon: Brain,
+    dialogue: {
+      npc: "Inner Wisdom",
+      lines: [
+        "Night is not empty - it is full of subtle presences.",
+        "Daylight shows the surface; night reveals the depths.",
+        "What cannot be seen becomes visible to inner sight.",
+        "Ratri teaches that all mysteries dwell in her embrace."
+      ]
+    },
+    choices: [
+      {
+        id: 'mystery_mastery',
+        text: "Continue exploring the night's mysteries",
+        label: "Deepen your nocturnal practice",
+        nextChapter: 'vigil_one',
+        reward: { xp: 130 }
+      }
+    ]
+  },
+
   vigil_one: {
     id: 'vigil_one',
     title: "First Night: Staying Awake",
@@ -1092,6 +3840,40 @@ export const storyChapters = {
     ]
   },
 
+  tapas_wisdom: {
+    id: 'tapas_wisdom',
+    title: "The Science of Sacred Austerity",
+    chapter: 6,
+    description: "Tapas is not punishment but purification through discipline. The ancient Rishis knew: through austerity, consciousness refines like gold in fire. Tapas burns away impurities, reveals hidden truths, elevates awareness. You learn the philosophical and practical foundations of this sacred practice.",
+    icon: Flame,
+    dialogue: {
+      npc: "Tapas Master",
+      lines: [
+        "Tapas means 'heat' - the transformative heat of spiritual discipline.",
+        "Through austerity, the mind becomes clear, the spirit becomes luminous.",
+        "Not harsh punishment, but conscious refinement of being.",
+        "The seven vigils are tapas in action - burning away sleep, revealing awakeness."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'study_tapas_texts',
+        title: "Study Ancient Tapas Texts",
+        description: "Learn from the Rishis' teachings on austerity and discipline.",
+        reward: { xp: 115, understanding: 'tapas_philosophy' }
+      }
+    ],
+    choices: [
+      {
+        id: 'begin_tapas_practice',
+        text: "Begin the tapas practice immediately",
+        label: "Start the transformation",
+        nextChapter: 'vigil_one',
+        reward: { xp: 140 }
+      }
+    ]
+  },
+
   // === RAIN CEREMONY PATH ===
   rain_ceremony_path: {
     id: 'rain_ceremony_path',
@@ -1119,6 +3901,40 @@ export const storyChapters = {
     ]
   },
 
+  water_ceremonies: {
+    id: 'water_ceremonies',
+    title: "The Ritual of Water Liberation",
+    chapter: 6,
+    description: "You learn the ancient water ceremonies - rituals that align human intention with the cosmic principle of water's freedom. These ceremonies invoke Indra's power to break barriers (like Vritra), Parjanya's generous rain, and Varuna's cosmic waters. Water that was trapped becomes free; dry lands become fertile.",
+    icon: Waves,
+    dialogue: {
+      npc: "Water Priest",
+      lines: [
+        "Water is imprisoned by drought, by dams, by limitation.",
+        "Our ceremonies call to the imprisoned waters - 'Flow! Be Free!'",
+        "We invoke Indra to shatter obstacles. We call Parjanya to rain.",
+        "The ancient words have power - they speak to cosmic forces."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'master_water_rituals',
+        title: "Master All Water Liberation Rituals",
+        description: "Learn and practice the complete system of water ceremonies.",
+        reward: { xp: 140, understanding: 'water_liberation' }
+      }
+    ],
+    choices: [
+      {
+        id: 'perform_ceremonies',
+        text: "Perfect the water liberation rituals",
+        label: "Master ritual water magic",
+        nextChapter: 'rain_master',
+        reward: { xp: 130 }
+      }
+    ]
+  },
+
   first_rain_ceremony: {
     id: 'first_rain_ceremony',
     title: "First Call to the Clouds",
@@ -1127,6 +3943,40 @@ export const storyChapters = {
     icon: Cloud,
     choices: [
       { id: 'continue_rain_work', text: "Continue the rain ceremonies", label: "Perfect the practice", nextChapter: 'twenty_rains', reward: { xp: 110 } }
+    ]
+  },
+
+  rain_master: {
+    id: 'rain_master',
+    title: "Master of the Rains",
+    chapter: 7,
+    description: "You have perfected the science of rain-calling. The ceremonies are flawless. Your invocations are powerful. Over the years, droughts have ended when you performed the rituals. People travel from distant lands to request your assistance. You have become a legendary rain-bringer - not through magic, but through perfect alignment of human intention with natural cycles and cosmic law.",
+    icon: CloudRain,
+    dialogue: {
+      npc: "Parjanya (through your understanding)",
+      lines: [
+        "You have learned to speak to me, rain god, accurately.",
+        "Your ceremonies call to the clouds. Your words move the waters.",
+        "I respond to your righteousness and your dedication.",
+        "Go forth - bring water where there is drought, abundance where there is need."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'legendary_rain_caller',
+        title: "Become Legendary Rain-Bringer",
+        description: "Establish your name and reputation as master of rain ceremonies.",
+        reward: { xp: 170, achievement: 'rain_legend' }
+      }
+    ],
+    choices: [
+      {
+        id: 'rain_master_complete',
+        text: "Dedicate yourself to bringing rain where needed",
+        label: "Perfect the rain-calling path",
+        nextChapter: 'ending_reflection',
+        reward: { xp: 210, achievement: 'rain_master' }
+      }
     ]
   },
 
@@ -1146,13 +3996,102 @@ export const storyChapters = {
     id: 'purification_path',
     title: "The Call to Purity",
     chapter: 5,
-    description: "You witness a Soma purification ritual - the sacred plant strained through wool, becoming Pavamana (the Purifier). A priest explains: 'Purification is not just physical but spiritual. Can you dedicate yourself to purifying souls, beginning with your own?'",
+    description: "You witness a [translate:Soma]] purification ritual - the sacred plant strained through wool, becoming [translate:Pavamana]] (the Purifier). A priest explains: 'Purification is not just physical but spiritual. Can you dedicate yourself to purifying souls, beginning with your own?'",
     icon: Droplet,
     unlocks: ['soma'],
+    dialogue: {
+      npc: "Priest of Purification",
+      lines: [
+        "[translate:Soma]] is the sacred plant of purification and transcendence.",
+        "[translate:Pavamana]] means 'the one who purifies' - it flows through the filter to become pure.",
+        "This mirrors your own path - strain away impurities, let clarity remain.",
+        "Will you commit to this sacred purification?"
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'study_pavamana',
+        title: "Study Pavamana Hymns Deeply",
+        description: "Learn the sacred verses that guide purification energy.",
+        reward: { xp: 95, understanding: 'pavamana_hymns' }
+      },
+      {
+        id: 'purification_commitment',
+        title: "Commit to the Purification Path",
+        description: "Dedicate yourself wholly to spiritual cleansing.",
+        reward: { xp: 105, understanding: 'purification_commitment' }
+      }
+    ],
     choices: [
-      { id: 'pavamana_study', text: "Study the Pavamana hymns deeply", label: "Learn purification wisdom", nextChapter: 'pavamana_teachings', reward: { xp: 85, deity: 'soma' } },
-      { id: 'self_purification', text: "Begin with rigorous self-purification", label: "Purify yourself first", nextChapter: 'inner_purification', reward: { xp: 90 } },
-      { id: 'purification_rituals', text: "Learn ceremonial purification techniques", label: "Master purifying rites", nextChapter: 'purification_ceremonies', reward: { xp: 80 } }
+      { 
+        id: 'pavamana_study', 
+        text: "Study the [translate:Pavamana]] hymns deeply", 
+        label: "Learn purification wisdom", 
+        nextChapter: 'pavamana_teachings', 
+        reward: { xp: 85, deity: 'soma' } 
+      },
+      { 
+        id: 'self_purification', 
+        text: "Begin with rigorous self-purification", 
+        label: "Purify yourself first", 
+        nextChapter: 'inner_purification', 
+        reward: { xp: 90 } 
+      },
+      { 
+        id: 'purification_rituals', 
+        text: "Learn ceremonial purification techniques", 
+        label: "Master purifying rites", 
+        nextChapter: 'purification_ceremonies', 
+        reward: { xp: 80 } 
+      }
+    ]
+  },
+
+  
+  purification_ceremonies: {
+    id: 'purification_ceremonies',
+    title: "Ritual Purification Practices",
+    chapter: 6,
+    description: "You learn the sacred ceremonies of purification - ritual baths in holy waters, chanting of purifying mantras, offerings to sacred fires. These are not mere physical actions but sacred choreography of transformation.",
+    icon: Sparkles,
+    dialogue: {
+      npc: "Purification Master",
+      lines: [
+        "Water washes the body. Fire cleanses the mind. Air carries away darkness.",
+        "The [translate:Pavamana]] mantras direct purifying forces through your entire being.",
+        "Each ceremony is a descent into the sacred fire and emergence reborn.",
+        "Through ritual purification, you align with cosmic cleansing forces."
+      ]
+    },
+    sideQuests: [
+      {
+        id: 'master_rituals',
+        title: "Master All Purification Rituals",
+        description: "Learn and perform all traditional purification ceremonies with perfect precision.",
+        reward: { xp: 155, achievement: 'purification_ritualist' }
+      },
+      {
+        id: 'sacred_bathing',
+        title: "Perform 108 Sacred Baths",
+        description: "Undergo ritual purification bathing 108 times at sacred locations.",
+        reward: { xp: 165, achievement: 'water_purified' }
+      }
+    ],
+    choices: [
+      { 
+        id: 'self_purification', 
+        text: "Focus on your own deep purification", 
+        label: "Begin inner purification work", 
+        nextChapter: 'inner_purification', 
+        reward: { xp: 140 } 
+      },
+      { 
+        id: 'ritual_mastery', 
+        text: "Perfect the ceremonial purification techniques", 
+        label: "Master the purification rites", 
+        nextChapter: 'purification_master', 
+        reward: { xp: 145 } 
+      }
     ]
   },
 

@@ -1,0 +1,227 @@
+/* src/components/Common/RishiFarewell.css */
+
+.rishi-farewell-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: overlayFadeIn 0.3s ease-out;
+  }
+  
+  @keyframes overlayFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .rishi-farewell-modal {
+    background: linear-gradient(135deg, rgba(200, 170, 160, 0.95) 0%, rgba(180, 150, 140, 0.95) 100%);
+    border: 3px solid #D4AF37;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 
+      0 20px 60px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    animation: modalSlideUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+  }
+  
+  .rishi-farewell-modal.fade-out {
+    animation: modalFadeOut 0.5s ease-in forwards;
+  }
+  
+  @keyframes modalSlideUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes modalFadeOut {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+  }
+  
+  /* Rishi Image */
+  .rishi-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .rishi-image {
+    font-size: 120px;
+    animation: rishiFloat 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
+  }
+  
+  .rishi-glow {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: glowPulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes rishiFloat {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  @keyframes glowPulse {
+    0%, 100% {
+      opacity: 0.5;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  }
+  
+  /* Message */
+  .rishi-message {
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2C1810;
+    margin: 20px 0 10px 0;
+    line-height: 1.4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rishi-subtext {
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+    color: #5C4033;
+    margin: 0 0 20px 0;
+    font-style: italic;
+    opacity: 0.8;
+  }
+  
+  /* Actions */
+  .rishi-actions {
+    display: flex;
+    gap: 12px;
+    margin: 25px 0;
+  }
+  
+  .rishi-btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .rishi-btn-stay {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+  }
+  
+  .rishi-btn-stay:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(76, 175, 80, 0.5);
+  }
+  
+  .rishi-btn-stay:active {
+    transform: translateY(0);
+  }
+  
+  .rishi-btn-leave {
+    background: linear-gradient(135deg, #f44336 0%, #da190b 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+  }
+  
+  .rishi-btn-leave:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(244, 67, 54, 0.5);
+  }
+  
+  .rishi-btn-leave:active {
+    transform: translateY(0);
+  }
+  
+  /* Quote */
+  .rishi-quote {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid rgba(212, 175, 55, 0.3);
+  }
+  
+  .rishi-quote-text {
+    font-family: 'Georgia', serif;
+    font-size: 13px;
+    color: #3E2723;
+    font-style: italic;
+    margin: 10px 0 8px 0;
+    line-height: 1.6;
+  }
+  
+  .rishi-quote-attr {
+    font-family: 'Georgia', serif;
+    font-size: 11px;
+    color: #5C4033;
+    margin: 0;
+    opacity: 0.7;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .rishi-farewell-modal {
+      padding: 30px 20px;
+    }
+  
+    .rishi-message {
+      font-size: 20px;
+    }
+  
+    .rishi-image {
+      font-size: 100px;
+    }
+  
+    .rishi-actions {
+      flex-direction: column;
+    }
+  }
+  

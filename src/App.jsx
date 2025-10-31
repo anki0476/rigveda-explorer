@@ -1,10 +1,11 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react';
+import React, { useState, useEffect, lazy, Suspense, useCallback } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Layout/Navigation';
 import EnhancedHome from './components/EnhancedHome';
 import NotificationContainer from './components/Games/NotificationContainer';
 import TourOrchestrator from './components/Tour/TourOrchestrator';
-import { BGMController } from './components/BGMController'; 
+import { BGMController } from './components/BGMController';
+import RishiFarewell from './components/Common/RishiFarewell';
 
 import VideoIntro from './components/VideoIntro';
 import AudioUnlock from './components/AudioUnlock';
@@ -34,6 +35,9 @@ function App() {
 
   const [showVideo, setShowVideo] = useState(!introComplete);
   const [showAudioUnlock, setShowAudioUnlock] = useState(false);
+  
+  // === NEW: Rishi Farewell State ===
+  const [showRishiFarewell, setShowRishiFarewell] = useState(false);
 
   const handleVideoComplete = () => {
     setShowVideo(false);
@@ -46,6 +50,46 @@ function App() {
     setIntroComplete(true);
   };
 
+  // === NEW: Handle Rishi Show ===
+  const handleShowRishi = useCallback(() => {
+    setShowRishiFarewell(true);
+  }, []);
+
+  // === NEW: Handle Stay (close modal, don't leave) ===
+  const handleStay = useCallback(() => {
+    setShowRishiFarewell(false);
+  }, []);
+
+  // === NEW: Handle Leave (allow page unload) ===
+  const handleLeave = useCallback(() => {
+    setShowRishiFarewell(false);
+    // Remove the beforeunload listener to allow navigation
+    window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, []);
+
+  // === NEW: BeforeUnload Event Handler ===
+  const handleBeforeUnload = useCallback((e) => {
+    // Show Rishi modal
+    handleShowRishi();
+    
+    // Prevent default browser warning for now
+    e.preventDefault();
+    e.returnValue = '';
+    
+    return '';
+  }, [handleShowRishi]);
+
+  // === NEW: Setup beforeunload listener after intro ===
+  useEffect(() => {
+    if (introComplete) {
+      window.addEventListener('beforeunload', handleBeforeUnload);
+
+      return () => {
+        window.removeEventListener('beforeunload', handleBeforeUnload);
+      };
+    }
+  }, [introComplete, handleBeforeUnload]);
+
   console.log('🎬 App render - introComplete:', introComplete);
 
   return (
@@ -55,7 +99,14 @@ function App() {
 
       {introComplete && (
         <Router>
-          <BGMController /> {/* ← ADD THIS LINE HERE (inside Router, before div) */}
+          {/* === NEW: Rishi Farewell Modal === */}
+          <RishiFarewell
+            isOpen={showRishiFarewell}
+            onStay={handleStay}
+            onLeave={handleLeave}
+          />
+
+          <BGMController />
           
           <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100">
             <Navigation />

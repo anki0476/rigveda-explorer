@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { storyChapters } from '../../data/storyData';
 import { useGameProgress } from '../../hooks/useGameProgress';
+import { deityCards } from '../../data/deityCards';
 
 const StoryMode = () => {
   const navigate = useNavigate();
@@ -9,6 +10,7 @@ const StoryMode = () => {
   const [currentStory, setCurrentStory] = useState(storyChapters[progress.currentChapter]);
   const [showReward, setShowReward] = useState(false);
   const [lastReward, setLastReward] = useState(null);
+  const [newUnlockedDeity, setNewUnlockedDeity] = useState(null);
 
   useEffect(() => {
     setCurrentStory(storyChapters[progress.currentChapter]);
@@ -18,6 +20,17 @@ const StoryMode = () => {
     // Show rewards
     if (choice.reward) {
       setLastReward(choice.reward);
+      
+      // Track newly unlocked deity
+      let unlockedDeity = null;
+      if (choice.reward.deity) {
+        const deityWasLocked = !progress.collectedDeities.includes(choice.reward.deity);
+        if (deityWasLocked) {
+          unlockedDeity = deityCards[choice.reward.deity];
+          setNewUnlockedDeity(unlockedDeity);
+        }
+      }
+
       setShowReward(true);
 
       // Add XP
@@ -38,8 +51,9 @@ const StoryMode = () => {
       // Wait for animation, then proceed
       setTimeout(() => {
         setShowReward(false);
+        setNewUnlockedDeity(null);
         setCurrentChapter(choice.nextChapter);
-      }, 2000);
+      }, 3000);
     } else {
       setCurrentChapter(choice.nextChapter);
     }
@@ -49,14 +63,14 @@ const StoryMode = () => {
     setCurrentChapter('start');
   };
 
-  // ✅ CHANGE: Check if story not found OR if choices array is empty (story ended)
+  // Check if story not found OR if choices array is empty (story ended)
   if (!currentStory || !currentStory.choices || currentStory.choices.length === 0) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100 flex items-center justify-center p-4">
         <div className="text-center bg-white p-12 rounded-2xl shadow-2xl max-w-2xl ornate-golden-border">
           <h1 className="text-5xl font-bold text-amber-900 mb-6">🎉 Journey Complete! 🎉</h1>
           <p className="text-xl text-gray-700 mb-8 font-[family:--font-family-body]">
-            You've completed this path of the RigVeda Explorer story! Your choices have shaped your understanding of ancient wisdom.
+            You've completed this path of the RigVeda Odyssey story! Your choices have shaped your understanding of ancient wisdom.
           </p>
           
           <div className="space-y-4">
@@ -156,6 +170,22 @@ const StoryMode = () => {
                     <div className="text-sm font-[family:--font-family-body] text-[--color-ink-light] italic">
                       {choice.label}
                     </div>
+                    
+                    {/* === UPDATED: Only show reward type icons, NO XP VALUE ===*/}
+                    {choice.reward && (
+                      <div className="mt-2 flex gap-2 text-xs">
+                        {choice.reward.deity && (
+                          <span className="px-2 py-1 bg-blue-500/20 text-blue-400 rounded font-bold">
+                            🎴 Card Reward
+                          </span>
+                        )}
+                        {choice.reward.achievement && (
+                          <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded font-bold">
+                            🏆 Achievement
+                          </span>
+                        )}
+                      </div>
+                    )}
                   </div>
                   <div className="text-2xl opacity-0 group-hover:opacity-100 transition-opacity">
                     →
@@ -172,39 +202,63 @@ const StoryMode = () => {
         </div>
       </div>
 
-      {/* Reward Popup */}
+      {/* Reward Popup - STILL SHOWS ALL REWARDS */}
       {showReward && lastReward && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 animate-fade-in-smooth">
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 animate-fade-in-smooth p-4">
           <div className="ornate-golden-border bg-[--color-parchment-light] p-8 rounded-2xl shadow-2xl max-w-md animate-scale-in">
             <div className="text-center">
-              <div className="text-6xl mb-4">🎉</div>
-              <h3 className="text-2xl font-[family:--font-family-header] font-bold text-[--color-gold] mb-4">
+              <div className="text-6xl mb-4 animate-bounce">🎉</div>
+              <h3 className="text-2xl font-[family:--font-family-header] font-bold text-[--color-gold] mb-6">
                 Reward Earned!
               </h3>
               
-              {lastReward.xp && (
-                <div className="mb-3">
-                  <span className="text-lg font-[family:--font-family-body] text-[--color-ink]">
-                    +{lastReward.xp} XP
-                  </span>
+              <div className="space-y-4">
+                {/* XP Reward - NOW REVEALED ONLY AFTER CHOICE */}
+                {lastReward.xp && (
+                  <div className="p-4 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-lg border border-[--color-gold]">
+                    <div className="text-3xl font-bold text-[--color-gold]">+{lastReward.xp}</div>
+                    <div className="text-sm font-[family:--font-family-body] text-[--color-ink]">
+                      Experience Points
+                    </div>
+                  </div>
+                )}
+                
+                {/* Deity Unlock */}
+                {lastReward.deity && newUnlockedDeity && (
+                  <div className="p-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg border border-blue-400 animate-pulse">
+                    <div className="text-3xl mb-2">{newUnlockedDeity.icon}</div>
+                    <div className="text-lg font-[family:--font-family-header] font-bold text-blue-400">
+                      New Deity Unlocked!
+                    </div>
+                    <div className="text-sm font-[family:--font-family-body] text-[--color-ink] mt-1">
+                      {newUnlockedDeity.name}
+                    </div>
+                    <div className="text-xs font-[family:--font-family-body] text-[--color-ink-light] mt-1">
+                      {newUnlockedDeity.title}
+                    </div>
+                  </div>
+                )}
+                
+                {/* Achievement Unlock */}
+                {lastReward.achievement && (
+                  <div className="p-4 bg-gradient-to-r from-yellow-500/20 to-amber-500/20 rounded-lg border border-yellow-400">
+                    <div className="text-3xl mb-2">🏆</div>
+                    <div className="text-lg font-[family:--font-family-header] font-bold text-yellow-500">
+                      Achievement Unlocked!
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Progress Summary */}
+              <div className="mt-6 pt-4 border-t border-[--color-gold]/30">
+                <div className="text-xs font-[family:--font-family-body] text-[--color-ink-light]">
+                  Total XP: <span className="text-[--color-gold] font-bold">{progress.xp}</span>
                 </div>
-              )}
-              
-              {lastReward.deity && (
-                <div className="mb-3">
-                  <span className="text-lg font-[family:--font-family-body] text-[--color-ink]">
-                    🎴 New Deity Card Unlocked!
-                  </span>
+                <div className="text-xs font-[family:--font-family-body] text-[--color-ink-light]">
+                  Level: <span className="text-[--color-gold] font-bold">{progress.level}</span>
                 </div>
-              )}
-              
-              {lastReward.achievement && (
-                <div className="mb-3">
-                  <span className="text-lg font-[family:--font-family-body] text-[--color-ink]">
-                    🏆 Achievement Unlocked!
-                  </span>
-                </div>
-              )}
+              </div>
             </div>
           </div>
         </div>

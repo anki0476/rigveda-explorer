@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
-import { rarityColors } from '../../data/deityCards';
+import { rarityColors, deityCards } from '../../data/deityCards';
+import { useGameProgress } from '../../hooks/useGameProgress';
 import './DeityCard3D.css';
 
 const clamp = (value, min = 0, max = 100) => Math.min(Math.max(value, min), max);
@@ -12,16 +13,23 @@ const getDeityImagePath = (deityName) => {
   return `/images/deities/${imageName}.jpg`;
 };
 
-
 const DeityCard = ({ deity, isUnlocked, onFlip }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const wrapRef = useRef(null);
   const cardRef = useRef(null);
   const innerCardRef = useRef(null);
 
+  // === NEW: Use game progress hook ===
+  const { progress, isDeityUnlocked, getXPToUnlockDeity, getUnlockProgressPercent } = useGameProgress();
+  
+  // Determine if deity is unlocked (from hook, not prop)
+  const deityIsUnlocked = isDeityUnlocked(deity.id);
+  const xpNeeded = getXPToUnlockDeity(deity.id);
+  const progressPercent = getUnlockProgressPercent(deity.id);
+
   const handleClick = (e) => {
     e.stopPropagation();
-    if (isUnlocked) {
+    if (deityIsUnlocked) {
       setIsFlipped(!isFlipped);
       if (onFlip) onFlip(!isFlipped);
       
@@ -76,27 +84,27 @@ const DeityCard = ({ deity, isUnlocked, onFlip }) => {
 
   const handlePointerMove = useCallback(
     (event) => {
-      if (!isUnlocked || isFlipped) return;
+      if (!deityIsUnlocked || isFlipped) return;
       const card = cardRef.current;
       if (!card) return;
       const rect = card.getBoundingClientRect();
       updateCardTransform(event.clientX - rect.left, event.clientY - rect.top);
     },
-    [isUnlocked, isFlipped, updateCardTransform]
+    [deityIsUnlocked, isFlipped, updateCardTransform]
   );
 
   const handlePointerEnter = useCallback(() => {
-    if (!isUnlocked || isFlipped) return;
+    if (!deityIsUnlocked || isFlipped) return;
     const wrap = wrapRef.current;
     const card = cardRef.current;
     if (wrap && card) {
       wrap.classList.add('active');
       card.classList.add('active');
     }
-  }, [isUnlocked, isFlipped]);
+  }, [deityIsUnlocked, isFlipped]);
 
   const handlePointerLeave = useCallback(() => {
-    if (isFlipped) return; // Don't reset if flipped
+    if (isFlipped) return;
     
     const wrap = wrapRef.current;
     const card = cardRef.current;
@@ -104,23 +112,19 @@ const DeityCard = ({ deity, isUnlocked, onFlip }) => {
     if (wrap && card && innerCard) {
       wrap.classList.remove('active');
       card.classList.remove('active');
-      // Reset to center position smoothly
       innerCard.style.transition = 'transform 1s ease';
       innerCard.style.transform = 'rotateY(0deg) translate3d(0, 0, 0.1px) rotateX(0deg) rotateY(0deg)';
     }
   }, [isFlipped]);
 
-  // Update transform when flip state changes
   useEffect(() => {
     const innerCard = innerCardRef.current;
     if (!innerCard) return;
 
     if (isFlipped) {
-      // When flipping, use CSS transform for flip animation
       innerCard.style.transition = 'transform 0.7s ease';
       innerCard.style.transform = 'rotateY(180deg) scale(1.05)';
     } else {
-      // When flipping back, reset to normal
       innerCard.style.transition = 'transform 0.7s ease';
       innerCard.style.transform = 'rotateY(0deg) translate3d(0, 0, 0.1px) rotateX(0deg) rotateY(0deg)';
     }
@@ -128,7 +132,7 @@ const DeityCard = ({ deity, isUnlocked, onFlip }) => {
 
   useEffect(() => {
     const card = cardRef.current;
-    if (!card || !isUnlocked) return;
+    if (!card || !deityIsUnlocked) return;
 
     card.addEventListener('pointerenter', handlePointerEnter);
     card.addEventListener('pointermove', handlePointerMove);
@@ -139,7 +143,7 @@ const DeityCard = ({ deity, isUnlocked, onFlip }) => {
       card.removeEventListener('pointermove', handlePointerMove);
       card.removeEventListener('pointerleave', handlePointerLeave);
     };
-  }, [isUnlocked, isFlipped, handlePointerEnter, handlePointerMove, handlePointerLeave]);
+  }, [deityIsUnlocked, isFlipped, handlePointerEnter, handlePointerMove, handlePointerLeave]);
 
   return (
     <div 
@@ -168,7 +172,7 @@ const DeityCard = ({ deity, isUnlocked, onFlip }) => {
           }}
         >
           {/* 3D Effects - Only show when not flipped */}
-          {!isFlipped && isUnlocked && (
+          {!isFlipped && deityIsUnlocked && (
             <>
               <div className="deity-card-shine" />
               <div className="deity-card-glare" />
@@ -184,69 +188,68 @@ const DeityCard = ({ deity, isUnlocked, onFlip }) => {
               minHeight: '450px'
             }}
           >
-                {/* Deity Image - Upper 50% */}
-    {isUnlocked && (
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          height: '50%',
-          zIndex: 0,
-          overflow: 'hidden',
-          borderTopLeftRadius: '18px',
-          borderTopRightRadius: '18px'
-        }}
-      >
-        <img
-          src={getDeityImagePath(deity.name)}
-          alt={deity.name}
-          loading="lazy"
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            objectPosition: 'center',
-            display: 'block'
-          }}
-          onError={(e) => {
-            e.target.style.display = 'none';
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: '150px',
-            background: `linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.7) 100%)`,
-            pointerEvents: 'none', 
-            zIndex: 1
-          }}
-        />
-      </div>
-    )}
+            {/* Deity Image - Upper 50% (only if unlocked) */}
+            {deityIsUnlocked && (
+              <div
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  height: '50%',
+                  zIndex: 0,
+                  overflow: 'hidden',
+                  borderTopLeftRadius: '18px',
+                  borderTopRightRadius: '18px'
+                }}
+              >
+                <img
+                  src={getDeityImagePath(deity.name)}
+                  alt={deity.name}
+                  loading="lazy"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center',
+                    display: 'block'
+                  }}
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                  }}
+                />
+                <div
+                  style={{
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    height: '150px',
+                    background: `linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.7) 100%)`,
+                    pointerEvents: 'none', 
+                    zIndex: 1
+                  }}
+                />
+              </div>
+            )}
 
             <div 
               className={`double-golden-border rounded-2xl p-6 h-full transition-all ${
-                isUnlocked 
+                deityIsUnlocked 
                   ? 'bg-gradient-to-br from-[--color-parchment-light] to-[--color-parchment] hover:shadow-2xl' 
                   : 'bg-[--color-parchment-dark] opacity-50'
               }`}
               style={{
-                borderTopColor: isUnlocked ? deity.color : '#666',
+                borderTopColor: deityIsUnlocked ? deity.color : '#666',
                 borderTopWidth: '6px',
                 minHeight: '450px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'flex-start', 
-                
                 position: 'relative'
               }}
             >
-              {isUnlocked ? (
+              {deityIsUnlocked ? (
                 <>
                   {/* Rarity Badge */}
                   <div 
@@ -256,9 +259,7 @@ const DeityCard = ({ deity, isUnlocked, onFlip }) => {
                     {deity.rarity}
                   </div>
 
-
-                
-                  <div style={{ position: 'absolute', top: '50%', left: 0, right: 0,height:'50%', padding: '20px',  boxSizing: 'border-box', display: 'flex',flexDirection: 'column',justifyContent: 'flex-start',overflow: 'hidden',zIndex: 10 }}>
+                  <div style={{ position: 'absolute', top: '50%', left: 0, right: 0, height:'50%', padding: '20px',  boxSizing: 'border-box', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', overflow: 'hidden', zIndex: 10 }}>
                     {/* Name */}
                     <h3 className="text-xl font-[family:--font-family-header] font-bold text-white text-center mb-0 relative z-10">
                       {deity.name}
@@ -266,7 +267,7 @@ const DeityCard = ({ deity, isUnlocked, onFlip }) => {
                   
                     {/* Sanskrit */}
                     <p className="text-sm sanskrit text-[--color-gold] text-center mb-1 relative z-10">
-                    {deity.sanskrit}
+                      {deity.sanskrit}
                     </p>
 
                     {/* Title */}
@@ -311,21 +312,51 @@ const DeityCard = ({ deity, isUnlocked, onFlip }) => {
                   </div>
                 </>
               ) : (
+                // === LOCKED STATE WITH XP PROGRESS ===
                 <div className="h-full flex flex-col items-center justify-center">
-                  <div className="text-6xl mb-4 opacity-30">🔒</div>
-                  <p className="text-lg font-[family:--font-family-header] text-[--color-ink-light]">
+                  <div className="text-6xl mb-4 opacity-50">🔒</div>
+                  <p className="text-lg font-[family:--font-family-header] text-[--color-ink-light] mb-4">
                     Locked
                   </p>
-                  <p className="text-sm font-[family:--font-family-body] text-[--color-ink-light] text-center mt-2 px-4">
-                    {deity.unlockRequirement}
+
+                  {/* XP PROGRESS BAR */}
+                  <div className="w-full px-4 mb-4">
+                    <div className="w-full bg-[--color-parchment-dark] rounded-full h-2 overflow-hidden mb-2">
+                      <div 
+                        className="bg-gradient-to-r from-blue-400 to-green-400 h-full rounded-full transition-all duration-500"
+                        style={{ width: `${progressPercent}%` }}
+                      ></div>
+                    </div>
+                    <div className="flex justify-between text-xs font-[family:--font-family-body] text-[--color-ink-light]">
+                      <span>{progress.xp} XP</span>
+                      <span>/ {deity.xpRequired} XP</span>
+                    </div>
+                  </div>
+
+                  {/* XP NEEDED TO UNLOCK */}
+                  <p className="text-sm font-[family:--font-family-body] text-[--color-gold] font-bold text-center mb-3">
+                    🔑 {xpNeeded} XP to unlock
+                  </p>
+
+                  {/* RARITY INFO */}
+                  <div 
+                    className="px-3 py-1 rounded-full text-xs font-[family:--font-family-header] font-bold text-white uppercase mb-3"
+                    style={{ backgroundColor: rarityColors[deity.rarity] }}
+                  >
+                    {deity.rarity}
+                  </div>
+
+                  {/* UNLOCK HINT */}
+                  <p className="text-xs font-[family:--font-family-body] text-[--color-ink-light] text-center px-4">
+                    Complete story chapters to earn XP and unlock this deity!
                   </p>
                 </div>
               )}
             </div>
           </div>
 
-          {/* Back of Card */}
-          {isUnlocked && (
+          {/* Back of Card - ONLY WHEN UNLOCKED */}
+          {deityIsUnlocked && (
             <div 
               className="absolute w-full h-full overflow-hidden"
               style={{ 

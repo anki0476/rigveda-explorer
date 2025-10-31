@@ -1,10 +1,12 @@
-import { lazy } from 'react';
-
+import { lazy, Suspense } from 'react';
 
 import { createBrowserRouter } from 'react-router-dom';
 import BookLayout from './components/Layout/BookLayout';
 import PageTransition from './components/Layout/PageTransition';
+import Lottie from 'lottie-react';
+import bookLoadingAnimation from './assets/animations/BookLoadingAnimation.json';
 
+// ✅ All your existing lazy imports...
 const SurpriseMeComponent = lazy(() => import('./components/SurpriseMe'));
 const DeityNetworkComponent = lazy(() => import('./components/DeityNetwork'));
 const TopicGridComponent = lazy(() => import('./components/TopicGrid'));
@@ -27,21 +29,39 @@ const StoryMode = lazy(() => import('./components/StoryMode/StoryMode'));
 const DeityCollector = lazy(() => import('./components/DeityCollector/DeityCollector'));
 const AchievementPanel = lazy(() => import('./components/Achievements/AchievementPanel'));
 
-// NEW: Vedic Identity Quiz Import
 const VedicIdentityQuiz = lazy(() => import('./components/VedicIdentityQuiz'));
 
-// ✅ ADD THIS IMPORT
 import ScrollToTop from './components/ScrollToTop';
 
-// Home route WITHOUT BookLayout wrapper for full scroll control
+// ✅ LOADING FALLBACK COMPONENT (for hymns only)
+const HymnLoadingFallback = () => (
+  <div className="min-h-screen bg-[--color-parchment] flex flex-col items-center justify-center gap-8">
+    <div className="w-32 h-32">
+      <Lottie
+        animationData={bookLoadingAnimation}
+        loop={true}
+        autoplay={true}
+      />
+    </div>
+    <div className="text-center">
+      <p className="text-xl font-[family:--font-family-header] text-[--color-ink] mb-2">
+        📜 Loading Sacred Hymns...
+      </p>
+      <p className="text-sm text-[--color-ink-light] font-[family:--font-family-body]">
+        Preparing the Hymn Browser
+      </p>
+    </div>
+  </div>
+);
+
+// ... all your existing route components ...
+
 const Home = () => (
   <>
-  
     <ScrollToTop />
     <PageTransition>
       <EnhancedHomeComponent />
     </PageTransition>
-  
   </>
 );
 
@@ -126,13 +146,16 @@ const About = () => (
   </BookLayout>
 );
 
+// ✅ UPDATED: HymnBrowser with Suspense + Loading animation
 const HymnBrowser = () => (
-  <BookLayout>
-    <ScrollToTop />
-    <PageTransition>
-      <HymnBrowserComponent />
-    </PageTransition>
-  </BookLayout>
+  <Suspense fallback={<HymnLoadingFallback />}>
+    <BookLayout>
+      <ScrollToTop />
+      <PageTransition>
+        <HymnBrowserComponent />
+      </PageTransition>
+    </BookLayout>
+  </Suspense>
 );
 
 const VedicStarMap = () => (
@@ -144,67 +167,65 @@ const VedicStarMap = () => (
   </BookLayout>
 );
 
-// GAME ROUTES (WITHOUT BookLayout for full-screen game experience)
+// GAME ROUTES (unchanged)
 const Games = () => (
   <BookLayout>
-  <>
-    <ScrollToTop />
-    <PageTransition>
-      <GamesHub />
-    </PageTransition>
-  </>
+    <>
+      <ScrollToTop />
+      <PageTransition>
+        <GamesHub />
+      </PageTransition>
+    </>
   </BookLayout>
 );
 
 const Story = () => (
   <BookLayout>
-  <>
-    <ScrollToTop />
-    <PageTransition>
-      <StoryMode />
-    </PageTransition>
-  </>
+    <>
+      <ScrollToTop />
+      <PageTransition>
+        <StoryMode />
+      </PageTransition>
+    </>
   </BookLayout>
 );
 
 const Collection = () => (
   <BookLayout>
-  <>
-    <ScrollToTop />
-    <PageTransition>
-      <DeityCollector />
-    </PageTransition>
-  </>
+    <>
+      <ScrollToTop />
+      <PageTransition>
+        <DeityCollector />
+      </PageTransition>
+    </>
   </BookLayout>
 );
 
 const Achievements = () => (
   <BookLayout>
-  <>
-    <ScrollToTop />
-    <PageTransition>
-      <AchievementPanel />
-    </PageTransition>
-  </>
+    <>
+      <ScrollToTop />
+      <PageTransition>
+        <AchievementPanel />
+      </PageTransition>
+    </>
   </BookLayout>
 );
 
-// NEW: Vedic Identity Quiz Route (Full-screen experience without BookLayout)
 const VedicIdentity = () => (
   <BookLayout>
-  <>
-    <ScrollToTop />
-    <PageTransition>
-      <VedicIdentityQuiz />
-    </PageTransition>
-  </>
+    <>
+      <ScrollToTop />
+      <PageTransition>
+        <VedicIdentityQuiz />
+      </PageTransition>
+    </>
   </BookLayout>
 );
 
-// 404 Route (NO PageTransition or BookLayout)
 const NotFoundPage = () => <NotFound />;
 
-// Router configuration
+// Router configuration (unchanged except for HymnBrowser route)
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -292,13 +313,11 @@ export const router = createBrowserRouter([
     element: <Achievements />,
     errorElement: <ErrorBoundary />
   },
-  // NEW: Vedic Identity Quiz Route
   {
     path: '/vedic-identity',
     element: <VedicIdentity />,
     errorElement: <ErrorBoundary />
   },
-  // 404 Catch-all (MUST BE LAST!)
   {
     path: '*',
     element: <NotFoundPage />,
